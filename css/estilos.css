@@ -5,7 +5,8 @@
 
 
 body {
-    background: rgb(223, 222, 222);
+    background: url(../imagenes/fondoinicio.jpg) no-repeat;
+    background-size: cover;
     font-family: Verdana;
 }
 
@@ -15,18 +16,20 @@ body {
 
 }
 
-.cerrar li a{
+
+.segui{
+    position:absolute;
     font-family: Verdana;
-    font-size: 15px;
-    color: #fc7323;
+    font-size: 25px;
+    margin-left: 8%;
+    margin-top: 1%;
+    color: rgb(89, 181, 72);
+    text-align: center;
 }
 
-.logo .segui{
-    font-family: Verdana;
-    font-size: 20px;
-    margin-left: 9%;
-    margin-top: -5%;
-    color: #238276;
+.imagen{
+    position: absolute;
+    z-index: 111;
 }
 .logo .seguiimg{
     margin-left: 5px;
@@ -34,9 +37,9 @@ body {
 
 .segun{
     position: absolute;
-    margin-left: 82.6%;
+    margin-left: 82.9%;
     z-index: 1;
-    margin-top: -6.5%;
+    margin-top: -2.2%;
 
 }
 
@@ -46,9 +49,9 @@ body {
     width: 85%;
     padding: 0 5.5em;
     position: absolute;
-    margin-top: 4px;
+    margin-top: 5%;
     margin-left: 0px;
-    border-color: #238276 transparent;
+    border-color: rgb(89, 181, 72) transparent;
     border-style: solid;
     border-width: 5px;
     text-align: center;
@@ -87,194 +90,33 @@ body {
     transition: all .5s;
     
 }
-
-.cerrar {
-    list-style: none;
-    margin-left: 10%;
-    margin-top: 0%;
+.contenido .video{
+    align-content: center;
 }
-
-.fondo{
-    margin-top: 5px;
-    margin-left: 30px;
+.video
+{
+    margin: 70px 0px 25px  250px;
+    width: 60%;
 }
-.naranja {
-    position: absolute;
-    z-index: 1;
-    margin-top: -150px;
-    margin-left: 520px;
-    background-color: #fc7323;
-    border-radius: 300px;
-    height: 250px;
-    width: 20%;
-}
-
-
-.contenedor{
-    position: absolute;
-    background-color: #ffffff;
-    width: 90%;
-    height: 150px;
-    margin-left: 60px;
-    margin-top: 10%;
-
-}  
-.date{
-    position: relative;
-    background-color: #ffffff;
-    border:2px solid;
-    border-color: #353434;
-    width:96%;
-    height: 100px;
-    margin-left: 20px;
-    margin-top: 2%;
-    text-align: center;
-} 
-.date .datos p{
-    list-style: none;
-    text-decoration: none;
-    font-family: Verdana;
-    color: black;
-    text-align: center;
-}
-.date .datos .text2{
-    text-align: left;
-    max-width: 10px;
-}
-
-
-.button { /*editar*/
-    position: absolute;
-    text-decoration: none;
-    padding: 10px 40px;
-    box-sizing: border-box;
-    font-family: Verdana;
-    width: 170px;
-    text-align: center;
-    margin-top: 29%;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    background: #238276;
-    top: 410px;
-    margin-left: 1000px;
-    border-radius: 20px;
-   
-}
-
-.button:hover{
-    background-color: rgb(252, 115, 35);
-    color: white;
-  
-}
-.button2 .butuno{
-    margin-right: 15px;
-    margin: -10px 10px;
-}
-
-.button2{ /*legalizacion*/
-    position: relative;
-    text-decoration: none;
-    margin: 0%;
-    padding: 10px 40px;
-    box-sizing: border-box;
-    font-family: verdana;
-    width: 170px;
-    text-align: center;
-    margin: auto;
-    margin-top: 200px;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    background: white;
-    top: 490px;
-    margin-left: 810px;
-    border-radius: 20px;
-    border-color: #238276 transparent;
-    border-style: solid;
-    border-width: 2px;
-    }
     
-.button2:hover{
-       
-        background-color: rgb(252, 115, 35);
-        color: white;
+.video iframe
+{
+    width:60%;
+    height:300px;
 }
-.button3 .butdos{
-    margin-right: 15px;
-    margin: -10px 10px;
-}
-.button3 { /*certificacion*/
-
-        position: relative;
-        text-decoration: none;
-        margin: 0%;
-        padding: 10px 40px;
-        box-sizing: border-box;
-        font-family: verdana;
-        width: 170px;
-        text-align: center;
-        margin: auto;
-        margin-top: 200px;
-        color: rgb(0, 0, 0);
-        font-size: 15px;
-        background: white;
-        top: 470px;
-        margin-left: 520px;
-        border-radius: 20px;
-        border-color: #238276 transparent;
-        border-style: solid;
-        border-width: 2px;
-    }
-    
-    .button3:hover {
-        color: white;
-        background-color:  rgb(252, 115, 35); 
-    }
-    .button4 .buttres{
-        margin-right: 15px;
-        margin: -10px 10px;
-    }
-
-    .button4 { /*aprendices*/
-        position: relative;
-        text-decoration: none;
-        margin: 0%;
-        padding: 10px 40px;
-        box-sizing: border-box;
-        font-family: Verdana;
-        width: 170px;
-        text-align: center;
-        margin: auto;
-        margin-top: 200px;
-        color: rgb(0, 0, 0);
-        font-size: 15px;
-        background: white;
-        top: 470px;
-        margin-left: -550px;
-        border-radius: 20px;
-        border-color: #238276 transparent;
-        border-style: solid;
-        border-width: 2px;
-    }
-    
-    .button4:hover{
-        background-color: rgb(252, 115, 35);
-        color: white;
-        
-    }
 
 .pie {
-    background-color: #238276;
-    margin-top:600px;
+    background-color:  rgb(89, 181, 72);
 }
 .pie{
     position: relative;
     width: 100%;
     height: 75px;
-    background-color: #238276;
-    margin-top:600px;
+    background-color:  rgb(89, 181, 72);
+    margin-top:64px;
     display: flex;
     align-items: flex-end;
-    border-top: 2px solid #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.192);
     margin-left: 0px;
     
 }
