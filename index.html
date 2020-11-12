@@ -2,35 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>INICIO</title>
+    <title>ingresar</title>
+    <link rel="stylesheet" href="css/ingreso.css">
 </head>
-<body>
-    <header class="princi">
-       
-        <div class="logo">
-            <img class="imagen"  height="90" width="90" src="imagenes/Imagen1.png"  alt="">
-            <h3 class="segui">SEGUIMIENTO <img class="seguiimg" width="30" height="30" src="imagenes/Imagen4.png" alt=""></h3>
 
-            <ul class="cerrar">
-                <li><a href="#">CERRAR SESIÓN</a></li>
-            </ul>
-            <div class="segun">
-                <img height="187" src="imagenes/Imagen.png" alt="">
-            </div>
+<body>
+    <div class="total">
+        <div class="titu">
+            <h1>ETAPA PRODUCTIVA</h1>
         </div>
 
+        <div class="login-box">
 
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="#"><img class="uno" width="30" height="30"  src="imagenes/Imagen9.png" alt="">LEGALIZACIÓN </a></li>
-                <li><a href="#"><img class="dos" width="26" height="30" src="imagenes/Imagen5.png" alt="">CERTIFICACIÓN</a></li>
-                <li><a href="#"><img class="tres"  width="37" height="30" src="imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
-            </ul>  
-        </nav>
+            <div class="acce">
+                <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
+                <h1>INICIO SESION</h1>
+            </div>
 
-    </header>
-    
+            <form method="POST" name="form1" id="form1" action="" autocomplete="off">
+                <!--USERNAME INPUT-->
+                <div class="usu">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario">
+                </div>
+                <!--PASSWORD INPUT-->
+                <div class="pass">
+                    <label for="password">Clave</label>
+                    <input type="password" name="clave" id="password" placeholder="Ingrese Clave">
+                </div>
+                <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+
+            </form>
+
+         </div>
+    </div>
 </body>
 </html>
