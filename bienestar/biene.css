@@ -100,6 +100,7 @@ body
     .menu > li > a:hover
     {
         background-color:#fc7323;
+        border-radius: 8px;
     }
 
 /*contenido imagen de perfil*/
