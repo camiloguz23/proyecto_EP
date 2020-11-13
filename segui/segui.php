@@ -1,11 +1,16 @@
 <?php
-session_start();
- require_once('../php/connecion.php');
-$sql="SELECT * FROM tip_docu    ";
+
+    require_once('../php/connecion.php');
+?>
+<?php
+$sql="SELECT * FROM tip_docu";
+
+
 $query=mysqli_query($connection, $sql);
 $fila=mysqli_fetch_assoc($query);
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -146,38 +151,47 @@ $fila=mysqli_fetch_assoc($query);
                 </div>
             </div>
         </div>
+
         <div class="registroEmpre" id="registroEmpre">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
+
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
                 <label class ="label" for="">*Razón Social Empresa: </label>
-                <input class ="inputR" type="text">
+                <input class ="inputR" type="text" name="socialEm">
 
                 <label class ="label" for="">*Nit: </label>
-                <input class ="inputR" type="number">
+                <input class ="inputR" type="number" name="nit">
+
+                <label class ="label" for="">*Nombre De La Empresa: </label>
+                <input class ="inputR" type="text" name="nomEmpre">
 
                 <label class ="label" for="">*Dirección: </label>
-                <input class ="inputR" type="text">
+                <input class ="inputR" type="text" name="direccion">
 
                 <label class ="label" for="">*Nombre Jefe Inmediato: </label>
-                <input class ="inputR" type="text">
+                <input class ="inputR" type="text" name="nomJefe">
 
                 <label class ="label" for="">*Cargo: </label>
-                <input class ="inputR" type="text">
+                <input class ="inputR" type="text" name="cargo">
 
                 <label class ="label" for="">*Teléfono: </label>
-                <input class ="inputR" type="number">
+                <input class ="inputR" type="number" name="telefono" max=999999999>
 
                 <label class ="label" for="">*E-mail: </label>
-                <input class ="inputR" type="email">
+                <input class ="inputR" type="email" name="email">
 
                 <div class="botones">
+
                     <input class="botonForm" type="button" value="GUARDAR">
                     <input class="botonForm" type="button" value="CANCELAR"  id="cerrarEmpresa">
+
                 </div>
             </form>
         </div>
+
+
 
         <div class="registroLegal">
             <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
@@ -331,10 +345,13 @@ $fila=mysqli_fetch_assoc($query);
         <input type="text" name="tel" id="tel">
         <p></p>
         
-        <button id="btnguardar">Guardar</button>
+        <button id="btnguardar" >Guardar</button>
         </form>
   <script src="segui.js"></script>
-  <script type="text/javascript">
+  
+</body>
+</html>
+<script type="text/javascript">
     $(document).ready(function() {
         $('#btnguardar').click(function() {
             var datos=$('#frmajax').serialize();
@@ -344,7 +361,7 @@ $fila=mysqli_fetch_assoc($query);
                 type: "POST",
                 url: "../php/crear.php",
                 data: datos,
- success: function(a) {
+                    success: function(a) {
                     if(a==1){
                         alert('Se agrego correctamente');
                     }else{
@@ -358,7 +375,28 @@ $fila=mysqli_fetch_assoc($query);
 
     });
 </script>
-</body>
-</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#botonEM').click(function() {
+            var datosEmpre=$('#registroEmpre').serialize();
+            
+            
+            $.ajax({
+                type: "POST",
+                url: "jqueryEnviarEmpresa.php",
+                data: datosEmpre,
+                        success: function(b) {
+                    if(b==1){
+                        alert('Se agrego correctamente');
+                    }else{
+                        alert('Error al grabar');
+                    }
 
+                }
+            });
+            return false;
+        });
+
+    });
+</script>
 
