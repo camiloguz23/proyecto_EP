@@ -52,15 +52,14 @@ body {
     border-style: solid;
     border-width: 5px;
     text-align: center;
-    
 }
-
-
 .navegacion  ul  li {
     list-style: none;
     margin: auto;
-    margin-left: 0px;
-   
+    transition: .3s ease all;
+}
+.navegacion  ul  li:hover{
+    background-color: #fc7323;
 }
 
 .navegacion  ul  li {
@@ -71,24 +70,17 @@ body {
     margin: -5px 5px;
 }
 
-
 .menu  li {
     font-family: Verdana;
     display: inline-block;
-
 }
 
 .menu  li a {
     display: block;
-    padding: 15px 20px;
+    padding: 15px 10px;
     color: black;
     font-family: Verdana;
     text-decoration: none;
-}
-
-.menu > li > a:hover{
-    background-color: #fc7323;
-    
 }
 
 .cerrar {
@@ -99,7 +91,6 @@ body {
 
 .fondo{
     margin-top: 5px;
-    margin-left: 30px;
 }
 .naranja .perfil{
     position: absolute;
@@ -112,7 +103,6 @@ body {
     width: 20%;
 
 }
-
 
 .contenedor{
     position: absolute;
@@ -558,8 +548,6 @@ body {
     width: 80%;
     margin-left: 5%;
 }
-
-
 
 .label2{
     font-weight:600;

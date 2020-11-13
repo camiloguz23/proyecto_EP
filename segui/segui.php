@@ -28,9 +28,6 @@ $fila=mysqli_fetch_assoc($query);
 
             <img class="imagen"  height="90" width="90" src="../imagenes/Imagen1.png"  alt="">
             <h3 class="segui">SEGUIMIENTO <img class="seguiimg" width="30" height="30" src="../imagenes/Imagen4.png" alt=""></h3>
-
-          
-
             <ul class="cerrar">
                 <li><a href="#">CERRAR SESIÓN</a></li>
             </ul>
@@ -50,7 +47,7 @@ $fila=mysqli_fetch_assoc($query);
     </header>
     
     <div class="fondo">
-        <img width="1250" height="400" src="../imagenes/perfilSegui.jpeg" alt="">
+        <img width="1349" height="400" src="../imagenes/perfilSegui.jpeg" alt="">
     </div>
     <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
     <div class="contenedor">
