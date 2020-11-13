@@ -78,7 +78,7 @@
 
         <!--formato d evidencias  del aprendiz-->
     <div class="conteiner" id="evidencias">
-        <form class=""  action="" id="evidencias" name="evidencias" method="POST">
+        <form class=""  action="" id="evidencias" method="POST">
 
         <div class="forman">
             <div class="evi1">
@@ -119,7 +119,7 @@
        </form>
    </div>
    <div class="conteiner1">
-    <form class=""  action="" id="evidencias" name="evidencias" method="POST">
+    <form class=""  action="" id="evidenciaas2"  method="POST">
 
         <div class="formann">
             <div class="evi3">

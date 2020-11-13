@@ -1,0 +1,224 @@
+:root{
+
+    --primarycolor:#238276;
+    --secondcolor: rgb(89,182,72);
+    --trecolor: #fc7323;
+    --fontsize: 16px;
+    --fontfamily: helvetica;
+
+}
+
+html{
+
+    font-family: var(--fontfamily);
+    box-sizing: border-box;
+    font-size: var(--fontsize);
+
+
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.letrah{
+    display: flex;
+
+}
+.cerrarses{
+    order: 2;
+}
+
+.menu{
+    
+    border-top:3px solid var(--primarycolor);
+    border-bottom: 3px solid var(--primarycolor);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.menu a{
+    
+    text-decoration: none;
+    width: 50%;
+    margin: 0 50px;
+    color: black;
+}
+
+.imgusu img{
+
+    border-radius: 50%;
+    width: 70px;
+    background-color: var(--primarycolor);
+}
+
+.triangulo {
+
+    width: 0; 
+    height: 0; 
+    border-right: 200px solid var(--primarycolor);
+    border-top: 90px solid transparent;
+    border-bottom: 90px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    
+}
+
+.logosena img{
+
+    height: 100px;
+    position: absolute;
+    top: -55px;
+    right: -190px;
+
+}
+
+.contenedor{
+    width: 1263px;
+    height: 1000px;
+    background-color: rgb(218, 218, 218);
+    padding: 20px 10px;
+}
+
+.contenedor .fondoperfil{
+    
+    width: 1243px;
+    height: 250px;
+    background-color: white;
+    
+
+}
+
+.contenedor .fondoperfil .circulo {
+    width: 200px;
+    height: 200px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #e46702;
+    position: absolute;
+    margin-top: 150px;
+    left: 43%;
+}
+
+.contenedor .fondodatos{
+
+    width: 1100px;
+    height: 150px;
+    background-color: white;
+    transform: translate(70px, 150px);
+
+
+}
+
+.contenedor .fondodatos .bordedatos{
+
+    
+    height: 100px;
+    border: 3px solid gray;
+    width: 90%;
+    margin: auto;
+    transform: translateY(25px);
+    
+
+}
+
+.contenedor h2{
+    text-align: center;
+}
+
+.contenedor .editar{
+
+    position: relative;
+    border: none;
+    background-color: var(--primarycolor);
+    left: 90%;
+    top: 40px;
+    color: white;
+    width: 90px;
+    height: 30px;
+
+}
+
+.perfiles{
+
+    display: flex;
+    flex-direction: row;
+    background: none;
+    position: relative;
+    top: 300px;
+    width: 70%;
+    height: 100px;
+    border: 3px solid gray;
+    left: 130px;
+    padding: 10px 30px;
+    align-items: center;
+}
+
+.perfiles .cajitas{
+    width: 50%;
+    height: 90%; 
+    border: 3px solid #000000 ;
+    
+    
+}
+
+.segunda{
+    margin: 0 10px 0 10px;
+}
+
+.circulitos{
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    float: right;
+    margin: 10px 20px;
+     
+}
+.cajitas .circulitos p{
+
+    margin-top: 20px;
+
+}
+
+.parrafos{
+    text-align: center; 
+    margin-top: 35px; 
+    font-size: 30px;
+}
+
+
+
+footer{
+    background: rgb(35,133,118);
+    color: white;
+    width: 100%;
+}
+.f{
+    display: flex;
+}
+.logo{
+    width: 80px;
+    margin:10px 30px;
+    position: absolute;
+    top: 608px;
+}
+.letras{
+    margin: 10px;
+    padding: 5px;
+}
+.letras p{
+    padding: 4px 170px;
+    font-family: helvetica;
+    
+}
+
+
