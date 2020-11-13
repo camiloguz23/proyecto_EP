@@ -34,7 +34,7 @@
 
     <div class="contper">
             <div class="fondo">
-                <img width="1290" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
+                <img width="1349" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
             </div>
         <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
 
@@ -42,7 +42,10 @@
             <div class="date">
                 <ul class="datos">
                     <p>Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                    <p class="text2">NOMBRE: EDAD: TELEFONO: EMAIL:</p>
+                    <p class="text2">NOMBRE: </p>
+                    <p class="text2">EDAD:</p>
+                    <p class="text2"> TELEFONO: </p>
+                    <p class="text2">EMAIL:</p>
                 </ul>
             </div>
             <div class="edicion">
@@ -75,7 +78,7 @@
 
         <!--formato d evidencias  del aprendiz-->
     <div class="conteiner" id="evidencias">
-        <form  action="" id="evidencias" name="evidencias" method="POST">
+        <form class=""  action="" id="evidencias" name="evidencias" method="POST">
 
         <div class="forman">
             <div class="evi1">
@@ -115,7 +118,27 @@
            </div>
        </form>
    </div>
+   <div class="conteiner1">
+    <form class=""  action="" id="evidencias" name="evidencias" method="POST">
 
+        <div class="formann">
+            <div class="evi3">
+                <span class="" id="">Evidencia N°1 - - - - - - </span>  <input type="checkbox"> <br>
+                
+                <span class="" id="">Evidencia N°2 - - - - - - </span>  <input type="checkbox">  
+                    
+            </div>  
+
+        </div>
+           <div class="botoonnn">
+                <input type="date" id="fecha1">
+                <div class="funsin">
+                    <button id="cancelarr" type="submit">Cancelar</button>
+                    <button id="guardarr" type="submit">Guardar</button>
+                </div>
+           </div>
+       </form>
+   </div>
     </div>
     <footer class="pie">
         <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
@@ -127,7 +150,5 @@
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
-   
-    
 </body>
 </html>

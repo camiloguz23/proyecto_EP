@@ -3,7 +3,21 @@
         margin: 0%;
     }
 
+    /*ocultar*/
+    
+    .seguimiento
+    {
+        visibility: hidden;
+    }
+    .conteiner
+    {
+        visibility: hidden;
+    }
 
+    .conteiner1
+    {
+        visibility: hidden;
+    }
     body 
     {
         padding: 0%;
@@ -106,7 +120,6 @@
     
     .contper
     {
-        
         height: auto;
     }
     .fondo
@@ -308,8 +321,7 @@
         width: 94%;
         margin-left: 3%;
         height: 760px;
-        position: absolute;
-        
+        position: absolute; 
     }
     
     .foor
@@ -455,6 +467,85 @@
         transform: translatey(3px);
     }
     .funsi
+    {
+        display: flex;
+    }
+    button{
+        margin-left: 14%;
+        margin-top: 15px;
+        width: 30%;
+        height: 40px;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color:2px solid thistle ;
+        font-family: Verdana;
+    }
+    button:hover{
+        background:rgb(240, 236, 236);
+        transform: translatey(3px);
+        cursor: pointer;
+    }
+
+    .conteiner1
+    {
+        border: 2px solid black;
+        width: 90%;
+        height:auto;
+        border-radius: 15px;
+        margin-left: 6%;
+        position: absolute; 
+        background-color: #ffffff; 
+        
+    }
+    .formann
+    {
+        width: 100%;
+        margin-top: 5%;
+        height: 280px;
+        display: flex;
+    }
+    .evi3
+    {
+        width: 50%;
+    }
+    
+    .evi3 > span{
+        margin-left: 17%;
+        font-size: 23px;
+    }
+    
+    .evi3 input
+    {
+        cursor: pointer;
+    }
+    .botoonnn
+    {
+        margin-left: 50%;
+        width: 40%;
+        height: 140px;
+        border-radius: 20px;
+        margin-top: -10%;
+        margin-bottom: 2%;
+    }
+
+    .botoonnn input
+    {
+        cursor: pointer;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 22%;
+        width: 60%;
+        height: 30px;
+        background-color: white;
+    }
+
+    .botoonnn input:hover
+    {
+        background-color: rgb(240, 236, 236);
+        transform: translatey(3px);
+    }
+    .funsin
     {
         display: flex;
     }
