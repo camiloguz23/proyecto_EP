@@ -84,8 +84,6 @@ body {
     color: black;
     font-family: Verdana;
     text-decoration: none;
-
-
 }
 
 .menu > li > a:hover{
@@ -306,6 +304,25 @@ body {
 }
 
 /* LEGALIZACIÓN --- HECHO POR: Daniela Nieto*/
+
+/*------OCULTOS-------*/
+.formLegalizar{
+    visibility: hidden;
+}
+
+.informa{
+    display: none;
+}
+
+.registroEmpre{
+    display: none;
+}
+
+.registroLegal{
+    display: none;
+}
+/*--------FIN--------*/
+
 .formLegalizar{
 
     /*GRID = Trabajar con grid */
@@ -322,12 +339,13 @@ body {
     margin-top: 3%;
 }
 
-.buscardor{
+.buscador{
    background-color: #ffffff;
    border-radius: 10px;
    margin-top: 1%;
    width: 80%;
    height: 25%;
+    
 }
 
 .buscarDocu{
@@ -361,15 +379,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 10px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.76);
+
 }
 
 .dato{
     margin-top: -15px;
     padding: 5px;
-}
-
-.datosApre, .datosForma{
-    border: 2px solid rgba(0, 0, 0, 0.76);
 }
 
 .label{
@@ -451,3 +467,141 @@ body {
     text-align: center;
 }
 
+
+/* CERTIFICACIÓN */
+
+/*------OCULTOS-------*/
+.formCertificar{
+    visibility: hidden;
+}
+.buscador2{
+    display: none;
+}
+.datosMostrar2, .cargaArchi{
+    display: none;
+}
+/*--------FIN--------*/
+
+.formCertificar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    background:#fc7323;
+    color: black;
+    padding: 2% 4% 3% 3%;
+    margin-left: 20%;
+    position: relative;
+    margin-top: -16%;
+    height: 2%;
+}
+
+.informa2{
+    background-color: #fff;
+    width: 90.7%;
+    padding: 2px 4px;
+    border-radius: 15px;
+    height: 80%;
+    margin-left: 5%;
+    grid-column: span 2;
+}
+.buscador2{
+    text-align: center;
+    margin-right: 2%;
+    height: 130px;
+}
+.subTitulo2{
+    padding: 4px 10px;
+    font-size: 19px;
+    text-align: center;
+    margin-left: 5%;
+}
+.inputE{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    width:50%;
+    margin-left: 5px;
+    margin-top: -20px;
+}
+.boton2{
+    width: 25%;
+    height: 35%;
+    margin-top: -4%;
+    margin-left: 58%;
+}
+.datosMostrar2{
+    background-color: #fff;
+    width: 94%;
+    padding: 10px 4px;
+    border-radius: 15px;
+    height: 100%;
+    margin-top: -3%;
+    margin-left: 10%;
+}
+.datosApre2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.76);
+    width: 80%;
+    margin-left: 5%;
+}
+
+.datosForma2{
+    padding: 20px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.76);
+    width: 80%;
+    margin-left: 5%;
+}
+
+
+
+.label2{
+    font-weight:600;
+    font-size: 13px;
+    padding: 10px 10px;
+}
+
+.labelE{
+    font-weight:600;
+    font-size: 13px;
+    padding: 10px 10px;
+    grid-column: 1;
+    color: crimson;
+}
+.inputC{
+    margin-left: 5%;
+}
+
+.cargaArchi{
+    background-color: #fff;
+    width: 91%;
+    padding: 10px 6px;
+    border-radius: 15px;
+    height: 100%;
+    margin-top: -3%;
+}
+.botones2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10%;
+    margin-left: 35%;
+    padding: 5px 5px;
+    grid-column: span 2;
+}
+.botonForm2{
+    height: 35px;
+    width: 95px;
+    background: rgb(67, 70, 206);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+.botonForm2:hover {
+    background: rgb(74, 160, 209);
+}
