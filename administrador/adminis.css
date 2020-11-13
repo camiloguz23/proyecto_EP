@@ -22,7 +22,7 @@ body {
     font-size: 25px;
     margin-left: 13%;
     margin-top: 1%;
-    color: rgb(65, 65, 66);
+    color: rgb(25, 130, 118);
 }
 
 .imagen{
@@ -42,7 +42,7 @@ body {
 }
 .segu{
     position: absolute;
-    margin-left: 85.3%;
+    margin-left: 84.2%;
     z-index: 1;
     margin-top: -1.9%;
 }
@@ -54,7 +54,7 @@ body {
     position: absolute;
     margin-top: 5%;
     margin-left: 16px;
-    border-color: rgb(97, 0, 16) transparent;
+    border-color: #fc7323 transparent;
     border-style: solid;
     border-width: 5px;
     text-align: center;
@@ -63,7 +63,7 @@ body {
 .cerrar li a{
     font-family: Verdana;
     font-size: 15px;
-    color: #5d57bb;
+    color: rgb(25, 130, 118);
 }
 .cerrar {
     position: absolute;
@@ -93,13 +93,12 @@ body {
 .menu  li a {
     display: block;
     padding: 15px 20px;
-    color: rgb(61, 61, 61);
+    color: black;
     font-family: Verdana;
     text-decoration: none;
 }
 .fondo{
     margin-top: 5px;
-    margin-left: 45px;
 }
 .naranja .perfil{
     position: absolute;
@@ -158,7 +157,7 @@ body {
     margin-top: 29%;
     color: rgb(255, 255, 255);
     font-size: 15px;
-    background: #26287a;
+    background: rgb(89, 181, 72);
     top: 410px;
     margin-left: 1000px;
     border-radius: 20px;
@@ -166,7 +165,7 @@ body {
 }
 
 .button:hover{
-    background-color: rgb(100, 8, 8);
+    background-color: rgb(25, 130, 118);
     color: white;
   
 }
@@ -192,15 +191,15 @@ body {
     top: 490px;
     margin-left: 810px;
     border-radius: 20px;
-    border-color: #4d0505 transparent;
+    border-color: rgb(25, 130, 118) transparent;
     border-style: solid;
     border-width: 2px;
     }
     
 .button2:hover{
        
-        background-color: rgb(92, 17, 21);
-        color: white;
+    background-color: rgb(25, 130, 118);
+    color: white;
 }
 .button3 .butdos{
     margin-right: 15px;
@@ -224,14 +223,14 @@ body {
         top: 470px;
         margin-left: 520px;
         border-radius: 20px;
-        border-color: #4d0505 transparent;
+        border-color: rgb(25, 130, 118) transparent;
         border-style: solid;
         border-width: 2px;
     }
     
     .button3:hover {
         color: white;
-        background-color: rgb(92, 17, 21);
+        background-color: rgb(25, 130, 118);
     }
     .button4 .buttres{
         margin-right: 15px;
@@ -255,26 +254,26 @@ body {
         top: 470px;
         margin-left: -550px;
         border-radius: 20px;
-        border-color: #4d0505 transparent;
+        border-color: rgb(25, 130, 118) transparent;
         border-style: solid;
         border-width: 2px;
     }
     
     .button4:hover{
-        background-color: rgb(92, 17, 21);
+        background-color: rgb(25, 130, 118);
         color: white;
         
     }
 
 .pie {
-    background-color: #420b0b;
+    background-color: #fc7323;
     margin-top:600px;
 }
 .pie{
     position: relative;
     width: 100%;
     height: 75px;
-    background-color: #460d0d;
+    background-color:#fc7323;
     margin-top:600px;
     display: flex;
     align-items: flex-end;
