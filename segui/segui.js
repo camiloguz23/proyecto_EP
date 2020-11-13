@@ -8,6 +8,7 @@ const formularioEmpresa = document.querySelector(".registroEmpre")
 const formularioLegalizacion = document.querySelector(".registroLegal")
 const btnaprendiz = document.querySelector("#tres")
 const registroAprendiz = document.getElementById("registroAprendiz")
+const btnLEgalizacion = document.getElementById("uno");
 
 
 // FUNCIONES 
