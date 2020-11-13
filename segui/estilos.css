@@ -305,22 +305,7 @@ body {
 
 /* LEGALIZACIÓN --- HECHO POR: Daniela Nieto*/
 
-/*------OCULTOS-------*/
-.formLegalizar{
-    visibility: hidden;
-}
 
-.informa{
-    display: none;
-}
-
-.registroEmpre{
-    display: none;
-}
-
-.registroLegal{
-    display: none;
-}
 /*--------FIN--------*/
 
 .formLegalizar{
@@ -329,7 +314,7 @@ body {
     display: grid;
     /*Definir numero de columnas*/
     grid-template-columns: 1fr 1fr;
-    gap: 5x;
+    gap: 5px;
     width: 60%;
     background:#fc7323;
     color: black;
