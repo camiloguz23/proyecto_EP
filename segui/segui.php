@@ -1,15 +1,20 @@
 <?php
 
     require_once('../php/connecion.php');
+
 ?>
 <?php
 $sql="SELECT * FROM tip_docu";
-
-
 $query=mysqli_query($connection, $sql);
 $fila=mysqli_fetch_assoc($query);
-
 ?>
+<?php
+
+$sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
+$query_ciudad=mysqli_query($connection, $sql_ciudad);
+$fila_ciudad=mysqli_fetch_assoc($query_ciudad);
+?>
+
 
 
 <!DOCTYPE html>
@@ -181,6 +186,16 @@ $fila=mysqli_fetch_assoc($query);
 
                 <label class ="label" for="">*E-mail: </label>
                 <input class ="inputR" type="email" name="email">
+                <label>Ciudad:</label>
+                <p></p>
+                <select name="tipdocu" id="tipdocu">
+                   <?php
+                        foreach($query_ciudad as $tip_ciudad):?>
+                        <option value="<?php echo $tip_ciudad['id'] ?> "><?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
+                        <?php
+                        endforeach; 
+                        ?>
+                </select>
 
                 <div class="botones">
 

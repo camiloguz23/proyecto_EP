@@ -312,11 +312,11 @@ body {
 }*/
 
 #formularioDocu {
-    display: none;
+    display: block;
 }
 
 .registroEmpre{
-    display: none;
+    display: block;
 }
 
 
