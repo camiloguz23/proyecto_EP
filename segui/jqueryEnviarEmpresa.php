@@ -12,7 +12,7 @@
     $ciudad = $_POST["id_ciu"];
 
     
-    $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, nom_jef_inme, cargo, telefono, correo,id, razon_social_empresa) 
+    $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, nom_jef_inme, cargo, telefono, correo, id, razon_social_empresa) 
     VALUES ('$nitEM','$nomEM','$direcEM','$nomJefInme','$cargo','$telefono','$correo','$ciudad','$socialEm')";
 
     echo mysqli_query($connection,$consul); 
