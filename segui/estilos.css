@@ -310,7 +310,9 @@ body {
     visibility: hidden;
 }*/
 
-
+#formularioDocu {
+    display: none;
+}
 
 .registroEmpre{
     display: none;
