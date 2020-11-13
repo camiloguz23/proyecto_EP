@@ -1,15 +1,20 @@
 <?php
 
     require_once('../php/connecion.php');
+
 ?>
 <?php
 $sql="SELECT * FROM tip_docu";
-
-
 $query=mysqli_query($connection, $sql);
 $fila=mysqli_fetch_assoc($query);
-
 ?>
+<?php
+
+$sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
+$query_ciudad=mysqli_query($connection, $sql_ciudad);
+$fila_ciudad=mysqli_fetch_assoc($query_ciudad);
+?>
+
 
 
 <!DOCTYPE html>
@@ -153,7 +158,7 @@ $fila=mysqli_fetch_assoc($query);
             </div>
         </div>
 
-        <div class="registroEmpre" id="registroEmpre">
+        <div class="registroEmpre" id="registroEmpreS">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
 
 
@@ -182,11 +187,21 @@ $fila=mysqli_fetch_assoc($query);
 
                 <label class ="label" for="">*E-mail: </label>
                 <input class ="inputR" type="email" name="email">
+                <label>Ciudad:</label>
+                <p></p>
+                <select name="id_ciu" id="id_ciu">
+                   <?php
+                        foreach($query_ciudad as $tip_ciudad):?>
+                        <option  value="<?php echo $tip_ciudad['id'] ?> "><?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
+                        <?php
+                        endforeach; 
+                        ?>
+                </select>
 
                 <div class="botones">
 
-                    <input class="botonForm" type="button" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR"  id="cerrarEmpresa">
+                    <button class="botonForm" id="botonEM">Guardar</button>
+                    <input class="botonForm" type="button" value="CERRAR"  id="cerrarEmpresa">
 
                 </div>
             </form>
