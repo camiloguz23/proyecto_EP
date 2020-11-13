@@ -9,6 +9,8 @@ const formularioLegalizacion = document.querySelector(".registroLegal")
 const btnaprendiz = document.querySelector("#tres")
 const registroAprendiz = document.getElementById("registroAprendiz")
 const btnLEgalizacion = document.getElementById("uno");
+const formularioDocu = document.getElementById("formularioDocu")
+const cerrarEmpresa = document.getElementById("cerrarEmpresa")
 
 
 // FUNCIONES 
@@ -45,6 +47,24 @@ function crear(e) {
 
 }
 
+function mostrar(e) {
+    e.preventDefault();
+    formularioDocu.style.display = "block";
+    console.log(formularioDocu);
+
+}
+
+function ocultarEmpresa(e) {
+    e.preventDefault();
+    console.log(formularioEmpresa)
+    formularioEmpresa.style.display = "none";
+    console.log(formularioEmpresa)
+}
+
+function ocultarLegalizacion(e) {
+    e.preventDefault();
+    formularioDocu.style.display = "none"
+}
 
 
 // EVENTOS 
@@ -52,3 +72,6 @@ btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
 boton.addEventListener("click", consulta)
 btnaprendiz.addEventListener("click", crear)
+btnLEgalizacion.addEventListener("click", mostrar)
+cerrarEmpresa.addEventListener("click", ocultarEmpresa)
+formularioDocu.addEventListener("click", ocultarLegalizacion)

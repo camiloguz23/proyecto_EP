@@ -74,7 +74,7 @@ $fila=mysqli_fetch_assoc($query);
           </div>
     </footer>
     <!--FORMULARIOS-->
-    <div id="">
+    <div id="formularioDocu">
         <div class="formLegalizar"> <!--todo el formulario-->
             <div class="buscardor">
                 <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3> 
@@ -174,7 +174,7 @@ $fila=mysqli_fetch_assoc($query);
 
                 <div class="botones">
                     <input class="botonForm" type="button" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR">
+                    <input class="botonForm" type="button" value="CANCELAR"  id="cerrarEmpresa">
                 </div>
             </form>
         </div>
