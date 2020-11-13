@@ -368,6 +368,10 @@ body {
     margin-left: 58%;
 }
 
+.registroEmpre, .registroLegal {
+    display: none;
+}
+
 .informa, .registroEmpre, .registroLegal{
     background-color: #fff;
     width: 80%;

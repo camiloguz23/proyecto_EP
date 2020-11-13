@@ -68,63 +68,70 @@
         <div class="buscardor">
             <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
             <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
-                <input class="inputB" type="number">
+                <input class="inputB" type="number" id="documento">
                 <div class="boton">
                     <a href="" id= "boton"><img class= "boton" src="../imagenes/Imagen3.png" height="50px" width="50px" ></a>
                 </div>
             </form>
         </div>
         <div class="informa">
-            <div class="datosMostrar">
-                <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-                <div class="datosApre">
-                    <div class="dato">
-                        <label class ="label" for="">NOMBRE: </label>
-                        <!-- NO BORRAR LAS CLASES -->
-                        <label class ="datos" for="">$bdlsls</label>
-                    </div>
-                    <div class="dato">
-                        <label class ="label" for="">IDENTIFICACIÓN: </label>
-                        <label class ="datos" for="">$bdlslsls</label>
-                    </div>
-                    <div class="dato">
-                        <label class ="label" for="">TELEFONO: </label>
-                        <label class ="datos" for="">$bdlslsl</label>
-                    </div>
-                    <div class="dato">
-                        <label class ="label" for="">E-MAIL: </label>
-                        <label class ="datos" for="">$bd</label>
+            <div id="informa">
+                <div class="datosMostrar">
+                    <h3 class="subTitulo">*DATOS APRENDIZ</h3>
+                    <div class="datosApre">
+                        <div class="dato">
+                            <label class ="label" for="">NOMBRE: </label>
+                            <!-- NO BORRAR LAS CLASES -->
+                            <label class ="datos" for=""></label>
+                        </div>
+                        <div class="dato">
+                            <label class ="label" for="">IDENTIFICACIÓN: </label>
+                            <label class ="datos" for=""></label>
+                        </div>
+                        <div class="dato">
+                            <label class ="label" for="">TELEFONO: </label>
+                            <label class ="datos" for=""></label>
+                        </div>
+                        <div class="dato">
+                            <label class ="label" for="">E-MAIL: </label>
+                            <label class ="datos" for=""></label>
+                        </div>
+                        <div class="dato">
+                            <label class ="label" for="">ESTADO: </label>
+                            <label class ="datos" for=""></label>
+                        </div> 
+                    </div><br>
+    
+                    <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
+    
+                    <div class="datosForma">
+                        <div class="dato">
+                            <label class ="label" for="">REGIONAL: </label>
+                            <label class ="datos" for="">$bd</label>
+                        </div>
+    
+                        <div class="dato">
+                            <label class ="label" for="">NO.FICHA: </label>
+                            <label class ="datos" for="">$bd</label>
+                        </div>
+    
+                        <div class="dato">
+                            <label class ="label" for="">CENTRO DE FORMACIÓN: </label>
+                            <label class ="datos" for="">$bd</label>
+                        </div>
+    
+                        <div class="dato">
+                            <label class ="label" for="">PROGRAMA DE FORMACIÓN: </label>
+                            <label class ="datos" for="">$bd</label>
+                        </div>
                     </div>
                     
-                </div><br>
-
-                <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
-
-                <div class="datosForma">
-                    <div class="dato">
-                        <label class ="label" for="">REGIONAL: </label>
-                        <label class ="datos" for="">$bd</label>
-                    </div>
-
-                    <div class="dato">
-                        <label class ="label" for="">NO.FICHA: </label>
-                        <label class ="datos" for="">$bd</label>
-                    </div>
-
-                    <div class="dato">
-                        <label class ="label" for="">CENTRO DE FORMACIÓN: </label>
-                        <label class ="datos" for="">$bd</label>
-                    </div>
-
-                    <div class="dato">
-                        <label class ="label" for="">PROGRAMA DE FORMACIÓN: </label>
-                        <label class ="datos" for="">$bd</label>
-                    </div>
                 </div>
-                <div class="botones">
-                    <input class="botonForm" type="button" value="Registar Empresa">
-                    <input class="botonForm" type="button" value="Legalizar">
-                </div>
+            </div>
+           
+            <div class="botones">
+                <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
+                <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
             </div>
         </div>
         <div class="registroEmpre">
@@ -218,12 +225,14 @@
                     <label  class ="inputC"for="">$bdlslslshjgh</label>
                 </div>
 
+
                 <div class="dato2">
                     <label  class="labelE" for="">ESTADO E.P: </label>
                     <label  class ="inputC" for="">$bdlslsls</label>
                 </div>
 
             </div><br>
+
 
             <h3 class="subTitulo">*DATOS LEGALIZACIÓN</h3>
             <div class="datosForma2">
@@ -273,7 +282,7 @@
             </form>  
         </div>
     </div>
-
+  <script src="segui.js"></script>
 </body>
 </html>
 
