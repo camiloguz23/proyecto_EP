@@ -52,8 +52,11 @@ $fila=mysqli_fetch_assoc($query);
     <div class="contenedor">
         <div class="date">
             <ul class="datos">
-                <p>Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                <p class="text2">NOMBRE: EDAD: TELEFONO: EMAIL:</p>
+            <p>Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
+            <p class="text2">NOMBRE: </p>
+            <p class="text2">EDAD:</p>
+            <p class="text2"> TELEFONO: </p>
+            <p class="text2">EMAIL:</p>   
             </ul>
         </div>
     </div>
@@ -73,7 +76,7 @@ $fila=mysqli_fetch_assoc($query);
     <!--FORMULARIOS-->
     <div id="">
         <div class="formLegalizar"> <!--todo el formulario-->
-            <div class="buscardor">
+            <div class="buscador">
                 <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3> 
                 <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">  <!--todo el formulario-->
                     <input class="inputB" type="number" id="documento">
@@ -89,7 +92,6 @@ $fila=mysqli_fetch_assoc($query);
                         <div class="datosApre">
                             <div class="dato">
                                 <label class ="label" for="">NOMBRE: </label>
-                                <!-- NO BORRAR LAS CLASES -->
                                 <label class ="datos" for=""></label>
                             </div>
                             <div class="dato">
@@ -105,7 +107,7 @@ $fila=mysqli_fetch_assoc($query);
                                 <label class ="datos" for=""></label>
                             </div>
                             <div class="dato">
-                                <label class ="label" for="">ESTADO: </label>
+                                <label class ="label" id="Estado" for="">ESTADO: </label>
                                 <label class ="datos" for=""></label>
                             </div> 
                         </div><br>
@@ -133,7 +135,6 @@ $fila=mysqli_fetch_assoc($query);
                                 <label class ="datos" for="">$bd</label>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             
@@ -144,7 +145,7 @@ $fila=mysqli_fetch_assoc($query);
             </div>
         </div>
         <div class="registroEmpre" id="registroEmpre">
-            <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
+            <form method="POST" id="registroEmpre"  autocomplete="off">
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
@@ -233,15 +234,12 @@ $fila=mysqli_fetch_assoc($query);
                     <label  class="label2" for="">IDENTIFICACIÓN: </label>
                     <label  class ="inputC"for="">$bdlslslshjgh</label>
                 </div>
-
-
                 <div class="dato2">
                     <label  class="labelE" for="">ESTADO E.P: </label>
                     <label  class ="inputC" for="">$bdlslsls</label>
                 </div>
 
-            </div><br>
-
+            </div>
 
             <h3 class="subTitulo">*DATOS LEGALIZACIÓN</h3>
             <div class="datosForma2">
@@ -255,7 +253,7 @@ $fila=mysqli_fetch_assoc($query);
         </div>
 
         <div class="cargaArchi">
-            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off">
+            <form method="POST" id="cargaArchi"  autocomplete="off">
                 <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
                 <Label class ="label"><input type="checkbox" name="" id="">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL DIA</Label>
                 
@@ -283,7 +281,6 @@ $fila=mysqli_fetch_assoc($query);
                 <input class="archivo" type="file" name="file">
                 
                 <div class="botones2">
-                    
                     <input class="botonForm2" type="button" value="GUARDAR">
                     <input class="botonForm2" type="button" value="CERRAR">
                 </div>
@@ -293,43 +290,46 @@ $fila=mysqli_fetch_assoc($query);
         
         </div>
     </div>
-    <div id="registroAprendiz">
+    <div id="registroAprendiz" class= "registroAprendiz">
+        <div class="formAprendiz">
             <form id="frmajax" method="POST">
-                <label>Tipo Documento:</label>
-                <p></p>
-                <select name="tipdocu" id="tipdocu">
-                   <?php
-                        foreach($query as $tip):?>
-                        <option value="<?php echo $tip['id_tip_docu'] ?> "><?php echo $tip['nom_docu'] ?></option>
+                <h1 class="tituloForm">REGISTRO DE APRENDIZ</h1>
+    
+                <label  class ="label" >*Tipo Documento:</label>
+                    <select class = "seleccionTipo" name="tipdocu" id="tipdocu">
                         <?php
-                        endforeach; 
-                        ?>
-                </select>
-        
-                <p></p>
-                <label>Documento</label>
-                <p></p>
-        <input type="number" name="docu" id="docu">
-        <p></p>
-        <label>Nombres Completos:</label>
-        <p></p>
-        <input type="text" name="nom" id="nom">
-        <p></p>
-        <label>Apellidos Completos:</label>
-        <p></p>
-        <input type="text" name="ape" id="ape">
-        <p></p>
-        <label>Email Aprendiz:</label>
-        <p></p>
-        <input type="text" name="email" id="email">
-        <p></p>
-        <label>Telefono Aprendiz:</label>
-        <p></p>
-        <input type="text" name="tel" id="tel">
-        <p></p>
-        
-        <button id="btnguardar">Guardar</button>
-        </form>
+                                foreach($query as $tip):?>
+                                <option value="<?php echo $tip['id_tip_docu'] ?> "><?php echo $tip['nom_docu'] ?></option>
+                                <?php
+                                endforeach; 
+                                ?>
+                    </select>
+                    
+                    <label  class ="label">*Documento</label>
+                    <input type="number" class ="inputR" name="docu" id="docu">
+            
+                    <label class ="label">*Nombres Completos:</label>
+                    <input type="text"  class ="inputR"name="nom" id="nom">
+                    
+                    <label class ="label">*Apellidos Completos:</label>
+                    <input type="text" class ="inputR" name="ape" id="ape">
+                    
+                    <label class ="label">*Email Aprendiz:</label>
+                    <input type="text" class ="inputR" name="email" id="email">
+                    
+                    <label class ="label">*Telefono Aprendiz:</label>
+                    <input type="text" class ="inputR" name="tel" id="tel">
+               
+
+                <div class="botones">
+                    <button id="btnguardar" class="botonForm2">GUARDAR</button>
+                    <button id="" class="botonForm2">CANCELAR</button>
+                </div>
+
+            </form>
+        </div>
+    </div>     
+
   <script src="segui.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {

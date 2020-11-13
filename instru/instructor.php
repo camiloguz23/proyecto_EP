@@ -34,7 +34,7 @@
 
     <div class="contper">
             <div class="fondo">
-                <img width="1349" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
+                <img width="1300" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
             </div>
         <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
 
@@ -53,10 +53,10 @@
             </div> 
         </div>
         
-            <div class="opcion">
-                <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset="">SEGUIMIENTO DE EVIDENCIAS</a>
-                <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
-            </div>
+        <div class="opcion">
+            <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset="">SEGUIMIENTO DE EVIDENCIAS</a>
+            <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
+        </div>
     </div>
 
     <div class="seguimiento">
