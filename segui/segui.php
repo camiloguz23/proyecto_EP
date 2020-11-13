@@ -58,7 +58,8 @@ $fila=mysqli_fetch_assoc($query);
         <div class="date">
             <ul class="datos">
                 <p>Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                <p class="text2">NOMBRE: EDAD: TELEFONO: EMAIL:</p>
+                <p class="text2">NOMBRE:<?php echo $_SESSION['']; ?> EDAD:<?php $_SESSION['']; ?> TELEFONO:<?php ?> EMAIL:<?php ?></p>
+
             </ul>
         </div>
     </div>
@@ -171,7 +172,7 @@ $fila=mysqli_fetch_assoc($query);
                 <input class ="inputR" type="text" name="cargo">
 
                 <label class ="label" for="">*Teléfono: </label>
-                <input class ="inputR" type="number" name="telefono" max=999999999>
+                <input class ="inputR" type="number" name="telefono" >
 
                 <label class ="label" for="">*E-mail: </label>
                 <input class ="inputR" type="email" name="email">
@@ -343,6 +344,8 @@ $fila=mysqli_fetch_assoc($query);
   
 </body>
 </html>
+
+<!-------------------------------Jquery--------------------------->
 <script type="text/javascript">
     $(document).ready(function() {
         $('#btnguardar').click(function() {
