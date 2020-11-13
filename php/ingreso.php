@@ -16,7 +16,7 @@
               
 
                         if($fila){
-                            $_SESSION['id_tip_usu'] = $fila['id_tip_user'];
+                            $_SESSION['id_tip_usu'] = $fila['id_tip_usu'];
                     
                             $_SESSION['usuario'] = $fila['usuario'];
                            
