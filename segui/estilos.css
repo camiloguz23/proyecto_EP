@@ -295,22 +295,18 @@ body {
 
 /* LEGALIZACIÓN --- HECHO POR: Daniela Nieto*/
 
-/*------OCULTOS-------*/
+/*------OCULTOS-------
 .formLegalizar{
     visibility: hidden;
-}
+}*/
 
-.informa{
-    display: none;
-}
+
 
 .registroEmpre{
     display: none;
 }
 
-.registroLegal{
-    display: none;
-}
+
 /*--------FIN--------*/
 
 .formLegalizar{
