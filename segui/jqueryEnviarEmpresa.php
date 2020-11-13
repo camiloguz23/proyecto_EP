@@ -11,7 +11,7 @@
     $correo = $_POST['email'];
     $ciudad = $_POST["id_ciu"];
 
-    $validar = "SELECT * from empresa"
+    $validar = "SELECT * from empresa";
 
 
     $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, nom_jef_inme, cargo, telefono, correo,id, razon_social_empresa) 
