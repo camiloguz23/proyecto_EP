@@ -306,6 +306,20 @@ body {
 /* LEGALIZACIÓN --- HECHO POR: Daniela Nieto*/
 
 
+/*------OCULTOS-------
+.formLegalizar{
+    visibility: hidden;
+}*/
+
+#formularioDocu {
+    display: none;
+}
+
+.registroEmpre{
+    display: none;
+}
+
+
 /*--------FIN--------*/
 
 .formLegalizar{
