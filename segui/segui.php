@@ -157,7 +157,7 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
             </div>
         </div>
 
-        <div class="registroEmpre" id="registroEmpre">
+        <div class="registroEmpre" id="registroEmpreS">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
 
 
@@ -182,16 +182,16 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
                 <input class ="inputR" type="text" name="cargo">
 
                 <label class ="label" for="">*Teléfono: </label>
-                <input class ="inputR" type="number" name="telefono" max=999999999>
+                <input class ="inputR" type="number" name="telefono" >
 
                 <label class ="label" for="">*E-mail: </label>
                 <input class ="inputR" type="email" name="email">
                 <label>Ciudad:</label>
                 <p></p>
-                <select name="tipdocu" id="tipdocu">
+                <select name="id_ciu" id="id_ciu">
                    <?php
                         foreach($query_ciudad as $tip_ciudad):?>
-                        <option value="<?php echo $tip_ciudad['id'] ?> "><?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
+                        <option  value="<?php echo $tip_ciudad['id'] ?> "><?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
                         <?php
                         endforeach; 
                         ?>
@@ -199,8 +199,8 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
 
                 <div class="botones">
 
-                    <input class="botonForm" type="button" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR"  id="cerrarEmpresa">
+                    <button class="botonForm" id="botonEM">Guardar</button>
+                    <input class="botonForm" type="button" value="CERRAR"  id="cerrarEmpresa">
 
                 </div>
             </form>
