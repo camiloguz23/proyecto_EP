@@ -1,8 +1,11 @@
 <?php
+
     require_once('../php/connecion.php');
 ?>
 <?php
 $sql="SELECT * FROM tip_docu";
+
+
 $query=mysqli_query($connection, $sql);
 $fila=mysqli_fetch_assoc($query);
 
@@ -42,8 +45,8 @@ $fila=mysqli_fetch_assoc($query);
 
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#"><img class="uno" width="30" height="30"  src="../imagenes/Imagen9.png" alt="">LEGALIZACIÓN </a></li>
-                <li><a href="#"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png" alt="">CERTIFICACIÓN</a></li>
+                <li><a href="#" id="uno"><img class="uno" width="30" height="30"  src="../imagenes/Imagen9.png" alt="">LEGALIZACIÓN </a></li>
+                <li><a href="#" id="dos"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png" alt="">CERTIFICACIÓN</a></li>
                 <li id="tres"><a href="#"><img class="tres"  width="37" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
             </ul>  
         </nav>
@@ -76,79 +79,82 @@ $fila=mysqli_fetch_assoc($query);
           </div>
     </footer>
     <!--FORMULARIOS-->
-    <div class="formLegalizar"> <!--todo el formulario-->
-        <div class="buscardor">
-            <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3> 
-            <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">  <!--todo el formulario-->
-                <input class="inputB" type="number" id="documento">
-                <div class="boton">
-                    <a href="#" id= "boton"><img class= "boton" src="../imagenes/Imagen3.png" height="50px" width="50px" ></a>
-                </div>
-            </form>
-        </div>
-        <div class="informa">
-            <div id="informa">
-                <div class="datosMostrar">
-                    <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-                    <div class="datosApre">
-                        <div class="dato">
-                            <label class ="label" for="">NOMBRE: </label>
-                            <!-- NO BORRAR LAS CLASES -->
-                            <label class ="datos" for=""></label>
-                        </div>
-                        <div class="dato">
-                            <label class ="label" for="">IDENTIFICACIÓN: </label>
-                            <label class ="datos" for=""></label>
-                        </div>
-                        <div class="dato">
-                            <label class ="label" for="">TELEFONO: </label>
-                            <label class ="datos" for=""></label>
-                        </div>
-                        <div class="dato">
-                            <label class ="label" for="">E-MAIL: </label>
-                            <label class ="datos" for=""></label>
-                        </div>
-                        <div class="dato">
-                            <label class ="label" for="">ESTADO: </label>
-                            <label class ="datos" for=""></label>
-                        </div> 
-                    </div><br>
-    
-                    <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
-    
-                    <div class="datosForma">
-                        <div class="dato">
-                            <label class ="label" for="">REGIONAL: </label>
-                            <label class ="datos" for="">$bd</label>
-                        </div>
-    
-                        <div class="dato">
-                            <label class ="label" for="">NO.FICHA: </label>
-                            <label class ="datos" for="">$bd</label>
-                        </div>
-    
-                        <div class="dato">
-                            <label class ="label" for="">CENTRO DE FORMACIÓN: </label>
-                            <label class ="datos" for="">$bd</label>
-                        </div>
-    
-                        <div class="dato">
-                            <label class ="label" for="">PROGRAMA DE FORMACIÓN: </label>
-                            <label class ="datos" for="">$bd</label>
-                        </div>
+    <div id="formularioDocu">
+        <div class="formLegalizar"> <!--todo el formulario-->
+            <div class="buscardor">
+                <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3> 
+                <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">  <!--todo el formulario-->
+                    <input class="inputB" type="number" id="documento">
+                    <div class="boton">
+                        <a href="#" id= "boton"><img class= "boton" src="../imagenes/Imagen3.png" height="50px" width="50px" ></a>
                     </div>
-                    
-                </div>
+                </form>
             </div>
-           
-            <div class="botones">
-                <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
-                <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
+            <div class="informa">
+                <div id="informa">
+                    <div class="datosMostrar">
+                        <h3 class="subTitulo">*DATOS APRENDIZ</h3>
+                        <div class="datosApre">
+                            <div class="dato">
+                                <label class ="label" for="">NOMBRE: </label>
+                                <!-- NO BORRAR LAS CLASES -->
+                                <label class ="datos" for=""></label>
+                            </div>
+                            <div class="dato">
+                                <label class ="label" for="">IDENTIFICACIÓN: </label>
+                                <label class ="datos" for=""></label>
+                            </div>
+                            <div class="dato">
+                                <label class ="label" for="">TELEFONO: </label>
+                                <label class ="datos" for=""></label>
+                            </div>
+                            <div class="dato">
+                                <label class ="label" for="">E-MAIL: </label>
+                                <label class ="datos" for=""></label>
+                            </div>
+                            <div class="dato">
+                                <label class ="label" for="">ESTADO: </label>
+                                <label class ="datos" for=""></label>
+                            </div> 
+                        </div><br>
+        
+                        <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
+        
+                        <div class="datosForma">
+                            <div class="dato">
+                                <label class ="label" for="">REGIONAL: </label>
+                                <label class ="datos" for="">$bd</label>
+                            </div>
+        
+                            <div class="dato">
+                                <label class ="label" for="">NO.FICHA: </label>
+                                <label class ="datos" for="">$bd</label>
+                            </div>
+        
+                            <div class="dato">
+                                <label class ="label" for="">CENTRO DE FORMACIÓN: </label>
+                                <label class ="datos" for="">$bd</label>
+                            </div>
+        
+                            <div class="dato">
+                                <label class ="label" for="">PROGRAMA DE FORMACIÓN: </label>
+                                <label class ="datos" for="">$bd</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="botones">
+                    <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
+                    <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
+                </div>
             </div>
         </div>
 
-        <div class="registroEmpre">
-            <form method="POST" id="registroEmpre"  autocomplete="off">
+        <div class="registroEmpre" id="registroEmpre">
+            <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
+
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
@@ -177,8 +183,10 @@ $fila=mysqli_fetch_assoc($query);
                 <input class ="inputR" type="email" name="email">
 
                 <div class="botones">
-                    <button id="botonEM" >Guardar</button>
-                    <input class="botonForm" type="button" value="CANCELAR">
+
+                    <input class="botonForm" type="button" value="GUARDAR">
+                    <input class="botonForm" type="button" value="CANCELAR"  id="cerrarEmpresa">
+
                 </div>
             </form>
         </div>
