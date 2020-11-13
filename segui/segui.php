@@ -1,3 +1,13 @@
+<?php
+    require_once('../php/connecion.php');
+?>
+<?php
+$sql="SELECT * FROM tip_docu    ";
+$query=mysqli_query($connection, $sql);
+$fila=mysqli_fetch_assoc($query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">    
     <link rel="shortcut icon" href="../imagenes/usuario.jpg" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Seguimiento</title>
 </head>
 
@@ -32,7 +43,7 @@
             <ul class="menu">
                 <li><a href="#"><img class="uno" width="30" height="30"  src="../imagenes/Imagen9.png" alt="">LEGALIZACIÓN </a></li>
                 <li><a href="#"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png" alt="">CERTIFICACIÓN</a></li>
-                <li><a href="#"><img class="tres"  width="37" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
+                <li id="tres"><a href="#"><img class="tres"  width="37" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
             </ul>  
         </nav>
 
@@ -64,13 +75,13 @@
           </div>
     </footer>
     <!--FORMULARIOS-->
-    <div class="formLegalizar">
+    <div class="formLegalizar"> <!--todo el formulario-->
         <div class="buscardor">
-            <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
-            <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
+            <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3> 
+            <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">  <!--todo el formulario-->
                 <input class="inputB" type="number" id="documento">
                 <div class="boton">
-                    <a href="" id= "boton"><img class= "boton" src="../imagenes/Imagen3.png" height="50px" width="50px" ></a>
+                    <a href="#" id= "boton"><img class= "boton" src="../imagenes/Imagen3.png" height="50px" width="50px" ></a>
                 </div>
             </form>
         </div>
@@ -174,9 +185,9 @@
                 <option value="0" placeholder="tipo de alternativa"></option>
                 <option value="1" placeholder="tipo de alternativa">hola bebe</option>
                 <!-- codigo para insertar los registros de tipo de alternativas de la bd<?php
-                    $query = $conexion -> query ("SELECT * FROM nombre de la tabla ");
-                    while ($valores = mysqli_fetch_array($query)) 
-                    { echo '<option value="'.$valores[llave de la tabla].'">'.$valores[campo para mostrar].'</option>';}
+                   # $query = $conexion -> query ("SELECT * FROM nombre de la tabla ");
+                   # while ($valores = mysqli_fetch_array($query)) 
+                   # { echo '<option value="'.$valores[llave de la tabla].'">'.$valores[campo para mostrar].'</option>';}
                 ?> -->
             </select>
 
@@ -281,8 +292,71 @@
 
             </form>  
         </div>
+        
+        </div>
     </div>
+    <div id="registroAprendiz">
+            <form id="frmajax" method="POST">
+                <label>Tipo Documento:</label>
+                <p></p>
+                <select name="tipdocu" id="tipdocu">
+                   <?php
+                        foreach($query as $tip):?>
+                        <option value="<?php echo $tip['id_tip_docu'] ?> "><?php echo $tip['nom_docu'] ?></option>
+                        <?php
+                        endforeach; 
+                        ?>
+                </select>
+        
+                <p></p>
+                <label>Documento</label>
+                <p></p>
+        <input type="number" name="docu" id="docu">
+        <p></p>
+        <label>Nombres Completos:</label>
+        <p></p>
+        <input type="text" name="nom" id="nom">
+        <p></p>
+        <label>Apellidos Completos:</label>
+        <p></p>
+        <input type="text" name="ape" id="ape">
+        <p></p>
+        <label>Email Aprendiz:</label>
+        <p></p>
+        <input type="text" name="email" id="email">
+        <p></p>
+        <label>Telefono Aprendiz:</label>
+        <p></p>
+        <input type="text" name="tel" id="tel">
+        <p></p>
+        
+        <button id="btnguardar">Guardar</button>
+        </form>
   <script src="segui.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#btnguardar').click(function() {
+            var datos=$('#frmajax').serialize();
+            
+            
+            $.ajax({
+                type: "POST",
+                url: "../php/crear.php",
+                data: datos,
+ success: function(a) {
+                    if(a==1){
+                        alert('Se agrego correctamente');
+                    }else{
+                        alert('Error al grabar');
+                    }
+
+                }
+            });
+            return false;
+        });
+
+    });
+</script>
 </body>
 </html>
 

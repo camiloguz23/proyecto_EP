@@ -6,6 +6,8 @@ const btnEmpresa = document.getElementById("btnEmpresa")
 const btnLegalizar = document.getElementById("btnLegalizar")
 const formularioEmpresa = document.querySelector(".registroEmpre")
 const formularioLegalizacion = document.querySelector(".registroLegal")
+const btnaprendiz = document.querySelector("#tres")
+const registroAprendiz = document.getElementById("registroAprendiz")
 
 
 // FUNCIONES 
@@ -35,9 +37,17 @@ function consulta(e) {
     xhr.send()
 }
 
+function crear(e) {
+    e.preventDefault();
+    console.log(registroAprendiz)
+    registroAprendiz.style.display = "block"
+
+}
+
 
 
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
 boton.addEventListener("click", consulta)
+btnaprendiz.addEventListener("click", crear)
