@@ -118,7 +118,6 @@
     .naranja .perfil
     {
         position: absolute;
-        z-index: 11;
         margin-top: -120px;
         margin-left: 545px;
         border-radius: 300px;
@@ -303,13 +302,14 @@
 
     .seguimiento
     {
+        border-radius: 5%;
         background:rgb(25, 130, 118);
         margin-top: -427px;
-        width: 90%;
-        margin-left: 5%;
-        height: 400px;
+        width: 94%;
+        margin-left: 3%;
+        height: 760px;
         position: absolute;
-        visibility: hidden;
+        
     }
     
     .foor
@@ -317,7 +317,7 @@
         background: white;
         border-radius: 20px;
         width: 40%;
-        height: 27%;
+        height: 14%;
         margin-top:5% ;
         margin-left: 5%;
         text-align: center;
@@ -333,17 +333,17 @@
     {
         width: 100%;
         height: 100%;
-        text-align: center;
+        
     }
     .formu input
     {
-        
+        background: white;
         width: 93%;
         height: 70%;
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid black;
         margin-top:1%;
         margin-left: 7%;
         text-align: center;
@@ -363,17 +363,114 @@
         height: 30%;
         margin-left: 50%;
         margin-top: -9%;
-        text-align: center;
     }
 
     .opcioonar input
     {
-        margin-top: 6%;
+        margin-top: 4%;
         width: 36%;
-        height: 30%;
-        border-radius: 6px;
+        height: 10%;
+        padding: 20px 0px 40px 0px;
+        font-family: Verdana;
+        color:rgb(0, 0, 0);
+        font-size: 20px;
+        background: white;
+        border-radius: 20px;
+        border: none;
     }
     .opcioonar  .bot1
     {
-        margin-right: 20%;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+
+     /*evidencias*/
+
+    .conteiner{
+        border: 2px solid black;
+        width: 90%;
+        height:auto;
+        border-radius: 15px;
+        margin-left: 6%;
+        position: absolute; 
+        background-color: #ffffff; 
+        
+    }
+    .forman
+    {
+        width: 100%;
+        margin-top: 5%;
+        height: 280px;
+        display: flex;
+    }
+    .evi1
+    {
+        width: 50%;
+    }
+    .evi2
+    {
+        margin-top: 5%;
+        width: 34%;
+        margin-left: 1%;
+    }
+    .evi1 > span{
+        margin-left: 17%;
+        font-size: 23px;
+    }
+    .evi2 > span{
+        margin-left: 10%;
+        font-size: 23px;
+    }
+    
+    .evi1 input,
+    .evi2 input
+    {
+        cursor: pointer;
+    }
+    .botoonn
+    {
+        margin-left: 50%;
+        width: 40%;
+        height: 140px;
+        border-radius: 20px;
+        margin-top: -10%;
+        margin-bottom: 2%;
+    }
+
+    .botoonn input
+    {
+        cursor: pointer;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 22%;
+        width: 60%;
+        height: 30px;
+        background-color: white;
+    }
+
+    .botoonn input:hover
+    {
+        background-color: rgb(240, 236, 236);
+        transform: translatey(3px);
+    }
+    .funsi
+    {
+        display: flex;
+    }
+    button{
+        margin-left: 14%;
+        margin-top: 15px;
+        width: 30%;
+        height: 40px;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color:2px solid thistle ;
+        font-family: Verdana;
+    }
+    button:hover{
+        background:rgb(240, 236, 236);
+        transform: translatey(3px);
+        cursor: pointer;
     }
