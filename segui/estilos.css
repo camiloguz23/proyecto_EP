@@ -633,7 +633,7 @@ body {
 }
 #frmajax {
     font-size: 25px;
-    display: none;
+ 
     position: absolute;
     padding: 9px 20px;
     top: 40px;
@@ -642,12 +642,15 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     z-index: 2;
 
-
 }
+#registroAprendiz{
+    display: none;
+}
+
 
 #frmajax input, #frmajax select {
     margin: 8px 0px;

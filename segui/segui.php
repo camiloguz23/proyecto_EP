@@ -345,7 +345,10 @@
 
     </div>
     </div>
+    
     <div id="registroAprendiz">
+
+
         <form id="frmajax" method="POST">
             <label>Tipo Documento:</label>
             <p></p>
@@ -382,17 +385,32 @@
 
             <button id="btnguardar">Guardar</button>
         </form>
-        <footer class="pie">
-            <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
-            <div class="info">
-                <p>&copy; Servicio Nacional de Aprendizaje SENA </p>
-                <p>Centro de Industria y Construccion- Ibague-Tolima </p>
+    </div> 
 
-                <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
-            </div>
-        </footer>
+    <footer class="pie">
+        <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
+        <div class="info">
+            <p>&copy; Servicio Nacional de Aprendizaje SENA </p>
+            <p>Centro de Industria y Construccion- Ibague-Tolima </p>
+
+            <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
+        </div>
+    </footer>
 
         <script src="segui.js"></script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
 </body>
 
 </html>
