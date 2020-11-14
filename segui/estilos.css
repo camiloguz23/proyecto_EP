@@ -147,7 +147,7 @@ body {
 }
 .date .datos .text2{
     text-align: left;
-    max-width: 10px;
+    width: 250px;
 }
 
 
@@ -446,11 +446,10 @@ body {
     cursor: pointer;
 }
 .botones{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10%;
-    margin-left: 40%;
-    padding: 10px 5px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
 }
 
 .botonForm{

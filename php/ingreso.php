@@ -1,9 +1,9 @@
 <?php
 
-    session_start();
+   
 
     require 'connecion.php';   
-            
+    session_start();
             $usuario = $_POST["usuario"];
             $clave = $_POST["clave"];
            
@@ -16,8 +16,10 @@
 
                         if($fila){
                             $_SESSION['id_tip_usu'] = $fila['id_tip_usu'];
-                    
                             $_SESSION['usuario'] = $fila['nombre'];
+                            $_SESSION["telefono"] = $fila["telefono"];
+                            $_SESSION["correo"] = $fila["correo"];
+                            $_SESSION["documento"] = $fila["documento"];
                            
                             
 
@@ -27,7 +29,7 @@
                                     exit();
                                 }
                                 elseif($_SESSION["id_tip_usu"] == 2 ){
-                                    header("location: ../segui/segui.html");
+                                    header("location: ../segui/segui.php");
                                     exit();
                                 }elseif($_SESSION["id_tip_usu"] == 3){
                                     header("location: ../instru/instructor.html");
