@@ -2,174 +2,297 @@
     padding: 0%;
     margin: 0%;
 }
-
-body {
-    background: #DFDEDE;
-    font-family: verdana;
-}
-
-/* Encabezado */
-
-.header {
-    background-color: #ffff;
-}
-
-.encabezado {
-    display: flex;
-    position: relative;
+body 
+{
+    padding: 0%;
+    margin: 0%;
+    background: rgb(223, 222, 222);
+    font-family: Verdana;
+    height: auto;
 }
 
 
-.datos-encabezado {
-    margin-left: 30px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+/*encabezado*/
+
+.princi
+{
+    background-color: #ffffff;
+    height: 110px;
 }
 
-.header .encabezado .datos-encabezado h2{
-    color: #fc7323;
+.cerrar
+{
+    margin-left: 9%;
 }
-
-.header .encabezado .datos-encabezado a {
+.cerrar  a
+{
+    font-family: Verdana;
+    font-size: 15px;
     color: #238276;
 }
 
-/* Menu */
-
-.menu {
-    width: 100%;
-    height: 49px;
-    border-top: 5px solid #fc7323;
-    border-bottom: 5px solid #fc7323;
-    background-color: #ffff;
-
-    display: flex;
-    justify-content: space-evenly;
+.logo .segui
+{
+    font-family: Verdana;
+    font-size: 20px;
+    margin-left: 9%;
+    margin-top: -5%;
+    color: #fc7323;
 }
 
-.menu a {
-    padding: 0 80px;
+.logo .seguiimg
+{
+    margin-left: 5px;
+}
+
+.segun
+{
+    position: absolute;
+    margin-left: 83.2%;
+    z-index: 1;
+    margin-top: -6.2%;
+
+}
+
+/*menu*/
+
+.navegacion 
+{
+    background: white;
+    display: table;
+    width: 86%;
+    padding: 0 5.5em;
+    position: absolute;
+    margin-top: 12px;
+    border-color: #fc7323 transparent;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.navegacion  ul  li 
+{
+    list-style: none;
+    margin: auto;
+    margin-left: 22%;
+}
+
+.navegacion .menu img
+{
+    margin-right: 15px;
+    margin: -7px 5px;
+}
+
+.menu  li 
+{
+    display: inline-block;
+}
+
+.menu  li a 
+{
+    display: block;
+    padding: 15px 5px;
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
     text-decoration: none;
-    color: black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.menu a:hover {
-    background-color: rgb(89,181,72);
-    border-radius: 8px;
+    .menu > li > a:hover
+    {
+        background-color:rgb(89, 181, 72);
+        color: white;
+        border-radius: 8px;
+    }
+
+/*contenido imagen de perfil*/
+
+.contper
+{
+    height: auto;
+}
+.fondo
+{
+    margin-top: 40px;
 }
 
-.logo-sena {
+.naranja .perfil
+{
     position: absolute;
-    right: 0;
-    top: -2px;
-    z-index: 100;
+    margin-top: -120px;
+    margin-left: 545px;
+    border-radius: 300px;
+    height: 250px;
+    width: 20%;
 }
 
-/* Fondo del biblioteca */
+/*contenido informativo*/
 
-.fondo-biblioteca {
-    width: 1290px;
-    height: 400px;
-    margin: auto;
-    background-image: url("../imagenes/INSTRUCTOR.png");
+.contenedor{
+    position: absolute;
+    background-color: #ffffff;
+    width: 90%;
+    height: 150px;
+    margin:5% ;
+    margin-top: 12%;
 
+}  
+
+.date{
     position: relative;
-    margin-bottom: 120px;
-}
+    background-color: #ffffff;
+    border:2px solid;
+    border-color: #353434;
+    width:96%;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 2%;
+    text-align: center;
+} 
 
-.foto-perfil {
-    border-radius: 50%;
-
-    position: absolute;
-    bottom: -90px;
-    right: 500px;
-}
-
-.datos_biblioteca {
-    width: 1270px;
-    padding: 20px;
-    margin: auto;
-    background-color: #ffff;
-}
-
-.caja_datos {
-    padding: 5px;
-    border: 2px solid black;
-}
-
-.datos_biblioteca h4 {
+.date .datos p
+{
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana;
+    color: black;
     text-align: center;
 }
 
-.caja_btn {
-    margin: 10px 0;
-    margin-right: 18px;
-    display: flex;
-    justify-content: flex-end;
+.date .datos .text2
+{
+    text-align: left;
+    max-width: 10px;
 }
 
-.caja_btn a {
-    padding: 5px 30px;
-    background-color: #fc7323;
-    border-radius: 40px;
+/*editar*/
+.button { 
+    position: absolute;
     text-decoration: none;
-    color: white;
-}
-
-.caja_btn a:hover {
-    background-color: #238276;
-}
-
-.opciones_biblioteca {
-    margin: 80px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.opciones_biblioteca a {
-    text-decoration: none;
-    color: black;
     padding: 10px 40px;
-    background-color: #ffff;
+    box-sizing: border-box;
+    font-family: Verdana;
+    width: 170px;
+    text-align: center;
+    margin-top: -21.5%;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background: #fc7323;
+    top: 410px;
+    margin-left: 1050px;
     border-radius: 20px;
-    border: 1px solid  black;
+
 }
 
-.opciones_biblioteca a:hover {
-    background-color: #238276;
+    .button:hover
+    {
+        background-color: rgb(25, 130, 118);
+        color: white;
+    
+    }
+
+/*opciones*/
+
+.opcion
+{
+    width: 70%;
+    margin-left: 30%;
 }
 
-/* Pie de página */
-.footer {
-    height: 100px;
-    background-color: #fc7323;
-
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
+.button3 
+{ 
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 170px;
+    text-align: center;
+    margin-top: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    background: white;
+    top: 470px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
 }
 
-.footer .info {
-    height: 90%;
-    border-left: 4px solid white;
+    .button3 .butdos
+    {
+        margin: -10px 10px;
+    }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .button3:hover 
+    {
+        color: white;
+        background-color:  rgb(25, 130, 118); 
+    }
 
-    padding-left: 8px;
-    margin-left: 6px;
+
+/*aprendices*/
+
+.button4 
+{ 
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 170px;
+    text-align: center;
+    margin-top: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    background: white;
+    top: 470px;
+    margin-left: 16%;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
 }
+    .button4 .buttres
+    {
+        margin-right: 15px;
+        margin: -10px 10px;
+    }
+
+    .button4:hover
+    {
+        background-color: rgb(25, 130, 118);
+        color: white;
+    }
 
 
-.footer .info p {
-    color: white;
-}
+/*pie de pagina*/
 
+
+    .pie
+    {
+        position: relative;
+        width: 100%;
+        height: 75px;
+        background-color: #fc7323;
+        margin-top:550px;
+        display: flex;
+        align-items: flex-end;
+        border-top: 2px solid #fff;
+        margin-left: 0px;   
+    }
+
+    .pie img
+    {
+        margin-left: 10px;
+    }
+
+    .info 
+    {
+        border-left: solid white;
+        margin: 4px;
+    }
+
+    .info p
+    {
+        font-size: 12px;
+        color: #fff;
+        font-family: Verdana;
+        margin: 4px;
+        margin-left: 5px;
+        font-family: Verdana;
+    }
