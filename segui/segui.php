@@ -58,7 +58,7 @@
 
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#" id="uno"><img class="uno" width="30" height="30" src="../imagenes/Imagen9.png"
+                <li><a href="#" id="legal"><img class="uno" width="30" height="30" src="../imagenes/Imagen9.png"
                             alt="">LEGALIZACIÓN </a></li>
                 <li><a href="#" id="dos"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png"
                             alt="">CERTIFICACIÓN</a></li>
@@ -99,6 +99,7 @@
     <div id="formularioDocu">
         <div class="formLegalizar">
             <!--todo el formulario-->
+           
             <div class="buscardor">
                 <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
