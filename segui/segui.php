@@ -95,6 +95,7 @@
                 srcset="">APRENDICES</a>
     </div>
 
+
     <!--FORMULARIOS-->
     <div id="formularioDocu">
         <div class="formLegalizar">
@@ -385,7 +386,14 @@
 
             <button id="btnguardar">Guardar</button>
         </form>
-    </div> 
+
+    </div>
+        <footer class="pie">
+            <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
+            <div class="info">
+                <p>&copy; Servicio Nacional de Aprendizaje SENA </p>
+                <p>Centro de Industria y Construccion- Ibague-Tolima </p>
+
 
     <footer class="pie">
         <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
