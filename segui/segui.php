@@ -58,7 +58,7 @@
 
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#" id="legal"><img class="uno" width="30" height="30" src="../imagenes/Imagen9.png"
+                <li id="most"><a href="#" id="uno"><img class="uno" width="30" height="30" src="../imagenes/Imagen9.png"
                             alt="">LEGALIZACIÓN </a></li>
                 <li><a href="#" id="dos"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png"
                             alt="">CERTIFICACIÓN</a></li>
@@ -96,11 +96,10 @@
     </div>
 
     <!--FORMULARIOS-->
-    <div id="formularioDocu">
-        <div class="formLegalizar">
+    <div id="formularioDocu" >
+        <div id="formulabus" class="formLegalizar">
             <!--todo el formulario-->
-           
-            <div class="buscardor">
+            <div class="buscador">
                 <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
                     <!--todo el formulario-->
@@ -172,7 +171,7 @@
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                 </div>
             </div>
-        </div>
+        
 
         <div class="registroEmpre" id="registroEmpreS">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
@@ -224,7 +223,7 @@
             </form>
         </div>
 
-
+        </div>
 
         <div class="registroLegal">
             <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>

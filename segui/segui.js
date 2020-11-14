@@ -12,8 +12,16 @@ const btnLEgalizacion = document.getElementById("legal");
 const formularioDocu = document.getElementById("formularioDocu")
 const cerrarEmpresa = document.getElementById("cerrarEmpresa")
 const btnCerrarDocu = document.getElementById("btnCerraDocu")
+const forbus = document.getElementById("formulabus");
+const forb = document.getElementById("most");
 
 
+forb.addEventListener('click', (e)=>{
+    e.preventDefault();
+    forbus.style.opacity="1";
+    forbus.style.visibility="visible"
+    forb.style.background="rgb(252,115,35)";
+})
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();
