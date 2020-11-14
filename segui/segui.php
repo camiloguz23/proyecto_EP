@@ -11,8 +11,8 @@ $fila=mysqli_fetch_assoc($query);
 <?php
 
 $sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
-$query_ciudad=mysqli_query($connection, $sql_ciudad);
-$fila_ciudad=mysqli_fetch_assoc($query_ciudad);
+$query_ciudad = mysqli_query($connection, $sql_ciudad);
+$fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 ?>
 
 
@@ -70,19 +70,22 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
     <div class="contenedor">
         <div class="date">
             <ul class="datos">
-                <p>Soy una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada dia</p>
+                <p class="frase">Soy una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada dia</p>
                 <p class="text2">NOMBRE: EDAD: TELEFONO: EMAIL:</p>
 
             </ul>
         </div>
     </div>
-    <a href="#" class="button">EDITAR</a>
-    <a href="#" class="button2"> <img class="butuno" height="30" width="30" src="../imagenes/Imagen9.png" alt=""
-            srcset=""> LEGALIZACIÓN</a>
-    <a href="#" class="button3"> <img class="butdos" height="30" width="30" src="../imagenes/Imagen5.png" alt=""
-            srcset="">CERTIFICACIÓN</a>
-    <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt=""
-            srcset="">APRENDICES</a>
+
+    <div class="tresbtn">
+        <a href="#" class="button">EDITAR</a>
+        <a href="#" class="button2"> <img class="butuno" height="30" width="30" src="../imagenes/Imagen9.png" alt=""
+                srcset=""> LEGALIZACIÓN</a>
+        <a href="#" class="button3"> <img class="butdos" height="30" width="30" src="../imagenes/Imagen5.png" alt=""
+                srcset="">CERTIFICACIÓN</a>
+        <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt=""
+                srcset="">APRENDICES</a>
+    </div>
 
     <!--FORMULARIOS-->
     <div id="formularioDocu">
@@ -90,7 +93,7 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
             <!--todo el formulario-->
             <div class="buscardor">
                 <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
-                <form method="POST" id="buscarDocu"  class="buscarDocu" autocomplete="off">
+                <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
                     <!--todo el formulario-->
                     <input class="inputB" type="number" id="documento">
                     <div class="boton">
@@ -378,8 +381,8 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
                 <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
             </div>
         </footer>
-        
-<script src="segui.js"></script>
+
+        <script src="segui.js"></script>
 </body>
 
 </html>
