@@ -70,7 +70,7 @@
     </header>
 
     <div class="fondo">
-        <img width="1250" height="400" src="../imagenes/perfilSegui.jpeg" alt="">
+        
     </div>
     <div class="naranja"><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
     <div class="contenedor">
@@ -82,11 +82,13 @@
 
 
             </ul>
+            <a href="#" class="button">EDITAR</a>
+          
         </div>
     </div>
 
     <div class="tresbtn">
-        <a href="#" class="button">EDITAR</a>
+        
         <a href="#" class="button2"> <img class="butuno" height="30" width="30" src="../imagenes/Imagen9.png" alt=""
                 srcset=""> LEGALIZACIÓN</a>
         <a href="#" class="button3"> <img class="butdos" height="30" width="30" src="../imagenes/Imagen5.png" alt=""
