@@ -1,5 +1,9 @@
 <?php
-
+session_start();
+$usario = $_SESSION["documento"];
+if ($usario == "" || $usario == null) {
+    header("location: ../index.html");
+}
     require_once('../php/connecion.php');
 
 ?>
@@ -43,7 +47,7 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
 
 
             <ul class="cerrar">
-                <li><a href="#">CERRAR SESIÓN</a></li>
+                <li><a href="../php/salir.php">CERRAR SESIÓN</a></li>
             </ul>
             <div class="segun">
                 <img height="220" src="../imagenes/verdeazulado.png" alt="">
@@ -71,7 +75,7 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
         <div class="date">
             <ul class="datos">
                 <p>Soy una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada dia</p>
-                <p class="text2">NOMBRE: EDAD: TELEFONO: EMAIL:</p>
+                <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail: <?=$_SESSION["correo"]?></p>
 
             </ul>
         </div>
@@ -132,7 +136,7 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
                         <div class="datosForma">
                             <div class="dato">
                                 <label class="label" for="">REGIONAL: </label>
-                                <label class="datos" for="">$bd</label>
+                                <label class="datos" for=""></label>
                             </div>
 
                             <div class="dato">
@@ -155,6 +159,7 @@ $fila_ciudad=mysqli_fetch_assoc($query_ciudad);
                 </div>
 
                 <div class="botones">
+                    <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                 </div>

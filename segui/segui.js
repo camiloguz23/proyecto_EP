@@ -11,6 +11,7 @@ const registroAprendiz = document.getElementById("registroAprendiz")
 const btnLEgalizacion = document.getElementById("uno");
 const formularioDocu = document.getElementById("formularioDocu")
 const cerrarEmpresa = document.getElementById("cerrarEmpresa")
+const btnCerrarDocu = document.getElementById("btnCerraDocu")
 
 
 // FUNCIONES 
@@ -74,4 +75,4 @@ boton.addEventListener("click", consulta)
 btnaprendiz.addEventListener("click", crear)
 btnLEgalizacion.addEventListener("click", mostrar)
 cerrarEmpresa.addEventListener("click", ocultarEmpresa)
-//formularioDocu.addEventListener("click", ocultarLegalizacion)
+btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
