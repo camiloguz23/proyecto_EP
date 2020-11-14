@@ -1,224 +1,302 @@
-:root{
-
-    --primarycolor:#238276;
-    --secondcolor: rgb(89,182,72);
-    --trecolor: #fc7323;
-    --fontsize: 16px;
-    --fontfamily: helvetica;
-
+*{
+    padding: 0%;
+    margin: 0%;
 }
 
-html{
 
-    font-family: var(--fontfamily);
-    box-sizing: border-box;
-    font-size: var(--fontsize);
-
-
+body 
+{
+    padding: 0%;
+    margin: 0%;
+    background: rgb(223, 222, 222);
+    font-family: Verdana;
+    height: auto;
 }
 
-body{
+/*encabezado*/
 
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+.princi
+{
+    background-color: #ffffff;
+    height: 110px;
 }
 
-.letrah{
-    display: flex;
-
+.cerrar
+{
+    margin-left: 10%;
 }
-.cerrarses{
-    order: 2;
-}
-
-.menu{
-    
-    border-top:3px solid var(--primarycolor);
-    border-bottom: 3px solid var(--primarycolor);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 25px;
-    
+.cerrar  a
+{
+    font-family: Verdana;
+    font-size: 15px;
+    color: #238276;
 }
 
-.menu a{
-    
-    text-decoration: none;
-    width: 50%;
-    margin: 0 50px;
-    color: black;
+.logo .segui
+{
+    font-family: Verdana;
+    font-size: 20px;
+    margin-left: 9%;
+    margin-top: -5%;
+    color: rgb(89, 181, 72);
 }
 
-.imgusu img{
-
-    border-radius: 50%;
-    width: 70px;
-    background-color: var(--primarycolor);
+.logo .seguiimg
+{
+    margin-left: 5px;
 }
 
-.triangulo {
-
-    width: 0; 
-    height: 0; 
-    border-right: 200px solid var(--primarycolor);
-    border-top: 90px solid transparent;
-    border-bottom: 90px solid transparent;
+.segun
+{
     position: absolute;
-    right: 0;
-    top: 0px;
-    
+    margin-left: 83.2%;
+    z-index: 1;
+    margin-top: -6.2%;
+
 }
 
-.logosena img{
+/*menu*/
 
-    height: 100px;
+.navegacion 
+{
+    background: white;
+    display: table;
+    width: 86%;
+    padding: 0 5.5em;
     position: absolute;
-    top: -55px;
-    right: -190px;
-
+    margin-top: 12px;
+    border-color: rgb(89, 181, 72) transparent;
+    border-style: solid;
+    border-width: 5px;
 }
 
-.contenedor{
-    width: 1263px;
-    height: 1000px;
-    background-color: rgb(218, 218, 218);
-    padding: 20px 10px;
-}
-
-.contenedor .fondoperfil{
-    
-    width: 1243px;
-    height: 250px;
-    background-color: white;
-    
-
-}
-
-.contenedor .fondoperfil .circulo {
-    width: 200px;
-    height: 200px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #e46702;
-    position: absolute;
-    margin-top: 150px;
-    left: 43%;
-}
-
-.contenedor .fondodatos{
-
-    width: 1100px;
-    height: 150px;
-    background-color: white;
-    transform: translate(70px, 150px);
-
-
-}
-
-.contenedor .fondodatos .bordedatos{
-
-    
-    height: 100px;
-    border: 3px solid gray;
-    width: 90%;
+.navegacion  ul  li 
+{
+    list-style: none;
     margin: auto;
-    transform: translateY(25px);
-    
-
+    margin-left: 16%;
 }
 
-.contenedor h2{
-    text-align: center;
+.navegacion .menu img
+{
+    margin-right: 15px;
+    margin: -7px 5px;
 }
 
-.contenedor .editar{
-
-    position: relative;
-    border: none;
-    background-color: var(--primarycolor);
-    left: 90%;
-    top: 40px;
-    color: white;
-    width: 90px;
-    height: 30px;
-
+.menu  li 
+{
+    display: inline-block;
 }
 
-.perfiles{
-
-    display: flex;
-    flex-direction: row;
-    background: none;
-    position: relative;
-    top: 300px;
-    width: 70%;
-    height: 100px;
-    border: 3px solid gray;
-    left: 130px;
-    padding: 10px 30px;
-    align-items: center;
+.menu  li a 
+{
+    display: block;
+    padding: 15px 50px;
+    color: black;
+    font-family: Verdana;
+    text-decoration: none;
 }
 
-.perfiles .cajitas{
-    width: 50%;
-    height: 90%; 
-    border: 3px solid #000000 ;
-    
-    
-}
+    .menu > li > a:hover
+    {
+        background-color:#fc7323;
+        border-radius: 8px;
+    }
 
-.segunda{
-    margin: 0 10px 0 10px;
-}
+/*contenido imagen de perfil*/
 
-.circulitos{
-
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    border: 2px solid white;
-    float: right;
-    margin: 10px 20px;
-     
-}
-.cajitas .circulitos p{
-
-    margin-top: 20px;
-
-}
-
-.parrafos{
-    text-align: center; 
-    margin-top: 35px; 
-    font-size: 30px;
-}
-
-
-
-footer{
-    background: rgb(35,133,118);
-    color: white;
+.contper
+{
+    height: auto;
     width: 100%;
 }
-.f{
-    display: flex;
+.fondo
+{
+    margin-top: 30px;
+    width: 100%;
 }
-.logo{
-    width: 80px;
-    margin:10px 30px;
+
+.naranja .perfil
+{
     position: absolute;
-    top: 608px;
+    margin-top: -120px;
+    margin-left: 545px;
+    border-radius: 300px;
+    height: 250px;
+    width: 20%;
 }
-.letras{
-    margin: 10px;
-    padding: 5px;
+
+/*contenido informativo*/
+
+.contenedor{
+    position: absolute;
+    background-color: #ffffff;
+    width: 90%;
+    height: 150px;
+    margin:5% ;
+    margin-top: 12%;
+
+}  
+
+.date{
+    position: relative;
+    background-color: #ffffff;
+    border:2px solid;
+    border-color: #353434;
+    width:96%;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 2%;
+    text-align: center;
+} 
+
+.date .datos p
+{
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana;
+    color: black;
+    text-align: center;
 }
-.letras p{
-    padding: 4px 170px;
-    font-family: helvetica;
+
+.date .datos .text2
+{
+    text-align: left;
+    max-width: 10px;
+}
+
+/*editar*/
+.button { 
+    position: absolute;
+    text-decoration: none;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    font-family: Verdana;
+    width: 170px;
+    text-align: center;
+    margin-top: -21.5%;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background:rgb(25, 130, 118);
+    top: 410px;
+    margin-left: 1050px;
+    border-radius: 20px;
+
+}
+
+    .button:hover
+    {
+        background-color: rgb(89, 181, 72);
+        color: white;
     
+    }
+
+/*opciones*/
+
+.opcion
+{
+    width: 70%;
+    margin-left: 27%;
 }
+
+.button3 
+{ 
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 170px;
+    text-align: center;
+    margin-top: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    background: white;
+    top: 470px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+    .button3 .butdos
+    {
+        margin: -10px 10px;
+    }
+
+    .button3:hover 
+    {
+        color: white;
+        background-color:rgb(25, 130, 118); 
+    }
+
+
+/*aprendices*/
+
+.button4 
+{ 
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 170px;
+    text-align: center;
+    margin-top: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    background: white;
+    top: 470px;
+    margin-left: 16%;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+}
+    .button4 .buttres
+    {
+        margin-right: 15px;
+        margin: -10px 10px;
+    }
+
+    .button4:hover
+    {
+        background-color: rgb(25, 130, 118);
+        color: white;
+    }
+
+
+/*pie de pagina*/
+
+
+    .pie
+    {
+        position: relative;
+        width: 100%;
+        height: 75px;
+        background-color: rgb(89, 181, 72);
+        margin-top:550px;
+        display: flex;
+        align-items: flex-end;
+        border-top: 2px solid #fff;
+        margin-left: 0px;   
+    }
+
+    .pie img
+    {
+        margin-left: 10px;
+    }
+
+    .info 
+    {
+        border-left: solid white;
+        margin: 4px;
+    }
+
+    .info p
+    {
+        font-size: 12px;
+        color: #fff;
+        font-family: Verdana;
+        margin: 4px;
+        margin-left: 5px;
+        font-family: Verdana;
+    }
 
 
