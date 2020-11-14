@@ -1,12 +1,14 @@
 *{
     padding: 0%;
     margin: 0%;
+    
 }
 
 
 body {
     background: rgb(223, 222, 222);
     font-family: Verdana;
+    width: 100%;
 }
 
 .princi{
@@ -118,29 +120,40 @@ body {
     width: 20%;
 
 }
+.naranja{
+    border:1px solid red ;
+    width: auto;
+    margin-bottom: 2%;
+    max-width: 90%;
+    height: 200px;
+}
 
 
 
 
 .contenedor{
-    position: relative;
-    background-color: #ffffff;
+    position:absolute;
+    background-color: #ca4b4b;
     width: 90%;
     height: 150px;
     margin-left: 60px;
     margin-top: 10%;
-
+    max-width: 97%;
+    
 }  
+
 .date{
-    position: absolute;
+    
     background-color: #ffffff;
-    border:2px solid;
+    max-width: 97%;
     border-color: #353434;
     width:96%;
+    margin-right: 20px;
     height: 100px;
     margin-left: 20px;
     margin-top: 2%;
     text-align: center;
+    border: 1px solid blue;
 } 
 .date .datos p{
     list-style: none;
@@ -159,7 +172,6 @@ body {
 .button { /*editar*/
     text-decoration: none;
     padding: 10px 30px;
-    box-sizing: border-box;
     font-family: Verdana;
     width: 170px;
     text-align: center;
@@ -436,7 +448,8 @@ body {
 }
 
 .datos{
-    margin-left: 10%;
+    margin-left: 2%;
+    margin-right: 3%;
     margin-top: -55px;
 }
 .archivo{
