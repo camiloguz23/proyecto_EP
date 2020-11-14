@@ -300,3 +300,30 @@ body
         margin-left: 5px;
         font-family: Verdana;
     }
+
+    .pazysall
+    {
+        margin-left: 3%;
+        margin-top: -32%;
+        background-color:#fc7323;
+        width: 94%;
+        height: 770px;
+        position: absolute;
+        border-radius: 15px;
+        visibility: hidden;
+    }
+
+    .cerrarpazsa
+    {
+        position:absolute ;
+        z-index: 11;
+    }
+    .cerrarpazsa img
+    {
+        margin-top: 4%;
+        width: 3%;
+        height: 3%;
+        margin-left: 1190px;
+        cursor: pointer;
+        z-index: 11;
+    }

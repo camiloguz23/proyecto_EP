@@ -25,22 +25,22 @@
 
                                 if($_SESSION["id_tip_usu"] == 1 ){
                                     
-                                    header("location: ../administrador/admin.html");
+                                    header("location: ../administrador/admin.php");
                                     exit();
                                 }
                                 elseif($_SESSION["id_tip_usu"] == 2 ){
                                     header("location: ../segui/segui.php");
                                     exit();
                                 }elseif($_SESSION["id_tip_usu"] == 3){
-                                    header("location: ../instru/instructor.html");
+                                    header("location: ../instru/instructor.php");
                                 }elseif ($_SESSION["id_tip_usu"] == 4){
-                                    header("location: ../APE/ape.html");
+                                    header("location: ../APE/ape.php");
                                 }elseif ($_SESSION["id_tip_usu"] == 5){
-                                    header("location: ../bienestar/biene.html");
+                                    header("location: ../bienestar/biene.php");
                                 }elseif ($_SESSION["id_tip_usu"] == 6){
-                                    header("location: ../cor_academico/cordinh.html");
+                                    header("location: ../cor_academico/cordinh.php");
                                 }elseif ($_SESSION["id_tip_usu"] == 7){
-                                    header("location: ../biblioteca/biblio.html");
+                                    header("location: ../biblioteca/biblio.php");
                                 }
                                  else{
                                     header("location: ../index.html");
