@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ape.css">
-    <title>APE</title>
+    <link rel="stylesheet" href="biene.css">
+    <title>BIENESTAR</title>
 </head>
 <body>
     <header class="princi">
        
         <div class="logo">
 
-            <img class="imagen"  height="80" width="85" src="../imagenes/iconoape.jpg.png"  alt="">
-            <h3 class="segui">AGENCIA PUBLICA DE EMPLEO<img class="seguiimg" width="35" height="30" src="https://image.flaticon.com/icons/png/512/2111/2111091.png" alt=""></h3>
+            <img class="imagen"  height="90" width="90" src="https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564400-account_81513.png"  alt="">
+            <h3 class="segui">BIENESTAR<img class="seguiimg" width="30" height="30" src="../imagenes/Imagen7.png" alt=""></h3>
 
             <div class="cerrar">
                 <a href="#">CERRAR SESIÓN</a>
             </div>
 
             <div class="segun">
-                <img height=213 src="../imagenes/verdemoco.png" alt="">
+                <img height="195" src="../imagenes/verdeazulado.png" alt="">
             </div>
         </div>
 
         <nav class="navegacion">
             <ul class="menu">
-                <li id="uno" ><a href="#"><img class="dos" width="36" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
+                <li id="pazbi"><a href="#"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
                 <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
             </ul>  
         </nav>
@@ -33,8 +33,8 @@
     </header>
 
     <div class="contper">
-            <div class="fondo">
-                <img width="1349" height="400" src="../imagenes/ape.jpg" alt="">
+            <div id="fondo" class="fondo">
+                <img width="1349" height="400" src="../imagenes/bienestar.jpg" alt="">
             </div>
         <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
 
@@ -60,7 +60,13 @@
     </div>
 
     </div>
-    
+
+    <div id="pazybi" class="pazybi">
+
+        <div id="cerrarbi" class="cerrarbi">
+            <img src="../imagenes/cancelar.png" alt="">
+        </div>
+    </div>
     <footer class="pie">
         <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
 
@@ -71,8 +77,6 @@
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
-   
-
-
+    <script src="bienestar.js"></script>
 </body>
 </html>

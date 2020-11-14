@@ -1,22 +1,24 @@
 <?php
-session_start();
-$usario = $_SESSION["documento"];
-if ($usario == "" || $usario == null) {
-    header("location: ../index.html");
-}
-    require_once('../php/connecion.php');
+    session_start();
+    $usario = $_SESSION["documento"];
+    if ($usario == "" || $usario == null) {
+        header("location: ../index.html");
+    }
+        require_once('../php/connecion.php');
 
 ?>
+
 <?php
-$sql="SELECT * FROM tip_docu";
-$query=mysqli_query($connection, $sql);
-$fila=mysqli_fetch_assoc($query);
+    $sql="SELECT * FROM tip_docu";
+    $query=mysqli_query($connection, $sql);
+    $fila=mysqli_fetch_assoc($query);
 ?>
+
 <?php
 
-$sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
-$query_ciudad = mysqli_query($connection, $sql_ciudad);
-$fila_ciudad = mysqli_fetch_assoc($query_ciudad);
+    $sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
+    $query_ciudad = mysqli_query($connection, $sql_ciudad);
+    $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 ?>
 
 

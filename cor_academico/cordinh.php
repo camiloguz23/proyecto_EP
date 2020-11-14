@@ -26,14 +26,14 @@
 
         <nav class="navegacion">
             <ul class="menu">
-                <li ><a href="#"><img class="dos" width="33" height="26" src="../imagenes/#" alt="">PAZ Y SALVO</a></li>
+                <li id="pazsalvo" ><a href="#"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
                 <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
             </ul>  
         </nav>
 
     </header>
     <div class="contper">
-        <div class="fondo">
+        <div id="fondo" class="fondo">
             <img width="1349" height="400" src="../imagenes/academico.jpg" alt="">
         </div>
         <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
@@ -51,12 +51,18 @@
         </div>
     
         <div class="opcion">
-            <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/#" alt="" srcset="">PAZ Y SALVO</a>
+            <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
             <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
         </div>
     </div>
 
+</div>
 
+<div id="pazysall" class="pazysall">
+
+    <div id="cerrarpazsa" class="cerrarpazsa">
+        <img src="../imagenes/cancelar.png" alt="">
+    </div>
 </div>
 <footer class="pie">
     <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
@@ -69,7 +75,7 @@
     </div>
 </footer>
     
-
+<script src="cordi.js"></script>
 
 </body>
 </html>
