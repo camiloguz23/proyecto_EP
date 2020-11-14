@@ -205,10 +205,10 @@
                 <input class="inputR" type="number" name="telefono">
 
                 <label class="label" for="">*E-mail: </label>
-                <input class="inputR" type="email" name="email">
-                <label>Ciudad:</label>
+                <input class="inputR" type="email" name="email"><br>
+                <label class="label"><b>*Ciudad:</b> </label>
                 <p></p>
-                <select name="id_ciu" id="id_ciu">
+                    <select class="inputR" name="id_ciu" id="id_ciu">
                     <?php
                         foreach($query_ciudad as $tip_ciudad):?>
                     <option value="<?php echo $tip_ciudad['id'] ?> ">
