@@ -30,7 +30,7 @@ function formuEmpresa(e) {
 }
 
 function consulta(e) {
-    e.preventDefault();
+  e.preventDefault();  
     let xhr = new XMLHttpRequest();
     const docuBase = documento.value 
     xhr.open("get","../php/aprendiz.php?documento=" + docuBase,true)
