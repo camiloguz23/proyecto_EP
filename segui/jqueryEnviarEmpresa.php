@@ -11,13 +11,21 @@
     $correo = $_POST['email'];
     $ciudad = $_POST["id_ciu"];
 
-    $validar = "SELECT * from empresa";
+    $validar = "SELECT * from empresa where nom_empre = '$nomEM' and nit_empresa = '$nitEM'";
+    $sqlValidar = mysqli_query($connection,$validar);
+    $datoValidar= mysqli_fetch_assoc($sqlValidar);
+
+    if ($datoValidar) {
+        echo "<script >".$datoValidar["nom_empre"]."</script>";
+    }else {
+        $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, nom_jef_inme, cargo, telefono, correo,id, razon_social_empresa) 
+        VALUES ('$nitEM','$nomEM','$direcEM','$nomJefInme','$cargo','$telefono','$correo','$ciudad','$socialEm')";
+    
+        echo mysqli_query($connection,$consul);
+    }
 
 
-    $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, nom_jef_inme, cargo, telefono, correo,id, razon_social_empresa) 
-    VALUES ('$nitEM','$nomEM','$direcEM','$nomJefInme','$cargo','$telefono','$correo','$ciudad','$socialEm')";
-
-    echo mysqli_query($connection,$consul); 
+    
 
 
 
