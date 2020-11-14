@@ -15,13 +15,7 @@ const btnCerrarDocu = document.getElementById("btnCerraDocu")
 const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
 
-
-forb.addEventListener('click', (e)=>{
-    e.preventDefault();
-    forbus.style.opacity="1";
-    forbus.style.visibility="visible"
-    forb.style.background="rgb(252,115,35)";
-})
+alert("hola ")
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();
@@ -58,7 +52,7 @@ function crear(e) {
 
 function mostrar(e) {
     e.preventDefault();
-    alert("hola")
+   
     formularioDocu.style.display = "block";
     console.log(formularioDocu);
 
