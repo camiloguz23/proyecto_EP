@@ -8,7 +8,7 @@ const formularioEmpresa = document.querySelector(".registroEmpre")
 const formularioLegalizacion = document.querySelector(".registroLegal")
 const btnaprendiz = document.querySelector("#tres")
 const registroAprendiz = document.getElementById("registroAprendiz")
-const btnLEgalizacion = document.getElementById("uno");
+const btnLEgalizacion = document.getElementById("legal");
 const formularioDocu = document.getElementById("formularioDocu")
 const cerrarEmpresa = document.getElementById("cerrarEmpresa")
 const btnCerrarDocu = document.getElementById("btnCerraDocu")
@@ -58,6 +58,7 @@ function crear(e) {
 
 function mostrar(e) {
     e.preventDefault();
+    alert("hola")
     formularioDocu.style.display = "block";
     console.log(formularioDocu);
 
