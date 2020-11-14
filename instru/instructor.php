@@ -25,16 +25,16 @@
 
         <nav class="navegacion">
             <ul class="menu">
-                <li ><a href="#"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">SEGUIMINETO DE EVIDENCIAS</a></li>
-                <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
+                <li  ><a href="#" id="seguimi"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">SEGUIMIENTO DE EVIDENCIAS</a></li>
+                <li id="aprediz"><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
             </ul>  
         </nav>
 
     </header>
 
     <div class="contper">
-            <div class="fondo">
-                <img width="1349" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
+            <div id="fondo" class="fondo">
+                 <img width="1349" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
             </div>
         <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
 
@@ -59,23 +59,83 @@
             </div>
     </div>
 
-    <div class="seguimiento">
-
-        <div class="foor">
-            <h1>BUSCAR DOCUMENTO</h1>
-            <div class="forma">
-            <form action="" class="formu">
-                <input type="number" id="docu" name="docu" placeholder="Numero de documento">
-            </form>
-            <img src="../imagenes/Imagen3.png" alt="logo-buscar">
+    <div id="infor" class="seguimiento">
+        <div  class="sali">
+        <a href="#" id="salirr"><img  class="salir" src="../imagenes/cancelar.png" alt=""></a>
+        </div>
+        <div class="informa2">
+            <div class="buscador2">
+                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
+                <div class="buscarDocu">
+                <form method="POST" id="buscarDocu" name="buscarDocu"  autocomplete="off">
+                    <input  type="number" placeholder="Numero De Documento">
+                     <img class= "boton2" src="../imagenes/Imagen3.png" >
+                </form>
+                </div>
             </div>
         </div>
 
         <div class="opcioonar">
-            <input class="bot1" type="button" value="Quincenales">
-            <input type="button" value="Trimestrales">
+            <input id="bot1"class="bot1" type="button" value="Quincenales">
+            <input id="bot2" class="bot1" type="button" value="Trimestrales">
         </div>
 
+        <!--datos del aprendiz -->
+        <div id="informa" class="informa">
+                    <div class="datosMostrar">
+                        <div class="datosApre">
+                        <h3 class="subTitulo">*DATOS APRENDIZ</h3>
+                            <div class="dato1">
+                                <label class="label" for="">NOMBRE: </label>
+                                <!-- NO BORRAR LAS CLASES -->
+                                <label class="datos" for=""></label>
+                            </div>
+                            <div class="dato2">
+                                <label class="label" for="">IDENTIFICACIÓN: </label>
+                                <label class="datos" for=""></label>
+                            </div>
+                            <div class="dato3">
+                                <label class="label" for="">TELEFONO: </label>
+                                <label class="datos" for=""></label>
+                            </div>
+                            <div class="dato4">
+                                <label class="label" for="">E-MAIL: </label>
+                                <label class="datos" for=""></label>
+                            </div>
+                            <div class="dato5">
+                                <label class="label" for="">ESTADO: </label>
+                                <label class="datos" for=""></label>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="datosForma">
+                        <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
+                            <div class="dato1">
+                                <label class="label" for="">REGIONAL: </label>
+                                <label class="datos" for="">$bd</label>
+                            </div>
+
+                            <div class="dato2">
+                                <label class="label" for="">NO.FICHA: </label>
+                                <label class="datos" for="">$bd</label>
+                            </div>
+
+                            <div class="dato3">
+                                <label class="label" for="">CENTRO DE FORMACIÓN: </label>
+                                <label class="datos" for="">$bd</label>
+                            </div>
+
+                            <div class="dato4">
+                                <label class="label" for="">PROGRAMA DE FORMACIÓN: </label>
+                                <label class="datos" for="">$bd</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        
         <!--formato d evidencias  del aprendiz-->
     <div class="conteiner" id="evidencias">
         <form class=""  action="" id="evidencias" method="POST">
@@ -118,7 +178,7 @@
            </div>
        </form>
    </div>
-   <div class="conteiner1">
+   <div class="conteiner1" id="evidenciastri2">
     <form class=""  action="" id="evidenciaas2"  method="POST">
 
         <div class="formann">
@@ -150,5 +210,6 @@
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
