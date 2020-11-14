@@ -1,212 +1,246 @@
-*{
-    padding: 0%;
-    margin: 0%;
-}
-
-
-body {
-    background-color: rgb(223, 223, 223) ;
-    font-family: Verdana;
-}
-
-.princi{
-    background-color: #ffffff;
-    height: 110px;
-
-}
-
-
-.segui{
-    position:absolute;
-    font-family: Verdana;
-    font-size: 25px;
-    margin-left: 13%;
-    margin-top: 1%;
-    color: rgb(25, 130, 118);
-}
-
-.imagen{
-    position: absolute;
-    z-index: 111;
-}
-.logo .seguiimg{
-    margin-left: 5px;
-}
-
-.segun{
-    position: absolute;
-    margin-left: 0%;
-    z-index: 1;
-    margin-top: -2.2%;
-
-}
-.segu{
-    position: absolute;
-    margin-left: 84.2%;
-    z-index: 1;
-    margin-top: -1.9%;
-}
-.navegacion {
-    background: white;
-    display: table;
-    width: 85%;
-    padding: 0 5.5em;
-    position: absolute;
-    margin-top: 5%;
-    margin-left: 16px;
-    border-color: #fc7323 transparent;
-    border-style: solid;
-    border-width: 5px;
-    text-align: center;
-    
-}
-.cerrar li a{
-    font-family: Verdana;
-    font-size: 15px;
-    color: rgb(25, 130, 118);
-}
-.cerrar {
-    position: absolute;
-    list-style: none;
-    margin-left: 13%;
-    margin-top: 3.5%;
-}
-
-
-.navegacion  ul  li {
-    list-style: none;
-    margin: auto;
-    margin-left: 0px;
-}
-.navegacion .menu img{
-    margin-right: 15px;
-    margin: -5px 5px;
-}
-
-
-.menu  li {
-    font-family: Verdana;
-    display: inline-block;
-
-}
-
-.menu  li a {
-    display: block;
-    padding: 15px 20px;
-    color: black;
-    font-family: Verdana;
-    text-decoration: none;
-}
-.fondo{
-    margin-top: 5px;
-}
-.naranja .perfil{
-    position: absolute;
-    z-index: 11;
-    margin-top: -120px;
-    margin-left: 535px;
-    background-color: #fc7323;
-    border-radius: 300px;
-    height: 250px;
-    width: 20%;
-
-}
-
-
-.contenedor{
-    position: absolute;
-    background-color: #ffffff;
-    width: 90%;
-    height: 150px;
-    margin-left: 60px;
-    margin-top: 10%;
-
-}  
-.date{
-    position: relative;
-    background-color: #ffffff;
-    border:2px solid;
-    border-color: #353434;
-    width:96%;
-    height: 100px;
-    margin-left: 20px;
-    margin-top: 2%;
-    text-align: center;
-} 
-.date .datos p{
-    list-style: none;
-    text-decoration: none;
-    font-family: Verdana;
-    color: black;
-    text-align: center;
-}
-.date .datos .text2{
-    text-align: left;
-    max-width: 10px;
-}
-
-
-.button { /*editar*/
-    position: absolute;
-    text-decoration: none;
-    padding: 10px 40px;
-    box-sizing: border-box;
-    font-family: Verdana;
-    width: 170px;
-    text-align: center;
-    margin-top: 29%;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    background: rgb(89, 181, 72);
-    top: 410px;
-    margin-left: 1000px;
-    border-radius: 20px;
-   
-}
-
-.button:hover{
-    background-color: rgb(25, 130, 118);
-    color: white;
-  
-}
-.button2 .butuno{
-    margin-right: 15px;
-    margin: -10px 10px;
-}
-
-.button2{ /*legalizacion*/
-    position: relative;
-    text-decoration: none;
-    margin: 0%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    font-family: verdana;
-    width: 170px;
-    text-align: center;
-    margin: auto;
-    margin-top: 200px;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    background: white;
-    top: 490px;
-    margin-left: 810px;
-    border-radius: 20px;
-    border-color: rgb(25, 130, 118) transparent;
-    border-style: solid;
-    border-width: 2px;
+    *{
+        padding: 0%;
+        margin: 0%;
     }
-    
-.button2:hover{
-       
-    background-color: rgb(25, 130, 118);
-    color: white;
-}
-.button3 .butdos{
-    margin-right: 15px;
-    margin: -10px 10px;
-}
-.button3 { /*certificacion*/
 
+    body 
+    {
+        background-color: rgb(223, 223, 223) ;
+        font-family: Verdana;
+    }
+
+    /*encabezado*/
+
+    .princi
+    {
+        background-color: #ffffff;
+        height: 110px;
+
+    }
+
+    .segui
+    {
+        position:absolute;
+        font-family: Verdana;
+        font-size: 25px;
+        margin-left: 13%;
+        margin-top: 1%;
+        color: rgb(25, 130, 118);
+    }
+
+    .imagen
+    {
+        position: absolute;
+        z-index: 111;
+    }
+
+    .logo .seguiimg
+    {
+        margin-left: 5px;
+    }
+
+    .segun
+    {
+        position: absolute;
+        margin-left: 0%;
+        z-index: 1;
+        margin-top: -2.2%;
+    }
+
+    .segu
+    {
+        position: absolute;
+        margin-left: 84.2%;
+        z-index: 1;
+        margin-top: -1.9%;
+    }
+
+    .navegacion 
+    {
+        background: white;
+        display: table;
+        width: 85%;
+        padding: 0 5.5em;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: 1px;
+        border-color: #fc7323 transparent;
+        border-style: solid;
+        border-width: 5px;
+    }
+
+    .cerrar li a
+    {
+        font-family: Verdana;
+        font-size: 15px;
+        color: rgb(25, 130, 118);
+    }
+
+    .cerrar 
+    {
+        position: absolute;
+        list-style: none;
+        margin-left: 13%;
+        margin-top: 3.5%;
+    }
+
+    .navegacion  ul  li 
+    {
+        list-style: none;
+        margin: auto;
+        margin-left: 10%;
+    }
+
+    .navegacion .menu img
+    {
+        margin-right: 15px;
+        margin: -5px 5px;
+    }
+
+    .menu  li 
+    {
+        font-family: Verdana;
+        display: inline-block;
+    }
+    .menu  li:hover 
+    {
+        background: rgb(25, 130, 118);
+        border-radius: 8px;
+    }
+
+    .menu  li a 
+    {
+        display: block;
+        padding: 15px 20px;
+        color: black;
+        font-family: Verdana;
+        text-decoration: none;
+    }
+
+    /*contenido*/
+
+    .fondo
+    {
+        margin-top: 5px;
+    }
+
+    .naranja .perfil
+    {
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 535px;
+        border-radius: 300px;
+        height: 250px;
+        width: 20%;
+    }
+
+    .contenedor
+    {
+        position: absolute;
+        background-color: #ffffff;
+        width: 90%;
+        height: 150px;
+        margin-left: 60px;
+        margin-top: 10%;
+    }  
+
+    .date
+    {
+        position: relative;
+        background-color: #ffffff;
+        border:2px solid;
+        border-color: #353434;
+        width:96%;
+        height: 100px;
+        margin-left: 20px;
+        margin-top: 2%;
+        text-align: center;
+    } 
+
+    .date .datos p
+    {
+        list-style: none;
+        text-decoration: none;
+        font-family: Verdana;
+        color: black;
+        text-align: center;
+    }
+
+    .date .datos .text2
+    {
+        text-align: left;
+        max-width: 10px;
+    }
+
+    /* boton de editar perfil */
+    .button 
+    { 
+        position: absolute;
+        text-decoration: none;
+        padding: 10px 40px;
+        box-sizing: border-box;
+        font-family: Verdana;
+        width: 170px;
+        text-align: center;
+        margin-top: 29%;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+        background: rgb(89, 181, 72);
+        top: 410px;
+        margin-left: 1000px;
+        border-radius: 20px;
+    }
+
+    .button:hover
+    {
+        background-color: rgb(25, 130, 118);
+        color: white;
+    }
+
+    /*botones menu*/
+
+    .button2 .butuno
+    {
+        margin-right: 15px;
+        margin: -10px 10px;
+    }
+
+    .button2
+    { 
+        position: relative;
+        text-decoration: none;
+        margin: 0%;
+        padding: 20px 40px;
+        box-sizing: border-box;
+        font-family: verdana;
+        width: 170px;
+        text-align: center;
+        margin: auto;
+        margin-top: 200px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        background: white;
+        top: 490px;
+        margin-left: 810px;
+        border-radius: 20px;
+        border-color: rgb(25, 130, 118) transparent;
+        border-style: solid;
+        border-width: 2px;
+    }
+        
+    .button2:hover
+    {
+        background-color: rgb(25, 130, 118);
+        color: white;
+    }
+    .button3 .butdos
+    {
+        margin-right: 15px;
+        margin: -10px 10px;
+    }
+
+    .button3 
+    {
         position: relative;
         text-decoration: none;
         margin: 0%;
@@ -227,17 +261,21 @@ body {
         border-style: solid;
         border-width: 2px;
     }
-    
-    .button3:hover {
+        
+    .button3:hover 
+    {
         color: white;
         background-color: rgb(25, 130, 118);
     }
-    .button4 .buttres{
+
+    .button4 .buttres
+    {
         margin-right: 15px;
         margin: -10px 10px;
     }
 
-    .button4 { /*aprendices*/
+    .button4 
+    { 
         position: relative;
         text-decoration: none;
         margin: 0%;
@@ -259,45 +297,79 @@ body {
         border-width: 2px;
     }
     
-    .button4:hover{
+    .button4:hover
+    {
         background-color: rgb(25, 130, 118);
         color: white;
         
     }
 
-.pie {
-    background-color: #fc7323;
-    margin-top:600px;
-}
-.pie{
-    position: relative;
-    width: 100%;
-    height: 75px;
-    background-color:#fc7323;
-    margin-top:600px;
-    display: flex;
-    align-items: flex-end;
-    border-top: 2px solid #fff;
-    margin-left: 0px;
-    
-}
-.pie img
-{
-    margin-left: 10px;
-    
-}
-.info 
-{
-   border-left: solid var(--white);
-   margin: 4px;
-   
-}
-.info p
-{
-    font-size: 12px;
-    color: #fff;
-    font-family: Verdana;
+    /*pie de pagina*/
+
+    .pie 
+    {
+        background-color: #fc7323;
+        margin-top:600px;
+    }
+
+    .pie
+    {
+        position: relative;
+        width: 100%;
+        height: 75px;
+        background-color:#fc7323;
+        margin-top:600px;
+        display: flex;
+        align-items: flex-end;
+        border-top: 2px solid #fff;
+        margin-left: 0px;
+    }
+
+    .pie img
+    {
+        margin-left: 10px; 
+    }
+
+    .info 
+    {
+    border-left: solid var(--white);
     margin: 4px;
-    margin-left: 5px;
-    font-family: Verdana;
-}
+    }
+
+    .info p
+    {
+        font-size: 12px;
+        color: #fff;
+        font-family: Verdana;
+        margin: 4px;
+        margin-left: 5px;
+        font-family: Verdana;
+    }
+
+    /*creacion de usuarios*/
+
+    .creausu
+    {
+        margin-left: 3%;
+        margin-top: -32%;
+        background-color: rgb(25, 130, 118);
+        width: 94%;
+        height: 720px;
+        position: absolute;
+        border-radius: 15px;
+        visibility: hidden;
+    }
+
+    .cerrar
+    {
+        position:absolute ;
+    }
+    .cerrar img
+    {
+        margin-top: 0%;
+        width: 4%;
+        height: 4%;
+        margin-left: 990px;
+        cursor: pointer;
+        z-index: 11;
+    }
