@@ -631,9 +631,12 @@ body {
    
     background-color: #2456c0;
 }
+#registroAprendiz{
+    display: none;
+}
 #frmajax {
     font-size: 25px;
-    display: none;
+   
     position: absolute;
     padding: 9px 20px;
     top: 40px;

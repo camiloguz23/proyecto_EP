@@ -95,6 +95,7 @@
                 srcset="">APRENDICES</a>
     </div>
 
+
     <!--FORMULARIOS-->
     <div id="formularioDocu">
         <div class="formLegalizar">
@@ -346,6 +347,7 @@
     </div>
     </div>
     <div id="registroAprendiz">
+
         <form id="frmajax" method="POST">
             <label>Tipo Documento:</label>
             <p></p>
@@ -382,6 +384,7 @@
 
             <button id="btnguardar">Guardar</button>
         </form>
+    </div>
         <footer class="pie">
             <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
             <div class="info">
