@@ -15,7 +15,6 @@ const btnCerrarDocu = document.getElementById("btnCerraDocu")
 const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
 
-alert("hola ")
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();

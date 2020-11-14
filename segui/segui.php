@@ -69,10 +69,11 @@
 
     </header>
 
-    <div class="fondo">
-        
+    <div class="fondo"><!--campo del fondo donde dice seguimiento *en el header*--></div>
+
+    <div class="naranja">
+    <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
     </div>
-    <div class="naranja"><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
     <div class="contenedor">
         <div class="date">
             <ul class="datos">
@@ -80,12 +81,11 @@
                 <p class="frase">Soy una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada dia</p>
                 <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail: <?=$_SESSION["correo"]?></p>
 
-
             </ul>
             <a href="#" class="button">EDITAR</a>
           
         </div>
-    </div>
+    </div>  
 
     <div class="tresbtn">
         
