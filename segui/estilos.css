@@ -195,114 +195,40 @@ body {
     color: white;
   
 }
-.button2 .butuno{
-    margin-right: 15px;
-    margin: -10px 10px;
+
+
+.tresbtn{
+    position:relative;
+    margin-top:5%;
+    padding:20px;
+    max-width: 90%;
+    margin-left: 3%;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.button2 { /*legalizacion*/
-    position: relative;
+.button21 { /*los tres botones legalizacion-certificacion y aprendices*/
+    margin-left: 20%;
     text-decoration: none;
-
     padding: 20px 40px;
-    border:1px solid rgb(17, 0, 255);
-    box-sizing: border-box;
     font-family: verdana;
     width: 170px;
-    text-align: center;
-    margin: auto;
-    top:19px;
-    margin-top: 230px;
     color: rgb(0, 0, 0);
     font-size: 15px;
     background: white;
-
-    margin-left: 810px;
     border-radius: 20px;
     border-color: #238276 transparent;
     border-style: solid;
     border-width: 2px;
-    }
+}
     
-.button2:hover{
+.button21:hover{
        
         background-color: rgb(252, 115, 35);
         color: white;
 }
 
-.button3 .butdos{
-    margin-right: 15px;
-    margin: -10px 10px;
-}
-
-.tresbtn{
-    position:relative;
-    margin-top:4%;
-    
-    padding:20px;
-    height: 80px;
-}
-
-.button3  { /*certificacion*/
-
-    
-    text-decoration: none;
-   
-    padding: 20px 40px;
-    box-sizing: border-box;
-    font-family: verdana;
-    width: 170px;
-    text-align: center;
-    
-    margin-top: 200px;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    background: white;
-    border:1px solid blue;
-
-    margin-left: 520px;
-    border-radius: 20px;
-    border-color: #238276 transparent;
-    border-style: solid;
-    border-width: 2px;
-}
-
-.button3:hover {
-    color: white;
-    background-color:  rgb(252, 115, 35); 
-}
-.button4 .buttres{
-    margin-right: 15px;
-    margin: -10px 10px;
-}
-
-.button4 { /*aprendices*/
-    position: relative;
-    text-decoration: none;
-    margin: 0%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    font-family: Verdana;
-    width: 170px;
-    text-align: center;
-    margin: auto;
-    margin-top: 200px;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    background: white;
-    
-    margin-left: -550px;
-    border-radius: 20px;
-    border-color: #238276 transparent;
-    border-style: solid;
-    border-width: 2px;
-}
-    
-.button4:hover{
-    background-color: rgb(252, 115, 35);
-    color: white;
-    
-}
 
 
 
@@ -362,7 +288,6 @@ body {
 
     /*GRID = Trabajar con grid */
     display: grid;
-    /*Definir numero de columnas*/
     grid-template-columns: 1fr ;
     gap: 5px;
     width: 60%;
@@ -370,9 +295,9 @@ body {
     color: black;
     border-radius:9px;
     padding: 1% 3% 5% 5%;
-    margin-left: 20%;
-    position: relative;
-    margin-top: 3%;
+    margin-left: 17%;
+    margin-top: -57%;
+    position: absolute;
 }
 
 .buscador{
@@ -413,6 +338,12 @@ body {
     width: 80%;
     padding: 15px 30px;
     border-radius: 15px;
+}
+.registroEmpre{
+    position: absolute;
+    z-index: 2;
+    margin-top: -59%;
+    width: 100%;
 }
 
 .datosApre, .datosForma{
@@ -653,9 +584,15 @@ body {
    
     background-color: #2456c0;
 }
+
 #registroAprendiz{
     display: none;
 }
+
+.registroAprendiz{
+    display: none;
+}
+
 #frmajax {
     font-size: 25px;
     position: absolute;
@@ -670,9 +607,6 @@ body {
     border-radius: 20px;
     z-index: 2;
 
-}
-#registroAprendiz{
-    display: none;
 }
 
 
