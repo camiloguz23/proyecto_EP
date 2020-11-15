@@ -169,7 +169,8 @@
     .date .datos .text2
     {
         text-align: left;
-        max-width: 10px;
+        max-width: 100%;
+        width: 50%;
     }
 
     /* boton de editar perfil */
