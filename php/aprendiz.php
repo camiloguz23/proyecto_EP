@@ -61,7 +61,7 @@ if ($dato) {
                             <label class ="label" for="">PROGRAMA DE FORMACIÓN: </label>
                             <label class ="datos" for="">'.$dato["nom_formacion"].'</label>
                         </div>
-                        
+                       
                     </div>
                 </div>
         '
