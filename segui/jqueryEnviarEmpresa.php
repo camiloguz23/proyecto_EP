@@ -16,7 +16,7 @@
     if ($datoValidar) {
         echo "<script >".$datoValidar["nom_empre"]."</script>";
     }else {
-        $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, telefono, correo,id, razon_social_empresa) 
+         $consul = "INSERT INTO empresa(nit_empresa, nom_empre, direc_empre, telefono, correo,id, razon_social_empresa) 
         VALUES ('$nitEM','$nomEM','$direcEM','$telefono','$correo','$ciudad','$socialEm')";
     
         echo mysqli_query($connection,$consul);
