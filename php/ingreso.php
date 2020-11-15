@@ -1,7 +1,4 @@
 <?php
-
-   
-
     require 'connecion.php';   
     session_start();
             $usuario = $_POST["usuario"];
@@ -48,8 +45,10 @@
                                 
                         } else{
                             
-                            echo "error";
-                                exit();
+                            
+                             header("location: ../ingreso/ingreso.html");
+                         
+                             
                         }  
                                                 
         
