@@ -114,7 +114,7 @@
 
 
     <!--FORMULARIOS-->
-    <div id="formularioDocu">
+    <div id="formularioDocu" class="formularioDocu">
         <div class="formLegalizar">
             <!--todo el formulario-->
 
@@ -123,9 +123,8 @@
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
                     <!--todo el formulario-->
                     <input class="inputB" type="number" id="documento">
-                    <div class="boton">
-                        <a href="#" id="boton"><img class="boton" src="../imagenes/Imagen3.png" height="50px"
-                                width="50px"></a>
+                    <div class="botones12" id="boton" title="consultar">
+                        <a href="#" class="hola" ><img class="boton" src="../imagenes/Imagen3.png" height="50px" width="50px"></a>
                     </div>
                 </form>
             </div>
@@ -142,7 +141,7 @@
                 </div>
             </div>
         </div>
-
+            <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpreS">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
 
@@ -402,7 +401,8 @@
 
 
 
-
+    <script src="validacionF.js"></script>
+    
 </body>
 
 </html>

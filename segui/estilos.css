@@ -285,7 +285,10 @@ text-align: center;
 
 
 /*--------FIN--------*/
-
+.formularioDocu{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
 .formLegalizar{
 
     /*GRID = Trabajar con grid */
@@ -312,23 +315,40 @@ text-align: center;
 }
 
 .buscarDocu{
+    margin-left: 30%;
     padding: 4% 3%;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 35%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    position: relative;
 }
 
 .inputB{
     border-top: none;
     border-left: none;
     border-right: none;
+    border: transparent;
+    border-radius: transparent;
+    outline: none; 
     border-bottom: 2px solid black;
-    width:70%;
+    height: 20px;
+    margin-top: 16%;
     margin-left: 20px;
 }
 
+#boton{
+    width: 34%;
+}
+
 .boton{
-    width: 35%;
-    height: 45%;
-    margin-top: -7%;
-    margin-left: 58%;
+
+    width: 60px;
+    height: 60px;
+    
 }
 
 .registroEmpre, .registroLegal {
@@ -346,6 +366,7 @@ text-align: center;
 .informa, .registroEmpre, .registroLegal{
     background-color: #fff;
     width: 80%;
+    margin-left: 4%;
     padding: 15px 30px;
     border-radius: 15px;
 }
@@ -353,7 +374,10 @@ text-align: center;
     position: absolute;
     z-index: 2;
     margin-top: -59%;
-    width: 100%;
+    width: 95.5%;
+
+    display: block;
+    margin-left: 0px;
 }
 
 .datosApre, .datosForma{
