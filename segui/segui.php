@@ -128,7 +128,7 @@
                     <!--</div>-->
                 </div>
 
-                <div class="botones">
+               <div class="botones">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
