@@ -131,7 +131,9 @@ body {
 }
 
 
-
+.agrego{
+text-align: center;
+}
 
 .contenedor{
     position: relative;

@@ -85,14 +85,15 @@
     </div>
     <div class="contenedor">
         <div class="date">
-            <ul class="datos">
 
-                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
-                    dia</p>
+  <!----------------------------campo del fondo donde dice seguimiento *en el header*------------------------->
+
+            <ul class="datos">
+                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada dia</p>
                 <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail:
                     <?=$_SESSION["correo"]?></p>
-
             </ul>
+
             <a href="#" class="button">EDITAR</a>
 
         </div>
@@ -139,7 +140,7 @@
         <div class="registroEmpre" id="registroEmpreS">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
 
-
+ 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
                 <label class="label" for="">*Razón Social Empresa: </label>
@@ -176,7 +177,7 @@
                         endforeach; 
                         ?>
                 </select>
-
+                <div class="agrego"></div>
                 <div class="botones">
 
                     <button class="botonForm" id="botonEM">Guardar</button>
@@ -425,9 +426,16 @@ $(document).ready(function() {
             data: datosEmpre,
             success: function(b) {
                 if (b == 1) {
-                    alert('Se agrego correctamente');
+                    $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
+                    return
+                    exit()
+                    
                 } else {
-                    alert('Error al grabar');
+                
+                   $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>')
+                      return
+                      exit()
+                  
                 }
 
             }
