@@ -76,32 +76,33 @@
 
     </header>
 
-    <div class="fondo"><!--campo del fondo donde dice seguimiento *en el header*--></div>
+    <div class="fondo">
+        <!--campo del fondo donde dice seguimiento *en el header*-->
+    </div>
 
     <div class="naranja">
-      <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
+        <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
     </div>
     <div class="contenedor">
         <div class="date">
             <ul class="datos">
 
-                <p class="frase">Soy una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada dia</p>
-                <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail: <?=$_SESSION["correo"]?></p>
+                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
+                    dia</p>
+                <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail:
+                    <?=$_SESSION["correo"]?></p>
 
             </ul>
             <a href="#" class="button">EDITAR</a>
-          
+
         </div>
-    </div>  
+    </div>
 
     <div class="tresbtn">
-        
-        <a href="#" class="button2"> <img class="butuno" height="30" width="30" src="../imagenes/Imagen9.png" alt=""
-                srcset=""> LEGALIZACIÓN</a>
-        <a href="#" class="button3"> <img class="butdos" height="30" width="30" src="../imagenes/Imagen5.png" alt=""
-                srcset="">CERTIFICACIÓN</a>
-        <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt=""
-                srcset="">APRENDICES</a>
+
+        <a href="#" class="button21"> <img class="butuno" alt="" srcset=""> LEGALIZACIÓN</a>
+        <a href="#" class="button21"> <img class="butuno" alt="" srcset="">CERTIFICACIÓN</a>
+        <a href="#" class="button21"> <img class="butuno" alt="" srcset="">APRENDICES</a>
     </div>
 
 
@@ -109,7 +110,7 @@
     <div id="formularioDocu">
         <div class="formLegalizar">
             <!--todo el formulario-->
-           
+
             <div class="buscardor">
                 <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
@@ -123,7 +124,7 @@
             </div>
             <div class="informa">
                 <div id="informa">
-                    
+
                     <!--</div>-->
                 </div>
 
@@ -166,7 +167,7 @@
                 <input class="inputR" type="email" name="email"><br>
                 <label class="label"><b>*Ciudad:</b> </label>
                 <p></p>
-                    <select class="inputR" name="id_ciu" id="id_ciu">
+                <select class="inputR" name="id_ciu" id="id_ciu">
                     <?php
                         foreach($query_ciudad as $tip_ciudad):?>
                     <option value="<?php echo $tip_ciudad['id'] ?> ">
@@ -194,14 +195,15 @@
                 <option value=""></option>
                 <?php
                         foreach($query_re as $alternativa):?>
-                <option value="<?php echo $alternativa['nom_alternativa'] ?>"><?php echo $alternativa['nom_alternativa'] ?></option>
+                <option value="<?php echo $alternativa['nom_alternativa'] ?>">
+                    <?php echo $alternativa['nom_alternativa'] ?></option>
                 <?php
                         endforeach; 
                         ?>
             </select>
 
             <div class="cargaDocu" id="cargaDocu">
-               
+
             </div>
 
             <div class="botones">
@@ -305,8 +307,8 @@
 
     </div>
     </div>
-    
-    <div id="registroAprendiz">
+
+    <div id="registroAprendiz" class="registroAprendiz">
 
 
         <form id="frmajax" method="POST">
@@ -347,7 +349,7 @@
         </form>
 
     </div>
-      
+
 
     <footer class="pie">
         <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
@@ -359,20 +361,20 @@
         </div>
     </footer>
 
-        <script src="segui.js"></script>
+    <script src="segui.js"></script>
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-   
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
