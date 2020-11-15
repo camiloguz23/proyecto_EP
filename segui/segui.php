@@ -187,7 +187,7 @@
         </div>
 
 
-        <form action="../php/registrolegi.php" method="POST" autocomplete="off">                   
+        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data">                   
             <div class="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label>
@@ -195,7 +195,7 @@
                     <option value=""></option>
                     <?php
                             foreach($query_re as $alternativa):?>
-                    <option value="<?php echo $alternativa['nom_alternativa'] ?>">
+                    <option value="<?php echo $alternativa['id_alternativa'] ?>"><?php echo $alternativa['id_alternativa'] ?>
                         <?php echo $alternativa['nom_alternativa'] ?></option>
                     <?php
                             endforeach; 
@@ -215,12 +215,14 @@
                 <input class="seleccionTipo" type="text" name="jefe" id=""><br>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="cargoJefe" id=""><br>
+                <label class="label" for="">fecha de inicio de la etapa productiva</label><br>
+                <input class="seleccionTipo" type="date" name="fecha" id="">
                 <div id="estudiante">
                     <input type="hidden" name="docuEstudiante" value="">
                 </div>
 
                 <div class="cargaDocu" id="cargaDocu">
-
+                           
                 </div>
 
                 <div class="botones">
