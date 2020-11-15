@@ -340,6 +340,15 @@
             <p></p>
             <input type="email" name="email" id="email" require>
             <p></p>
+            <select class="inputR" name="id_apren" id="id_ciu">
+                    <?php
+                        foreach($query_ciudad as $tip_ciudad):?>
+                    <option value="<?php echo $tip_ciudad['id'] ?> ">
+                        <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
+                    <?php
+                        endforeach; 
+                        ?>
+                </select>
             <label>Telefono Aprendiz:</label>
             <p></p>
             <input type="number" name="tel" id="tel">
@@ -393,6 +402,7 @@ $(document).ready(function() {
             success: function(a) {
                 if (a == 1) {
                     alert('Se agrego correctamente');
+                    
                 } else {
                     alert('Error al grabar');
                 }
@@ -401,7 +411,6 @@ $(document).ready(function() {
         });
         return false;
     });
-
 });
 </script>
 <script type="text/javascript">
