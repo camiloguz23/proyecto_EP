@@ -76,7 +76,7 @@ function funAlte() {
     const datoalter = alternativa.value
 
     switch (datoalter) {
-        case "Contrato de aprendizaje":
+        case "1":
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
@@ -84,7 +84,7 @@ function funAlte() {
             <input class="archivo" type="file" name="ContratoAprendizaje">
             `
             break;
-        case "Vinculo laboral":
+        case "2":
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
@@ -94,7 +94,7 @@ function funAlte() {
             <input class="archivo" type="file" name="Cartaempresa">
             `
             break;
-        case "Pasantía: Apoyo unidad productiva familiar":
+        case "3":  // "Pasantía: Apoyo unidad productiva familiar"
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
@@ -102,13 +102,13 @@ function funAlte() {
             <input class="archivo" type="file" name="CartaSolicitud"><br>
             <Label class="label">Constacia de la empresa</Label>
             <input class="archivo" type="file" name="Cartaempresa"><br>
-            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaEPS"><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
             <input class="archivo" type="file" name="FotocopiaCC">
             `
             break;
-        case "Pasantia:Apoyo entidad estatal, municipal, verdal u OMG":
+        case "4":  // "Pasantia:Apoyo entidad estatal, municipal, verdal u OMG"
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
@@ -116,12 +116,13 @@ function funAlte() {
             <input class="archivo" type="file" name="CartaSolicitud"><br>
             <Label class="label">Constacia de la empresa</Label>
             <input class="archivo" type="file" name="Cartaempresa"><br>
-            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaEPS"><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
             <input class="archivo" type="file" name="FotocopiaCC">
             `
-        case "Pasantia : Monitoria":
+            break;
+        case "5": // Pasantia : Monitoria
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
@@ -129,12 +130,13 @@ function funAlte() {
             <input class="archivo" type="file" name="CartaSolicitud"><br>
             <Label class="label">Constacia de la empresa</Label>
             <input class="archivo" type="file" name="Cartaempresa"><br>
-            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaEPS"><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
             <input class="archivo" type="file" name="FotocopiaCC">
             `
-        case "Servicio Militar (social)":
+            break;
+        case "6":  // Servicio Militar (social)
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
@@ -143,14 +145,15 @@ function funAlte() {
             <Label class="label">Constacia de la empresa</Label>
             <input class="archivo" type="file" name="Cartaempresa">
             `
-        case "Proyecto productivo":
+            break;
+        case "7": // Proyecto productivo
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
             <input class="archivo" type="file" name="GFPI"><br>
             <Label class="label">Carta de solicitud</Label>
             <input class="archivo" type="file" name="CartaSolicitud"><br>
-            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaEPS"><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
             <input class="archivo" type="file" name="FotocopiaCC">
             `
