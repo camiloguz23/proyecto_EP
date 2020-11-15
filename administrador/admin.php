@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $usario = $_SESSION["documento"];
+    if ($usario == "" || $usario == null) {
+        header("location: ../index.html");
+    }
+        require_once('../php/connecion.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +21,7 @@
             <div class="logo">
                 <h3 class="segui">ADMINISTRADOR<img class="seguiimg" width="30" height="30" src="../imagenes/iconoadmin.jpg.png" alt=""></h3>
                     <ul class="cerrar">
-                        <li><a href="#">CERRAR SESIÓN</a></li>
+                        <li><a href="../php/salir.php">CERRAR SESIÓN</a></li>
                     </ul>
                     <div class="segun">
                         <img height="220" src="../imagenes/adminis.jpg.png" alt="">
@@ -42,11 +51,10 @@
         <div class="contenedor">
             <div class="date">
                 <ul class="datos">
-                    <p>Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                    <p class="text2">NOMBRE:</p>
-                    <p class="text2">EDAD: </p>
-                    <p class="text2">TELEFONO:</p>
-                    <p class="text2">EMAIL:</p>
+                    <p>Soy  una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada  dia</p>
+                    <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> </p>
+                    <p class="text2"> TELEFONO: <?=$_SESSION["telefono"]?></p>
+                    <p class="text2">EMAIL:  <?=$_SESSION["correo"]?></p>
                 </ul>
             </div>
         </div>
