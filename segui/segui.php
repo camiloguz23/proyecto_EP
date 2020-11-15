@@ -122,57 +122,8 @@
             </div>
             <div class="informa">
                 <div id="informa">
-                    <div class="datosMostrar">
-                        <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-                        <div class="datosApre">
-                            <div class="dato">
-                                <label class="label" for="">NOMBRE: </label>
-                                <!-- NO BORRAR LAS CLASES -->
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato">
-                                <label class="label" for="">IDENTIFICACIÓN: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato">
-                                <label class="label" for="">TELEFONO: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato">
-                                <label class="label" for="">E-MAIL: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato">
-                                <label class="label" for="">ESTADO: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                        </div><br>
-
-                        <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
-
-                        <div class="datosForma">
-                            <div class="dato">
-                                <label class="label" for="">REGIONAL: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-
-                            <div class="dato">
-                                <label class="label" for="">NO.FICHA: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-
-                            <div class="dato">
-                                <label class="label" for="">CENTRO DE FORMACIÓN: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-
-                            <div class="dato">
-                                <label class="label" for="">PROGRAMA DE FORMACIÓN: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                        </div>
-
-                    </div>
+                    
+                    <!--</div>-->
                 </div>
 
                 <div class="botones">
@@ -384,11 +335,11 @@
             <p></p>
             <label>Email Aprendiz:</label>
             <p></p>
-            <input type="text" name="email" id="email">
+            <input type="email" name="email" id="email" require>
             <p></p>
             <label>Telefono Aprendiz:</label>
             <p></p>
-            <input type="text" name="tel" id="tel">
+            <input type="number" name="tel" id="tel">
             <p></p>
 
             <button id="btnguardar">Guardar</button>
