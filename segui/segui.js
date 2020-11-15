@@ -14,6 +14,8 @@ const cerrarEmpresa = document.getElementById("cerrarEmpresa")
 const btnCerrarDocu = document.getElementById("btnCerraDocu")
 const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
+const alternativa = document.getElementById("tipoAlte")
+const cargaDocu = document.getElementById("cargaDocu")
 
 // FUNCIONES 
 function formulegalizar(e) {
@@ -69,6 +71,95 @@ function ocultarLegalizacion(e) {
     formularioDocu.style.display = "none"
 }
 
+function funAlte() {
+    const datoalter = alternativa.value
+
+    switch (datoalter) {
+        case "Contrato de aprendizaje":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Contrato de aprendizaje</Label>
+            <input class="archivo" type="file" name="ContratoAprendizaje">
+            `
+            break;
+        case "Vinculo laboral":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Carta de solicitud</Label>
+            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <Label class="label">Constacia de la empresa</Label>
+            <input class="archivo" type="file" name="Cartaempresa">
+            `
+            break;
+        case "Pasantía: Apoyo unidad productiva familiar":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Carta de solicitud</Label>
+            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <Label class="label">Constacia de la empresa</Label>
+            <input class="archivo" type="file" name="Cartaempresa"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia de la cedula 150%</Label>
+            <input class="archivo" type="file" name="FotocopiaCC">
+            `
+            break;
+        case "Pasantia:Apoyo entidad estatal, municipal, verdal u OMG":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Carta de solicitud</Label>
+            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <Label class="label">Constacia de la empresa</Label>
+            <input class="archivo" type="file" name="Cartaempresa"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia de la cedula 150%</Label>
+            <input class="archivo" type="file" name="FotocopiaCC">
+            `
+        case "Pasantia : Monitoria":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Carta de solicitud</Label>
+            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <Label class="label">Constacia de la empresa</Label>
+            <input class="archivo" type="file" name="Cartaempresa"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia de la cedula 150%</Label>
+            <input class="archivo" type="file" name="FotocopiaCC">
+            `
+        case "Servicio Militar (social)":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Carta de solicitud</Label>
+            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <Label class="label">Constacia de la empresa</Label>
+            <input class="archivo" type="file" name="Cartaempresa">
+            `
+        case "Proyecto productivo":
+            cargaDocu.innerHTML = `
+            <Label class="label">Formato GFPI-F-023</Label>
+            <input class="archivo" type="file" name="GFPI"><br>
+            <Label class="label">Carta de solicitud</Label>
+            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <Label class="label">Fotocopia del carnet de afiliacion a IPS o documento Fosyga</Label>
+            <input class="archivo" type="file" name="fotocopiaIPS"><br>
+            <Label class="label">Fotocopia de la cedula 150%</Label>
+            <input class="archivo" type="file" name="FotocopiaCC">
+            `
+        	break;
+        default:
+            cargaDocu.innerHTML =``
+            break;
+    }
+}
+
 
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
@@ -78,3 +169,4 @@ btnaprendiz.addEventListener("click", crear)
 btnLEgalizacion.addEventListener("click", mostrar)
 cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
+alternativa.addEventListener("blur", funAlte)

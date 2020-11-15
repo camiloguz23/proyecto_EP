@@ -15,6 +15,12 @@
 ?>
 
 <?php
+    $sql_re="SELECT * FROM alternativa";
+    $query_re=mysqli_query($connection, $sql_re);
+    $fila_re=mysqli_fetch_assoc($query_re);
+?>
+
+<?php
 
     $sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
     $query_ciudad = mysqli_query($connection, $sql_ciudad);
@@ -152,17 +158,17 @@
 
                             <div class="dato">
                                 <label class="label" for="">NO.FICHA: </label>
-                                <label class="datos" for="">$bd</label>
+                                <label class="datos" for=""></label>
                             </div>
 
                             <div class="dato">
                                 <label class="label" for="">CENTRO DE FORMACIÓN: </label>
-                                <label class="datos" for="">$bd</label>
+                                <label class="datos" for=""></label>
                             </div>
 
                             <div class="dato">
                                 <label class="label" for="">PROGRAMA DE FORMACIÓN: </label>
-                                <label class="datos" for="">$bd</label>
+                                <label class="datos" for=""></label>
                             </div>
                         </div>
 
@@ -232,19 +238,18 @@
         <div class="registroLegal">
             <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
             <label class="label" for="">*Seleccione el tipo de alternativa:</label>
-            <select class="seleccionTipo" id="tipo" name="seleccionTipo">
-                <option value="0" placeholder="tipo de alternativa"></option>
-                <option value="1" placeholder="tipo de alternativa">hola bebe</option>
-                <!-- codigo para insertar los registros de tipo de alternativas de la bd<?php
-                   # $query = $conexion -> query ("SELECT * FROM nombre de la tabla ");
-                   # while ($valores = mysqli_fetch_array($query)) 
-                   # { echo '<option value="'.$valores[llave de la tabla].'">'.$valores[campo para mostrar].'</option>';}
-                ?> -->
+            <select class="seleccionTipo" id="tipoAlte" name="seleccionTipo">
+                <option value=""></option>
+                <?php
+                        foreach($query_re as $alternativa):?>
+                <option value="<?php echo $alternativa['nom_alternativa'] ?>"><?php echo $alternativa['nom_alternativa'] ?></option>
+                <?php
+                        endforeach; 
+                        ?>
             </select>
 
-            <div class="cargaDocu">
-                <Label class="label">*Nombre del Documento</Label>
-                <input class="archivo" type="file" name="file">
+            <div class="cargaDocu" id="cargaDocu">
+               
             </div>
 
             <div class="botones">
@@ -273,25 +278,25 @@
             <div class="datosApre2">
                 <div class="dato2">
                     <label class="label2" for="">NOMBRE: </label>
-                    <label class="inputC" for="">$bdlslsjghjghj</label>
+                    <label class="inputC" for=""></label>
                 </div>
                 <div class="dato2">
                     <label class="label2" for="">TELEFONO: </label>
-                    <label class="inputC" for="">$bdlslslghjghj</label>
+                    <label class="inputC" for=""></label>
                 </div>
                 <div class="dato2">
                     <label class="label2" for="">E-MAIL: </label>
-                    <label class="inputC" for="">$bdjghjghlkñklj</label>
+                    <label class="inputC" for=""></label>
                 </div>
                 <div class="dato2">
                     <label class="label2" for="">IDENTIFICACIÓN: </label>
-                    <label class="inputC" for="">$bdlslslshjgh</label>
+                    <label class="inputC" for=""></label>
                 </div>
 
 
                 <div class="dato2">
                     <label class="labelE" for="">ESTADO E.P: </label>
-                    <label class="inputC" for="">$bdlslsls</label>
+                    <label class="inputC" for=""></label>
                 </div>
 
             </div><br>
