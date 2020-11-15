@@ -331,6 +331,14 @@ body {
 
 .registroEmpre, .registroLegal {
     display: none;
+ 
+}
+
+.registroLegal{
+    position: absolute;
+    z-index: 2;
+    margin-top: -59%;
+    width: 100%;
 }
 
 .informa, .registroEmpre, .registroLegal{
