@@ -121,12 +121,13 @@ body {
 
 }
 .naranja{
-    border:1px solid red ;
+    
     width: auto;
     margin-left: 4.5%;
     margin-bottom: 2%;
     max-width: 90%;
     height: 150px;
+    
 }
 
 
@@ -134,7 +135,9 @@ body {
 
 .contenedor{
     position: relative;
-    background-color: #ca4b4b;
+    background-color: #fc7323;
+    border-radius: 10px;
+    border:1px solid black;
     width: 90%;
     height: 150px;
     margin-left: 60px;
@@ -148,13 +151,15 @@ body {
     background-color: #ffffff;
     max-width: 97%;
     border-color: #353434;
+    border-radius: 10px;
+    border:1px solid black;
     width:96%;
     margin-right: 20px;
     height: 100px;
     margin-left: 20px;
     margin-top: 2%;
     text-align: center;
-    border: 1px solid blue;
+   
 } 
 .date .datos p{
     list-style: none;
@@ -186,6 +191,7 @@ body {
 
 .button:hover{
     background-color: rgb(252, 115, 35);
+    border: 1px solid black;
     color: white;
   
 }
@@ -197,7 +203,7 @@ body {
 .button2 { /*legalizacion*/
     position: relative;
     text-decoration: none;
-    
+
     padding: 20px 40px;
     border:1px solid rgb(17, 0, 255);
     box-sizing: border-box;
@@ -210,7 +216,7 @@ body {
     color: rgb(0, 0, 0);
     font-size: 15px;
     background: white;
-  
+
     margin-left: 810px;
     border-radius: 20px;
     border-color: #238276 transparent;
@@ -223,12 +229,14 @@ body {
         background-color: rgb(252, 115, 35);
         color: white;
 }
+
 .button3 .butdos{
     margin-right: 15px;
     margin: -10px 10px;
 }
+
 .tresbtn{
-    position:absolute;
+    position:relative;
     margin-top:4%;
     
     padding:20px;
@@ -243,7 +251,7 @@ body {
     padding: 20px 40px;
     box-sizing: border-box;
     font-family: verdana;
-    width: 170px;border:1px solid red;
+    width: 170px;
     text-align: center;
     
     margin-top: 200px;
@@ -355,7 +363,7 @@ body {
     /*GRID = Trabajar con grid */
     display: grid;
     /*Definir numero de columnas*/
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     gap: 5px;
     width: 60%;
     background:rgb(252, 115, 35);
@@ -443,7 +451,7 @@ body {
 }
 
 .inputR:focus{
-    border: 2px solid #2456c0;
+    border: 2px solid #238276;
 	outline: none;
 	box-shadow: 3px 0px 20px rgba(255, 255, 255, 0.596);
 }
@@ -468,7 +476,7 @@ body {
 .botonForm{
     height: 30px;
     width: 85px;
-    background: rgb(67, 70, 206);
+    background: #238276;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 9px;
