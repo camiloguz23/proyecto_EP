@@ -39,6 +39,7 @@ function consulta(e) {
         if(xhr.readyState == 4 && xhr.status == 200){
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
+            estudiante(docuBase);
         }
     }
     xhr.send()
@@ -155,12 +156,16 @@ function funAlte() {
             `
         	break;
         default:
-            cargaDocu.innerHTML =``
+            cargaDocu.innerHTML =`<input type="hidden" name="">`
             break;
     }
 }
 
-
+function estudiante(datoEstu) {
+    const estudiante = document.getElementById("estudiante")
+    estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
+}
+const docuestudiante = documento.value
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)

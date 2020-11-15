@@ -21,6 +21,12 @@
 ?>
 
 <?php
+    $sql_empresa="SELECT * FROM empresa";
+    $query_empresa=mysqli_query($connection, $sql_empresa);
+    $fila_empresa=mysqli_fetch_assoc($query_empresa);
+?>
+
+<?php
 
     $sql_ciudad="SELECT * FROM municipios,departamento WHERE departamento.departamento_id=municipios.departamento_id";
     $query_ciudad = mysqli_query($connection, $sql_ciudad);
@@ -154,12 +160,6 @@
                 <label class="label" for="">*Dirección: </label>
                 <input class="inputR" type="text" name="direccion">
 
-                <label class="label" for="">*Nombre Jefe Inmediato: </label>
-                <input class="inputR" type="text" name="nomJefe">
-
-                <label class="label" for="">*Cargo: </label>
-                <input class="inputR" type="text" name="cargo">
-
                 <label class="label" for="">*Teléfono: </label>
                 <input class="inputR" type="number" name="telefono">
 
@@ -187,30 +187,48 @@
         </div>
 
 
+        <form action="../php/registrolegi.php" method="POST" autocomplete="off">                   
+            <div class="registroLegal">
+                <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
+                <label class="label" for="">*Seleccione el tipo de alternativa:</label>
+                <select class="seleccionTipo" id="tipoAlte" name="seleccionTipo">
+                    <option value=""></option>
+                    <?php
+                            foreach($query_re as $alternativa):?>
+                    <option value="<?php echo $alternativa['nom_alternativa'] ?>">
+                        <?php echo $alternativa['nom_alternativa'] ?></option>
+                    <?php
+                            endforeach; 
+                            ?>
+                </select><br>
+                <label class="label" for="">Empresa</label>
+                <select class="seleccionTipo" name="empresa" id="">
+                    <option value=""></option>
+                    <?php
+                            foreach($query_empresa as $empresa):?>
+                    <option value="<?php echo $empresa['nit_empresa'] ?> "><?php echo $empresa['nit_empresa'] ?> -- <?php echo $empresa['nom_empre'] ?></option>
+                    <?php
+                            endforeach; 
+                            ?>
+                </select><br>
+                <label class="label" for="">Nombre del jefe inmediato</label><br>
+                <input class="seleccionTipo" type="text" name="jefe" id=""><br>
+                <label class="label" for="">Cargo del jefe inmediato</label><br>
+                <input class="seleccionTipo" type="text" name="cargoJefe" id=""><br>
+                <div id="estudiante">
+                    <input type="hidden" name="docuEstudiante" value="">
+                </div>
 
-        <div class="registroLegal">
-            <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
-            <label class="label" for="">*Seleccione el tipo de alternativa:</label>
-            <select class="seleccionTipo" id="tipoAlte" name="seleccionTipo">
-                <option value=""></option>
-                <?php
-                        foreach($query_re as $alternativa):?>
-                <option value="<?php echo $alternativa['nom_alternativa'] ?>">
-                    <?php echo $alternativa['nom_alternativa'] ?></option>
-                <?php
-                        endforeach; 
-                        ?>
-            </select>
+                <div class="cargaDocu" id="cargaDocu">
 
-            <div class="cargaDocu" id="cargaDocu">
+                </div>
 
+                <div class="botones">
+                    <input class="botonForm" type="submit" value="GUARDAR">
+                    <input class="botonForm" type="button" value="CANCELAR">
+                </div>
             </div>
-
-            <div class="botones">
-                <input class="botonForm" type="button" value="GUARDAR">
-                <input class="botonForm" type="button" value="CANCELAR">
-            </div>
-        </div>
+        </form>
     </div>
 
 
