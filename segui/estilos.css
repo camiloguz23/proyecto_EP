@@ -111,9 +111,9 @@ body {
     background-image: url(../imagenes/perfilSegui.jpeg);
 }
 .naranja .perfil{
-    position: absolute;
-    margin-top: -120px;
-    margin-left: 545px;
+    
+    margin-top:-67px;
+    margin-left:40%;
     background-color: #fc7323;
     border-radius: 300px;
     height: 250px;
@@ -123,27 +123,28 @@ body {
 .naranja{
     border:1px solid red ;
     width: auto;
+    margin-left: 4.5%;
     margin-bottom: 2%;
     max-width: 90%;
-    height: 200px;
+    height: 150px;
 }
 
 
 
 
 .contenedor{
-    position:absolute;
+    position: relative;
     background-color: #ca4b4b;
     width: 90%;
     height: 150px;
     margin-left: 60px;
-    margin-top: 10%;
+    margin-top: 4%;
     max-width: 97%;
     
 }  
 
 .date{
-    
+    position: absolute;
     background-color: #ffffff;
     max-width: 97%;
     border-color: #353434;
@@ -227,7 +228,7 @@ body {
     margin: -10px 10px;
 }
 .tresbtn{
-    
+    position:absolute;
     margin-top:4%;
     
     padding:20px;

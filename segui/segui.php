@@ -78,7 +78,7 @@
     <div class="fondo"><!--campo del fondo donde dice seguimiento *en el header*--></div>
 
     <div class="naranja">
-    <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
+      <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
     </div>
     <div class="contenedor">
         <div class="date">
