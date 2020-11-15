@@ -358,7 +358,9 @@
             <p></p>
             <input type="email" name="email" id="email" require>
             <p></p>
-            <select class="inputR" name="id_apren" id="id_ciu">
+            <label>Ciudad:</label>
+            <p></p>
+            <select class="select" name="id_apren" id="id_ciu">
                     <?php
                         foreach($query_ciudad as $tip_ciudad):?>
                     <option value="<?php echo $tip_ciudad['id'] ?> ">
