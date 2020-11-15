@@ -48,7 +48,7 @@
                                 
                         } else{
                             
-                            echo "error ";
+                            echo "error";
                                 exit();
                         }  
                                                 
