@@ -225,7 +225,7 @@
 
                 <div class="botones">
                     <input class="botonForm" type="submit" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR">
+                    <input class="botonForm" type="button" value="CANCELAR" id="btnCerrarlega">
                 </div>
             </div>
         </form>

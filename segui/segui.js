@@ -18,6 +18,7 @@ const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
 const certificacion = document.getElementById("dos")
 const buscadorCerti = document.querySelector(".buscador2")
+const botonCerrarLega = document.getElementById("btnCerrarlega")
 
 // FUNCIONES 
 function formulegalizar(e) {
@@ -66,7 +67,7 @@ function mostrar(e) {
     e.preventDefault();
    
     formularioDocu.style.display = "block";
-    console.log(formularioDocu);
+    
 
 }
 
@@ -179,6 +180,11 @@ function buscador(e) {
     buscadorCerti.style.display = "block"
     
 }
+
+function btncerrarlegal() {
+    
+    formularioLegalizacion.style.display = "none"
+}
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
@@ -189,3 +195,4 @@ cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
+botonCerrarLega.addEventListener("click", btncerrarlegal)
