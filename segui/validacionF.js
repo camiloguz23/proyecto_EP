@@ -1,4 +1,4 @@
-const fomulario = document.getElementById('formulario');
+/* const fomulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input'); //elijo el id formulario y que me seleccione todos los input
 
 const expresiones = {
@@ -8,3 +8,11 @@ const expresiones = {
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z-]+\.[a-zA-Z-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
+ */
+
+
+ const hola = document.getElementById('nada');
+
+ hola.addEventListener('click' e=>{
+	 
+ })

@@ -276,8 +276,7 @@
         <div class="cargaArchi">
             <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off">
                 <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
-                <Label class="label"><input type="checkbox" name="" id="">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
-                    DIA</Label>
+                <Label class="label"><input type="checkbox" name="" id="">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL DIA</Label>
 
                 <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
 
@@ -440,7 +439,7 @@ $(document).ready(function() {
                     
                 } else {
                 
-                   $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>')
+                   $('.agrego').html('<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>')
                       return
                       exit()
                   
