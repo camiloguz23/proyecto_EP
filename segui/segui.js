@@ -30,6 +30,14 @@ function formuEmpresa(e) {
     
 }
 
+function ocultarEmpresa(e) {
+    e.preventDefault();
+    console.log(formularioEmpresa)
+    formularioEmpresa.style.display = "none";
+    console.log(formularioEmpresa)
+}
+
+
 function consulta(e) {
   e.preventDefault();  
     let xhr = new XMLHttpRequest();
@@ -60,12 +68,6 @@ function mostrar(e) {
 
 }
 
-function ocultarEmpresa(e) {
-    e.preventDefault();
-    console.log(formularioEmpresa)
-    formularioEmpresa.style.display = "none";
-    console.log(formularioEmpresa)
-}
 
 function ocultarLegalizacion(e) {
     e.preventDefault();
@@ -169,6 +171,7 @@ function estudiante(datoEstu) {
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
 }
 const docuestudiante = documento.value
+
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)

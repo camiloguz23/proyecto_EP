@@ -142,8 +142,8 @@
             </div>
         </div>
             <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
-        <div class="registroEmpre" id="registroEmpreS">
-            <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
+        <div class="registroEmpre" id="registroEmpre">
+            <form method="POST" id="registroEmpre"  autocomplete="off">
 
  
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
@@ -221,9 +221,7 @@
                     <input type="hidden" name="docuEstudiante" value="">
                 </div>
 
-                <div class="cargaDocu" id="cargaDocu">
-                           
-                </div>
+                <div class="cargaDocu" id="cargaDocu"></div>
 
                 <div class="botones">
                     <input class="botonForm" type="submit" value="GUARDAR">
@@ -234,19 +232,7 @@
     </div>
 
 
-    <div class="formCertificar">
-        <div class="informa2">
-            <div class="buscador2">
-                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
-                <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
-                    <input class="inputE" type="number">
-                    <div class="boton2">
-                        <a href="" id="boton2"><img class="boton2" src="../imagenes/Imagen3.png" height="50px"
-                                width="50px"></a>
-                    </div>
-                </form>
-            </div>
-        </div>
+ 
         <div class="datosMostrar2">
             <h3 class="subTitulo">*DATOS APRENDIZ</h3>
             <div class="datosApre2">
@@ -326,7 +312,7 @@
         </div>
 
     </div>
-    </div>
+    
 
     <div id="registroAprendiz" class="registroAprendiz">
 
