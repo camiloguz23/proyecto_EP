@@ -239,7 +239,7 @@
             <div class="buscador2">
                 <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
                 <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
-                    <input class="inputE" type="number">
+                    <input class="inputE" type="number" name="estudianteCerti">
                     <div class="boton2">
                         <a href="" id="boton2"><img class="boton2" src="../imagenes/Imagen3.png" height="50px"
                                 width="50px"></a>

@@ -16,6 +16,8 @@ const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
 const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
+const certificacion = document.getElementById("dos")
+const buscadorCerti = document.querySelector(".buscador2")
 
 // FUNCIONES 
 function formulegalizar(e) {
@@ -168,7 +170,13 @@ function estudiante(datoEstu) {
     const estudiante = document.getElementById("estudiante")
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
 }
-const docuestudiante = documento.value
+
+function buscador(e) {
+    e.preventDefault();
+    console.log("funciona")
+    buscadorCerti.style.display = "block"
+    
+}
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
@@ -178,3 +186,4 @@ btnLEgalizacion.addEventListener("click", mostrar)
 cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
+certificacion.addEventListener("click", buscador)
