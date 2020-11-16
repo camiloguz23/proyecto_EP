@@ -142,32 +142,40 @@
             </div>
         </div>
             <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
-        <div class="registroEmpre" id="registroEmpre">
-            <form method="POST" id="registroEmpre"  autocomplete="off">
+        <div class="registroEmpre" id="registroEmpreS">
+            <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
 
  
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
                 <label class="label" for="">*Razón Social Empresa: </label>
-                <input class="inputR" type="text" name="socialEm">
+                <input class="inputR" type="text" name="socialEm" id="socialEm" >
+                <p class="inputR_p" id="inputR_p"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Nit: </label>
-                <input class="inputR" type="number" name="nit">
+                <input class="inputR" type="text" name="nit" id="nit">
+                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros</p>
 
                 <label class="label" for="">*Nombre De La Empresa: </label>
-                <input class="inputR" type="text" name="nomEmpre">
+                <input class="inputR" type="text" name="nomEmpre" id="nomEmpre">
+                <p class="inputR_p-nom" id="inputR_p-nom"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Dirección: </label>
-                <input class="inputR" type="text" name="direccion">
+                <input class="inputR" type="text" name="direccion" id="direccion">
+                <p class="inputR_p-d" id="inputR_p-d"><i class="fas fa-exclamation"></i> Eso no es una dirrecion solo use numeros,letras y guion</p>
 
                 <label class="label" for="">*Teléfono: </label>
-                <input class="inputR" type="number" name="telefono">
+                <input class="inputR" type="text" name="telefono" id="telefono">
+                <p class="inputR_t" id="inputR_p_t"><i class="fas fa-exclamation"></i> Ingrese solo numeros, minimo 9 y maximo 11 caracteres</p>
 
                 <label class="label" for="">*E-mail: </label>
-                <input class="inputR" type="email" name="email"><br>
+                <input class="inputR" type="email" name="email" id="email">
+                <p class="inputR_p-c" id="inputR_p-c"><i class="fas fa-exclamation"></i> Ingrese solo un correo valido</p><br>
                 <label class="label"><b>*Ciudad:</b> </label>
                 <p></p>
                 <select class="inputR" name="id_ciu" id="id_ciu">
+                <script src="validacionformulario.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
                     <?php
                         foreach($query_ciudad as $tip_ciudad):?>
                     <option value="<?php echo $tip_ciudad['id'] ?> ">
@@ -181,7 +189,7 @@
 
                     <button class="botonForm" id="botonEM">Guardar</button>
                     <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
-
+                        <p class="registro_c" id="registro_c">¡Registro Completado Correctamente!</p>
                 </div>
             </form>
         </div>
@@ -221,18 +229,32 @@
                     <input type="hidden" name="docuEstudiante" value="">
                 </div>
 
-                <div class="cargaDocu" id="cargaDocu"></div>
+                <div class="cargaDocu" id="cargaDocu">
+                           
+                </div>
 
                 <div class="botones">
                     <input class="botonForm" type="submit" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR" id="btnCerrarlega">
+                    <input class="botonForm" type="button" value="CANCELAR">
                 </div>
             </div>
         </form>
     </div>
 
 
- 
+    <div class="formCertificar">
+        <div class="informa2">
+            <div class="buscador2">
+                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
+                <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
+                    <input class="inputE" type="number">
+                    <div class="boton2">
+                        <a href="" id="boton2"><img class="boton2" src="../imagenes/Imagen3.png" height="50px"
+                                width="50px"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="datosMostrar2">
             <h3 class="subTitulo">*DATOS APRENDIZ</h3>
             <div class="datosApre2">
@@ -312,7 +334,7 @@
         </div>
 
     </div>
-    
+    </div>
 
     <div id="registroAprendiz" class="registroAprendiz">
 
