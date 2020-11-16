@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ingresar</title>
@@ -13,23 +14,31 @@
         </div>
 
 
-    <div class="login-box">
-        <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
-        <h1>INICIO SESION</h1>
-        <form method="post" name="form1" id="form1" action="../php/ingreso.php" autocomplete="off">
-            <!--USERNAME INPUT-->
-            <label for="username">Documento</label>
-            <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario">
-            
-            <!--PASSWORD INPUT-->
-            <label for="password">Clave</label>
-            <input type="password" name="clave" id="password" placeholder="Ingrese Clave">
-            
-            <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+        <div class="login-box">
+            <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
+            <h1>INICIO SESION</h1>
+            <form method="post" id="form1" action="../php/ingreso.php" autocomplete="off">
+                <!--USERNAME INPUT-->
+                <div class="grupo">
+                    <label for="username">Documento</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario">
+                    <p id="aviso"></p>
+                </div>
+                <div class="grupo">
+                    <label for="password">Clave</label>
+                    <input type="password" name="clave" id="password" placeholder="Ingrese Clave">
+                    <p id="aviso"></p>
+                </div>
+                <!--PASSWORD INPUT-->
+              
 
-           </form>
+                <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+             
+            </form>
 
-         </div>
+        </div>
     </div>
+    <script src="validacion.js"></script>
 </body>
+
 </html>

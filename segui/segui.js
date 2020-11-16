@@ -32,6 +32,14 @@ function formuEmpresa(e) {
     
 }
 
+function ocultarEmpresa(e) {
+    e.preventDefault();
+    console.log(formularioEmpresa)
+    formularioEmpresa.style.display = "none";
+    console.log(formularioEmpresa)
+}
+
+
 function consulta(e) {
   e.preventDefault();  
     let xhr = new XMLHttpRequest();
@@ -62,12 +70,6 @@ function mostrar(e) {
 
 }
 
-function ocultarEmpresa(e) {
-    e.preventDefault();
-    console.log(formularioEmpresa)
-    formularioEmpresa.style.display = "none";
-    console.log(formularioEmpresa)
-}
 
 function ocultarLegalizacion(e) {
     e.preventDefault();
