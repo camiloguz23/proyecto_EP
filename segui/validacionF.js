@@ -10,9 +10,3 @@ const expresiones = {
 }
  */
 
-
- const hola = document.getElementById('nada');
-
- hola.addEventListener('click' e=>{
-	 
- })
