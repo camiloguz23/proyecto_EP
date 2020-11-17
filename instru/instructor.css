@@ -383,297 +383,80 @@
         margin-right: 6%;
     }
 
-    .opcioonar
-    {
-        width: 50%;
-        height: 30%;
-        margin-left: 50%;
-        margin-top: -9%;
-    }
-
-    .opcioonar input
-    {
-        margin-top: 4%;
-        width: 36%;
-        height: 10%;
-        padding: 20px 0px 40px 0px;
-        font-family: Verdana;
-        color:rgb(0, 0, 0);
-        font-size: 20px;
+    .formutievi{
         background: white;
-        border-radius: 20px;
-        border: none;
+        width: 35%;
+        height: 5%;
+        border-radius: 15px;
+        margin-left: 50%;
+        margin-top: -5%;
+        padding: 30px;
     }
-    .opcioonar  .bot1
-    {
-        cursor: pointer;
-        margin-right: 10%;
-        text-align: center;
+    .formutievi select{
+        width: 65%;
+        background-color: gainsboro;
+        height: 40px;
+        border-radius: 15px;
+        font-size: 15px;
+        border:2px solid ;
+        border-color: rgb(0, 0, 0);
     }
-
-    .opcioonar  .bot1:hover
+    .formutievi select:hover
     {
-        background-color: rgb(240, 236, 236);
+        background: rgb(199, 195, 195);
         transform: translatey(3px);
     }
-
-    .opcioonar .bot2
-    {
-        cursor: pointer;
+    .formutievi input{
+        border-radius: 10px;
+        width: 25%;
+        height: 40px;
+        background:  rgb(89, 181, 72);
+        color: rgb(223, 222, 222);
+        font-size: 18px;
     }
-
-    .opcioonar  .bot2:hover
-    {
-        background-color: rgb(240, 236, 236);
-        transform: translatey(3px);
+    .formutievi input:hover{
+        background-color: #fc7323;
     }
 
      /*evidencias*/
 
-    .conteiner{
-        margin-top: -25%;
-        border: 2px solid black;
-        width: 90%;
-        height:auto;
-        border-radius: 15px;
-        margin-left: 5%;
-        position: absolute; 
-        background-color: #ffffff; 
-        
-    }
-    .forman
-    {
-        width: 100%;
-        margin-top: 5%;
-        height: 280px;
-        display: flex;
-    }
-    .evi1
-    {
-        width: 50%;
-    }
-    .evi2
-    {
-        margin-top: 5%;
-        width: 34%;
-        margin-left: 1%;
-    }
-    .evi1 > span{
-        margin-left: 17%;
-        font-size: 23px;
-    }
-    .evi2 > span{
-        margin-left: 10%;
-        font-size: 23px;
-    }
     
-    .evi1 input,
-    .evi2 input
-    {
-        cursor: pointer;
-    }
-    .botoonn
-    {
-        margin-left: 50%;
-        width: 40%;
-        height: 140px;
-        border-radius: 20px;
-        margin-top: -10%;
-        margin-bottom: 2%;
-    }
-
-    .botoonn input
-    {
-        cursor: pointer;
-        text-align: center;
-        margin-top: 5%;
-        margin-left: 22%;
-        width: 60%;
-        height: 30px;
-        border-radius: 10px;
-        background-color: white;
-    }
-
-    .botoonn input:hover
-    {
-        background-color: rgb(240, 236, 236);
-        transform: translatey(3px);
-    }
-    .funsi
-    {
-        display: flex;
-    }
-    button{
-        margin-left: 14%;
-        margin-top: 15px;
-        width: 30%;
-        height: 40px;
-        background-color: white;
-        border-radius: 10px;
-        font-size: 20px;
-        background-color:2px solid thistle ;
-        font-family: Verdana;
-    }
-    button:hover{
-        background:rgb(240, 236, 236);
-        transform: translatey(3px);
-        cursor: pointer;
-    }
-
-    .conteiner1
-    {
-        margin-top: -25%;
-        border: 2px solid black;
-        width: 90%;
-        height:auto;
-        border-radius: 15px;
-        margin-left: 6%;
-        position: absolute; 
-        background-color: #ffffff; 
-    }
-    .formann
-    {
-        width: 100%;
-        margin-top: 5%;
-        height: 280px;
-        display: flex;
-    }
-    .evi3
-    {
-        width: 50%;
-    }
-    
-    .evi3 > span{
-        margin-left: 17%;
-        font-size: 23px;
-    }
-    
-    .evi3 input
-    {
-        cursor: pointer;
-    }
-    .botoonnn
-    {
-        margin-left: 50%;
-        width: 40%;
-        height: 140px;
-        border-radius: 20px;
-        margin-top: -10%;
-        margin-bottom: 2%;
-    }
-
-    .botoonnn input
-    {
-        cursor: pointer;
-        text-align: center;
-        margin-top: 5%;
-        margin-left: 22%;
-        width: 60%;
-        height: 30px;
-        background-color: white;
-    }
-
-    .botoonnn input:hover
-    {
-        background-color: rgb(240, 236, 236);
-        transform: translatey(3px);
-    }
-    .funsin
-    {
-        display: flex;
-    }
-    button{
-        margin-left: 14%;
-        margin-top: 15px;
-        width: 30%;
-        height: 40px;
-        background-color: white;
-        border-radius: 10px;
-        font-size: 20px;
-        background-color:2px solid thistle ;
-        font-family: Verdana;
-    }
-    button:hover{
-        background:rgb(240, 236, 236);
-        transform: translatey(3px);
-        cursor: pointer;
-    }
-
-
     /*datos del aprendiz*/
     .informa
     {
-        margin-top: -5%;
-        background-color: white;
-        width: 80%;
-        height: 230px;
-        margin-left: 5%;
-        padding: 3%;
-        border-radius: 10px;
-        border:1px solid;
-        border-color: black;
+        background-color: #fff;
+        width: 60%;
+        padding: 15px 30px;
+        border-radius: 15px;
+        margin-left: 20%;
+        margin-top: 10%;
     }
-
-    .datosMostrar
-    { 
-        width: 90%;
-        height: 100%;
-        display: flex;
-        margin-left: 4%;
-    }
-
-    .datosApre,
-    .datosForma
-    {
-        height: 85%;
-        width: 40%;
-        margin-left: 3%;
-        border-radius: 10px;
-        border:1px solid;
-        border-color: black;
-        padding: 2%;
-    }
-
-    .subTitulo
-    {
+    .subTitulo{
+        padding: 20px;
+        font-size: 17px;
         text-align: center;
     }
+    .datosApre, .datosForma{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 20px;
+        border: 2px solid rgba(0, 0, 0, 0.76);
+    
+    }
+    .dato{
+        margin-top: -15px;
+        padding: 5px;
+    }
 
-    .dato1
-    {
-        width: 40%;
-        height: 25%;
-        margin-left: 5%;
+    .label{
         display: block;
-        margin: 2%;
+        font-weight:600;
+        font-size: 13px;
+        padding: 13px;
     }
-    .dato2
-    {
-        width: 40%;
-        height: 25%;
-        margin-left: 55%;
-        margin-top: -15%;
-    }
-
-    .dato3
-    {
-        width: 40%;
-        height: 25%;
+    .datos{
         margin-left: 2%;
-        margin-top: 5%;
+        margin-right: 3%;
+        margin-top: -55px;
     }
-    .dato4
-    {
-        width: 40%;
-        height: 25%;
-        margin-left: 55%;
-        margin-top: -14%;
-    }
-
-    .dato5
-    {
-        width: 40%;
-        height: 25%;
-        margin-left: 30%;
-        margin-top: 3%;
-    }
+    
