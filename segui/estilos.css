@@ -385,7 +385,7 @@ input[type=number] { -moz-appearance:textfield; }
     margin-top: -59%;
     width: 95.5%;
     
-    display: block;
+    display: none;
     margin-left: 0px;
     height: 850px;
 }
@@ -502,9 +502,12 @@ input[type=number] { -moz-appearance:textfield; }
 
     display: none;
 }
+
+
 .datosMostrar2, .cargaArchi{
     display: none;
 }
+
 /*--------FIN--------*/
 
 .formCertificar{
