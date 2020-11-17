@@ -492,11 +492,11 @@ input[type=number] { -moz-appearance:textfield; }
 /*------OCULTOS-------*/
 
 .buscador2{
-    display: none;
+    display: block;
     
 }
 .datosMostrar2, .cargaArchi{
-    display: none;
+    display: block;
 }
 /*--------FIN--------*/
 

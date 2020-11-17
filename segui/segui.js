@@ -17,8 +17,11 @@ const forb = document.getElementById("most");
 const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
 const certificacion = document.getElementById("dos")
-const buscadorCerti = document.querySelector(".buscador2")
+const buscadorCerti = document.querySelector(".datosMostrar2")
 const botonCerrarLega = document.getElementById("btnCerrarlega")
+// variables para el formulario de certificacion
+const formularioCerti = document.getElementById("cargaArchi")
+const btnEnviar = document.getElementById("btnEnviar")
 
 // FUNCIONES 
 function formulegalizar(e) {
@@ -197,3 +200,20 @@ btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
 botonCerrarLega.addEventListener("click", btncerrarlegal)
+
+/// evento de certificacion 
+
+btnEnviar.addEventListener("click", enviaBD)
+
+function enviaBD(e) {
+    e.preventDefault();
+    const datos = new FormData(formularioCerti)
+    fetch("../php/certificado.php", {
+        method: "POST",
+        body : datos
+    })
+        .then(res => res.text())
+        .then(bd => {
+            console.log(bd)
+        })
+}
