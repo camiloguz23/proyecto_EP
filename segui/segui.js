@@ -17,15 +17,37 @@ const forb = document.getElementById("most");
 const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
 const certificacion = document.getElementById("dos")
-const buscadorCerti = document.querySelector(".buscador2")
+const buscadorCerti = document.querySelector(".datosMostrar2")
 const botonCerrarLega = document.getElementById("btnCerrarlega")
+
+const formulariolega = document.getElementById("buscarDocu")
+const informar = document.querySelector(".informacion")
+
+// variables para el formulario de certificacion
+const formularioCerti = document.getElementById("cargaArchi")
+const btnEnviar = document.getElementById("btnEnviar")
+const datoAprendiz = document.getElementById("datoAprendiz")
+
 
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();
     formularioLegalizacion.style.display ="block"
+
+
+
     
 }
+
+btnCerraDocu.addEventListener("click", function (e){
+    e.preventDefault();
+    formulariolega.reset();
+    informar.style.display = "none"
+    btnLEgalizacion.style.background = ("#ffffff")
+    btnLEgalizacion.style.color = ("black")
+
+
+}, true);
 
 function formuEmpresa(e) {
     e.preventDefault();
@@ -51,6 +73,8 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
+            datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
+            informar.style.display = "block"
         }
     }
     xhr.send()
@@ -65,16 +89,16 @@ function crear(e) {
 
 function mostrar(e) {
     e.preventDefault();
-   
     formularioDocu.style.display = "block";
-    
-
+    btnLEgalizacion.style.background = ("rgb(252, 115, 35)")
+    btnLEgalizacion.style.color = ("#ffffff")
 }
 
 
 function ocultarLegalizacion(e) {
     e.preventDefault();
     formularioDocu.style.display = "none"
+    
 }
 
 function funAlte() {
@@ -196,3 +220,20 @@ btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
 botonCerrarLega.addEventListener("click", btncerrarlegal)
+
+/// evento de certificacion 
+
+btnEnviar.addEventListener("click", enviaBD)
+
+function enviaBD(e) {
+    e.preventDefault();
+    const datos = new FormData(formularioCerti)
+    fetch("../php/certificado.php", {
+        method: "POST",
+        body : datos
+    })
+        .then(res => res.text())
+        .then(bd => {
+            console.log(bd)
+        })
+}

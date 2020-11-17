@@ -22,12 +22,4 @@
         echo mysqli_query($connection,$consul);
     }
 
-
-    
-
-
-
-
-
-
 ?>
