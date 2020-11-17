@@ -501,9 +501,12 @@ input[type=number] { -moz-appearance:textfield; }
 
     display: none;
 }
+
+
 .datosMostrar2, .cargaArchi{
     display: none;
 }
+
 /*--------FIN--------*/
 
 .formCertificar{
