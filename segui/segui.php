@@ -114,7 +114,7 @@
     </div>
   
         <div class="formularioActualizar">
-            <form id="formularito" method="post">
+            <form id="formularito" method="post" action="actualizar.php">
                 <h1 class="tituloForActu">FORMULARIO ACTUALIZAR</h1>
 
                 <label class="label" for="">*correo </label>
@@ -126,7 +126,7 @@
                 <label class="label" for="">*Clave</label>
                 <input class="inputR" type="text" name="claveA">
 
-                <button class="inputR alv">Actualizar</button>
+                <button class="inputR alv" type="submit">Actualizar</button>
 
             </form>
         </div>
