@@ -330,6 +330,9 @@
 
                 <Label class="label">7) Documento de Identidad al 150%:</Label>
                 <input class="archivo" type="file" name="cedula">
+                <input type="hidden" name="usuario" value="<?=$_SESSION["documento"]?>">
+                <div id="datoAprendiz">
+                </div>
 
 
             <div class="botones2">

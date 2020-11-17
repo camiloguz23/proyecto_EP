@@ -26,6 +26,7 @@ const informar = document.querySelector(".informacion")
 // variables para el formulario de certificacion
 const formularioCerti = document.getElementById("cargaArchi")
 const btnEnviar = document.getElementById("btnEnviar")
+const datoAprendiz = document.getElementById("datoAprendiz")
 
 
 // FUNCIONES 
@@ -72,7 +73,11 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
+
+            datoAprendiz.innerHTML = ` <input type="hidden" name="usuario" value="${docuBase}">`
+
             informar.style.display = "block"
+
         }
     }
     xhr.send()
