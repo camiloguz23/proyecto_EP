@@ -440,7 +440,7 @@ $(document).ready(function() {
                     
                 } else {
                 
-                   $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>')
+                   $('.agrego').html('<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>')
                       return
                       exit()
                   

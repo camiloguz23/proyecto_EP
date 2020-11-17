@@ -78,6 +78,7 @@ function mostrar(e) {
 function ocultarLegalizacion(e) {
     e.preventDefault();
     formularioDocu.style.display = "none"
+    
 }
 
 function funAlte() {
