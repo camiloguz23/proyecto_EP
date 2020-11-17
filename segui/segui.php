@@ -207,24 +207,16 @@ if(isset($_POST['btn_actualizar'])){
 
                 <div class="botones">
                    
-+
+
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
             <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpreS">
             <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
-=======
-        <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
-        <div class="registroEmpre" id="registroEmpre">
-
-            <form method="POST" id="registroEmpre"  autocomplete="off">
-                
->>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
@@ -327,8 +319,7 @@ if(isset($_POST['btn_actualizar'])){
     </div>
 
 
-<<<<<<< HEAD
-    <div class="formCertificar">
+    <!--<div class="formCertificar">
         <div class="informa2">
             <div class="buscador2">
                 <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
@@ -359,29 +350,7 @@ if(isset($_POST['btn_actualizar'])){
                 <div class="dato2">
                     <label class="label2" for="">IDENTIFICACIÓN: </label>
                     <label class="inputC" for=""></label>
-                </div>
-=======
-
-    <div class="datosMostrar2">
-        <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-        <div class="datosApre2">
-            <div class="dato2">
-                <label class="label2" for="">NOMBRE: </label>
-                <label class="inputC" for=""></label>
-            </div>
-            <div class="dato2">
-                <label class="label2" for="">TELEFONO: </label>
-                <label class="inputC" for=""></label>
-            </div>
-            <div class="dato2">
-                <label class="label2" for="">E-MAIL: </label>
-                <label class="inputC" for=""></label>
-            </div>
-            <div class="dato2">
-                <label class="label2" for="">IDENTIFICACIÓN: </label>
-                <label class="inputC" for=""></label>
-            </div>
->>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
+g                </div>
 
 
             <div class="dato2">
@@ -398,14 +367,14 @@ if(isset($_POST['btn_actualizar'])){
                 <label class="label2" for="">TIPO DE ALTERNATIVA: </label>
                 <label for="">$bd</label>
             </div>
-            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS -->
+            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS 
             <br>
         </div>
-    </div>
+    </div>-->
 
 
-        <div class="cargaArchi" id="formularioCertificacion">
-            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
+    <div class="cargaArchi" id="formularioCertificacion">
+        <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/        form-data">
                 <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
                 <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
                     DIA</Label>
@@ -450,11 +419,7 @@ if(isset($_POST['btn_actualizar'])){
     </div>
 
     </div>
-<<<<<<< HEAD
     </div>
-=======
-
->>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
 
     <div id="registroAprendiz" class="registroAprendiz">
 
@@ -565,24 +530,7 @@ if(isset($_POST['btn_actualizar'])){
     });
 </script>
 <script type="text/javascript">
-<<<<<<< HEAD
-    $(document).ready(function() {
-        $('#botonEM').click(function() {
-            var datosEmpre = $('#registroEmpre').serialize();
 
-
-            $.ajax({
-                type: "POST",
-                url: "jqueryEnviarEmpresa.php",
-                data: datosEmpre,
-                success: function(b) {
-                    if (b == 1) {
-                        $('.agrego').html(
-                            '<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
-                        )
-                        return
-                        exit()
-=======
 $(document).ready(function() {
     $('#botonEM').click(function() {
         var datosEmpre = $('#registroEmpre').serialize();
@@ -594,16 +542,12 @@ $(document).ready(function() {
             data: datosEmpre,
             success: function(b) {
                 if (b == 1) {
-<<<<<<< HEAD
+
                     $('.agrego').html('<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
-=======
-                    $('.agrego').html(
-                        '<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
-                        )
->>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
+
                     return
                     exit()
->>>>>>> 8d315f29098e57b86f3a3fa2784ba5af89787d41
+
 
                     } else {
 
