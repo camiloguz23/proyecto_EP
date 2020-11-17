@@ -294,6 +294,7 @@ if(isset($_POST['btn_actualizar'])){
                     endforeach;
                     ?>
                 </select><br>
+                
                 <label class="label" for="">Nombre del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="jefe" id=""><br>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>
@@ -439,6 +440,7 @@ g                </div>
             <p></p>
             <input type="number" name="docu" id="docu">
             <p></p>
+            
             <label>Nombres Completos:</label>
             <p></p>
             <input type="text" name="nom" id="nom">
@@ -466,7 +468,10 @@ g                </div>
             <p></p>
             <input type="number" name="tel" id="tel">
             <p></p>
-
+            <label>Telefono :</label>
+            <p></p>
+            <input type="number" name="tel" id="tel">
+            <p></p>
             <button id="btnguardar">Guardar</button>
         </form>
 
