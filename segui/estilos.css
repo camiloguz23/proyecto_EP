@@ -230,11 +230,11 @@ text-align: center;
 
 
 .pie{
-    
+    position: relative;
     width: 100%;
     height: 75px;
     background-color: #238276;
-    margin-top:30px;
+    margin-top:300px;
     display: flex;
     align-items: flex-end;
     border-top: 2px solid #fff;
@@ -383,6 +383,7 @@ input[type=number] { -moz-appearance:textfield; }
     z-index: 2;
     margin-top: -59%;
     width: 95.5%;
+    
     display: none;
     margin-left: 0px;
     height: 850px;
@@ -493,19 +494,21 @@ input[type=number] { -moz-appearance:textfield; }
 /* CERTIFICACIÓN */
 
 /*------OCULTOS-------*/
-
+.formCertificar{
+    visibility: hidden;
+}
 .buscador2{
 
     display: none;
 }
 .datosMostrar2, .cargaArchi{
-    display: block;
+    display: none;
 }
 /*--------FIN--------*/
 
 .formCertificar{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     width: 60%;
     background:#fc7323;
     color: black;
@@ -514,7 +517,6 @@ input[type=number] { -moz-appearance:textfield; }
     position: relative;
     margin-top: -16%;
     height: 2%;
-    top: 50px;
 }
 
 .informa2{
@@ -598,16 +600,11 @@ input[type=number] { -moz-appearance:textfield; }
 
 .cargaArchi{
     background-color: #fff;
-    width: 61%;
+    width: 91%;
     padding: 10px 6px;
-    border: 15px rgb(252, 115, 35) solid ;
-    height: 130%;
+    border-radius: 15px;
+    height: 100%;
     margin-top: -3%;
-    box-sizing: border-box;
-    position: absolute;
-    top: 190px;
-    left: 280px;
-    display: none;
 }
 .botones2{
     display: grid;
