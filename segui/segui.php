@@ -207,7 +207,7 @@ if(isset($_POST['btn_actualizar'])){
 
                 <div class="botones">
                    
-+
+
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
@@ -319,7 +319,7 @@ if(isset($_POST['btn_actualizar'])){
     </div>
 
 
-    <div class="formCertificar">
+    <!--<div class="formCertificar">
         <div class="informa2">
             <div class="buscador2">
                 <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
@@ -350,7 +350,7 @@ if(isset($_POST['btn_actualizar'])){
                 <div class="dato2">
                     <label class="label2" for="">IDENTIFICACIÓN: </label>
                     <label class="inputC" for=""></label>
-                </div>
+g                </div>
 
 
             <div class="dato2">
@@ -367,14 +367,14 @@ if(isset($_POST['btn_actualizar'])){
                 <label class="label2" for="">TIPO DE ALTERNATIVA: </label>
                 <label for="">$bd</label>
             </div>
-            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS -->
+            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS 
             <br>
         </div>
-    </div>
+    </div>-->
 
 
-        <div class="cargaArchi" id="formularioCertificacion">
-            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
+    <div class="cargaArchi" id="formularioCertificacion">
+        <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/        form-data">
                 <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
                 <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
                     DIA</Label>
