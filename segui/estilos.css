@@ -361,7 +361,6 @@ input[type=number] { -moz-appearance:textfield; }
 
 .registroEmpre, .registroLegal {
     display: none;
- 
 }
 
 .registroLegal{

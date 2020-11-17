@@ -6,8 +6,10 @@ const btnEmpresa = document.getElementById("btnEmpresa")
 const btnLegalizar = document.getElementById("btnLegalizar")
 const formularioEmpresa = document.querySelector(".registroEmpre")
 const formularioLegalizacion = document.querySelector(".registroLegal")
+// boton aprendiz
 const btnaprendiz = document.querySelector("#tres")
 const registroAprendiz = document.getElementById("registroAprendiz")
+// boton legal
 const btnLEgalizacion = document.getElementById("legal");
 const formularioDocu = document.getElementById("formularioDocu")
 const cerrarEmpresa = document.getElementById("cerrarEmpresa")
@@ -16,6 +18,7 @@ const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
 const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
+// boton certificación
 const certificacion = document.getElementById("dos")
 const buscadorCerti = document.querySelector(".datosMostrar2")
 const botonCerrarLega = document.getElementById("btnCerrarlega")
@@ -27,6 +30,17 @@ const informar = document.querySelector(".informacion")
 const formularioCerti = document.getElementById("cargaArchi")
 const btnEnviar = document.getElementById("btnEnviar")
 const datoAprendiz = document.getElementById("datoAprendiz")
+
+// Variables para el formulario de legalización
+const registroLegal = document.getElementById("registroLegal")
+const btn_cerrarForm = document.getElementById("btn_cerrarLegal")
+const legalForm = document.getElementById("legalForm")
+
+
+// Formulario de legalizar 
+const formLegalizar = document.getElementById("formLegalizar")
+
+
 
 
 // FUNCIONES 
@@ -48,6 +62,12 @@ btnCerraDocu.addEventListener("click", function (e){
 
 
 }, true);
+
+btn_cerrarForm.addEventListener("click", (e) => {
+    e.preventDefault()
+    registroLegal.style.display = "none"
+    legalForm.reset();
+})
 
 function formuEmpresa(e) {
     e.preventDefault();
@@ -84,6 +104,9 @@ function crear(e) {
     e.preventDefault();
     console.log(registroAprendiz)
     registroAprendiz.style.display = "block"
+    
+    formLegalizar.style.display = "none"
+
 
 }
 
