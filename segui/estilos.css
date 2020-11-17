@@ -274,9 +274,8 @@ text-align: center;
     visibility: hidden;
 }*/
 
-.formularioActualizar{
-    display:none;
-}
+
+
 
 #formularioDocu {
     display: none;
@@ -756,8 +755,12 @@ input[type=number] { -moz-appearance:textfield; }
     width:30%;
     background: #ffffff; border:2px solid rgb(255, 166, 0);
     padding:20px;
-    display:none;
+    display:block;
 }
+
+/* .formularioActualizar{
+    display:block;
+} */
 
 .tituloForActu{
     text-align: center;
