@@ -429,7 +429,7 @@ g                </div>
     <div id="registroAprendiz" class="registroAprendiz">
 
 
-        <form id="frmajax" method="POST">
+        <form id="frmajax" method="POST" autocomplete="off">
             <label>Tipo Documento:</label>
             <p></p>
             <select name="tipdocu" id="tipdocu">
