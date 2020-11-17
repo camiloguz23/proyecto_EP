@@ -212,16 +212,16 @@ if(isset($_POST['btn_actualizar'])){
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
                 <label class="label" for="">*Razón Social Empresa: </label><br>
-                <input class="inputR" type="text" name="socialEm" id="socialEm" maxlength="20"  style="text-transform:uppercase">
+                <input class="inputR" type="text" name="socialEm" id="socialEm" maxlength="30"  style="text-transform:uppercase">
                 <p class="inputR_p" id="inputR_p"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Nit: </label><br>
-                <input class="inputR" type="number" name="nit" id="nit" maxlength="20"  style="text-transform:uppercase">
+                <input class="inputR" type="number" name="nit" id="nit" max="20"  style="text-transform:uppercase">
                 <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros</p>
 
                 <label class="label" for="">*Nombre De La Empresa: </label><br>
-                <input class="inputR" type="text" name="nomEmpre" id="nomEmpre" maxlength="20"  style="text-transform:uppercase">
-                <p class="inputR_p-nom" id="inputR_p-nom"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
+                <input class="inputR" type="text" name="nomEmpre" id="nomEmpre" maxlength="25"  style="text-transform:uppercase">
+                <p class="inputR_p-nom" id="inputR_p-nom"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 25 caracteres</p>
 
                 <label class="label" for="">*Dirección: </label><br>
                 <input class="inputR" type="text" name="direccion" id="direccion" maxlength="30"  style="text-transform:uppercase">
@@ -232,7 +232,7 @@ if(isset($_POST['btn_actualizar'])){
                 <p class="inputR_t" id="inputR_p_t"><i class="fas fa-exclamation"></i> Ingrese solo numeros, minimo 9 y maximo 11 caracteres</p>
 
                 <label class="label" for="">*E-mail: </label><br>
-                <input class="inputR" type="email" name="email" id="email" maxlength="30"  style="text-transform:uppercase">
+                <input class="inputR" type="email" name="email" id="email" maxlength="30" >
                 <p class="inputR_p-c" id="inputR_p-c"><i class="fas fa-exclamation"></i> Ingrese solo un correo valido</p><br>
                 <label class="label"><b>*Ciudad:</b> </label><br>
                 <p></p>
@@ -495,15 +495,6 @@ g                </div>
     </footer>
 
     <script src="segui.js"></script>
-
-
-
-
-
-
-
-
-
 
 
 
