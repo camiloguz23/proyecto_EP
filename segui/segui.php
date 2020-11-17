@@ -273,7 +273,7 @@ if(isset($_POST['btn_actualizar'])){
             </form>
         </div>
 
-        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">                   
+        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm" >                   
 
             <div class="registroLegal" id="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
@@ -299,20 +299,21 @@ if(isset($_POST['btn_actualizar'])){
                     <?php
                     endforeach;
                     ?>
-                </select><br>
+                </select>
+                <p class= "crear" id="crear">+Crear Empresa</p>
                 
                 <label class="label" for="">Nombre del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="jefe" id=""><br>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="cargoJefe" id=""><br>
-                <label class="label" for="">fecha de inicio de la etapa productiva</label><br>
+                <label class="label" for="">Fecha de inicio de la etapa productiva</label><br>
                 <input class="seleccionTipo" type="date" name="fecha" id="">
                 <div id="estudiante">
                     <input type="hidden" name="docuEstudiante" value="">
                 </div>
 
                 <div class="cargaDocu" id="cargaDocu">
-                           
+                    <label class="label" for="">*Recuerde cargar todos los archivos en formato PDF</label><br>    
                 </div>
 
                 <div class="botones">
