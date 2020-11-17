@@ -28,7 +28,12 @@ $cedula = $_FILES["cedula"]["name"];
 $rutacedula = $_FILES["cedula"]["tmp_name"];
 $destinocedula = "../segui/pdfCertificacion/".$cedula;
 
-if (copy($rutaComCERT,$destinoComCERt) && copy($rutaCosntLabo,$destinoConsLabo) && copy($rutaFormaSegui,$destinoFormaSegui) && copy($rutaProsaber,$destinoProsaber) && copy($rutaPazysalvo,$destinoPAzysalvo) && copy($rutaEPA,$destinoEPA) && copy($rutacedula,$destinocedula)) {
-    # code...
+$cedulaAprendiz = $_POST["docuAprendiz"];
+$cedulaUsuario = $_POST["usuario"];
+if ($cedulaAprendiz == "" || $cedulaAprendiz == null) {
+    if (copy($rutaComCERT,$destinoComCERt) && copy($rutaCosntLabo,$destinoConsLabo) && copy($rutaFormaSegui,$destinoFormaSegui) && copy($rutaProsaber,$destinoProsaber) && copy($rutaPazysalvo,$destinoPAzysalvo) && copy($rutaEPA,$destinoEPA) && copy($rutacedula,$destinocedula)) {
+        # code...
+    }
 }
+
 ?>
