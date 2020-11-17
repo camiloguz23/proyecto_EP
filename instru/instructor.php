@@ -7,17 +7,24 @@
         require_once('../php/connecion.php');
 
 ?>
+<?php
+
+$sql_ciudad="SELECT * FROM tipo_evidencias";
+$query_ciudad = mysqli_query($connection, $sql_ciudad);
+$fila_ciudad = mysqli_fetch_assoc($query_ciudad);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="instructor.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>INSTRUCTOR</title>
 </head>
 <body>
     <header class="princi">
-       
+     
         <div class="logo">
 
             <img class="imagen"  height="90" width="90" src="../imagenes/Imagen2.png"  alt="">
@@ -76,137 +83,41 @@
                 <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
                 <div class="buscarDocu">
                 <form method="POST" id="buscarDocu" name="buscarDocu"  autocomplete="off">
-                    <input  type="number" placeholder="Numero De Documento">
-                     <img class= "boton2" src="../imagenes/Imagen3.png" >
+                    <input  type="number" placeholder="Numero De Documento" id="documento">
+                    <div class="boton">
+                        <a href="#" id="boton"><img class="boton" src="../imagenes/Imagen3.png" height="50px"
+                                width="50px"></a>
+                    </div>
                 </form>
                 </div>
             </div>
         </div>
 
-        <div class="opcioonar">
-            <input id="bot1"class="bot1" type="button" value="Quincenales">
-            <input id="bot2" class="bot1" type="button" value="Trimestrales">
-        </div>
+        <form id="fomutievi" class="formutievi">
+                <select class="inputR" name="tip_evi" id="tip_evi">
+                        <?php
+                            foreach($query_ciudad as $tipo_evidencia):?>
+                        <option value="<?php echo $tipo_evidencia['id_tip_eviden'] ?> ">
+                            <?php echo $tipo_evidencia['nom_tip_eviden'] ?></option>
+                        <?php
+                            endforeach; 
+                            ?>
+                </select>
+            <input  type="submit" name="inicio" id="inicio" value="seleccionar">
+        </form>
+        <div id="fore">
 
+        </div>
         <!--datos del aprendiz -->
-        <div id="informa" class="informa">
-                    <div class="datosMostrar">
-                        <div class="datosApre">
-                        <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-                            <div class="dato1">
-                                <label class="label" for="">NOMBRE: </label>
-                                <!-- NO BORRAR LAS CLASES -->
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato2">
-                                <label class="label" for="">IDENTIFICACIÓN: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato3">
-                                <label class="label" for="">TELEFONO: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato4">
-                                <label class="label" for="">E-MAIL: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                            <div class="dato5">
-                                <label class="label" for="">ESTADO: </label>
-                                <label class="datos" for=""></label>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="datosForma">
-                        <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
-                            <div class="dato1">
-                                <label class="label" for="">REGIONAL: </label>
-                                <label class="datos" for="">$bd</label>
-                            </div>
-
-                            <div class="dato2">
-                                <label class="label" for="">NO.FICHA: </label>
-                                <label class="datos" for="">$bd</label>
-                            </div>
-
-                            <div class="dato3">
-                                <label class="label" for="">CENTRO DE FORMACIÓN: </label>
-                                <label class="datos" for="">$bd</label>
-                            </div>
-
-                            <div class="dato4">
-                                <label class="label" for="">PROGRAMA DE FORMACIÓN: </label>
-                                <label class="datos" for="">$bd</label>
-                            </div>
-                        </div>
-
-                    </div>
+        <div class="informa">
+                <div id="informa">
+                     <h3> "mereces todo lo que sueñas</h3>
+                    <!--</div>-->
                 </div>
-        
-        <!--formato d evidencias  del aprendiz-->
-    <div class="conteiner" id="evidencias">
-        <form class=""  action="" id="evidencias" method="POST">
-
-        <div class="forman">
-            <div class="evi1">
-                <span class="che1" id="">Evidencia N°1 - - - - - - </span>  <input type="checkbox"> <br>
-                
-                <span class="" id="">Evidencia N°2 - - - - - - </span>  <input type="checkbox"> 
-                    
-                <span class="" id="">Evidencia N°3 - - - - - - </span>  <input type="checkbox">  
-                
-                <span class="" id="">Evidencia N°4 - - - - - - </span>  <input type="checkbox">   
-                
-                <span class="" id="">Evidencia N°5 - - - - - -  </span>  <input type="checkbox">  
-                
-                <span class="" id="">Evidencia N°6 - - - - - - </span>  <input type="checkbox"> 
-           
-                <span class="" id="">Evidencia N°7 - - - - - - </span>  <input type="checkbox">  
-                
-                <span class="" id="">Evidencia N°8 - - - - - - </span>  <input type="checkbox">  
-
-                <span class="" id="">Evidencia N°9 - - - - - - </span>  <input type="checkbox"> 
-                    
-            </div>  
-            <div class="evi2">
-                <span class="" id="">Evidencia N°10- - - - - - </span>  <input type="checkbox">  
-                
-                <span class="" id="">Evidencia N°11- - - - - - </span>  <input type="checkbox">  
-
-                <span class="" id="">Evidencia N°12- - - - - - </span>  <input type="checkbox">  
-          </div>
         </div>
-           <div class="botoonn">
-                <input type="date" id="fecha">
-                <div class="funsi">
-                    <button id="cancelar" type="submit">Cancelar</button>
-                    <button id="guardar" type="submit">Guardar</button>
-                </div>
-           </div>
-       </form>
-   </div>
-   <div class="conteiner1" id="evidenciastri2">
-    <form class=""  action="" id="evidenciaas2"  method="POST">
+        <!--formato de evidencias  del aprendiz-->
+    
 
-        <div class="formann">
-            <div class="evi3">
-                <span class="" id="">Evidencia N°1 - - - - - - </span>  <input type="checkbox"> <br>
-                
-                <span class="" id="">Evidencia N°2 - - - - - - </span>  <input type="checkbox">  
-                    
-            </div>  
-
-        </div>
-           <div class="botoonnn">
-                <input type="date" id="fecha1">
-                <div class="funsin">
-                    <button id="cancelarr" type="submit">Cancelar</button>
-                    <button id="guardarr" type="submit">Guardar</button>
-                </div>
-           </div>
-       </form>
-   </div>
     </div>
     <footer class="pie">
         <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
@@ -219,5 +130,6 @@
         </div>
     </footer>
     <script src="app.js"></script>
+
 </body>
 </html>
