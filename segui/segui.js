@@ -22,6 +22,7 @@ const botonCerrarLega = document.getElementById("btnCerrarlega")
 // variables para el formulario de certificacion
 const formularioCerti = document.getElementById("cargaArchi")
 const btnEnviar = document.getElementById("btnEnviar")
+const datoAprendiz = document.getElementById("datoAprendiz")
 
 // FUNCIONES 
 function formulegalizar(e) {
@@ -54,6 +55,7 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
+            datoAprendiz.innerHTML = ` <input type="hidden" name="usuario" value="${docuBase}">`
         }
     }
     xhr.send()
