@@ -7,19 +7,17 @@ const expresiones = {
     nombre_empresa: /^[a-zA-ZÀ-ÿ\s]{1,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
     direccion:  /^[a-zA-Z0-9_.+-]{1,15}$/, // todos los digitos 
     telefono: /^\d{9,11}$/, // 7 a 14 numeros.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    
-    
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
-/* const campos ={
-    socialEm = false,
-    nit = false,
-    nomEmpre = false,
-    direccion = false, 
-    telefono = false,
-    email = false
+const campos ={
+    razon_social:false,
+    nit:false,
+    nomEmpre:false,
+    direccion:false, 
+    telefono:false,
+    email:false
     
-} */
+} 
 const validarformulario = (e) =>{
     switch (e.target.name){
         case "socialEm":
@@ -27,12 +25,12 @@ const validarformulario = (e) =>{
                  
                 document.getElementById('socialEm').classList.remove('inputR-incorrecto');
                 document.getElementById('inputR_p').classList.remove('inputR_p-incorrecto');
-                campos.socialEm =true;
+                campos.razon_social =true;
 
             } else {
                 document.getElementById('socialEm').classList.add('inputR-incorrecto');
                 document.getElementById('inputR_p').classList.add('inputR_p-incorrecto');
-                campos.socialEm = false;
+                campos.razon_social= false;
             }
         break
         case "nit":
@@ -54,7 +52,7 @@ const validarformulario = (e) =>{
                  
                     document.getElementById('nomEmpre').classList.remove('inputR-incorrecto');
                     document.getElementById('inputR_p-nom').classList.remove('inputR_p-n-incorrecto');
-                    campos.nomEmre =true;
+                    campos.nomEmpre =true;
     
                 } else {
                     document.getElementById('nomEmpre').classList.add('inputR-incorrecto');
@@ -110,16 +108,27 @@ const validarformulario = (e) =>{
 
 }
 
+const bloqueo = (e) =>{
+
+    if (campos.razon_social==true && campos.nit==true && campos.nomEmpre && campos.direccion && campos.telefono && campos.email) {
+
+        document.getElementById('bloque').classList.remove('bloqueo-activo');
+    
+    }else{
+        
+        document.getElementById('bloque').classList.add('bloqueo-activo');
+    
+    }
+    
+
+} 
+
 inputs.forEach((input)=>{
     input.addEventListener('keyup', validarformulario);
     input.addEventListener('focusout', validarformulario);
+    input.addEventListener('keyup', bloqueo);
+ 
 });
 
-/*
-formulario.addEventListener('submit',(e)=> {
 
-    if(campos.socialEm && campos.nit && campos.nomEmpre && campos.direccion && campos.telefono && campos.email){
-        document.getElementById('registro_c').classList('registro_c-correcto')
-    }
-})
-*/
+    

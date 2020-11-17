@@ -733,3 +733,17 @@ text-align: center;
 .registro_c-correcto{
     visibility: visible;
 }
+.bloqueo{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    top:700px;
+    left:150px;
+    visibility: hidden;
+    
+
+}
+.bloqueo-activo{
+    visibility: visible;
+}

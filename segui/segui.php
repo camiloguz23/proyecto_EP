@@ -187,9 +187,10 @@
                 <div class="agrego"></div>
                 <div class="botones">
 
-                    <button class="botonForm" id="botonEM">Guardar</button>
+                    <button class="botonForm" id="botonEM" type="submit" >Guardar</button>
                     <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
                         <p class="registro_c" id="registro_c">¡Registro Completado Correctamente!</p>
+                        <div class="bloqueo" id="bloque">hola</div>
                 </div>
             </form>
         </div>
@@ -456,7 +457,7 @@ $(document).ready(function() {
             data: datosEmpre,
             success: function(b) {
                 if (b == 1) {
-                    $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
+                    $('.agrego').html('<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
                     return
                     exit()
                     
