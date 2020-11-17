@@ -16,13 +16,38 @@ const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
 const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
+const certificacion = document.getElementById("dos")
+const buscadorCerti = document.querySelector(".datosMostrar2")
+const botonCerrarLega = document.getElementById("btnCerrarlega")
+
+const formulariolega = document.getElementById("buscarDocu")
+const informar = document.querySelector(".informacion")
+
+// variables para el formulario de certificacion
+const formularioCerti = document.getElementById("cargaArchi")
+const btnEnviar = document.getElementById("btnEnviar")
+const datoAprendiz = document.getElementById("datoAprendiz")
+
 
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();
     formularioLegalizacion.style.display ="block"
+
+
+
     
 }
+
+btnCerraDocu.addEventListener("click", function (e){
+    e.preventDefault();
+    formulariolega.reset();
+    informar.style.display = "none"
+    btnLEgalizacion.style.background = ("#ffffff")
+    btnLEgalizacion.style.color = ("black")
+
+
+}, true);
 
 function formuEmpresa(e) {
     e.preventDefault();
@@ -48,6 +73,8 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
+            datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
+            informar.style.display = "block"
         }
     }
     xhr.send()
@@ -62,10 +89,9 @@ function crear(e) {
 
 function mostrar(e) {
     e.preventDefault();
-   
     formularioDocu.style.display = "block";
-    console.log(formularioDocu);
-
+    btnLEgalizacion.style.background = ("rgb(252, 115, 35)")
+    btnLEgalizacion.style.color = ("#ffffff")
 }
 
 
@@ -171,8 +197,18 @@ function estudiante(datoEstu) {
     const estudiante = document.getElementById("estudiante")
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
 }
-const docuestudiante = documento.value
 
+function buscador(e) {
+    e.preventDefault();
+    console.log("funciona")
+    buscadorCerti.style.display = "block"
+    
+}
+
+function btncerrarlegal() {
+    
+    formularioLegalizacion.style.display = "none"
+}
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
@@ -182,3 +218,22 @@ btnLEgalizacion.addEventListener("click", mostrar)
 cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
+certificacion.addEventListener("click", buscador)
+botonCerrarLega.addEventListener("click", btncerrarlegal)
+
+/// evento de certificacion 
+
+btnEnviar.addEventListener("click", enviaBD)
+
+function enviaBD(e) {
+    e.preventDefault();
+    const datos = new FormData(formularioCerti)
+    fetch("../php/certificado.php", {
+        method: "POST",
+        body : datos
+    })
+        .then(res => res.text())
+        .then(bd => {
+            console.log(bd)
+        })
+}

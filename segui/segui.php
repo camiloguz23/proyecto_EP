@@ -174,12 +174,12 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 
     <!--FORMULARIOS-->
     <div id="formularioDocu" class="formularioDocu">
-        <div class="formLegalizar">
+        <div  class="formLegalizar">
             <!--todo el formulario-->
 
             <div class="buscardor">
-                <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
+                <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                     <!--todo el formulario-->
                     <input class="inputB" type="number" id="documento">
                     <div class="botones12" id="boton" title="consultar">
@@ -188,45 +188,63 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                 </form>
             </div>
             <div class="informa">
-                <div id="informa">
+                <div class="informacion" id="informa">
 
                     <!--</div>-->
                 </div>
 
+
                 <div class="botones">
-                    <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
+                   
++
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
+                    <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+            <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
+        <div class="registroEmpre" id="registroEmpreS">
+            <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
+=======
         <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpre">
-            <form method="POST" id="registroEmpre" autocomplete="off">
 
+            <form method="POST" id="registroEmpre"  autocomplete="off">
+                
+>>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
                 <label class="label" for="">*Razón Social Empresa: </label>
-                <input class="inputR" type="text" name="socialEm">
+                <input class="inputR" type="text" name="socialEm" id="socialEm" >
+                <p class="inputR_p" id="inputR_p"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Nit: </label>
-                <input class="inputR" type="number" name="nit">
+                <input class="inputR" type="text" name="nit" id="nit">
+                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros</p>
 
                 <label class="label" for="">*Nombre De La Empresa: </label>
-                <input class="inputR" type="text" name="nomEmpre">
+                <input class="inputR" type="text" name="nomEmpre" id="nomEmpre">
+                <p class="inputR_p-nom" id="inputR_p-nom"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Dirección: </label>
-                <input class="inputR" type="text" name="direccion">
+                <input class="inputR" type="text" name="direccion" id="direccion">
+                <p class="inputR_p-d" id="inputR_p-d"><i class="fas fa-exclamation"></i> Eso no es una dirrecion solo use numeros,letras y guion</p>
 
                 <label class="label" for="">*Teléfono: </label>
-                <input class="inputR" type="number" name="telefono">
+                <input class="inputR" type="text" name="telefono" id="telefono">
+                <p class="inputR_t" id="inputR_p_t"><i class="fas fa-exclamation"></i> Ingrese solo numeros, minimo 9 y maximo 11 caracteres</p>
 
                 <label class="label" for="">*E-mail: </label>
-                <input class="inputR" type="email" name="email"><br>
+                <input class="inputR" type="email" name="email" id="email">
+                <p class="inputR_p-c" id="inputR_p-c"><i class="fas fa-exclamation"></i> Ingrese solo un correo valido</p><br>
                 <label class="label"><b>*Ciudad:</b> </label>
                 <p></p>
                 <select class="inputR" name="id_ciu" id="id_ciu">
+                <script src="validacionformulario.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
                     <?php
                     foreach ($query_ciudad as $tip_ciudad) : ?>
                         <option value="<?php echo $tip_ciudad['id'] ?> ">
@@ -238,15 +256,18 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                 <div class="agrego"></div>
                 <div class="botones">
 
-                    <button class="botonForm" id="botonEM">Guardar</button>
+                    <button class="botonForm" id="botonEM" type="submit" >Guardar</button>
                     <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
-
+                        <p class="registro_c" id="registro_c">¡Registro Completado Correctamente!</p>
+                        <div class="bloqueo" id="bloque">hola</div>
                 </div>
             </form>
         </div>
 
 
-        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+
+        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">                   
+
             <div class="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label>
@@ -282,7 +303,9 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                     <input type="hidden" name="docuEstudiante" value="">
                 </div>
 
-                <div class="cargaDocu" id="cargaDocu"></div>
+                <div class="cargaDocu" id="cargaDocu">
+                           
+                </div>
 
                 <div class="botones">
                     <input class="botonForm" type="submit" value="GUARDAR">
@@ -293,6 +316,40 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     </div>
 
 
+<<<<<<< HEAD
+    <div class="formCertificar">
+        <div class="informa2">
+            <div class="buscador2">
+                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
+                <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
+                    <input class="inputE" type="number">
+                    <div class="boton2">
+                        <a href="" id="boton2"><img class="boton2" src="../imagenes/Imagen3.png" height="50px"
+                                width="50px"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="datosMostrar2">
+            <h3 class="subTitulo">*DATOS APRENDIZ</h3>
+            <div class="datosApre2">
+                <div class="dato2">
+                    <label class="label2" for="">NOMBRE: </label>
+                    <label class="inputC" for=""></label>
+                </div>
+                <div class="dato2">
+                    <label class="label2" for="">TELEFONO: </label>
+                    <label class="inputC" for=""></label>
+                </div>
+                <div class="dato2">
+                    <label class="label2" for="">E-MAIL: </label>
+                    <label class="inputC" for=""></label>
+                </div>
+                <div class="dato2">
+                    <label class="label2" for="">IDENTIFICACIÓN: </label>
+                    <label class="inputC" for=""></label>
+                </div>
+=======
 
     <div class="datosMostrar2">
         <h3 class="subTitulo">*DATOS APRENDIZ</h3>
@@ -313,6 +370,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                 <label class="label2" for="">IDENTIFICACIÓN: </label>
                 <label class="inputC" for=""></label>
             </div>
+>>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
 
 
             <div class="dato2">
@@ -334,46 +392,58 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
         </div>
     </div>
 
-    <div class="cargaArchi">
-        <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off">
-            <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
-            <Label class="label"><input type="checkbox" name="" id="">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
-                DIA</Label>
+
+        <div class="cargaArchi" id="formularioCertificacion">
+            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
+                <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
+                <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
+                    DIA</Label>
+
 
             <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
 
-            <Label class="label">1) Compromiso de Certificación:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">1) Compromiso de Certificación:</Label>
+                <input class="archivo" type="file" name="CompromisoCertificacion">
 
-            <Label class="label">2) Constancia Laboral:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">2) Constancia Laboral:</Label>
+                <input class="archivo" type="file" name="ConstanciaLaboral">
 
-            <Label class="label">3) Formato de Seguimiento:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">3) Formato de Seguimiento:</Label>
+                <input class="archivo" type="file" name="formatoSeguimiento">
 
-            <Label class="label">4) Formato Prueba Saber Pro:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">4) Formato Prueba Saber Pro:</Label>
+                <input class="archivo" type="file" name="proSaber">
 
-            <Label class="label">5) Formato Paz y Salvo:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">5) Formato Paz y Salvo:</Label>
+                <input class="archivo" type="file" name="pazSAlvo">
 
-            <Label class="label">6) Formato APE (Agencia Publica de Empleo):</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">6) Formato APE (Agencia Publica de Empleo):</Label>
+                <input class="archivo" type="file" name="formatoAPE">
 
-            <Label class="label">7) Documento de Identidad al 150%:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">7) Documento de Identidad al 150%:</Label>
+                <input class="archivo" type="file" name="cedula">
+                <input type="hidden" name="usuario" value="<?=$_SESSION["documento"]?>">
+                <div id="datoAprendiz">
+                </div>
+
 
             <div class="botones2">
 
-                <input class="botonForm2" type="button" value="GUARDAR">
-                <input class="botonForm2" type="button" value="CERRAR">
-            </div>
+
+                    <input class="botonForm2" type="button" value="GUARDAR" id="btnEnviar">
+                    <input class="botonForm2" type="button" value="CERRAR">
+                </div>
+
 
         </form>
     </div>
 
     </div>
+<<<<<<< HEAD
+    </div>
+=======
 
+>>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
 
     <div id="registroAprendiz" class="registroAprendiz">
 
@@ -484,6 +554,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     });
 </script>
 <script type="text/javascript">
+<<<<<<< HEAD
     $(document).ready(function() {
         $('#botonEM').click(function() {
             var datosEmpre = $('#registroEmpre').serialize();
@@ -500,6 +571,28 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                         )
                         return
                         exit()
+=======
+$(document).ready(function() {
+    $('#botonEM').click(function() {
+        var datosEmpre = $('#registroEmpre').serialize();
+
+
+        $.ajax({
+            type: "POST",
+            url: "jqueryEnviarEmpresa.php",
+            data: datosEmpre,
+            success: function(b) {
+                if (b == 1) {
+<<<<<<< HEAD
+                    $('.agrego').html('<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
+=======
+                    $('.agrego').html(
+                        '<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
+                        )
+>>>>>>> 3b78f7824a87f4356315c9d7c8a2d6e634fb250e
+                    return
+                    exit()
+>>>>>>> 8d315f29098e57b86f3a3fa2784ba5af89787d41
 
                     } else {
 
