@@ -27,7 +27,7 @@ const formulariolega = document.getElementById("buscarDocu")
 const informar = document.querySelector(".informacion")
 
 // variables para el formulario de certificacion
-const formularioCerti = document.getElementById("cargaArchi")
+const formularioCerti = document.getElementById("formularioCertificacion")
 const btnEnviar = document.getElementById("btnEnviar")
 const datoAprendiz = document.getElementById("datoAprendiz")
 
@@ -47,6 +47,7 @@ const formLegalizar = document.getElementById("formLegalizar")
 function formulegalizar(e) {
     e.preventDefault();
     formularioLegalizacion.style.display ="block"
+    
 
 
 
@@ -223,8 +224,9 @@ function estudiante(datoEstu) {
 
 function buscador(e) {
     e.preventDefault();
-    console.log("funciona")
-    buscadorCerti.style.display = "block"
+    console.log("funciona 227")
+    formularioCerti.style.display = "block"
+    
     
 }
 
@@ -242,7 +244,7 @@ cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
-botonCerrarLega.addEventListener("click", btncerrarlegal)
+//botonCerrarLega.addEventListener("click", btncerrarlegal)
 
 /// evento de certificacion 
 

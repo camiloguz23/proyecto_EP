@@ -440,6 +440,7 @@ g                </div>
             <p></p>
             <input type="number" name="docu" id="docu">
             <p></p>
+            
             <label>Nombres Completos:</label>
             <p></p>
             <input type="text" name="nom" id="nom">
@@ -467,7 +468,10 @@ g                </div>
             <p></p>
             <input type="number" name="tel" id="tel">
             <p></p>
-
+            <label>Telefono :</label>
+            <p></p>
+            <input type="number" name="tel" id="tel">
+            <p></p>
             <button id="btnguardar">Guardar</button>
         </form>
 
