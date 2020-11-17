@@ -315,11 +315,11 @@ text-align: center;
 }
 
 .buscarDocu{
-    margin-left: 30%;
-    padding: 4% 3%;
+    margin-left: 0%;
+    padding: 4% 1%;
     background: rgb(255, 255, 255);
     border-radius: 10px;
-    width: 35%;
+    width: 100%;
     height: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -490,14 +490,13 @@ input[type=number] { -moz-appearance:textfield; }
 /* CERTIFICACIÓN */
 
 /*------OCULTOS-------*/
-.formCertificar{
-    visibility: hidden;
-}
+
 .buscador2{
-    display: none;
+    display: block;
+    
 }
 .datosMostrar2, .cargaArchi{
-    display: none;
+    display: block;
 }
 /*--------FIN--------*/
 
@@ -527,6 +526,7 @@ input[type=number] { -moz-appearance:textfield; }
     text-align: center;
     margin-right: 2%;
     height: 130px;
+    
 }
 .subTitulo2{
     padding: 4px 10px;
@@ -539,8 +539,8 @@ input[type=number] { -moz-appearance:textfield; }
     border-left: none;
     border-right: none;
     border-bottom: 2px solid black;
-    width:50%;
-    margin-left: 5px;
+    width:100%;
+    margin-left: 120px;
     margin-top: -20px;
 }
 .boton2{

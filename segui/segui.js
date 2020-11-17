@@ -16,6 +16,12 @@ const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
 const alternativa = document.getElementById("tipoAlte")
 const cargaDocu = document.getElementById("cargaDocu")
+const certificacion = document.getElementById("dos")
+const buscadorCerti = document.querySelector(".datosMostrar2")
+const botonCerrarLega = document.getElementById("btnCerrarlega")
+// variables para el formulario de certificacion
+const formularioCerti = document.getElementById("cargaArchi")
+const btnEnviar = document.getElementById("btnEnviar")
 
 // FUNCIONES 
 function formulegalizar(e) {
@@ -64,7 +70,7 @@ function mostrar(e) {
     e.preventDefault();
    
     formularioDocu.style.display = "block";
-    console.log(formularioDocu);
+    
 
 }
 
@@ -171,8 +177,18 @@ function estudiante(datoEstu) {
     const estudiante = document.getElementById("estudiante")
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
 }
-const docuestudiante = documento.value
 
+function buscador(e) {
+    e.preventDefault();
+    console.log("funciona")
+    buscadorCerti.style.display = "block"
+    
+}
+
+function btncerrarlegal() {
+    
+    formularioLegalizacion.style.display = "none"
+}
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
@@ -182,3 +198,22 @@ btnLEgalizacion.addEventListener("click", mostrar)
 cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
+certificacion.addEventListener("click", buscador)
+botonCerrarLega.addEventListener("click", btncerrarlegal)
+
+/// evento de certificacion 
+
+btnEnviar.addEventListener("click", enviaBD)
+
+function enviaBD(e) {
+    e.preventDefault();
+    const datos = new FormData(formularioCerti)
+    fetch("../php/certificado.php", {
+        method: "POST",
+        body : datos
+    })
+        .then(res => res.text())
+        .then(bd => {
+            console.log(bd)
+        })
+}

@@ -246,7 +246,7 @@
 
                 <div class="botones">
                     <input class="botonForm" type="submit" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR">
+                    <input class="botonForm" type="button" value="CANCELAR" id="btnCerrarlega">
                 </div>
             </div>
         </form>
@@ -294,40 +294,45 @@
         </div>
     </div>
 
-    <div class="cargaArchi">
-        <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off">
-            <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
-            <Label class="label"><input type="checkbox" name="" id="">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
-                DIA</Label>
+
+        <div class="cargaArchi" id="formularioCertificacion">
+            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
+                <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
+                <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
+                    DIA</Label>
+
 
             <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
 
-            <Label class="label">1) Compromiso de Certificación:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">1) Compromiso de Certificación:</Label>
+                <input class="archivo" type="file" name="CompromisoCertificacion">
 
-            <Label class="label">2) Constancia Laboral:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">2) Constancia Laboral:</Label>
+                <input class="archivo" type="file" name="ConstanciaLaboral">
 
-            <Label class="label">3) Formato de Seguimiento:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">3) Formato de Seguimiento:</Label>
+                <input class="archivo" type="file" name="formatoSeguimiento">
 
-            <Label class="label">4) Formato Prueba Saber Pro:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">4) Formato Prueba Saber Pro:</Label>
+                <input class="archivo" type="file" name="proSaber">
 
-            <Label class="label">5) Formato Paz y Salvo:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">5) Formato Paz y Salvo:</Label>
+                <input class="archivo" type="file" name="pazSAlvo">
 
-            <Label class="label">6) Formato APE (Agencia Publica de Empleo):</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">6) Formato APE (Agencia Publica de Empleo):</Label>
+                <input class="archivo" type="file" name="formatoAPE">
 
-            <Label class="label">7) Documento de Identidad al 150%:</Label>
-            <input class="archivo" type="file" name="file">
+                <Label class="label">7) Documento de Identidad al 150%:</Label>
+                <input class="archivo" type="file" name="cedula">
+
 
             <div class="botones2">
 
-                <input class="botonForm2" type="button" value="GUARDAR">
-                <input class="botonForm2" type="button" value="CERRAR">
-            </div>
+
+                    <input class="botonForm2" type="button" value="GUARDAR" id="btnEnviar">
+                    <input class="botonForm2" type="button" value="CERRAR">
+                </div>
+
 
         </form>
     </div>
