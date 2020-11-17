@@ -493,7 +493,8 @@ g                </div>
                 endforeach;
                 ?>
             </select>
-            <button id="btnguardar">Guardar</button>
+                <button id="btnguardar">Guardar</button>
+                <button id="btncerrarAprendiz">Cerrar</button>   
         </form>
 
     </div>
@@ -510,18 +511,6 @@ g                </div>
     </footer>
 
     <script src="segui.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="validacionF.js"></script>
 
 </body>
