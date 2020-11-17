@@ -2,32 +2,31 @@
     require_once("../php/connecion.php");
     session_start();
 
+    if(isset($_POST['btn_actualizar'])){
 
-/*    echo $usuario; */
-    if (strlen($_POST['emailA']) >= 1 && strlen($_POST['telefonoA']) >= 1 && strlen($_POST['claveA']) >= 1) {
+        $doc = $_POST['documentoA'];
+        $correo = $_POST['correoA'];
+        $telefono = $_POST['telefonoA'];
+        $clave = $_POST['claveA'];
 
-       
-        $clave= $_POST['claveA'];
-        $email=$_POST['emailA'];
-        $tel=$_POST['telefonoA'];
-        /* $docu= $_POST['docu']; */
+        if($doc == "" || $correo==""|| $telefono==""|| $clave==""){
+            echo "los campos son obligatorios";
+        }else{
+            $existe =0;
+            $resultado = mysqli_query($connection,"SELECT * FROM usuario WHERE documento = '$doc'");
+            while($consulta = mysqli_fetch_array($resultado)){
+                $existe++;
+            }
+            if($existe ==0){
+                echo "el documentono no existe en la db";
+            }else{
+                $actualizar="UPDATE usuario SET correo = '$correo',telefono = '$telefono',clave = '$clave' WHERE documento = '$doc'";
+                mysqli_query($connection,$actualizar);
+            }
 
-        
-        $insert=("UPDATE usuario SET correo = '$email', telefono = '$tel', clave = '$clave' WHERE usuario.documento = $docu");
-        echo mysqli_query($connection, $insert);
-    }else{
-        echo $usuario;
-        echo "no funciono";
+            
+        }
+
     }
-    
-
-
-
-
-
-
-
-
-
 
 ?>
