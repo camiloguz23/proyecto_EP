@@ -415,8 +415,10 @@ g                </div>
     <div id="registroAprendiz" class="registroAprendiz">
 
 
-        <form id="frmajax" method="POST">
-            <label>Tipo Documento:</label><br>
+
+        <form id="frmajax" method="POST" autocomplete="off">
+            <label>Tipo Documento:</label>
+
             <p></p>
             <select name="tipdocu" id="tipdocu">
                 <?php
@@ -478,7 +480,8 @@ g                </div>
                 endforeach;
                 ?>
             </select>
-            <button id="btnguardar">Guardar</button>
+                <button id="btnguardar">Guardar</button>
+                <button id="btncerrarAprendiz">Cerrar</button>   
         </form>
 
     </div>
@@ -495,18 +498,6 @@ g                </div>
     </footer>
 
     <script src="segui.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="validacionF.js"></script>
 
 </body>
