@@ -73,11 +73,8 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
-
-            datoAprendiz.innerHTML = ` <input type="hidden" name="usuario" value="${docuBase}">`
-
+            datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
             informar.style.display = "block"
-
         }
     }
     xhr.send()
