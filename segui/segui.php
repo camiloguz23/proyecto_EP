@@ -185,7 +185,7 @@ if(isset($_POST['btn_actualizar'])){
 
     <!--FORMULARIOS-->
     <div id="formularioDocu" class="formularioDocu">
-        <div  class="formLegalizar">
+        <div  class="formLegalizar" id="formLegalizar">
             <!--todo el formulario-->
 
             <div class="buscardor">
@@ -267,11 +267,9 @@ if(isset($_POST['btn_actualizar'])){
             </form>
         </div>
 
-
-
         <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">                   
 
-            <div class="registroLegal">
+            <div class="registroLegal" id="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label>
                 <select class="seleccionTipo" id="tipoAlte" name="seleccionTipo">
@@ -313,7 +311,7 @@ if(isset($_POST['btn_actualizar'])){
 
                 <div class="botones">
                     <input class="botonForm" type="submit" value="GUARDAR">
-                    <input class="botonForm" type="button" value="CANCELAR">
+                    <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
         </form>
