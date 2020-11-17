@@ -296,6 +296,7 @@ if(isset($_POST['btn_actualizar'])){
                     endforeach;
                     ?>
                 </select><br>
+                
                 <label class="label" for="">Nombre del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="jefe" id=""><br>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>

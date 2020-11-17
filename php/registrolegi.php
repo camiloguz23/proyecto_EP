@@ -58,9 +58,11 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
             if (copy($ruta,$destino) && copy($rutaTres,$destinoTres) && copy($rutaCuatro,$destinoCuatro)) {
                 $consulta = "INSERT INTO legalizacion (nit_empresa,id_alternativa,id_aprend,fecha_ini_ep,fecha_carga_docu,cart_solicitud,form_023,const_empre,cedu_copia,contra_copia,eps_copia,jefe_inmediato,cargo_del_jefe) VALUES ('$empresa','$Alternativa','$documento','$fecha', NOW(),'$nombreCuatro','$nombre', '$nombreTres', null,null,null,'$jefe','$cargoJefe')";
                 $sql = mysqli_query($connection,$consulta);
+
                 if ($sql) {
                     $estado ="UPDATE ficha_programa SET id_estado = '2' WHERE ficha_programa.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
+                    
                     if ($sqlEstado) {
                         header("location: ../segui/segui.php");
                     }
