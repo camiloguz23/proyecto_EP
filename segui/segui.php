@@ -133,12 +133,12 @@
 
     <!--FORMULARIOS-->
     <div id="formularioDocu" class="formularioDocu">
-        <div class="formLegalizar">
+        <div  class="formLegalizar">
             <!--todo el formulario-->
 
             <div class="buscardor">
-                <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
+                <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                     <!--todo el formulario-->
                     <input class="inputB" type="number" id="documento">
                     <div class="botones12" id="boton" title="consultar">
@@ -148,22 +148,26 @@
                 </form>
             </div>
             <div class="informa">
-                <div id="informa">
+                <div class="informacion" id="informa">
 
                     <!--</div>-->
                 </div>
 
+
                 <div class="botones">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
++
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
+                    <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
                 </div>
             </div>
         </div>
         <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpre">
-            <form method="POST" id="registroEmpre" autocomplete="off">
 
+            <form method="POST" id="registroEmpre"  autocomplete="off">
+                
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
@@ -206,7 +210,9 @@
         </div>
 
 
-        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+
+        <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">                   
+
             <div class="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label>

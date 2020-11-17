@@ -19,16 +19,34 @@ const cargaDocu = document.getElementById("cargaDocu")
 const certificacion = document.getElementById("dos")
 const buscadorCerti = document.querySelector(".datosMostrar2")
 const botonCerrarLega = document.getElementById("btnCerrarlega")
+
+const formulariolega = document.getElementById("buscarDocu")
+const informar = document.querySelector(".informacion")
+
 // variables para el formulario de certificacion
 const formularioCerti = document.getElementById("cargaArchi")
 const btnEnviar = document.getElementById("btnEnviar")
+
 
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();
     formularioLegalizacion.style.display ="block"
+
+
+
     
 }
+
+btnCerraDocu.addEventListener("click", function (e){
+    e.preventDefault();
+    formulariolega.reset();
+    informar.style.display = "none"
+    btnLEgalizacion.style.background = ("#ffffff")
+    btnLEgalizacion.style.color = ("black")
+
+
+}, true);
 
 function formuEmpresa(e) {
     e.preventDefault();
@@ -54,6 +72,7 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
+            informar.style.display = "block"
         }
     }
     xhr.send()
@@ -68,10 +87,9 @@ function crear(e) {
 
 function mostrar(e) {
     e.preventDefault();
-   
     formularioDocu.style.display = "block";
-    
-
+    btnLEgalizacion.style.background = ("rgb(252, 115, 35)")
+    btnLEgalizacion.style.color = ("#ffffff")
 }
 
 
