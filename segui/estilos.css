@@ -374,14 +374,16 @@ input[type=number] { -moz-appearance:textfield; }
     padding: 15px 30px;
     border-radius: 15px;
 }
+/***********************************************************************************************************************/
 .registroEmpre{
     position: absolute;
     z-index: 2;
     margin-top: -59%;
     width: 95.5%;
-
-    display: none;
+    
+    display: block;
     margin-left: 0px;
+    height: 850px;
 }
 
 .datosApre, .datosForma{
@@ -495,7 +497,6 @@ input[type=number] { -moz-appearance:textfield; }
 .buscador2{
 
     display: none;
-
 }
 .datosMostrar2, .cargaArchi{
     display: block;
@@ -690,6 +691,30 @@ input[type=number] { -moz-appearance:textfield; }
     
     background: #3e9c3a;
 }
+/**************  VALIDACION FORMULARIO CREAR EMPRESA  *******************/
+.inputR-incorrecto{
+    border: red solid; 
+}
+
+.inputR_p{
+    visibility: hidden;
+}
+.inputR_p-incorrecto{
+    visibility: visible;
+}
+
+.inputR_t{
+    visibility: hidden;
+}
+.inputR_t-incorrecto{
+    visibility: visible;
+}
+.inputR_p-nom{
+    visibility: hidden;
+}
+.inputR_p-nom-incorrecto{
+    visibility: visible;
+}
 
 /* ------formulario actualizar---- */
 .formularioActualizar{
@@ -719,3 +744,7 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 
+
+.bloqueo-activo{
+    visibility: visible;
+}
