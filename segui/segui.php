@@ -15,6 +15,12 @@ $fila = mysqli_fetch_assoc($query);
 ?>
 
 <?php
+$sql_ficha = "SELECT * FROM ficha_programa";
+$query_ficha = mysqli_query($connection, $sql_ficha);
+$fila_ficha = mysqli_fetch_assoc($query_ficha);
+?>
+
+<?php
 $sql_re = "SELECT * FROM alternativa";
 $query_re = mysqli_query($connection, $sql_re);
 $fila_re = mysqli_fetch_assoc($query_re);
@@ -468,10 +474,24 @@ g                </div>
             <p></p>
             <input type="number" name="tel" id="tel">
             <p></p>
-            <label>Telefono :</label>
+            <label>Telefono celular:</label>
             <p></p>
-            <input type="number" name="tel" id="tel">
+            <input type="number" name="celular" id="tel">
             <p></p>
+            <label>Direccion:</label>
+            <p></p>
+            <input type="text" name="direccion" id="tel">
+            <p></p>
+            <label for="">Ficha de formacion</label>
+            <select class="select" name="ficha" id="id_ciu">
+                <?php
+                foreach ($query_ficha as $ficha) : ?>
+                    <option value="<?php echo $ficha['num_ficha'] ?> ">
+                        <?php echo $ficha['num_ficha'] ?></option>
+                <?php
+                endforeach;
+                ?>
+            </select>
             <button id="btnguardar">Guardar</button>
         </form>
 

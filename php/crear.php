@@ -11,10 +11,20 @@
         $tel=$_POST['tel'];
         $docu= $_POST['docu'];
         $id= $_POST['id_apren'];
+        $celular = $_POST["celular"];
+        $direccion = $_POST["direccion"];
+        $ficha = $_POST["ficha"];
         
-        $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend,id, id_tip_docu)
-        VALUES ('$docu', '$name', '$ape', '$email', '$tel','$id', '$tipdoc')";
-        echo mysqli_query($connection, $insert);
+        $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend, id_tip_docu,direccion,num_celular)
+        VALUES ('$docu', '$name', '$ape', '$email', '$tel', '$tipdoc','$direccion','$celular')";
+        $inserta = mysqli_query($connection, $insert);
+
+        if ($inserta) {
+            $consulta = "INSERT INTO detalle_formacion(num_ficha, id_aprend, id_estado) VALUES ('$ficha',$docu,'1')";
+            
+            echo mysqli_query($connection,$consulta);
+        }
+
     }
 
    
