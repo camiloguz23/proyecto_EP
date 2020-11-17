@@ -92,10 +92,11 @@
     <div class="contenedor">
         <div class="date">
 
-  <!----------------------------campo del fondo donde dice seguimiento *en el header*------------------------->
+            <!----------------------------campo del fondo donde dice seguimiento *en el header*------------------------->
 
             <ul class="datos">
-                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada dia</p>
+                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
+                    dia</p>
                 <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail:
                     <?=$_SESSION["correo"]?></p>
             </ul>
@@ -111,7 +112,24 @@
         <a href="#" class="button21"> <img class="butuno" alt="" srcset="">CERTIFICACIÓN</a>
         <a href="#" class="button21"> <img class="butuno" alt="" srcset="">APRENDICES</a>
     </div>
+  
+        <div class="formularioActualizar">
+            <form id="formularito" method="post">
+                <h1 class="tituloForActu">FORMULARIO ACTUALIZAR</h1>
 
+                <label class="label" for="">*correo </label>
+                <input class="inputR" type="email" name="correoA">
+
+                <label class="label" for="">*Telefono</label>
+                <input class="inputR" type="number" name="telefonoA">
+
+                <label class="label" for="">*Clave</label>
+                <input class="inputR" type="text" name="claveA">
+
+                <button class="inputR alv">Actualizar</button>
+
+            </form>
+        </div>
 
     <!--FORMULARIOS-->
     <div id="formularioDocu" class="formularioDocu">
@@ -124,7 +142,8 @@
                     <!--todo el formulario-->
                     <input class="inputB" type="number" id="documento">
                     <div class="botones12" id="boton" title="consultar">
-                        <a href="#" class="hola" ><img class="boton" src="../imagenes/Imagen3.png" height="50px" width="50px"></a>
+                        <a href="#" class="hola"><img class="boton" src="../imagenes/Imagen3.png" height="50px"
+                                width="50px"></a>
                     </div>
                 </form>
             </div>
@@ -134,17 +153,22 @@
                     <!--</div>-->
                 </div>
 
-               <div class="botones">
+
+                <div class="botones">
+                    <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
++
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
                 </div>
             </div>
         </div>
-            <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
+        <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpre">
+
             <form method="POST" id="registroEmpre"  autocomplete="off">
                 
+
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
                 <label class="label" for="">*Razón Social Empresa: </label>
@@ -186,7 +210,9 @@
         </div>
 
 
+
         <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">                   
+
             <div class="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label>
@@ -194,7 +220,8 @@
                     <option value=""></option>
                     <?php
                             foreach($query_re as $alternativa):?>
-                    <option value="<?php echo $alternativa['id_alternativa'] ?>"><?php echo $alternativa['id_alternativa'] ?>
+                    <option value="<?php echo $alternativa['id_alternativa'] ?>">
+                        <?php echo $alternativa['id_alternativa'] ?>
                         <?php echo $alternativa['nom_alternativa'] ?></option>
                     <?php
                             endforeach; 
@@ -205,7 +232,8 @@
                     <option value=""></option>
                     <?php
                             foreach($query_empresa as $empresa):?>
-                    <option value="<?php echo $empresa['nit_empresa'] ?> "><?php echo $empresa['nit_empresa'] ?> -- <?php echo $empresa['nom_empre'] ?></option>
+                    <option value="<?php echo $empresa['nit_empresa'] ?> "><?php echo $empresa['nit_empresa'] ?> --
+                        <?php echo $empresa['nom_empre'] ?></option>
                     <?php
                             endforeach; 
                             ?>
@@ -231,87 +259,92 @@
     </div>
 
 
- 
-        <div class="datosMostrar2">
-            <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-            <div class="datosApre2">
-                <div class="dato2">
-                    <label class="label2" for="">NOMBRE: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">TELEFONO: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">E-MAIL: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">IDENTIFICACIÓN: </label>
-                    <label class="inputC" for=""></label>
-                </div>
 
-
-                <div class="dato2">
-                    <label class="labelE" for="">ESTADO E.P: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-
-            </div><br>
-
-
-            <h3 class="subTitulo">*DATOS LEGALIZACIÓN</h3>
-            <div class="datosForma2">
-                <div class="dato">
-                    <label class="label2" for="">TIPO DE ALTERNATIVA: </label>
-                    <label for="">$bd</label>
-                </div>
-                <!--CODIGO PARA VER DOCUEMENTOS CARGADOS -->
-                <br>
+    <div class="datosMostrar2">
+        <h3 class="subTitulo">*DATOS APRENDIZ</h3>
+        <div class="datosApre2">
+            <div class="dato2">
+                <label class="label2" for="">NOMBRE: </label>
+                <label class="inputC" for=""></label>
             </div>
-        </div>
+            <div class="dato2">
+                <label class="label2" for="">TELEFONO: </label>
+                <label class="inputC" for=""></label>
+            </div>
+            <div class="dato2">
+                <label class="label2" for="">E-MAIL: </label>
+                <label class="inputC" for=""></label>
+            </div>
+            <div class="dato2">
+                <label class="label2" for="">IDENTIFICACIÓN: </label>
+                <label class="inputC" for=""></label>
+            </div>
 
-        <div class="cargaArchi">
-            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off">
+
+            <div class="dato2">
+                <label class="labelE" for="">ESTADO E.P: </label>
+                <label class="inputC" for=""></label>
+            </div>
+
+        </div><br>
+
+
+        <h3 class="subTitulo">*DATOS LEGALIZACIÓN</h3>
+        <div class="datosForma2">
+            <div class="dato">
+                <label class="label2" for="">TIPO DE ALTERNATIVA: </label>
+                <label for="">$bd</label>
+            </div>
+            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS -->
+            <br>
+        </div>
+    </div>
+
+
+        <div class="cargaArchi" id="formularioCertificacion">
+            <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
                 <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
-                <Label class="label"><input type="checkbox" name="" id="">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
+                <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
                     DIA</Label>
 
-                <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
+
+            <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
 
                 <Label class="label">1) Compromiso de Certificación:</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="CompromisoCertificacion">
 
                 <Label class="label">2) Constancia Laboral:</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="ConstanciaLaboral">
 
                 <Label class="label">3) Formato de Seguimiento:</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="formatoSeguimiento">
 
                 <Label class="label">4) Formato Prueba Saber Pro:</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="proSaber">
 
                 <Label class="label">5) Formato Paz y Salvo:</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="pazSAlvo">
 
                 <Label class="label">6) Formato APE (Agencia Publica de Empleo):</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="formatoAPE">
 
                 <Label class="label">7) Documento de Identidad al 150%:</Label>
-                <input class="archivo" type="file" name="file">
+                <input class="archivo" type="file" name="cedula">
 
-                <div class="botones2">
 
-                    <input class="botonForm2" type="button" value="GUARDAR">
+            <div class="botones2">
+
+
+                    <input class="botonForm2" type="button" value="GUARDAR" id="btnEnviar">
                     <input class="botonForm2" type="button" value="CERRAR">
                 </div>
 
-            </form>
-        </div>
+
+        </form>
+    </div>
 
     </div>
-    
+
 
     <div id="registroAprendiz" class="registroAprendiz">
 
@@ -348,14 +381,14 @@
             <label>Ciudad:</label>
             <p></p>
             <select class="select" name="id_apren" id="id_ciu">
-                    <?php
+                <?php
                         foreach($query_ciudad as $tip_ciudad):?>
-                    <option value="<?php echo $tip_ciudad['id'] ?> ">
-                        <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
-                    <?php
+                <option value="<?php echo $tip_ciudad['id'] ?> ">
+                    <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
+                <?php
                         endforeach; 
                         ?>
-                </select>
+            </select>
             <label>Telefono Aprendiz:</label>
             <p></p>
             <input type="number" name="tel" id="tel">
@@ -391,7 +424,7 @@
 
 
     <script src="validacionF.js"></script>
-    
+
 </body>
 
 </html>
@@ -410,7 +443,7 @@ $(document).ready(function() {
             success: function(a) {
                 if (a == 1) {
                     alert('Se agrego correctamente');
-                    
+
                 } else {
                     alert('Error al grabar');
                 }
@@ -433,16 +466,20 @@ $(document).ready(function() {
             data: datosEmpre,
             success: function(b) {
                 if (b == 1) {
-                    $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
+                    $('.agrego').html(
+                        '<p style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
+                        )
                     return
                     exit()
-                    
+
                 } else {
-                
-                   $('.agrego').html('<p style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>')
-                      return
-                      exit()
-                  
+
+                    $('.agrego').html(
+                        '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>'
+                        )
+                    return
+                    exit()
+
                 }
 
             }

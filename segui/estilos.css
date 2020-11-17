@@ -319,6 +319,13 @@ text-align: center;
     align-items: center;
 }
 
+/*eliminar llas dos flechitas de lo input */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
 .inputB{
     border-top: none;
     border-left: none;
@@ -486,10 +493,12 @@ text-align: center;
     visibility: hidden;
 }
 .buscador2{
+
     display: none;
+
 }
 .datosMostrar2, .cargaArchi{
-    display: none;
+    display: block;
 }
 /*--------FIN--------*/
 
@@ -680,6 +689,33 @@ text-align: center;
 #frmajax button{
     
     background: #3e9c3a;
+}
+
+/* ------formulario actualizar---- */
+.formularioActualizar{
+   position: relative;
+    margin-left:auto;
+    margin-right: auto;
+   margin-top:-46%;
+    border-radius:12px;
+    width:30%;
+    background: #ffffff; border:2px solid rgb(255, 166, 0);
+    padding:20px;
+}
+
+.tituloForActu{
+    text-align: center;
+    position:relative;
+}
+
+.alv{
+    
+    position:relative;
+    margin-top: 10%;
+    padding:20px 20px 23px 3px;
+    background: #fc7323;    border:2px solid rgb(255, 208, 0);
+    font-size: 20px;
+
 }
 
 
