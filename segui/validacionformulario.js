@@ -6,7 +6,7 @@ const expresiones = {
     nit:  /^\d{1,20}$/, //numeros de 1 al 20
     nombre_empresa: /^[a-zA-ZÀ-ÿ\s]{1,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
     direccion:  /^[a-zA-Z0-9_.+-]{1,15}$/, // todos los digitos 
-    telefono: /^\d{9,11}$/, // 7 a 14 numeros.
+    telefono: /^\d{9,11}$/, // 9 a 11 numeros.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
 const campos ={
