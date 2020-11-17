@@ -745,6 +745,43 @@ input[type=number] { -moz-appearance:textfield; }
 .inputR_p-nom-incorrecto{
     visibility: visible;
 }
+.inputR_p-nit{
+    visibility: hidden;
+}
+.inputR_p-nit-incorrecto{
+    visibility: visible;
+}
+.inputR_p-d{
+    visibility: hidden;
+}
+.inputR_p-d-incorrecto{
+    visibility:visible;
+}
+.inputR_p-c{
+    visibility: hidden;
+}
+.inputR_p-c-incorrecto{
+    visibility: visible;
+}
+.bloque{
+    position: absolute;
+    top:738px;
+    left: 150px;
+    height: 41px;
+    width: 141px;
+    background: #112c29;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    visibility: visible;
+
+}
+.bloque-correcto{
+    visibility: hidden;
+}
 
 /* ------formulario actualizar---- */
 .formularioActualizar{

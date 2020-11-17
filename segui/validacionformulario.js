@@ -2,10 +2,10 @@ const formulario = document.getElementById('registroEmpre');
 const inputs = document.querySelectorAll('#registroEmpre');
 
 const expresiones = {
-	razon_social: /^[a-zA-ZÀ-ÿ\s]{1,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
-    nit:  /^\d{1,20}$/, //numeros de 1 al 20
-    nombre_empresa: /^[a-zA-ZÀ-ÿ\s]{1,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
-    direccion:  /^[a-zA-Z0-9_.+-]{1,15}$/, // todos los digitos 
+	razon_social: /^[a-zA-ZÀ-ÿ\s]{5,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
+    nit:  /^\d{5,20}$/, //numeros de 1 al 20
+    nombre_empresa: /^[a-zA-ZÀ-ÿ\s]{3,25}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
+    direccion:  /^[a-zA-Z0-9_.+-]{4,15}$/, // todos los digitos 
     telefono: /^\d{9,11}$/, // 9 a 11 numeros.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
@@ -37,12 +37,12 @@ const validarformulario = (e) =>{
             if(expresiones.nit.test(e.target.value)){
                  
                 document.getElementById('nit').classList.remove('inputR-incorrecto');
-                document.getElementById('inputR_p-n').classList.remove('inputR_p-n-incorrecto');
+                document.getElementById('inputR_p-n').classList.remove('inputR_p-nit-incorrecto');
                 campos.nit =true;
 
             } else {
                 document.getElementById('nit').classList.add('inputR-incorrecto');
-                document.getElementById('inputR_p-n').classList.add('inputR_p-n-incorrecto');
+                document.getElementById('inputR_p-n').classList.add('inputR_p-nit-incorrecto');
                 campos.nit =false;
             }
             
@@ -51,12 +51,12 @@ const validarformulario = (e) =>{
                 if(expresiones.razon_social.test(e.target.value)){
                  
                     document.getElementById('nomEmpre').classList.remove('inputR-incorrecto');
-                    document.getElementById('inputR_p-nom').classList.remove('inputR_p-n-incorrecto');
+                    document.getElementById('inputR_p-nom').classList.remove('inputR_p-nom-incorrecto');
                     campos.nomEmpre =true;
     
                 } else {
                     document.getElementById('nomEmpre').classList.add('inputR-incorrecto');
-                    document.getElementById('inputR_p-nom').classList.add('inputR_p-n-incorrecto');
+                    document.getElementById('inputR_p-nom').classList.add('inputR_p-nom-incorrecto');
                     campos.nomEmpre = false;
                 }
             
@@ -112,11 +112,12 @@ const bloqueo = (e) =>{
 
     if (campos.razon_social==true && campos.nit==true && campos.nomEmpre && campos.direccion && campos.telefono && campos.email) {
 
-        document.getElementById('bloque').classList.remove('bloqueo-activo');
+        document.getElementById('bloque').classList.add('bloque-correcto');
     
     }else{
         
-        document.getElementById('bloque').classList.add('bloqueo-activo');
+        
+        document.getElementById('bloque').classList.remove('bloque-correcto');
     
     }
     

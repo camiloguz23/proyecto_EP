@@ -228,15 +228,15 @@ if(isset($_POST['btn_actualizar'])){
 
                 <label class="label" for="">*Razón Social Empresa: </label>
                 <input class="inputR" type="text" name="socialEm" id="socialEm" >
-                <p class="inputR_p" id="inputR_p"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
+                <p class="inputR_p" id="inputR_p"><i class="fas fa-exclamation"></i> Ingrese solo letras, minimo 5 y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Nit: </label>
                 <input class="inputR" type="text" name="nit" id="nit">
-                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros</p>
+                <p class="inputR_p-nit" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros, minimo 5 y maximo 20</p>
 
                 <label class="label" for="">*Nombre De La Empresa: </label>
                 <input class="inputR" type="text" name="nomEmpre" id="nomEmpre">
-                <p class="inputR_p-nom" id="inputR_p-nom"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
+                <p class="inputR_p-nom" id="inputR_p-nom"><i class="fas fa-exclamation"></i> Ingrese solo letras, minimo 3 y maximo 25 caracteres</p>
 
                 <label class="label" for="">*Dirección: </label>
                 <input class="inputR" type="text" name="direccion" id="direccion">
@@ -248,7 +248,7 @@ if(isset($_POST['btn_actualizar'])){
 
                 <label class="label" for="">*E-mail: </label>
                 <input class="inputR" type="email" name="email" id="email">
-                <p class="inputR_p-c" id="inputR_p-c"><i class="fas fa-exclamation"></i> Ingrese solo un correo valido</p><br>
+                <p class="inputR_p-c" id="inputR_p-c"><i class="fas fa-exclamation"></i> Ingrese un correo valido</p><br>
                 <label class="label"><b>*Ciudad:</b> </label>
                 <p></p>
                 <select class="inputR" name="id_ciu" id="id_ciu">
@@ -267,8 +267,8 @@ if(isset($_POST['btn_actualizar'])){
 
                     <button class="botonForm" id="botonEM" type="submit" >Guardar</button>
                     <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
-                        <p class="registro_c" id="registro_c">¡Registro Completado Correctamente!</p>
-                        <div class="bloqueo" id="bloque">hola</div>
+                    <input class="bloque" id="bloque" value="Guardar">
+                    <input type="reset" class="botonForm">
                 </div>
             </form>
         </div>
