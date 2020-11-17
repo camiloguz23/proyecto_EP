@@ -39,6 +39,7 @@ const legalForm = document.getElementById("legalForm")
 
 // Formulario de legalizar 
 const formLegalizar = document.getElementById("formLegalizar")
+const botonCrear =document.getElementById("crear")
 
 
 
@@ -47,11 +48,6 @@ const formLegalizar = document.getElementById("formLegalizar")
 function formulegalizar(e) {
     e.preventDefault();
     formularioLegalizacion.style.display ="block"
-    
-
-
-
-    
 }
 
 btnCerraDocu.addEventListener("click", function (e){
@@ -237,6 +233,7 @@ function btncerrarlegal() {
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
 btnEmpresa.addEventListener("click", formuEmpresa)
+botonCrear.addEventListener("click", formuEmpresa)
 boton.addEventListener("click", consulta)
 btnaprendiz.addEventListener("click", crear)
 btnLEgalizacion.addEventListener("click", mostrar)

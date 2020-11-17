@@ -368,27 +368,45 @@ input[type=number] { -moz-appearance:textfield; }
     z-index: 1;
     margin-top: -59%;
     width: 100%;
+    
 }
 
-.informa, .registroEmpre, .registroLegal{
+.informa{
     background-color: #fff;
     width: 80%;
     margin-left: 4.5%;
     padding: 15px 30px;
     border-radius: 15px;
 }
+
+
+.registroEmpre, .registroLegal{
+    background-color: #fff;
+    width: 53%;
+    margin-left: 17%;
+    padding: 30px 100px;
+    border-radius: 15px;
+    border: 8px solid rgb(252, 115, 35);
+    
+}
 /***********************************************************************************************************************/
 .registroEmpre{
     position: absolute;
     z-index: 2;
     margin-top: -59%;
-    width: 95.5%;
-    
     display: none;
-    margin-left: 0px;
-    height: 850px;
+    
 }
 
+.crear{
+    font-size: 12px;
+    padding: 13px;
+    color: rgb(128, 18, 18);
+    margin-left: 75%;
+    display: inline-block;
+    cursor: pointer;
+
+}
 .datosApre, .datosForma{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -609,7 +627,7 @@ input[type=number] { -moz-appearance:textfield; }
     top: 180px;
     left: 450px;
     border: 15px rgb(252, 115, 35) solid;
-    
+
 }
 .botones2{
     display: grid;
