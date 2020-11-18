@@ -433,21 +433,21 @@ g                </div>
             <p></p>
             <label>Documento</label>
             <p></p>
-            <input type="number" name="docu" id="docu">
-            <p></p>
+            <input type="number" name="docu" id="docu" class="grupo__aprendiz">
+            <p class="parrafoAprendiz" id="parrafoAprendiz_1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El documento debe contener de 9 a 13 números</p>
             
             <label>Nombres Completos:</label>
             <p></p>
             <input type="text" name="nom" id="nom" maxlength="40"  style="text-transform:uppercase">
-            <p></p>
+            <p class="parrafoAprendiz" id="parrafoAprendiz_2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El nombre puede contener espacios, no puede tener simbolos</p>
             <label>Apellidos Completos:</label>
             <p></p>
             <input type="text" name="ape" id="ape"  maxlength="40"  style="text-transform:uppercase">
-            <p></p>
+            <p class="parrafoAprendiz" id="parrafoAprendiz_3"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El apellido puede contener espacios, no puede tener simbolos</p>
             <label>Email Aprendiz:</label>
             <p></p>
             <input type="email" name="email" id="email" require  maxlength="40"  style="text-transform:uppercase">
-            <p></p>
+            <p class="parrafoAprendiz" id="parrafoAprendiz_4"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El correo solo puede contener letras, numero, puntos, guiones y guion bajo</p>
             <label>Ciudad:</label>
             <p></p>
             <select class="select" name="id_apren" id="id_ciu">
@@ -462,15 +462,15 @@ g                </div>
             <label>Telefono Aprendiz:</label>
             <p></p>
             <input type="number" name="tel" id="tel">
-            <p></p>
+            <p class="parrafoAprendiz" id="parrafoAprendiz_5"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El telefono solo puede contener numeros y el máximo son 14 digitos</p>
             <label>Telefono celular:</label>
             <p></p>
-            <input type="number" name="celular" id="tel">
-            <p></p>
+            <input type="number" name="celular" id="celular">
+            <p class="parrafoAprendiz" id="parrafoAprendiz_6"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El celular solo puede contener numeros y el máximo son 14 digitos</p>
             <label>Direccion:</label>
             <p></p>
             <input type="text" name="direccion" id="tel"  maxlength="40"  style="text-transform:uppercase">
-            <p></p>
+            <p class="parrafoAprendiz" id="parrafoAprendiz_7"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> La direccion puede contener letras, espacios, caracteres especiales, guiones</p>
             <label for="">Ficha de formacion</label>
             <select class="select" name="ficha" id="id_ciu">
                 <?php
@@ -500,6 +500,7 @@ g                </div>
 
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>
+    <script src="validarAprendices.js"></script>
 
 </body>
 
