@@ -31,6 +31,7 @@ const informar = document.querySelector(".informacion")
 const formularioCerti = document.getElementById("formularioCertificacion")
 const btnEnviar = document.getElementById("btnEnviar")
 const datoAprendiz = document.getElementById("datoAprendiz")
+const cerrarcer = document.getElementById("botoncerrarcer")
 
 // Variables para el formulario de legalización
 const registroLegal = document.getElementById("registroLegal")
@@ -53,6 +54,12 @@ botonaparecere.addEventListener("click", (e) => {
     formactualizar.style.display = "block"
     
 })
+
+cerrarcer.addEventListener("click", (e) => {
+    e.preventDefault()
+    formularioCerti.style.display = "none"
+})
+
 
 botoneditar.addEventListener("click", (e) => {
     e.preventDefault()
@@ -247,8 +254,6 @@ function buscador(e) {
     e.preventDefault();
     console.log("funciona 227")
     formularioCerti.style.display = "block"
-    
-    
 }
 
 function btncerrarlegal() {
