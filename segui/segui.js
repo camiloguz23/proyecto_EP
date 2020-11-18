@@ -9,6 +9,7 @@ const formularioLegalizacion = document.querySelector(".registroLegal")
 // boton aprendiz
 const btnaprendiz = document.querySelector("#tres")
 const registroAprendiz = document.getElementById("registroAprendiz")
+const btncerrarAprendiz = document.getElementById("btncerrarAprendiz")
 // boton legal
 const btnLEgalizacion = document.getElementById("legal");
 const formularioDocu = document.getElementById("formularioDocu")
@@ -96,7 +97,7 @@ function consulta(e) {
     }
     xhr.send()
 }
-
+// formulario de registro del aprendiz
 function crear(e) {
     e.preventDefault();
     console.log(registroAprendiz)
@@ -105,6 +106,13 @@ function crear(e) {
     formLegalizar.style.display = "none"
 
 
+}
+
+function cerrarAprendiz(e) {
+    e.preventDefault();
+    const form = document.getElementById("frmajax")
+    registroAprendiz.style.display = "none";
+    form.reset();
 }
 
 function mostrar(e) {
@@ -241,6 +249,7 @@ cerrarEmpresa.addEventListener("click", ocultarEmpresa)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
+btncerrarAprendiz.addEventListener("click", cerrarAprendiz)
 //botonCerrarLega.addEventListener("click", btncerrarlegal)
 
 /// evento de certificacion 
