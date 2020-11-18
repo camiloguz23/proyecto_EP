@@ -130,7 +130,7 @@ if(isset($_POST['btn_actualizar'])){
     <div class="naranja">
         <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
     </div>
-    <div class="contenedor">
+    <div class="contenedor" >
         <div class="date">
 
             <!----------------------------campo del fondo donde dice seguimiento *en el header*------------------------->
@@ -142,7 +142,7 @@ if(isset($_POST['btn_actualizar'])){
                     <?= $_SESSION["correo"] ?></p>
             </ul>
 
-            <a href="#" class="button">EDITAR</a>
+            <a href="#" id="aparecerE" class="button">EDITAR</a>
 
         </div>
     </div>
@@ -154,7 +154,7 @@ if(isset($_POST['btn_actualizar'])){
         <a href="#" class="button21"> <img class="butuno" alt="" srcset="">APRENDICES</a>
     </div>
 
-    <div class="formularioActualizar">
+    <div class="formularioActualizar" id="formularito">
         <form id="formularito" method="post" action="segui.php">
             <h1 class="tituloForActu">FORMULARIO ACTUALIZAR</h1>
 
@@ -170,6 +170,7 @@ if(isset($_POST['btn_actualizar'])){
             <label class="label" for="">*Ingrese su documento</label><br>
             <input class="inputR" type="number" name="documentoA" maxlength="11"  style="text-transform:uppercase">
             <button class="inputR alv" type="submit" name="btn_actualizar">Actualizar</button>
+            <button class="inputR alv" id="botonEditar" >Cancelar</button>
 
         </form>
     </div>
