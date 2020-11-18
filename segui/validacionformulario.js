@@ -108,12 +108,12 @@ const validarformulario = (e) =>{
 const bloqueo = (e) =>{
 
     if (campos.razon_social==true && campos.nit==true && campos.nomEmpre && campos.direccion && campos.telefono && campos.email) {
-
-        document.getElementById('bloque').classList.add('bloque-correcto');
+        
+        document.getElementById('botonEM').style.display = "block"
     
     }else{
         
-        document.getElementById('bloque').classList.remove('bloque-correcto');
+        document.getElementById('botonEM').style.display = "none"
     }
 } 
 
