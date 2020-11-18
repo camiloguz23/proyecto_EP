@@ -403,7 +403,7 @@ g                </div>
 
 
                     <input class="botonForm2" type="button" value="GUARDAR" id="btnEnviar">
-                    <input class="botonForm2" type="button" value="CERRAR">
+                    <input class="botonForm2" type="button" value="CERRAR" id="botoncerrarcer">
                 </div>
 
 
