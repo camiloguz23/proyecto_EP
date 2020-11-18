@@ -9,23 +9,31 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
         $nombre= $_FILES['GFPI'] ['name'];
         $ruta = $_FILES["GFPI"] ["tmp_name"];
         $destino = "../segui/pdfLEgalizacion/".$nombre;
-
+        echo $nombre;
         $nombreDOs= $_FILES['ContratoAprendizaje'] ['name'];
         $rutaDos = $_FILES["ContratoAprendizaje"] ["tmp_name"];
         $destinoDos = "../segui/pdfLEgalizacion/".$nombreDOs;
+        echo $nombreDOs;
         #dato ingresados por el usuario
         $documento = $_POST["docuEstudiante"];
+        echo $documento;
         $Alternativa = $_POST["seleccionTipo"];
+        echo $Alternativa;
         $empresa = $_POST["empresa"];
+        echo $empresa = $empresa;
         $jefe = $_POST["jefe"];
+        echo $empresa = $jefe;
         $cargoJefe = $_POST["cargoJefe"];
+        echo $empresa = $cargoJefe;
+        
+
         $fecha = $_POST["fecha"];
         if ($nombre != "") {
             if (copy($ruta,$destino) && copy($rutaDos,$destinoDos)) {
                 $consulta = "INSERT INTO legalizacion (nit_empresa,id_alternativa,id_aprend,fecha_ini_ep,fecha_carga_docu,cart_solicitud,form_023,const_empre,cedu_copia,contra_copia,eps_copia,jefe_inmediato,cargo_del_jefe) VALUES ('$empresa','$Alternativa','$documento','$fecha', NOW(),NULL,'$nombre', null, null,'$nombreDOs',null,'$jefe','$cargoJefe')";
                 $sql = mysqli_query($connection,$consulta);
                 if ($sql) {
-                    $estado ="UPDATE ficha_programa SET id_estado = '2' WHERE ficha_programa.id_aprend = '$documento'";
+                    $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
                         header("location: ../segui/segui.php");
