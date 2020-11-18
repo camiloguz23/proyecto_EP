@@ -252,7 +252,7 @@ if(isset($_POST['btn_actualizar'])){
 
                     <button class="botonForm" id="botonEM" type="submit" >Guardar</button>
                     <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
-                    <input class="bloque" id="bloque" value="Guardar">
+                   
                     <input type="reset" class="botonForm">
                 </div>
             </form>
