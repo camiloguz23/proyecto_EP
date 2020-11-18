@@ -6,7 +6,7 @@ if ($usario == "" || $usario == null) {
 }
 require_once('../php/connecion.php');
 
-?>
+?> 
 
 <?php
 $sql = "SELECT * FROM tip_docu";
@@ -252,8 +252,8 @@ if(isset($_POST['btn_actualizar'])){
 
                     <button class="botonForm" id="botonEM" type="submit" >Guardar</button>
                     <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
-                        <p class="registro_c" id="registro_c">¡Registro Completado Correctamente!</p>
-                        <div class="bloqueo" id="bloque">hola</div>
+                    <input class="bloque" id="bloque" value="Guardar">
+                    <input type="reset" class="botonForm">
                 </div>
             </form>
         </div>
