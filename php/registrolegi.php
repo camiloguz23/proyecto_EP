@@ -29,9 +29,17 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
                         header("location: ../segui/segui.php");
+                    }else{
+                        echo "30 linea";
                     }
+                } else {
+                    echo "linea 27";
                 }
+            }else {
+                echo "linea 24";
             }
+        }else {
+            echo "23 linea";
         }
     }else if ($_POST["seleccionTipo"] == 2 || $_POST["seleccionTipo"] == 6) {
         #archivos pdf

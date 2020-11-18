@@ -295,7 +295,7 @@ if(isset($_POST['btn_actualizar'])){
                 <label class="label" for="">Fecha de inicio de la etapa productiva</label><br>
                 <input class="seleccionTipo" type="date" name="fecha" id="">
                 <div id="estudiante">
-                    <input type="hidden" name="docuEstudiante" value="" >
+                    
                 </div>
 
                 <div class="cargaDocu" id="cargaDocu">
