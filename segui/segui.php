@@ -498,7 +498,6 @@ g                </div>
     </footer>
 
     <script src="segui.js"></script>
-
     <script src="validacionF.js"></script>
 
 </body>
