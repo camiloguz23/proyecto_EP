@@ -6,7 +6,7 @@ const expresiones = {
     nit:  /^\d{5,20}$/, //numeros de 1 al 20
     nombre_empresa: /^[a-zA-ZÀ-ÿ\s]{3,25}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
     direccion:  /^[a-zA-Z0-9_.+-]{4,15}$/, // todos los digitos 
-    telefono: /^\d{9,11}$/, // 9 a 11 numeros.
+    telefono: /^\d{10}$/, // 9 a 11 numeros.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
 const campos ={
@@ -103,11 +103,8 @@ const validarformulario = (e) =>{
             }
             
         break
-        
     }
-
 }
-
 const bloqueo = (e) =>{
 
     if (campos.razon_social==true && campos.nit==true && campos.nomEmpre && campos.direccion && campos.telefono && campos.email) {
@@ -116,12 +113,8 @@ const bloqueo = (e) =>{
     
     }else{
         
-        
         document.getElementById('bloque').classList.remove('bloque-correcto');
-    
     }
-    
-
 } 
 
 inputs.forEach((input)=>{
@@ -130,6 +123,12 @@ inputs.forEach((input)=>{
     input.addEventListener('keyup', bloqueo);
  
 });
+
+/**-----------------------------formulario de aprendices ---------------------------------------*/
+
+const formulario2 = document.getElementById('frmajax');
+const inputs2 = document.querySelectorAll('#frmajax');
+
 
 
     
