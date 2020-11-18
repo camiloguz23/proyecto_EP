@@ -42,7 +42,23 @@ const legalForm = document.getElementById("legalForm")
 const formLegalizar = document.getElementById("formLegalizar")
 const botonCrear =document.getElementById("crear")
 
+// Formulario actualizar
+const formactualizar = document.getElementById("formularito")
+const botoneditar =document.getElementById("botonEditar")
 
+const botonaparecere =document.getElementById("aparecerE")
+
+botonaparecere.addEventListener("click", (e) => {
+    e.preventDefault()
+    formactualizar.style.display = "block"
+    
+})
+
+botoneditar.addEventListener("click", (e) => {
+    e.preventDefault()
+    formactualizar.style.display = "none"
+    legalForm.reset();
+})
 
 
 // FUNCIONES 
