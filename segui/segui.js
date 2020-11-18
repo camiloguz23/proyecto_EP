@@ -238,6 +238,7 @@ function funAlte() {
 }
 
 function estudiante(datoEstu) {
+    console.log(`esa me importa ${datoEstu}`)
     const estudiante = document.getElementById("estudiante")
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
 }
