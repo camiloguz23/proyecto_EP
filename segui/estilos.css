@@ -618,18 +618,21 @@ input[type=number] { -moz-appearance:textfield; }
     margin-left: 5%;
 }
 
+
 .cargaArchi{
     background-color: #fff;
-    width: 41%;
     padding: 10px 6px;
     border-radius: 15px;
     height: 120%;
-    margin-top: -3%;
+    width: 50%;
+    margin-top: -2.5%;
     position: absolute;
     top: 180px;
-    left: 450px;
+    left: 350px;
     border: 15px rgb(252, 115, 35) solid;
-
+}
+#cargaArchi{
+    margin-left: 12%;
 }
 .botones2{
     display: grid;
@@ -669,21 +672,42 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 #frmajax {
-    font-size: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-color: #fff;
+    padding: 10px 6px;
+    border-radius: 15px;
+    height: 120%;
+    width: 60%;
+    margin-top: -2.5%;
     position: absolute;
-    padding: 9px 20px;
-    top: 40px;
-    left: 350px;
-    border: solid  #238276 2px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    z-index: 2; 
-    width: 35%;
-    height: 150%;
+    top: 180px;
+    left: 260px;
+    border: 15px rgb(252, 115, 35) solid;
 
+}
+.datosR{
+    margin: -1% 0% 0%;
+}
+
+.datosR{
+  
+    margin-left: 10%;
+}
+
+.tituloFormR{
+    text-align: center;
+    padding: 50px;
+    font-size: 25px;
+    margin-top: -20px;
+    grid-column: span 2;
+}
+
+.labelR{
+    display: block;
+    font-weight:600;
+    font-size: 14px;
+    padding: 13px;
 }
 .select{
     width: 100%;
@@ -717,8 +741,17 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 #frmajax button{
-    
-    background: #3e9c3a;
+    height: 45px;
+    width: 200px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+    background: #3d9c3ad3;
+    margin-left: 20%;
 }
 /**************  VALIDACION FORMULARIO CREAR EMPRESA  *******************/
 .inputR-incorrecto{

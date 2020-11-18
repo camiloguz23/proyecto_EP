@@ -366,10 +366,10 @@ g                </div>
 
 
     <div class="cargaArchi" id="formularioCertificacion">
+    <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
         <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
-                <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
-                <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL
-                    DIA</Label>
+            
+            <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL DIA</Label>
 
 
             <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
@@ -415,76 +415,91 @@ g                </div>
 
     <div id="registroAprendiz" class="registroAprendiz">
 
-
-
         <form id="frmajax" method="POST" autocomplete="off">
-            <label>Tipo Documento:</label>
+            <h1 class="tituloFormR">REGISTRO DE APRENDIZ</h1>
 
-            <p></p>
-            <select name="tipdocu" id="tipdocu">
-                <?php
-                foreach ($query as $tip) : ?>
-                    <option value="<?php echo $tip['id_tip_docu'] ?> "><?php echo $tip['nom_docu'] ?></option>
-                <?php
-                endforeach;
-                ?>
-            </select>
+            <div class="datosR">
+                <label class="labelR">Tipo Documento:</label>
+                <select name="tipdocu" id="tipdocu">
+                    <?php
+                    foreach ($query as $tip) : ?>
+                        <option value="<?php echo $tip['id_tip_docu'] ?> "><?php echo $tip['nom_docu'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select>
+            </div>
 
-            <p></p>
-            <label>Documento</label>
-            <p></p>
-            <input type="number" name="docu" id="docu" class="grupo__aprendiz">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El documento debe contener de 9 a 13 números</p>
+            <div class="datosR">
+                <label class="labelR">Documento</label>
+                <input type="number" name="docu" id="docu" class="grupo__aprendiz">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El documento debe contener de 9 a 13 números</p>
+            </div>
             
-            <label>Nombres Completos:</label>
-            <p></p>
-            <input type="text" name="nom" id="nom" maxlength="40"  style="text-transform:uppercase">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El nombre puede contener espacios, no puede tener simbolos</p>
-            <label>Apellidos Completos:</label>
-            <p></p>
-            <input type="text" name="ape" id="ape"  maxlength="40"  style="text-transform:uppercase">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_3"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El apellido puede contener espacios, no puede tener simbolos</p>
-            <label>Email Aprendiz:</label>
-            <p></p>
-            <input type="email" name="email" id="email" require  maxlength="40"  style="text-transform:uppercase">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_4"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El correo solo puede contener letras, numero, puntos, guiones y guion bajo</p>
-            <label>Ciudad:</label>
-            <p></p>
-            <select class="select" name="id_apren" id="id_ciu">
-                <?php
-                foreach ($query_ciudad as $tip_ciudad) : ?>
-                    <option value="<?php echo $tip_ciudad['id'] ?> ">
-                        <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
-                <?php
-                endforeach;
-                ?>
-            </select>
-            <label>Telefono Aprendiz:</label>
-            <p></p>
-            <input type="number" name="tel" id="tel">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_5"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El telefono solo puede contener numeros y el máximo son 14 digitos</p>
-            <label>Telefono celular:</label>
-            <p></p>
-            <input type="number" name="celular" id="celular">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_6"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El celular solo puede contener numeros y el máximo son 14 digitos</p>
-            <label>Direccion:</label>
-            <p></p>
-            <input type="text" name="direccion" id="tel"  maxlength="40"  style="text-transform:uppercase">
-            <p class="parrafoAprendiz" id="parrafoAprendiz_7"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> La direccion puede contener letras, espacios, caracteres especiales, guiones</p>
-            <label for="">Ficha de formacion</label>
-            <select class="select" name="ficha" id="id_ciu">
-                <?php
-                foreach ($query_ficha as $ficha) : ?>
-                    <option value="<?php echo $ficha['num_ficha'] ?> ">
-                        <?php echo $ficha['num_ficha'] ?></option>
-                <?php
-                endforeach;
-                ?>
-            </select>
-                <button id="btnguardar">Guardar</button>
-                <button id="btncerrarAprendiz">Cerrar</button>   
+            <div class="datosR">
+                <label class="labelR">Nombres Completos:</label>
+                <input type="text" name="nom" id="nom" maxlength="40"  style="text-transform:uppercase">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El nombre puede contener espacios, no puede tener simbolos</p>
+            </div>
+            
+            <div class="datosR">
+                <label class="labelR">Apellidos Completos:</label>
+                <input type="text" name="ape" id="ape"  maxlength="40"  style="text-transform:uppercase">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_3"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El apellido puede contener espacios, no puede tener simbolos</p>
+            </div>
+            
+            <div class="datosR">
+                <label class="labelR">Email Aprendiz:</label>
+                <input type="email" name="email" id="email" require  maxlength="40"  style="text-transform:uppercase">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_4"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El correo solo puede contener letras, numero, puntos, guiones y guion bajo</p>
+            </div>
+            
+            <div class="datosR">
+                <label class="labelR">Ciudad:</label>
+                <select class="select" name="id_apren" id="id_ciu">
+                    <?php
+                    foreach ($query_ciudad as $tip_ciudad) : ?>
+                        <option value="<?php echo $tip_ciudad['id'] ?> ">
+                            <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select>
+            </div>
+            
+            <div class="datosR">
+                <label class="labelR">Teléfono Aprendiz:</label>
+                <input type="number" name="tel" id="tel">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_5"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El telefono solo puede contener numeros y el máximo son 14 digitos</p>
+            </div>
+            
+            <div class="datosR">
+                <label class="labelR" >Teléfono celular:</label>
+                <input type="number" name="celular" id="celular">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_6"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El celular solo puede contener numeros y el máximo son 14 digitos</p>
+            </div>
+          
+            <div class="datosR">
+                <label class="labelR">Dirección:</label>
+                <input type="text" name="direccion" id="tel"  maxlength="40"  style="text-transform:uppercase">
+                <p class="parrafoAprendiz" id="parrafoAprendiz_7"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> La direccion puede contener letras, espacios, caracteres especiales, guiones</p>   
+            </div>
+            
+            <div class="datosR">
+                <label class="labelR">Ficha de Formación</label>
+                <select class="select" name="ficha" id="id_ciu">
+                    <?php
+                    foreach ($query_ficha as $ficha) : ?>
+                        <option value="<?php echo $ficha['num_ficha'] ?> ">
+                            <?php echo $ficha['num_ficha'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select>
+            </div>
+            <button id="btnguardar">Guardar</button>
+            <button id="btncerrarAprendiz">Cerrar</button>   
         </form>
-
     </div>
 
 
