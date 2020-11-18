@@ -792,7 +792,7 @@ input[type=number] { -moz-appearance:textfield; }
     width:30%;
     background: #ffffff; border:2px solid rgb(255, 166, 0);
     padding:20px;
-    display:block;
+    display:none;
 }
 
 /* .formularioActualizar{
