@@ -35,7 +35,7 @@ if ($dato) {
                         </div> 
                         <div class="dato">
                             <label class ="label" for="">ESTADO: </label>
-                            <label class ="datos" for="">'.$dato["nom_estado"].'</label>
+                            <label class ="datos" for="" id="estadoAprend">'.$dato["nom_estado"].'</label>
                         </div>
                     </div><br>
 
@@ -74,6 +74,7 @@ if ($dato) {
                        
                     </div>
                 </div>
+               
         '
     );
         

@@ -120,3 +120,35 @@ inputFormAprendices.forEach((input) => {
     input.addEventListener("blur", validarFormulario)
     input.addEventListener("keyup", bloquearBoton)
 })
+
+/// cpdigo de lany
+
+const NomJefe = document.getElementById('nomjefe');
+const CargoJefe = document.getElementById('cargojefe');
+const error = document.getElementById('error');
+const boton523 = document.getElementById('boton523');
+error.style.color = 'red';
+
+NomJefe.addEventListener("blur", () => {
+    if(NomJefe.value === null || NomJefe.value === ''){
+        let mensaje = 'Por Favor Llenar Todos los Datos'
+        error.innerHTML = `<h2>${mensaje}</h2>`
+        boton523.style.display = "none";
+    }
+    else{
+
+        error.innerHTML = ``
+        boton523.style.display = "block";
+    }
+})
+CargoJefe.addEventListener("blur", () => {
+    if(CargoJefe.value === null || CargoJefe.value === ''){
+        let mensaje = 'Por Favor Llenar Todos los Datos'
+        error.innerHTML = `<h2>${mensaje}</h2>`
+        boton523.style.display = "none";
+    }
+    else{
+        error.innerHTML = ``
+        boton523.style.display = "block";
+    }
+})

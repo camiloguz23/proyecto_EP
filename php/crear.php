@@ -15,14 +15,23 @@
         $direccion = $_POST["direccion"];
         $ficha = $_POST["ficha"];
         
-        $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend, id_tip_docu,direccion,num_celular)
-        VALUES ('$docu', '$name', '$ape', '$email', '$tel', '$tipdoc','$direccion','$celular')";
-        $inserta = mysqli_query($connection, $insert);
+        $consultaApre = "SELECT * FROM aprendices where id_aprend = '$docu'";
+        $sqlApre = mysqli_query($connection,$consultaApre);
+        $datoApre = mysqli_fetch_assoc($sqlApre);
+        if ($datoApre) {
+            echo "existe";
+        }else {
 
-        if ($inserta) {
-            $consulta = "INSERT INTO detalle_formacion(num_ficha, id_aprend, id_estado) VALUES ('$ficha',$docu,'1')";
-            
-            echo mysqli_query($connection,$consulta);
+        
+            $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend, id_tip_docu,direccion,num_celular)
+            VALUES ('$docu', '$name', '$ape', '$email', '$tel', '$tipdoc','$direccion','$celular')";
+            $inserta = mysqli_query($connection, $insert);
+
+            if ($inserta) {
+                $consulta = "INSERT INTO detalle_formacion(num_ficha, id_aprend, id_estado) VALUES ('$ficha',$docu,'1')";
+                
+                echo mysqli_query($connection,$consulta);
+            }
         }
 
     }

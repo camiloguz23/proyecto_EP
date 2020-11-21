@@ -193,7 +193,7 @@ if(isset($_POST['btn_actualizar'])){
             <div class="informa">
                 <div class="informacion" id="informa">
 
-                    <!--</div>-->
+                    
                 </div>
 
 
@@ -303,7 +303,7 @@ if(isset($_POST['btn_actualizar'])){
                 </div>
 
                 <div class="botones">
-                    <input class="botonForm" type="submit" value="GUARDAR">
+                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523">
                     <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
@@ -533,11 +533,14 @@ g                </div>
                 url: "../php/crear.php",
                 data: datos,
                 success: function(a) {
+                    console.log(`revison de este dato ${a}`)
                     if (a == 1) {
                         alert('Se agrego correctamente');
 
-                    } else {
-                        alert('Error al grabar');
+                    } else if (a == "existe") {
+                        alert('Aprendiz ya existe');
+                    }else {
+                        alert("error")
                     }
 
                 }
