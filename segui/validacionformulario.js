@@ -114,6 +114,7 @@ const bloqueo = (e) =>{
     }else{
         
         document.getElementById('botonEM').style.display = "none"
+        
     }
 } 
 

@@ -6,7 +6,7 @@
 
 
 body {
-    background: rgb(223, 222, 222);
+    background: rgb(222, 223, 222);
     font-family: Verdana;
     width: 100%;
 }
@@ -496,12 +496,16 @@ input[type=number] { -moz-appearance:textfield; }
     font-size: 17px;
 }
 
+
+
 .subTitulo1{
-    padding: 20px;
-    font-size: 17px;
+
+    position:absolute;
+
     text-align: center;
     grid-column: span 2;
-    margin-top: -10px;
+
+   
 }
 
 .frase{
@@ -764,31 +768,36 @@ input[type=number] { -moz-appearance:textfield; }
 .inputR_p-incorrecto{
     visibility: visible;
 }
-
+/* //////////////// */
 .inputR_t{
     visibility: hidden;
 }
 .inputR_t-incorrecto{
     visibility: visible;
 }
+/* AAAA */
 .inputR_p-nom{
     visibility: hidden;
 }
 .inputR_p-nom-incorrecto{
     visibility: visible;
 }
+/* ZZZZZZ */
+
 .inputR_p-nit{
     visibility: hidden;
 }
 .inputR_p-nit-incorrecto{
     visibility: visible;
 }
+/* aaaaa */
 .inputR_p-d{
     visibility: hidden;
 }
 .inputR_p-d-incorrecto{
     visibility:visible;
 }
+/* aaa */
 .inputR_p-c{
     visibility: hidden;
 }
