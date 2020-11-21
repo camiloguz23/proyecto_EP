@@ -6,6 +6,7 @@ const btnEmpresa = document.getElementById("btnEmpresa")
 const btnLegalizar = document.getElementById("btnLegalizar")
 const formularioEmpresa = document.querySelector(".registroEmpre")
 const formularioLegalizacion = document.querySelector(".registroLegal")
+const formularioEmpresaCerrar = document.querySelector("#registroEmpre")
 // boton aprendiz
 const btnaprendiz = document.querySelector("#tres")
 const registroAprendiz = document.getElementById("registroAprendiz")
@@ -117,6 +118,7 @@ function ocultarEmpresa(e) {
     console.log(formularioEmpresa)
     formularioEmpresa.style.display = "none";
     console.log(formularioEmpresa)
+    formularioEmpresaCerrar.reset();
 }
 
 
@@ -167,7 +169,8 @@ function mostrar(e) {
 
 function ocultarLegalizacion(e) {
     e.preventDefault();
-    formLegalizar.style.display = "none"
+    formularioDocu.style.display = "none"
+    formulegalizar.reset();
     
 }
 
