@@ -22,7 +22,7 @@ const cargaDocu = document.getElementById("cargaDocu")
 // boton certificación
 const certificacion = document.getElementById("dos")
 const buscadorCerti = document.querySelector(".datosMostrar2")
-const botonCerrarLega = document.getElementById("btnCerrarlega")
+const botonCerrarLega = document.getElementById("cerrarCerti")
 
 const formulariolega = document.getElementById("buscarDocu")
 const informar = document.querySelector(".informacion")
@@ -31,6 +31,7 @@ const informar = document.querySelector(".informacion")
 const formularioCerti = document.getElementById("formularioCertificacion")
 const btnEnviar = document.getElementById("btnEnviar")
 const datoAprendiz = document.getElementById("datoAprendiz")
+const resetformuceti = document.getElementById("cargaArchi")
 
 // Variables para el formulario de legalización
 const registroLegal = document.getElementById("registroLegal")
@@ -135,7 +136,7 @@ function crear(e) {
     console.log(registroAprendiz)
     registroAprendiz.style.display = "block"
     
-    formLegalizar.style.display = "none"
+    formularioDocu.style.display = "none"
 
 
 }
@@ -152,12 +153,13 @@ function mostrar(e) {
     formularioDocu.style.display = "block";
     btnLEgalizacion.style.background = ("rgb(252, 115, 35)")
     btnLEgalizacion.style.color = ("#ffffff")
+    registroAprendiz.style.display = "none"
 }
 
 
 function ocultarLegalizacion(e) {
     e.preventDefault();
-    formularioDocu.style.display = "none"
+    formularioCerti.style.display = "none"
     
 }
 
@@ -269,7 +271,8 @@ function buscador(e) {
 
 function btncerrarlegal() {
     
-    formularioLegalizacion.style.display = "none"
+    formularioCerti.style.display = "none"
+    resetformuceti.reset()
 }
 // EVENTOS 
 btnLegalizar.addEventListener("click", formulegalizar)
@@ -283,7 +286,7 @@ btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
 btncerrarAprendiz.addEventListener("click", cerrarAprendiz)
-//botonCerrarLega.addEventListener("click", btncerrarlegal)
+botonCerrarLega.addEventListener("click", btncerrarlegal)
 
 /// evento de certificacion 
 
