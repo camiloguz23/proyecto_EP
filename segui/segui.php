@@ -209,7 +209,7 @@ if(isset($_POST['btn_actualizar'])){
 
                 <label class="label" for="">*Nit: </label><br>
                 <input class="inputR" type="number" name="nit" id="nit" max="20"  style="text-transform:uppercase">
-                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros maximo 12 </p>
+                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i>  Numeros maximo 12 </p>
 
                 <label class="label" for="">*Nombre De La Empresa: </label><br>
                 <input class="inputR" type="text" name="nomEmpre" id="nomEmpre" maxlength="25"  style="text-transform:uppercase">
@@ -563,6 +563,7 @@ $(document).ready(function() {
                     $('.agrego').html('<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
                         setTimeout(() => {
                             document.querySelector("#registroEmpre").reset()
+                            $('.agrego').html('<p></p>')
                         }, 2000);
                     
                     exit()
@@ -573,7 +574,11 @@ $(document).ready(function() {
                         $('.agrego').html(
                             '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>'
                         )
-                        return
+                        setTimeout(() => {
+                            
+                            $('.agrego').html('<p></p>')
+                        }, 2000);
+                        
                         exit()
 
                     }
