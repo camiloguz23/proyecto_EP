@@ -529,6 +529,10 @@ g                </div>
                     console.log(`revison de este dato ${a}`)
                     if (a == 1) {
                         alert('Se agrego correctamente');
+                        setTimeout(() => {
+                            document.querySelector("#frmajax").reset()
+                            
+                        }, 2000);
 
                     } else if (a == "existe") {
                         alert('Aprendiz ya existe');
@@ -557,8 +561,10 @@ $(document).ready(function() {
                 if (b == 1) {
 
                     $('.agrego').html('<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>')
+                        setTimeout(() => {
+                            document.querySelector("#registroEmpre").reset()
+                        }, 2000);
                     
-                    return
                     exit()
 
 
