@@ -765,6 +765,11 @@ input[type=number] { -moz-appearance:textfield; }
 .inputR_p{
     visibility: hidden;
 }
+
+.inputR_p-n{
+    visibility: hidden;
+}
+
 .inputR_p-incorrecto{
     visibility: visible;
 }
