@@ -57,10 +57,10 @@ botonaparecere.addEventListener("click", (e) => {
     
 })
 
-cerrarcer.addEventListener("click", (e) => {
+/*cerrarcer.addEventListener("click", (e) => {
     e.preventDefault()
     formularioCerti.style.display = "none"
-})
+})*/
 
 
 botoneditar.addEventListener("click", (e) => {
@@ -167,7 +167,7 @@ function mostrar(e) {
 
 function ocultarLegalizacion(e) {
     e.preventDefault();
-    formularioCerti.style.display = "none"
+    formLegalizar.style.display = "none"
     
 }
 
