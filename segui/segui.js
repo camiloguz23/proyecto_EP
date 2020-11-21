@@ -71,7 +71,21 @@ botoneditar.addEventListener("click", (e) => {
 // FUNCIONES 
 function formulegalizar(e) {
     e.preventDefault();
-    formularioLegalizacion.style.display ="block"
+    let xhr = new XMLHttpRequest();
+    const docuBase = documento.value 
+    xhr.open("get","../php/validarEstado.php?documento=" + docuBase,true)
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState == 4 && xhr.status == 200){
+            if (xhr.responseText == 2) {
+                alert("aprendiz ya esta legalizado")           
+            }else{
+                formularioLegalizacion.style.display ="block"
+            }
+           
+        }
+    }
+    xhr.send()
+    
 }
 
 btnCerraDocu.addEventListener("click", function (e){
@@ -116,6 +130,8 @@ function consulta(e) {
             estudiante(docuBase);
             datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
             informar.style.display = "block"
+            const estadoAprend = document.getElementById("estadoAprend").value
+            console.log(estadoAprend+"funciona")
         }
     }
     xhr.send()
@@ -245,7 +261,7 @@ function funAlte() {
 }
 
 function estudiante(datoEstu) {
-    console.log(`esa me importa ${datoEstu}`)
+    
     const estudiante = document.getElementById("estudiante")
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
 }
