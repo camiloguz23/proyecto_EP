@@ -70,16 +70,7 @@ if(isset($_POST['btn_actualizar'])){
 
 }
 
-
-
-
-
-
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -218,7 +209,7 @@ if(isset($_POST['btn_actualizar'])){
 
                 <label class="label" for="">*Nit: </label><br>
                 <input class="inputR" type="number" name="nit" id="nit" max="20"  style="text-transform:uppercase">
-                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros</p>
+                <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Ingrese solo numeros maximo 12 </p>
 
                 <label class="label" for="">*Nombre De La Empresa: </label><br>
                 <input class="inputR" type="text" name="nomEmpre" id="nomEmpre" maxlength="25"  style="text-transform:uppercase">
