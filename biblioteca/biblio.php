@@ -1,91 +1,130 @@
 <?php
-    session_start();
-    $usario = $_SESSION["documento"];
-    if ($usario == "" || $usario == null) {
-        header("location: ../index.html");
-    }
-        require_once('../php/connecion.php');
+    require_once("../php/connecion.php");
+    $usuario = $_GET["usuario"];
 
+    if(isset($_FILES['file'])) {
+        $directorio = "../uploads/" . $usuario;
+        
+        if (!file_exists($directorio)) {
+            mkdir($directorio, 0777, true);
+        }
+
+        $directorio = $directorio . "/";
+
+        $archivo = $directorio . basename($_FILES["file"]["name"]); // uploads/carta.pdf
+        $nombreArchivo = $_FILES["file"]["name"];
+        $tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+        $tamañoArchivo = $_FILES["file"]["size"];
+
+        
+            if ($tamañoArchivo <= 209715200) {
+
+                if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
+                    echo "<script>alert('El archivo se subió correctamente')</script>";
+                    
+                    $sql = "UPDATE usuario SET firma = '$archivo' WHERE usuario.documento = '$usuario'";
+                    $consultarSql = mysqli_query($connection,$sql);
+                    
+                } else {
+                    echo "<script>alert('Ha ocurrido un error al subir el archivo')</script>";
+                }
+
+            } else {
+                echo "<script>alert('El peso del archivo es superior a 200MB')</script>";
+            }   
+    }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="bibli.css">
+    <link rel="stylesheet" href="biblio.css">
+    <link rel="stylesheet" href="../paz_y_salvo/pazysalvo.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="princi">
-       
-        <div class="logo">
 
-            <img class="imagen"  height="90" width="90" src="../imagenes/biblioteca.jpg.png"  alt="">
-            <h3 class="segui">BIBLIOTECA<img class="seguiimg" width="30" height="30" src="../imagenes/iconobiblio.jpg" alt=""></h3>
+    <header class="header">
 
-            <div class="cerrar">
-                <a href="../php/salir.php">CERRAR SESIÓN</a>
+        <div class="encabezado">
+            <div class="foto-encabezado">
+                <img class="foto_perfil-encabezado" src="../imagenes/Imagen2.png" alt="Foto de perfil" width="90" height="90">
             </div>
 
-            <div class="segun">
-                <img height="220" src="../imagenes/naranja.png" alt="">
+            <div class="datos-encabezado">
+                <h2>BIBLIOTECA</h2>
+                <a href="#">CERRAR SESIÓN</a>
             </div>
+            <img class="logo-sena" src="../imagenes/naranja.png" alt="" width="226" height="220">
         </div>
 
-        <nav class="navegacion">
-            <ul class="menu">
-                <li id="pazsalv" ><a href="#"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
-                <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
-            </ul>  
-        </nav>
+        <div class="menu">
+            <div class="contenedor_paz">
+                <a id="btn_pazysalvo">PAZ Y SALVO</a>
+                <div class="cuadro" id="cuadro">
+                    <form action="../paz_y_salvo/pazysalvo.php" method="POST" id="frm_1">
+                        <label for="documento">Documento de identidad</label>
+                        <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento">
+                        <input class="submit" type="submit" value="Buscar">
+                        <input type="hidden" name="usuario" value="<?php echo $usuario;?>">
+                    </form>
+                </div>
+            </div>
+            <a href="#"><img src="../imagenes/Imagen6.png" alt="" width="39" height="30">APRENDIZ</a>
+        </div>
 
     </header>
+    
+    <div class="main">
 
-    <div class="contper">
-            <div id="fondo" class="fondo">
-                <img width="1349" height="400" src="../imagenes/biblio.jpg" alt="">
-            </div>
-        <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
-
-        <div class="contenedor">
-            <div class="date">
-                <ul class="datos">
-                    <p>Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                    <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> </p>
-                    <p class="text2"> TELEFONO: <?=$_SESSION["telefono"]?></p>
-                    <p class="text2">EMAIL:  <?=$_SESSION["correo"]?></p>
-                </ul>
-            </div>
-            <div class="edicion">
-                <a href="#" class="button">EDITAR</a>
-            </div> 
+        <div class="fondo-biblioteca">
+            <!-- Para el que lea, el fondo del instructor lo puse por css mediante un background -->
+            <img class="foto-perfil" src="../imagenes/PERFIL.jpg" alt="">
         </div>
-        
-            <div class="opcion">
-                <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
-                <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
+
+        <div class="datos_biblioteca">
+            <div class="caja_datos"> 
+                <h4>Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada dia</h4>
+                <p>NOMBRE:</p>
+                <p>EDAD:</p>
+                <p>TELEFONO:</p>
+                <p>EMAIL:</p>
             </div>
+        </div>
+
+        <div class="caja_btn">
+            <a href="#">EDITAR</a>
+        </div>
+
+        <div class="opciones_biblioteca">
+            <a href="#">PAZ Y SALVO</a>
+            <a href="#">APRENDICES</a>
+        </div>
+
+        <div class="caja_form">
+            <form method="post" enctype="multipart/form-data" class="form_2" id="form_2">
+                <h3>Subir Firma</h3>
+                <input type="file" name="file">
+                <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo"></p>
+            </form>
+        </div>
     </div>
 
-    <div id="pazysal" class="pazysal">
-
-        <div id="cerrarpazs" class="cerrarpazs">
-            <img src="../imagenes/cancelar.png" alt="">
-        </div>
-    </div>
-
-    <footer class="pie">
-        <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
+    <footer class="footer">
+        <img src="../imagenes/logo blanco.jpg" alt="Logo SENA Blanco" width="70" height="70">
 
         <div class="info">
-            <p>&copy; Servicio Nacional de Aprendizaje SENA </p>
-            <p>Centro de Industria y Construccion- Ibague-Tolima </p>
-            
-            <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
+            <p>© Servicio Nacional de Aprendizaje SENA</p>
+            <p>Centro de Industria y Construccion- Ibague-Tolima</p>
+            <p>Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
+        
     </footer>
-
-  <script src="bibli.js"></script>
-
+    <script src="script/biblio.js"></script>
+    <script src="script/submenu.js"></script>
 </body>
 </html>
