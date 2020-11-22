@@ -358,7 +358,7 @@ g                </div>
 
     <div class="cargaArchi" id="formularioCertificacion">
     <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
-        <form method="POST" id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
+        <form   id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
             
             <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA Y PRODUCTIVA AL DIA</Label>
 
