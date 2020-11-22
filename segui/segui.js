@@ -303,7 +303,8 @@ btnEnviar.addEventListener("click", enviaBD)
 
 function enviaBD(e) {
     e.preventDefault();
-    const datos = new FormData(formularioCerti)
+    console.log("funciona")
+    const datos = new FormData(resetformuceti)
     fetch("../php/certificado.php", {
         method: "POST",
         body : datos
@@ -311,5 +312,13 @@ function enviaBD(e) {
         .then(res => res.text())
         .then(bd => {
             console.log(bd)
+            if (bd == "existo") {
+                alert("alumno ya esta en inicio de certificacion")
+                setTimeout(() => {
+                    resetformuceti.reset();
+                    formularioCerti.style.display="none"
+                }, 2000);
+            }
         })
+        .catch(error => console.log(error))
 }
