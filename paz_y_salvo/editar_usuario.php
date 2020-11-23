@@ -1,6 +1,7 @@
 <?php
 
 require_once('../php/connecion.php');
+session_start();
 
 
 $usario = $_GET['usuario'];
@@ -28,8 +29,11 @@ if(isset($_FILES['file'])) {
                 
                 $sql = "UPDATE detalle_pazysalvo SET firma = '$archivo' WHERE detalle_pazysalvo.id_det_pazysalvo = '$id'";
                 $consultarSql = mysqli_query($connection,$sql);
-                header("location: pazysalvo.php");
-                
+
+                echo'<script type="text/javascript">
+                        alert("Se ha subido correctamente la firma");
+                        window.location.href="pazysalvo.php";
+                    </script>';
             } else {
                 echo "<script>alert('Ha ocurrido un error al subir el archivo')</script>";
             }
@@ -40,13 +44,23 @@ if(isset($_FILES['file'])) {
 }
 
 ?>
-
-<h1>Subir Firma</h1>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="style/editar_usuario.css">
+</head>
+<body class="fondo">
+    
 <div class="caja_form">
     <form method="post" enctype="multipart/form-data" class="form_2" id="form_2">
-        <h3>Subir Firma</h3>
-        <input type="file" name="file">
-        <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo"></p>
+        <h3 class="titulo">Subir Firma</h3>
+        <input type="file" name="file" class="boton_personalizado">
+        <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo" class="boton_personalizado"></p>
     </form>
 </div>
+
+</body>
+</html>
