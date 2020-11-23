@@ -429,7 +429,7 @@
         padding: 15px 30px;
         border-radius: 15px;
         margin-left: 20%;
-        margin-top: 10%;
+        margin-top: 1%;
     }
     .subTitulo{
         padding: 20px;
@@ -459,4 +459,33 @@
         margin-right: 3%;
         margin-top: -55px;
     }
-    
+    input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+.inputB{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border: transparent;
+    border-radius: transparent;
+    outline: none; 
+    border-bottom: 2px solid black;
+    height: 20px;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 20%;
+    grid-column: span 2;
+}
+.evide
+{
+    background-color: #fff;
+    width: 20%;
+    padding: 15px 30px;
+    border-radius: 15px;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-align: center;
+}
