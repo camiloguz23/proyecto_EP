@@ -4,21 +4,9 @@ require_once("../php/connecion.php");
 session_start();
 
 if(isset($_POST)){
-    
-    //Documento de los que firman
-    if(isset($_POST['usuario'])){
-        $usuario = $_POST['usuario'];
-    } else if(isset($_POST['auxUsu'])){
-        $usuario = $_POST['auxUsu'];
-    }
-    
-    if(isset($_POST['documento'])) {
-        //Documento del aprendiz
-        $documento = $_POST['documento'];
-        $usuario = $_POST['usuario'];
-    } else if (isset($_POST['auxDoc'])) {
-        $documento = $_POST['auxDoc'];
-    }
+
+    $documento = $_SESSION['docAprendiz'];
+    $usuario = $_SESSION["documento"];
 
     //Consultar el estado del aprendiz
     $sql = "SELECT * FROM aprendices INNER JOIN detalle_formacion ON aprendices.id_aprend = detalle_formacion.id_aprend AND detalle_formacion.id_aprend = '$documento'";
@@ -48,17 +36,12 @@ if(isset($_POST)){
         $_SESSION['telefono_aprend'] = $datosAprendiz['telefono_aprend'];
         $_SESSION['nom_cen_forma'] = $datosAprendiz['nom_cen_forma'];
 
-        //Si el usuario no tiene paz y salvo creado, se crea automaticamente al entrar con el documento del aprendiz
+        //Consultar el paz y salvo del aprendiz para obtener el id del mismo
         $consultaPazysalvo = "SELECT * FROM paz_y_salvo WHERE id_aprend = '$documento'";
         $queryPazysalvo = mysqli_query($connection, $consultaPazysalvo);
         $pazysalvo = mysqli_fetch_assoc($queryPazysalvo);
-        if(empty($pazysalvo)){
 
-            $crearPazysalvo = "INSERT INTO paz_y_salvo (id_pazysalvo, id_aprend, fecha_diligenciamiento) VALUES ('', '$documento', NOW())";
-            $querycrearPaz = mysqli_query($connection, $crearPazysalvo);
-        }
-
-        $id_pazysalvo = $pazysalvo['id_pazysalvo'];  
+        $id_pazysalvo = $pazysalvo['id_pazysalvo']; 
 
         //Si el usuario aún no tiene el detalle de paz y salvo, se crea automaticamente
         $consultaDetaPazysalvo = "SELECT * FROM detalle_pazysalvo WHERE id_pazysalvo = '$id_pazysalvo' AND documento = '$usuario'";
@@ -199,22 +182,24 @@ if(isset($_POST)){
         FROM usuario, detalle_pazysalvo, paz_y_salvo, tip_usu
         WHERE usuario.id_tip_usu = tip_usu.id_tip_usu
         AND detalle_pazysalvo.id_pazysalvo = paz_y_salvo.id_pazysalvo
-        AND detalle_pazysalvo.documento = usuario.documento";
+        AND detalle_pazysalvo.documento = usuario.documento
+        AND detalle_pazysalvo.id_pazysalvo = '$id_pazysalvo'";
         $queryConsulta = mysqli_query($connection, $consulta);
         $resulConsulta = mysqli_num_rows($queryConsulta);
 
         if($resulConsulta > 0) {
             while ($data = mysqli_fetch_array($queryConsulta)) {
+                $idFirma = str_replace(' ', '', $data['nom_tip_usu']);
     ?>
         <tr>
             <td><?php echo $data['nom_tip_usu']?></td>
             <td>X</td>
             <td>----------</td>
             <td><?php echo $data['nombre']?> <?php echo $data['apellido']?></td>
-            <td><img src="<?php echo $data['firma']?>" alt="Sin firmar" width="100" height="100">
+            <td><img src="<?php echo $data['firma']?>" alt="" width="125">
             </td>
             <td>
-                <a href="editar_usuario.php?id=<?php echo $data['id_det_pazysalvo']?>&&usuario=<?php echo $usuario?>&&documento=<?php echo $documento?>">Firmar</a>
+                <a href="editar_usuario.php?id=<?php echo $data['id_det_pazysalvo']?>&&usuario=<?php echo $usuario?>&&documento=<?php echo $documento?>" class="btn_firma1" id="<?php echo $idFirma;?>">Firmar</a>
             </td>
         </tr>
     <?php
@@ -277,13 +262,75 @@ if(isset($_POST)){
                 }
         ?>
     </div>
+<script>
+    const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>"
+    const btn_ape = document.getElementById("Agenciapublicadeempleo");
+    const btn_biblioteca = document.getElementById("Biblioteca");
+    const btn_coordinador = document.getElementById("CoordinadorAcademico");
+    const btn_bienestar = document.getElementById("Bienestar");
+    
+    switch(id_tip_usu) {
+        case "4": 
+            btn_biblioteca.style.visibility = "hidden";
+            btn_coordinador.style.visibility = "hidden";
+            btn_ape.style.visibility = "visible";
+            btn_bienestar.style.visibility = "hidden";
+            break;
+        case "5": 
+            btn_biblioteca.style.visibility = "hidden";
+            btn_coordinador.style.visibility = "hidden";
+            btn_ape.style.visibility = "hidden";
+            btn_bienestar.style.visibility = "visible";
+            break;
+        case "6": 
+            btn_biblioteca.style.visibility = "hidden";
+            btn_coordinador.style.visibility = "visible";
+            btn_ape.style.visibility = "hidden";
+            btn_bienestar.style.visibility = "hidden";
+            break;
+        case "7": 
+            btn_biblioteca.style.visibility = "visible";
+            btn_coordinador.style.visibility = "hidden";
+            btn_ape.style.visibility = "hidden";
+            btn_bienestar.style.visibility = "hidden";
+            break;
+    }
+</script>
+
 </body>
 
 </html>
 
 <?php
     } else {
-        echo "Error";
+
+        switch($_SESSION['id_tip_usu']) {
+            case 4: 
+                echo'<script type="text/javascript">
+                        alert("El aprendiz digitado no existe, o no se encuentra en estado Por Certificar");
+                        window.location.href="../APE/ape.php";
+                    </script>';
+                break;
+            case 5: 
+                echo'<script type="text/javascript">
+                        alert("El aprendiz digitado no existe, o no se encuentra en estado Por Certificar");
+                        window.location.href="../bienestar/biene.php";
+                    </script>';
+                break;
+            case 6: 
+                echo'<script type="text/javascript">
+                        alert("El aprendiz digitado no existe, o no se encuentra en estado Por Certificar");
+                        window.location.href="../cor_academico/cordinh.php";
+                    </script>';
+                break;
+            case 7: 
+                echo'<script type="text/javascript">
+                        alert("El aprendiz digitado no existe, o no se encuentra en estado Por Certificar");
+                        window.location.href="../biblioteca/biblio.php";
+                    </script>';
+                break;
+        }
+
     }
 ?>
 
