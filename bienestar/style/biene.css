@@ -1,101 +1,101 @@
-*{
+    *{
     padding: 0%;
     margin: 0%;
-}
+    }
 
 
-body 
-{
+    body 
+    {
     padding: 0%;
     margin: 0%;
     background: rgb(223, 222, 222);
     font-family: Verdana;
     height: auto;
-}
+    }
 
-/*encabezado*/
+    /*encabezado*/
 
-.princi
-{
+    .princi
+    {
     background-color: #ffffff;
     height: 110px;
-}
+    }
 
-.cerrar
-{
+    .cerrar
+    {
     margin-left: 10%;
-}
-.cerrar  a
-{
+    }
+    .cerrar  a
+    {
     font-family: Verdana;
     font-size: 15px;
     color: #238276;
-}
+    }
 
-.logo .segui
-{
+    .logo .segui
+    {
     font-family: Verdana;
     font-size: 20px;
     margin-left: 9%;
     margin-top: -5%;
-    color: rgb(89, 181, 72);
-}
+    color: rgb(25, 130, 118);
+    }
 
-.logo .seguiimg
-{
+    .logo .seguiimg
+    {
     margin-left: 5px;
-}
+    }
 
-.segun
-{
+    .segun
+    {
     position: absolute;
     margin-left: 83.2%;
     z-index: 1;
     margin-top: -6.2%;
 
-}
+    }
 
-/*menu*/
+    /*menu*/
 
-.navegacion 
-{
+    .navegacion 
+    {
     background: white;
     display: table;
     width: 86%;
     padding: 0 5.5em;
     position: absolute;
     margin-top: 12px;
-    border-color: rgb(89, 181, 72) transparent;
+    border-color: rgb(25, 130, 118) transparent;
     border-style: solid;
     border-width: 5px;
-}
+    }
 
-.navegacion  ul  li 
-{
+    .navegacion  ul  li 
+    {
     list-style: none;
     margin: auto;
     margin-left: 16%;
-}
+    }
 
-.navegacion .menu img
-{
+    .navegacion .menu img
+    {
     margin-right: 15px;
     margin: -7px 5px;
-}
+    }
 
-.menu  li 
-{
+    .menu  li 
+    {
     display: inline-block;
-}
+    }
 
-.menu  li a 
-{
+    .menu  li a 
+    {
     display: block;
     padding: 15px 50px;
     color: black;
     font-family: Verdana;
     text-decoration: none;
-}
+    }
 
     .menu > li > a:hover
     {
@@ -103,32 +103,32 @@ body
         border-radius: 8px;
     }
 
-/*contenido imagen de perfil*/
+    /*contenido imagen de perfil*/
 
-.contper
-{
+    .contper
+    {
     height: auto;
     width: 100%;
-}
-.fondo
-{
-    margin-top: 30px;
+    }
+    .fondo
+    {
+    margin-top: 40px;
     width: 100%;
-}
+    }
 
-.naranja .perfil
-{
+    .naranja .perfil
+    {
     position: absolute;
     margin-top: -120px;
     margin-left: 545px;
     border-radius: 300px;
     height: 250px;
     width: 20%;
-}
+    }
 
-/*contenido informativo*/
+    /*contenido informativo*/
 
-.contenedor{
+    .contenedor{
     position: absolute;
     background-color: #ffffff;
     width: 90%;
@@ -136,9 +136,9 @@ body
     margin:5% ;
     margin-top: 12%;
 
-}  
+    }  
 
-.date{
+    .date{
     position: relative;
     background-color: #ffffff;
     border:2px solid;
@@ -148,25 +148,25 @@ body
     margin-left: 20px;
     margin-top: 2%;
     text-align: center;
-} 
+    } 
 
-.date .datos p
-{
+    .date .datos p
+    {
     list-style: none;
     text-decoration: none;
     font-family: Verdana;
     color: black;
     text-align: center;
-}
+    }
 
-.date .datos .text2
-{
+    .date .datos .text2
+    {
     text-align: left;
     max-width: 100%;
-}
+    }
 
-/*editar*/
-.button { 
+    /*editar*/
+    .button { 
     position: absolute;
     text-decoration: none;
     padding: 10px 40px;
@@ -182,25 +182,25 @@ body
     margin-left: 1050px;
     border-radius: 20px;
 
-}
+    }
 
     .button:hover
     {
-        background-color: rgb(89, 181, 72);
+        background-color: #fc7323;
         color: white;
-    
+
     }
 
-/*opciones*/
+    /*opciones*/
 
-.opcion
-{
+    .opcion
+    {
     width: 70%;
     margin-left: 27%;
-}
+    }
 
-.button3 
-{ 
+    .button3 
+    { 
     position: relative;
     text-decoration: none;
     padding: 20px;
@@ -215,7 +215,7 @@ body
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
-}
+    }
 
     .button3 .butdos
     {
@@ -225,14 +225,14 @@ body
     .button3:hover 
     {
         color: white;
-        background-color:rgb(25, 130, 118); 
+        background-color:  #fc7323; 
     }
 
 
-/*aprendices*/
+    /*aprendices*/
 
-.button4 
-{ 
+    .button4 
+    { 
     position: relative;
     text-decoration: none;
     padding: 20px;
@@ -248,7 +248,7 @@ body
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
-}
+    }
     .button4 .buttres
     {
         margin-right: 15px;
@@ -257,12 +257,12 @@ body
 
     .button4:hover
     {
-        background-color: rgb(25, 130, 118);
+        background-color: #fc7323;
         color: white;
     }
 
 
-/*pie de pagina*/
+    /*pie de pagina*/
 
 
     .pie
@@ -270,7 +270,7 @@ body
         position: relative;
         width: 100%;
         height: 75px;
-        background-color: rgb(89, 181, 72);
+        background-color: rgb(25, 130, 118);
         margin-top:550px;
         display: flex;
         align-items: flex-end;
@@ -299,8 +299,7 @@ body
         font-family: Verdana;
     }
 
-
-    .pazsal
+    .pazybi
     {
         margin-left: 3%;
         margin-top: -32%;
@@ -312,12 +311,12 @@ body
         visibility: hidden;
     }
 
-    .cerrarpaz
+    .cerrarbi
     {
         position:absolute ;
         z-index: 11;
     }
-    .cerrarpaz img
+    .cerrarbi img
     {
         margin-top: 4%;
         width: 3%;
@@ -326,3 +325,58 @@ body
         cursor: pointer;
         z-index: 11;
     }
+
+    .cuadro {
+        width: 280px;
+        height: 200px;
+        background-color: #ededed;
+    
+        position: absolute;
+        top: 48px;
+        left: 260px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    
+    }
+    
+    
+    .cuadro form {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .cuadro form label {
+        font-weight: bold;
+    }
+    
+    .cuadro form .input {
+        width: 100%;
+        height: 40px;
+        padding: 0 3px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 3px 3px 4px black;
+    }
+    
+    .cuadro form .input:focus {
+        outline: none;
+    }
+    
+    .cuadro form .submit {
+        width: 200px;
+        height: 30px;
+        border: none;
+        background-color: rgb(89, 181, 72);
+        border-radius: 20px;
+    }
+    
+    .cuadro form .submit:hover {
+        background-color: #238276;
+    }
+

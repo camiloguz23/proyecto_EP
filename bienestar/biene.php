@@ -12,7 +12,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="biene.css">
+    <link rel="stylesheet" href="style/biene.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>BIENESTAR</title>
 </head>
 <body>
@@ -34,7 +35,16 @@
 
         <nav class="navegacion">
             <ul class="menu">
-                <li id="pazbi"><a href="#"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
+                <li id="pazbi">
+                    <a href="#" id="btn_pazysalvo"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
+                    <div class="cuadro" id="cuadro">
+                        <form action="../paz_y_salvo/pazysalvo.php" method="POST" id="frm_1">
+                            <label for="documento">Documento de identidad</label>
+                            <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento">
+                            <input type="hidden" name="usuario" value="<?php echo $usario?>">
+                            <input class="submit" type="submit" value="Buscar">
+                        </form>
+                    </div>
                 <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
             </ul>  
         </nav>
@@ -85,6 +95,6 @@
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
-    <script src="bienestar.js"></script>
+    <script src="script/bienestar.js"></script>
 </body>
 </html>
