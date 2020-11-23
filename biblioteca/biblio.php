@@ -1,9 +1,14 @@
 <?php
-    require_once("../php/connecion.php");
-    $usuario = $_GET["usuario"];
+    session_start();
+    $usario = $_SESSION["documento"];
+    if ($usario == "" || $usario == null) {
+        header("location: ../index.html");
+    }
+    
+    require_once('../php/connecion.php');
 
     if(isset($_FILES['file'])) {
-        $directorio = "../uploads/" . $usuario;
+        $directorio = "../uploads/" . $usario;
         
         if (!file_exists($directorio)) {
             mkdir($directorio, 0777, true);
@@ -22,7 +27,7 @@
                 if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
                     echo "<script>alert('El archivo se subió correctamente')</script>";
                     
-                    $sql = "UPDATE usuario SET firma = '$archivo' WHERE usuario.documento = '$usuario'";
+                    $sql = "UPDATE usuario SET firma = '$archivo' WHERE usuario.documento = '$usario'";
                     $consultarSql = mysqli_query($connection,$sql);
                     
                 } else {
@@ -42,8 +47,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="biblio.css">
-    <link rel="stylesheet" href="../paz_y_salvo/pazysalvo.css">
+    <link rel="stylesheet" href="style/biblio.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -52,12 +56,12 @@
 
         <div class="encabezado">
             <div class="foto-encabezado">
-                <img class="foto_perfil-encabezado" src="../imagenes/Imagen2.png" alt="Foto de perfil" width="90" height="90">
+                <img class="foto_perfil-encabezado" src="../imagenes/biblioteca.jpg.png" alt="Foto de perfil" width="90" height="90">
             </div>
 
             <div class="datos-encabezado">
                 <h2>BIBLIOTECA</h2>
-                <a href="#">CERRAR SESIÓN</a>
+                <a href="../php/salir.php">CERRAR SESIÓN</a>
             </div>
             <img class="logo-sena" src="../imagenes/naranja.png" alt="" width="226" height="220">
         </div>
@@ -69,8 +73,8 @@
                     <form action="../paz_y_salvo/pazysalvo.php" method="POST" id="frm_1">
                         <label for="documento">Documento de identidad</label>
                         <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento">
+                        <input type="hidden" name="usuario" value="<?php echo $usario?>">
                         <input class="submit" type="submit" value="Buscar">
-                        <input type="hidden" name="usuario" value="<?php echo $usuario;?>">
                     </form>
                 </div>
             </div>
@@ -103,14 +107,6 @@
         <div class="opciones_biblioteca">
             <a href="#">PAZ Y SALVO</a>
             <a href="#">APRENDICES</a>
-        </div>
-
-        <div class="caja_form">
-            <form method="post" enctype="multipart/form-data" class="form_2" id="form_2">
-                <h3>Subir Firma</h3>
-                <input type="file" name="file">
-                <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo"></p>
-            </form>
         </div>
     </div>
 
