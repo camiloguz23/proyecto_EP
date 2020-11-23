@@ -1,0 +1,49 @@
+.caja_form{
+    width: 500px;
+    margin: auto;
+    border: 1px solid blue;
+    padding: 33px;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 240px;
+    border-radius: 20px;
+}
+
+.form_2{
+    background-size: cover;
+    width: 460px;
+    height: 135px;
+}
+
+.fondo{
+    background-image: url(../../imagenes/fondoinicio.jpg);
+    background-size: cover;
+}
+
+.titulo{
+    font-family: 'Amaranth', sans-serif;
+    color: #000000;
+    font-size: 28px;
+    margin-left: 166px;
+}
+
+.titulo2{
+    font-family: 'Amaranth', sans-serif;
+    color: #000000;
+    font-size: 28px;
+}
+
+.input#file-upload-button{
+    color: transparent;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #fc7323;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
