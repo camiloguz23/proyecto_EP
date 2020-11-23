@@ -481,6 +481,7 @@ input[type=number] { -moz-appearance:textfield; }
     transition: .1s ease all;
 }
 
+
 .botonForm:hover {
     background: rgb(74, 160, 209);
 }

@@ -1,10 +1,10 @@
 <?php
 require_once("connecion.php");
 
-
-
 if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
-    echo("identifique el aprendiz");
+    
+    echo  "<script>alert('identifique el aprendiz')</script>";
+  
 }else {
     if ($_POST["seleccionTipo"] == 1) {
         #archivos pdf
