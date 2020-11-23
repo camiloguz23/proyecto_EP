@@ -859,6 +859,26 @@ input[type=number] { -moz-appearance:textfield; }
 
 }
 
+#readPDF {
+   
+    overflow: scroll;
+    width: fit-content;
+    height: 400px;
+    
+}
 
+#cerrarPDF{
+    font-size: 25px;
+    width: 100%;
+    padding: 5px 0px;
+    
+}
 
+#contePDF {
+    display: none;
+    width: fit-content;
+    position: fixed;
+    top: 50px;
+    left: 150px;
+}
 
