@@ -155,7 +155,6 @@ function crear(e) {
     e.preventDefault();
     console.log(registroAprendiz)
     registroAprendiz.style.display = "block"
-    
     formularioDocu.style.display = "none"
 
 
