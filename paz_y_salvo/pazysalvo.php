@@ -1,9 +1,10 @@
 <?php
 
 require_once("../php/connecion.php");
+session_start();
 
 if(isset($_POST)){
-
+    
     //Documento de los que firman
     if(isset($_POST['usuario'])){
         $usuario = $_POST['usuario'];
@@ -243,7 +244,41 @@ if(isset($_POST)){
             <div class="observacion"></div>
         </div>
     </div>
+    <div class="boton_regresar">
+        <?php
+                if( $_SESSION['id_tip_usu'] == 4) {
+        ?>
+                    <a class="btn_regresar" href="../APE/ape.php"><img src="" alt=""> Regresar a APE</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 5) {
+        ?>
+                    <a class="btn_regresar" href="../bienestar/biene.php">Regresar a Bienestar</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 6) {
+        ?>
+                    <a class="btn_regresar" href="../cor_academico/cordinh.php">Regresar a Coordinador Academico</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 7) {
+        ?>
+                    <a class="btn_regresar" href="../biblioteca/biblio.php">Regresar a Biblioteca</a>
+        <?php
+                }
+        ?>
+    </div>
 </body>
+
 </html>
 
 <?php

@@ -28,7 +28,7 @@ if(isset($_FILES['file'])) {
                 
                 $sql = "UPDATE detalle_pazysalvo SET firma = '$archivo' WHERE detalle_pazysalvo.id_det_pazysalvo = '$id'";
                 $consultarSql = mysqli_query($connection,$sql);
-                header("location: ../index.html");
+                header("location: pazysalvo.php");
                 
             } else {
                 echo "<script>alert('Ha ocurrido un error al subir el archivo')</script>";
