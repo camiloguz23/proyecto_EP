@@ -194,6 +194,10 @@ if(isset($_POST['btn_actualizar'])){
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
+                    <form action="" id="formuPDF">
+                    <input class="botonForm" type="button" value="Documentos" id="DocuPDF">
+                    <div id="hidden"></div>
+                    </form>
                 </div>
             </div>
         </div>

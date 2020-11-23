@@ -270,6 +270,7 @@ function estudiante(datoEstu) {
     
     const estudiante = document.getElementById("estudiante")
     estudiante.innerHTML = ` <input type="hidden" name="docuEstudiante" value="${datoEstu}">`
+    hidden.innerHTML =  ` <input type="hidden" name="docuEstuPDF" value="${datoEstu}">`
 }
 
 function buscador(e) {
@@ -321,4 +322,25 @@ function enviaBD(e) {
             }
         })
         .catch(error => console.log(error))
+}
+
+// ********************  MOSTRAR DOCUMENTO PDF *******************************
+const formuPDF = document.getElementById("formuPDF")
+const botonPDFR = document.getElementById("DocuPDF")
+const hidden = document.getElementById("hidden")
+
+botonPDFR.addEventListener("click", mostrarPDF)
+
+function mostrarPDF() {
+    const docuBPDF = documento.value 
+    
+    if (docuBPDF == "" || docuBPDF == null) {
+        alert("ingreso aprendiz")
+    } else {
+        const file = new FormData(formuPDF)
+        fetch("../php/pdf.php", {
+            method: "POST",
+            body: file
+        }).then(res => res.text()).then(valor => console.log(valor))
+    }
 }
