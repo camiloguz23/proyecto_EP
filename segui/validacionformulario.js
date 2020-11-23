@@ -3,10 +3,10 @@ const inputs = document.querySelectorAll('#registroEmpre');
 
 const expresiones = {
 	razon_social: /^[a-zA-ZÀ-ÿ\s]{5,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
-    nit:  /^\d{5,20}$/, //numeros de 1 al 20
+    nit:  /^\d{6,12}$/, //numeros de 1 al 12
     nombre_empresa: /^[a-zA-ZÀ-ÿ\s]{3,25}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
-    direccion:  /^[a-zA-Z0-9_.+-]{4,15}$/, // todos los digitos 
-    telefono: /^\d{10}$/, // 9 a 11 numeros.
+    direccion: /^[a-zA-Z0-9_.+-\s]{2,40}$/, // todos los digitos 
+    telefono: /^\d{10,11}$/, // 9 a 11 numeros.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
 const campos ={

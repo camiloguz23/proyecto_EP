@@ -203,7 +203,8 @@ if(isset($_POST['btn_actualizar'])){
         </div>
             <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpreS">
-            <form method="POST" id="registroEmpre" name="registroEmpre" autocomplete="off">
+            <input class="botonDeCerrar" type="button" value="X" id="cerrarEmpresa"style="margin-left: 100%;width: 70px;height: 62px;border-radius: 50%;border: 1px solid navajowhite;background: #238276;cursor: pointer">
+            <form method="POST" id="registroEmpre"  autocomplete="off">
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
 
@@ -225,7 +226,7 @@ if(isset($_POST['btn_actualizar'])){
 
                 <label class="label" for="">*Teléfono: </label><br>
                 <input class="inputR" type="text" name="telefono" id="telefono">
-                <p class="inputR_t" id="inputR_p_t"><i class="fas fa-exclamation"></i> Ingrese solo numeros, minimo 9 y maximo 11 caracteres</p>
+                <p class="inputR_t" id="inputR_p_t"><i class="fas fa-exclamation"></i> Ingrese numero de 10 caracteres</p>
 
                 <label class="label" for="">*E-mail: </label><br>
                 <input class="inputR" type="email" name="email" id="email" maxlength="30" >
@@ -237,6 +238,7 @@ if(isset($_POST['btn_actualizar'])){
                 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
                     <?php
                     foreach ($query_ciudad as $tip_ciudad) : ?>
+                        <option value="">Elije una ciudad</option>
                         <option value="<?php echo $tip_ciudad['id'] ?> ">
                             <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
                     <?php
@@ -247,7 +249,7 @@ if(isset($_POST['btn_actualizar'])){
                 <div class="botones">
 
                     <button class="botonForm" id="botonEM" type="submit" >Guardar</button>
-                    <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresa">
+                    <input class="botonForm" type="button" value="CERRAR" id="cerrarEmpresad">
                    
                     <input type="reset" class="botonForm">
                 </div>
@@ -260,9 +262,10 @@ if(isset($_POST['btn_actualizar'])){
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label><br>
                 <select class="seleccionTipo" id="tipoAlte" name="seleccionTipo">
-                    <option value=""></option>
+                    <option value="">Seleccione la alternativa</option>
                     <?php
                     foreach ($query_re as $alternativa) : ?>
+                    <option value="">Seleccione</option>
                         <option value="<?php echo $alternativa['id_alternativa'] ?>">
                             <?php echo $alternativa['id_alternativa'] ?>
                             <?php echo $alternativa['nom_alternativa'] ?></option>
@@ -272,9 +275,10 @@ if(isset($_POST['btn_actualizar'])){
                 </select><br>
                 <label class="label" for="">Empresa</label><br>
                 <select class="seleccionTipo" name="empresa" id="">
-                    <option value=""></option>
+                    <option value="">Seleccione la empresa</option>
                     <?php
                     foreach ($query_empresa as $empresa) : ?>
+                    
                         <option value="<?php echo $empresa['nit_empresa'] ?> "><?php echo $empresa['nit_empresa'] ?> --
                             <?php echo $empresa['nom_empre'] ?></option>
                     <?php
@@ -420,6 +424,7 @@ g                </div>
                 <select name="tipdocu" id="tipdocu">
                     <?php
                     foreach ($query as $tip) : ?>
+                    
                         <option value="<?php echo $tip['id_tip_docu'] ?> "><?php echo $tip['nom_docu'] ?></option>
                     <?php
                     endforeach;

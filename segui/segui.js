@@ -15,6 +15,8 @@ const btncerrarAprendiz = document.getElementById("btncerrarAprendiz")
 const btnLEgalizacion = document.getElementById("legal");
 const formularioDocu = document.getElementById("formularioDocu")
 const cerrarEmpresa = document.getElementById("cerrarEmpresa")
+const cerrarEmpresad = document.getElementById("cerrarEmpresad")
+
 const btnCerrarDocu = document.getElementById("btnCerraDocu")
 const forbus = document.getElementById("formulabus");
 const forb = document.getElementById("most");
@@ -112,8 +114,16 @@ function formuEmpresa(e) {
     formularioEmpresa.style.display = "block"
     
 }
-
+/* ---------------------------hola------------------------------- */
 function ocultarEmpresa(e) {
+    e.preventDefault();
+    console.log(formularioEmpresa)
+    formularioEmpresa.style.display = "none";
+    console.log(formularioEmpresa)
+    formularioEmpresaCerrar.reset();
+}
+
+function ocultarEmpresad(e) {
     e.preventDefault();
     console.log(formularioEmpresa)
     formularioEmpresa.style.display = "none";
@@ -292,6 +302,7 @@ boton.addEventListener("click", consulta)
 btnaprendiz.addEventListener("click", crear)
 btnLEgalizacion.addEventListener("click", mostrar)
 cerrarEmpresa.addEventListener("click", ocultarEmpresa)
+cerrarEmpresad.addEventListener("click", ocultarEmpresad)
 btnCerrarDocu.addEventListener("click", ocultarLegalizacion)
 alternativa.addEventListener("blur", funAlte)
 certificacion.addEventListener("click", buscador)
