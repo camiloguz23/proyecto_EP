@@ -88,7 +88,7 @@ if(isset($_POST['btn_actualizar'])){
 <body>
 
     <header class="princi">
-
+        
         <div class="logo">
 
             <img class="imagen" height="90" width="90" src="../imagenes/Imagen1.png" alt="">
@@ -186,8 +186,7 @@ if(isset($_POST['btn_actualizar'])){
 
                     
                 </div>
-
-
+                
                 <div class="botones">
                    
 
@@ -200,6 +199,11 @@ if(isset($_POST['btn_actualizar'])){
                     </form>
                 </div>
             </div>
+            <div id="contePDF">
+                <div id="readPDF"></div>
+                <button id="cerrarPDF">cerrar</button>
+            </div>
+            
         </div>
             <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpreS">
@@ -265,7 +269,7 @@ if(isset($_POST['btn_actualizar'])){
                     <option value="">Seleccione la alternativa</option>
                     <?php
                     foreach ($query_re as $alternativa) : ?>
-                    <option value="">Seleccione</option>
+                    
                         <option value="<?php echo $alternativa['id_alternativa'] ?>">
                             <?php echo $alternativa['id_alternativa'] ?>
                             <?php echo $alternativa['nom_alternativa'] ?></option>
@@ -514,6 +518,7 @@ g                </div>
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
+    
 
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>

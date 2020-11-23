@@ -5,7 +5,7 @@ const btn_aprendices = document.getElementById("btnguardar")
 
 
 const expresionesAprendices = {
-    documento: /^\d{9,13}$/, // 9 a 13 numeros.
+    documento: /^\d{7,13}$/, // 9 a 13 numeros.
     nombre: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
     apellido: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,

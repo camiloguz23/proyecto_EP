@@ -339,19 +339,31 @@ function enviaBD(e) {
 const formuPDF = document.getElementById("formuPDF")
 const botonPDFR = document.getElementById("DocuPDF")
 const hidden = document.getElementById("hidden")
+const btncerrarPDF = document.getElementById("cerrarPDF")
+const contePDF = document.getElementById("contePDF")
+
 
 botonPDFR.addEventListener("click", mostrarPDF)
 
 function mostrarPDF() {
     const docuBPDF = documento.value 
-    
+    const readPDF = document.getElementById("readPDF")
     if (docuBPDF == "" || docuBPDF == null) {
         alert("ingreso aprendiz")
     } else {
         const file = new FormData(formuPDF)
+        
         fetch("../php/pdf.php", {
             method: "POST",
             body: file
-        }).then(res => res.text()).then(valor => console.log(valor))
+        }).then(res => res.text()).then(valor => {
+            contePDF.style.display = "block"
+            readPDF.innerHTML = `${valor}`
+        })
     }
 }
+
+btncerrarPDF.addEventListener("click", (e) => {
+    e.preventDefault();
+    contePDF.style.display = "none"
+})
