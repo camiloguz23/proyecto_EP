@@ -476,18 +476,18 @@ if (isset($_POST['btn_actualizar'])) {
     </div>
     
     <div class="crearFicha">
-        <h1>CREAR FICHA DE FORMACION</h1>
-        <form action="" method="POST">
+        <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
+        <form  method="POST" id="fomularioF" autocomplete="off">
 
-            <div class="labelR">
-                <label for="">*Numero de ficha</label>
-                <input type="number" >
+            <div class="datosf">
+                <label for="" class="labelF">*Numero de ficha</label>
+                <input type="number" class="select1" >
             </div>
 
-            <div class="datosR">
-                <label class="labelR">*Jornada</label>
+            <div class="datosf">
+                <label class="labelF">*Jornada</label>
                 <select class="select1" name="ficha" id="id_jor">
-                    <option value="">Seleccione la jornada</option>
+                    <option value="">*Seleccione la jornada</option>
                     <?php
                     foreach ($query_ficha as $ficha) : ?>
                         <option value="<?php echo $ficha['num_ficha'] ?> ">
@@ -498,8 +498,8 @@ if (isset($_POST['btn_actualizar'])) {
                 </select>
             </div>
 
-            <div class="datosR">
-                <label class="labelR">Nivel de formacion</label>
+            <div class="datosf">
+                <label class="labelF">*Nivel de formacion</label>
                 <select class="select1" name="ficha" id="id_niv_form">
                     <option value="">Seleccione nivel de formacion</option>
                     <?php
@@ -512,8 +512,8 @@ if (isset($_POST['btn_actualizar'])) {
                 </select>
             </div>
 
-            <div class="datosR">
-                <label class="labelR">Centro de formacion</label>
+            <div class="datosf">
+                <label class="labelF">*Centro de formacion</label>
                 <select class="select1" name="ficha" id="id_ficha">
                     <option value="">Seleccione el centro de formacion</option>
                     <?php
@@ -526,15 +526,20 @@ if (isset($_POST['btn_actualizar'])) {
                 </select>
             </div>
 
-            <div class="cajitFicha">
-                <label for="">Fecha inicio</label>
-                <input type="date" class="labelF">
+            <div class="cajitFicha datosf">
+                <label for="" class="labelF">*Fecha inicio</label>
+                <input type="date" class="select1">
             </div>
 
-            <div class="cajitFicha">
+            <div class="cajitFicha datosf">
 
-                <label for="">Fecha fin</label>
-                <input type="date" class="labelF">
+                <label for="" class="labelF">*Fecha fin</label>
+                <input type="date" class="select1">
+            </div>
+            <div class="agregoF"></div>
+            <div class="botonesF">
+                <button class="btnEnviar" id="crearF">CREAR</button>
+                <button class="btnCerrar" id="cerrarF">CERRAR</button>
             </div>
 
         </form>
@@ -593,6 +598,7 @@ if (isset($_POST['btn_actualizar'])) {
         });
     });
 </script>
+<!-- --------------------------REGISTRO EMPRESA---------------------------------------->
 <script type="text/javascript">
     $(document).ready(function() {
         $('#botonEM').click(function() {
@@ -624,6 +630,51 @@ if (isset($_POST['btn_actualizar'])) {
                         setTimeout(() => {
 
                             $('.agrego').html('<p></p>')
+                        }, 2000);
+
+                        exit()
+
+                    }
+
+                }
+            });
+            return false;
+        });
+
+    });
+</script>
+
+<!-- --------------------------CREARFICHA---------------------------------------->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#crearF').click(function() {
+            var datosEmpre = $('#fomularioF').serialize();
+
+
+            $.ajax({
+                type: "POST",
+                url: "../php/crearFicha.php",
+                data: datosEmpre,
+                success: function(b) {
+                    if (b == 1) {
+
+                        $('.agregoF').html('<p id="sub_for_empresa"style="color:white;font-size:15px;text-align: center;margin-right: 60px; background-color:#238276;padding:10px 20px;">SE AGREGO CORRECTAMENTE</p>')
+                        setTimeout(() => {
+                            document.querySelector("#registroEmpre").reset()
+                            $('.agregoF').html('<p></p>')
+                            window.location="segui.php"
+                        }, 2000);
+
+                        exit()
+                    } else {
+
+                        $('.agregoF').html(
+                            '<p id="nada" style="color:white;font-size:20px;text-align: center;margin-right: 60px; background-color:#fc7323;padding:10px 20px;">VERIFICA LOS CAMPOS</p>'
+                        )
+                        setTimeout(() => {
+
+                            $('.agregoF').html('<p></p>')
                         }, 2000);
 
                         exit()

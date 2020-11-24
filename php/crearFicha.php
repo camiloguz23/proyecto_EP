@@ -1,6 +1,4 @@
 <?php
-    
-   
     require 'connection.php';
 
             if(strlen($_POST["telefono"]) >= 1  &&
