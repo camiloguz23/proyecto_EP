@@ -11,6 +11,10 @@ require_once('../php/connecion.php');
     $query = mysqli_query($connection,$consul);
     $db = mysqli_fetch_assoc($query);
     // var_dump($db);
+    if($db['id_estado'] == 1 || $db['id_estado'] == null){
+        echo '<script> alert("El aprendiz no esta legalizado"); </script>';
+        echo '<script> window.location = "../segui/segui.php"; </script>';  
+    }
 ?>        
         <!DOCTYPE html>
         <html lang="en">
