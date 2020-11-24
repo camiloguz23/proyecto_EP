@@ -31,7 +31,7 @@ session_start();
     </header>
 
     <div >
-        <a href="../certificado_leg/imdex.php?documento=<?=$_SESSION['estudiante']?>" target="blank"><button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute; width:40%;height:20%;font-size:30px;background-color:  rgb(89, 181, 72);">Constancia</button></a><br>
+        <a href="../certificado_leg/imdex.php?documento=<?=$_SESSION['estudiante']?>" target="blank"><button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute; width:40%;height:20%;font-size:30px;background-color:  rgb(89, 181, 72);">Imprimir constancia</button></a><br>
         <a href="../segui/segui.php" ><button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute; width:40%;height:20%;font-size:30px; top:350px;background-color:  rgb(89, 181, 72);">Regresar</button></a>
         
     </div>

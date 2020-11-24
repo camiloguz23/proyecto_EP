@@ -50,7 +50,8 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     echo "linea 27";
                 }
             }else {
-                echo "linea 24";
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
             }
         }else {
             echo "23 linea";
@@ -86,9 +87,12 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $sqlEstado= mysqli_query($connection,$estado);
                     
                     if ($sqlEstado) {
-                        #header("location: ../segui/segui.php");
+                        header("location: ../php/constancia.php");
                     }
                 }
+            }else {
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
             }
         }
     } elseif ($_POST["seleccionTipo"] == 3 || $_POST["seleccionTipo"] == 4 || $_POST["seleccionTipo"] == 5 ){
@@ -129,11 +133,12 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        #header("location: ../segui/segui.php");
+                        header("location: ../php/constancia.php");
                     }
                 }
             }else {
                 echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
             }
         }
     }elseif ($_POST["seleccionTipo"] == 7) {
@@ -170,13 +175,14 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        #header("location: ../certificado_leg/imdex.php?documento=".$dato['id_aprend']);
+                        header("location: ../php/constancia.php");
                     }
                    }else{
                        echo "hola";
                    }
                }else {
                 echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
                 }
            }
     }
