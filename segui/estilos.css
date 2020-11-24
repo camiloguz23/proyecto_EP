@@ -882,3 +882,41 @@ input[type=number] { -moz-appearance:textfield; }
     left: 150px;
 }
 
+.crearFicha{
+
+    display:none;
+    position:absolute;
+    border:1px solid blue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:500px;
+    background: white;
+    border-radius:10px;
+    margin-left:10%;
+    margin-top:-32%;
+   
+}
+
+.select1{
+    width: 80%;
+    background: #ffffff;
+    border: wheat;
+    border-radius: 5px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    transition: .3s ease all;
+    margin-top: -30px;
+    margin-left: 4%;
+    cursor: pointer;
+   
+
+}
+
+.labelF{
+    display: block;
+    font-weight:600;
+    font-size: 14px;
+    padding: 7px;
+}
