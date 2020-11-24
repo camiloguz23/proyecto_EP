@@ -520,9 +520,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-size: 15px;
     
 }
-/* Esconder */
-.evidencias1, .evidencias2
-{
-    display: none;
-    
+.check{
+    padding: 30px;
+    background-color: chartreuse;
 }
