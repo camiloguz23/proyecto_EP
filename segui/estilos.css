@@ -429,7 +429,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-size: 13px;
     padding: 13px;
 }
-
+/*************************************************************************************************************/
 .inputR, .seleccionTipo{
     width: 80%;
     background: #ffffff;
@@ -443,8 +443,24 @@ input[type=number] { -moz-appearance:textfield; }
     margin-top: -30px;
     margin-left: 10%;
     cursor: pointer;
+    
 }
-
+.seleccionTipo_n{
+    width: 80%;
+    background: #ffffff;
+   border: 2px solid rgba(201, 195, 195, 0.76);
+    border-radius: 5px;
+    outline: none;
+    height: 30px;
+    color: black;
+    font-size: 15px;
+    transition: .3s ease all;
+    margin-top: -30px;
+    margin-left: 10%;
+    cursor: pointer;
+    
+    
+}
 .inputR:focus{
     border: 2px solid #238276;
 	outline: none;
@@ -860,5 +876,19 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 
-
-
+/****************************VALIDACION FORMULARIO REGISTRO LEGALIZACION**************************************/
+.p-cargo-jefe{
+    visibility: hidden;
+}
+.p-nombre-jefe{
+    visibility: hidden;
+}
+.p-cargo-jefe-incorrecto{
+    visibility: visible;
+}
+.p-nombre-jefe-incorrecto{
+    visibility: visible;
+}
+.seleccionTipo_n-incorrecto{
+    border: solid red;
+}

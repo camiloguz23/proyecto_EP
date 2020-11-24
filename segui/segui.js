@@ -41,7 +41,7 @@ const resetformuceti = document.getElementById("cargaArchi")
 // Variables para el formulario de legalización
 const registroLegal = document.getElementById("registroLegal")
 const btn_cerrarForm = document.getElementById("btn_cerrarLegal")
-const legalForm = document.getElementById("legalForm")
+const legalForm = document.getElementById('legalForm');
 
 
 // Formulario de legalizar 

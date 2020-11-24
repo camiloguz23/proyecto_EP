@@ -12,6 +12,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imagenes/favicon.ico">
     <title>Document</title>
 </head>
 <body>
