@@ -8,12 +8,14 @@ $consulta = "SELECT aprendices.nombre_aprend,aprendices.apellido_aprend,cen_form
 $sql = mysqli_query($connection,$consulta);
 $dato = mysqli_fetch_assoc($sql);
 
+
 if ($dato) {
-     
-    
+    // $datos = implode(",", $dato);
+    // echo ($datos);
         
         echo('
         <div class="datosMostrar" id="datosgen">
+        
                     <h3 class="subTitulo">*DATOS APRENDIZ</h3>
                     <div class="datosApre">
                         <div class="dato">
@@ -73,7 +75,7 @@ if ($dato) {
                         </div>
                        
                     </div>
-                    <input id="calificarr" type="submit" value="calificar">
+                    
                 </div>
                
         '
