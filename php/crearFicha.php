@@ -1,21 +1,26 @@
 <?php
-    require 'connection.php';
+   require_once("connecion.php");
 
-            if(strlen($_POST["telefono"]) >= 1  &&
-            strlen($_POST["apousu"]) >= 1  &&
-            strlen($_POST["email"]) >= 1  &&
-            strlen($_POST["clave"]) >= 1  ){
+            if(strlen($_POST["numf"]) >= 1  &&
+            strlen($_POST["jornadaF"]) >= 1  &&
+            strlen($_POST["NivelFormacion"]) >= 1  && 
+            strlen($_POST["centroFormacion"]) >= 1  && 
+            strlen($_POST["fechaiF"]) >= 1  &&
+            strlen($_POST["fechaF"]) >= 1  ){
                 
-                $telefono = $_POST['telefono'];
-                $apousu = $_POST['apousu'];
-                $email =$_POST['email'] ;
-                $clave =$_POST['clave'] ;
-                $confclave = $_POST['claveCon'];
-            
-            
-            if($clave == $confclave){
+                $numf = $_POST['numf'];
+                $jornadaF = $_POST['jornadaF'];
+                $NivelFormacion =$_POST['NivelFormacion'] ;
+                $programaformacion =$_POST['programaformacion'] ;
+                $centroFormacion =$_POST['centroFormacion'] ;
+                $fechaiF = $_POST['fechaiF'];
+                $fechaF = $_POST['fechaF'];
+            }
+       
+            if($numf != "" && $jornadaF != "" && $NivelFormacion != "" && $centroFormacion != "" && $fechaiF != "" && $fechaF != ""){
               
-                $consulta = "INSERT INTO usuario( telefono, apousu, email, clave, id_tip_user) VALUES ('$telefono','$apousu','$email','$clave' ,'2')";
+                $consulta = "INSERT INTO ficha_programa (num_ficha, id_jornada, id_nivel, id_formacion, id_cen_forma, fecha_inicio, fecha_final)
+                 VALUES                                  ('$numf','$jornadaF', '$NivelFormacion', '1', '2', '$fechaiF', '$fechaF')";
                 
                 $resultado = mysqli_query($connection,$consulta);
                
