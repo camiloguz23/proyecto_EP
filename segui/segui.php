@@ -320,60 +320,8 @@ if(isset($_POST['btn_actualizar'])){
         </form>
     </div>
 
-
-    <!--<div class="formCertificar">
-        <div class="informa2">
-            <div class="buscador2">
-                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
-                <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
-                    <input class="inputE" type="number">
-                    <div class="boton2">
-                        <a href="" id="boton2"><img class="boton2" src="../imagenes/Imagen3.png" height="50px"
-                                width="50px"></a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="datosMostrar2">
-            <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-            <div class="datosApre2">
-                <div class="dato2">
-                    <label class="label2" for="">NOMBRE: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">TELEFONO: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">E-MAIL: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">IDENTIFICACIÓN: </label>
-                    <label class="inputC" for=""></label>
-g                </div>
-
-
-            <div class="dato2">
-                <label class="labelE" for="">ESTADO E.P: </label>
-                <label class="inputC" for=""></label>
-            </div>
-
-        </div><br>
-
-
-        <h3 class="subTitulo">*DATOS LEGALIZACIÓN</h3>
-        <div class="datosForma2">
-            <div class="dato">
-                <label class="label2" for="">TIPO DE ALTERNATIVA: </label>
-                <label for="">$bd</label>
-            </div>
-            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS 
-            <br>
-        </div>
-    </div>-->
-
+        
+  
 
     <div class="cargaArchi" id="formularioCertificacion">
     <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
@@ -517,6 +465,32 @@ g                </div>
             <button id="btnguardar">Guardar</button>
             <button id="btncerrarAprendiz">Cerrar</button>   
         </form>
+        <div class="crearFicha">
+            <form action="" method="POST">
+                <label for="">*Numero de ficha</label>
+                <input type="number">
+
+                <label for="">*Jornada</label>
+                <input type="number">
+
+                <label for="">*Nivel</label>
+                <input type="number">
+
+                <label for="">*Formacion</label>
+                <input type="number">
+
+                <label for="">*centro de formacion</label>
+                <input type="number">
+
+                <label for="">hola</label>
+                <input type="date">
+
+                <label for="">hola</label>
+                <input type="date">
+
+            </form>
+
+        </div>
     </div>
 
 
