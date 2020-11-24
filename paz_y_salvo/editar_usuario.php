@@ -22,7 +22,7 @@ if(isset($_FILES['file'])) {
     $tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
     $tamañoArchivo = $_FILES["file"]["size"];
 
-    
+    if($tipoArchivo == "png" || $tipoArchivo == "jpg" || $tipoArchivo == "jpeg") {
         if ($tamañoArchivo <= 209715200) {
 
             if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
@@ -41,7 +41,11 @@ if(isset($_FILES['file'])) {
         } else {
             echo "<script>alert('El peso del archivo es superior a 200MB')</script>";
         }   
+    } else {
+        echo "<script>alert('El tipo de archivo subido no es admitido, solo se admite imágenes (jpg, png, jpeg)')</script>";
+    }
 }
+        
 
 ?>
 <!DOCTYPE html>
