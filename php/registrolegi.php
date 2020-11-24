@@ -13,22 +13,22 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
         $nombre= $_FILES['GFPI'] ['name'];
         $ruta = $_FILES["GFPI"] ["tmp_name"];
         $destino = "../segui/pdfLEgalizacion/".$nombre;
-        echo $nombre;
+        
         $nombreDOs= $_FILES['ContratoAprendizaje'] ['name'];
         $rutaDos = $_FILES["ContratoAprendizaje"] ["tmp_name"];
         $destinoDos = "../segui/pdfLEgalizacion/".$nombreDOs;
-        echo $nombreDOs;
+        
         #dato ingresados por el usuario
         $documento = $_POST["docuEstudiante"];
         echo $documento;
         $Alternativa = $_POST["seleccionTipo"];
-        echo $Alternativa;
+        
         $empresa = $_POST["empresa"];
-        echo $empresa = $empresa;
+        
         $jefe = $_POST["jefe"];
-        echo $empresa = $jefe;
+        
         $cargoJefe = $_POST["cargoJefe"];
-        echo $empresa = $cargoJefe;
+        
         
 
         $fecha = $_POST["fecha"];
@@ -40,7 +40,7 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        #header("location: ../segui/segui.php");
                     }else{
                         echo "30 linea";
                     }
@@ -84,7 +84,7 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $sqlEstado= mysqli_query($connection,$estado);
                     
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        #header("location: ../segui/segui.php");
                     }
                 }
             }
@@ -127,9 +127,11 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        #header("location: ../segui/segui.php");
                     }
                 }
+            }else {
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
             }
         }
     }elseif ($_POST["seleccionTipo"] == 7) {
@@ -166,12 +168,64 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        #header("location: ../certificado_leg/imdex.php?documento=".$dato['id_aprend']);
                     }
+                   }else{
+                       echo "hola";
                    }
-               }
+               }else {
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                }
            }
     }
     
 }  
 ?>
+<a href="../certificado_leg/imdex.php?documento='.$dato['id_aprend'].'" target="_blank">
+                        <button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute;">Constancia</button>
+                        </a>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <title>INICIO</title>
+</head>
+<body>
+
+    <header class="princi">
+       
+        <div class="logo">
+            <img class="imagen"  height="67" width="90" src="../imagenes/iconoinicio.jpg.png"  alt="">
+            <h3 class="segui">ETAPA PRODUCTIVA<img class="seguiimg" width="20" height="20" src="../imagenes/iconoii.jpg" alt=""></h3>
+
+            <div class="segun">
+                <img height="220" src="../imagenes/verdemoco.png" alt="">
+            </div>
+        </div>
+        
+
+
+        
+
+    </header>
+
+    <div >
+        <a href="../certificado_leg/imdex.php?documento=<$dato['id_aprend']?>" target="_blank"><button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute; width:40%;height:20%;font-size:30px;background-color:  rgb(89, 181, 72);">Constancia</button></a><br>
+        <a href="../segui/segui.php" ><button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute; width:40%;height:20%;font-size:30px; top:350px;background-color:  rgb(89, 181, 72);">Regresar</button></a>
+        
+    </div>
+
+    <div class="paginas">
+        <a href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="_blank"><img height="52" width="58" src="imagenes/sofia.png" alt=""></a><br>
+        <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank"><img height="52" width="55" src="imagenes/sena.png" alt=""></a><br>
+        <a href="https://sena.territorio.la/index.php?login=true" target="_blank"><img height="49" width="55" src="imagenes/terrritorium.png" alt=""></a><br>
+    </div>
+
+  
+
+    
+</body>
+</html>-->

@@ -432,7 +432,7 @@ if(isset($_POST['btn_actualizar'])){
             </div>
             
             <div class="datosR">
-                <label class="labelR">Teléfono Aprendiz:</label>
+                <label class="labelR">Teléfono Fijo:</label>
                 <input type="number" name="tel" id="tel">
                 <p class="parrafoAprendiz" id="parrafoAprendiz_5"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El telefono solo puede contener numeros,máximo son 10 digitos</p>
             </div>

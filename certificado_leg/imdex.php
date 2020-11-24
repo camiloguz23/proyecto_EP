@@ -1,6 +1,9 @@
 <?php
 require_once('../php/connecion.php');
-
+if($db['id_estado'] == 1 || $db['id_estado'] == null){
+    echo '<script> alert("El aprendiz no esta legalizado"); </script>';
+    echo '<script> window.location = "../segui/segui.php"; </script>';  
+}
     //Consulta
     $documento = $_GET['documento'];
 
