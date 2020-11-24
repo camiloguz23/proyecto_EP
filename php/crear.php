@@ -2,7 +2,12 @@
    include("connecion.php");
    
 
-    if (strlen($_POST['tipdocu']) >= 1 && strlen($_POST['nom']) >= 1 && strlen($_POST['ape']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['tel']) >= 1 && strlen($_POST['docu']) >= 1 ) {
+    if (strlen($_POST['tipdocu']) >= 1 &&
+     strlen($_POST['nom']) >= 1 &&
+      strlen($_POST['ape']) >= 1 &&
+       strlen($_POST['email']) >= 1 &&
+        strlen($_POST['tel']) >= 1 &&
+         strlen($_POST['docu']) >= 1 ) {
 
         $tipdoc=$_POST['tipdocu'];
         $name=$_POST['nom'];

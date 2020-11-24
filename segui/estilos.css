@@ -883,7 +883,7 @@ input[type=number] { -moz-appearance:textfield; }
     
 }
 
-<<<<<<< HEAD
+
 /****************************VALIDACION FORMULARIO REGISTRO LEGALIZACION**************************************/
 .p-cargo-jefe{
     visibility: hidden;
@@ -900,7 +900,7 @@ input[type=number] { -moz-appearance:textfield; }
 .seleccionTipo_n-incorrecto{
     border: solid red;
 }
-=======
+
 #cerrarPDF{
     font-size: 25px;
     width: 100%;
@@ -916,4 +916,44 @@ input[type=number] { -moz-appearance:textfield; }
     left: 150px;
 }
 
->>>>>>> a41e06c1ca6ae7317c19e08280ebda90203518ed
+
+
+.crearFicha{
+
+    display:none;
+    position:absolute;
+    border:1px solid blue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:500px;
+    background: white;
+    border-radius:10px;
+    margin-left:10%;
+    margin-top:-32%;
+   
+}
+
+.select1{
+    width: 80%;
+    background: #ffffff;
+    border: wheat;
+    border-radius: 5px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    transition: .3s ease all;
+    margin-top: -30px;
+    margin-left: 4%;
+    cursor: pointer;
+   
+
+}
+
+.labelF{
+    display: block;
+    font-weight:600;
+    font-size: 14px;
+    padding: 7px;
+}
+
