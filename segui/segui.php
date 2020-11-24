@@ -290,7 +290,7 @@ if(isset($_POST['btn_actualizar'])){
                     <?php
                     foreach ($query_empresa as $empresa) : ?>
                     
-                        <option value="<?php echo $empresa['nit_empresa'] ?>" require><?php echo $empresa['nit_empresa'] ?> --
+                        <option value="<?php echo $empresa['nit_empresa'] ?>" require>
                             <?php echo $empresa['nom_empre'] ?></option>
                     <?php
                     endforeach;
@@ -589,6 +589,7 @@ $(document).ready(function() {
                         setTimeout(() => {
                             document.querySelector("#registroEmpre").reset()
                             $('.agrego').html('<p></p>')
+                            window.location="segui.php"
                         }, 2000);
                     
                     exit()
