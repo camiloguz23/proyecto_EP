@@ -477,7 +477,7 @@ if (isset($_POST['btn_actualizar'])) {
     
     <div class="crearFicha">
         <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
-        <form action="../php/crearFicha.php" method="POST" id="fomularioF">
+        <form  method="POST" id="fomularioF" autocomplete="off">
 
             <div class="datosf">
                 <label for="" class="labelF">*Numero de ficha</label>
@@ -487,7 +487,7 @@ if (isset($_POST['btn_actualizar'])) {
             <div class="datosf">
                 <label class="labelF">*Jornada</label>
                 <select class="select1" name="ficha" id="id_jor">
-                    <option value="">Seleccione la jornada</option>
+                    <option value="">*Seleccione la jornada</option>
                     <?php
                     foreach ($query_ficha as $ficha) : ?>
                         <option value="<?php echo $ficha['num_ficha'] ?> ">
@@ -499,7 +499,7 @@ if (isset($_POST['btn_actualizar'])) {
             </div>
 
             <div class="datosf">
-                <label class="labelF">Nivel de formacion</label>
+                <label class="labelF">*Nivel de formacion</label>
                 <select class="select1" name="ficha" id="id_niv_form">
                     <option value="">Seleccione nivel de formacion</option>
                     <?php
@@ -513,7 +513,7 @@ if (isset($_POST['btn_actualizar'])) {
             </div>
 
             <div class="datosf">
-                <label class="labelF">Centro de formacion</label>
+                <label class="labelF">*Centro de formacion</label>
                 <select class="select1" name="ficha" id="id_ficha">
                     <option value="">Seleccione el centro de formacion</option>
                     <?php
@@ -527,14 +527,19 @@ if (isset($_POST['btn_actualizar'])) {
             </div>
 
             <div class="cajitFicha datosf">
-                <label for="" class="labelF">Fecha inicio</label>
+                <label for="" class="labelF">*Fecha inicio</label>
                 <input type="date" class="select1">
             </div>
 
             <div class="cajitFicha datosf">
 
-                <label for="" class="labelF">Fecha fin</label>
+                <label for="" class="labelF">*Fecha fin</label>
                 <input type="date" class="select1">
+            </div>
+            <div class="agregoF"></div>
+            <div class="botonesF">
+                <button class="btnEnviar" id="crearF">CREAR</button>
+                <button class="btnCerrar" id="cerrarF">CERRAR</button>
             </div>
 
         </form>
@@ -593,6 +598,7 @@ if (isset($_POST['btn_actualizar'])) {
         });
     });
 </script>
+<!-- --------------------------REGISTRO EMPRESA---------------------------------------->
 <script type="text/javascript">
     $(document).ready(function() {
         $('#botonEM').click(function() {
@@ -624,6 +630,51 @@ if (isset($_POST['btn_actualizar'])) {
                         setTimeout(() => {
 
                             $('.agrego').html('<p></p>')
+                        }, 2000);
+
+                        exit()
+
+                    }
+
+                }
+            });
+            return false;
+        });
+
+    });
+</script>
+
+<!-- --------------------------CREARFICHA---------------------------------------->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#crearF').click(function() {
+            var datosEmpre = $('#fomularioF').serialize();
+
+
+            $.ajax({
+                type: "POST",
+                url: "../php/crearFicha.php",
+                data: datosEmpre,
+                success: function(b) {
+                    if (b == 1) {
+
+                        $('.agregoF').html('<p id="sub_for_empresa"style="color:white;font-size:15px;text-align: center;margin-right: 60px; background-color:#238276;padding:10px 20px;">SE AGREGO CORRECTAMENTE</p>')
+                        setTimeout(() => {
+                            document.querySelector("#registroEmpre").reset()
+                            $('.agregoF').html('<p></p>')
+                            window.location="segui.php"
+                        }, 2000);
+
+                        exit()
+                    } else {
+
+                        $('.agregoF').html(
+                            '<p id="nada" style="color:white;font-size:20px;text-align: center;margin-right: 60px; background-color:#fc7323;padding:10px 20px;">VERIFICA LOS CAMPOS</p>'
+                        )
+                        setTimeout(() => {
+
+                            $('.agregoF').html('<p></p>')
                         }, 2000);
 
                         exit()
