@@ -61,125 +61,108 @@ if(isset($_POST)){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paz y Salvo</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style/pazysalvo.css">
     <link rel="icon" href="../imagenes/favicon.ico">
 </head>
 <body>
     <div class="contenedor">
-        <div class="contenedor_header">
-            <div class="header_logo">
-                <img src="../imagenes/sigasena.jpg" alt="" width="250">
+        <div class="header">
+            <div class="logo">
+                <img src="../imagenes/sigasena.jpg" alt="" width="" class="sigasena">
             </div>
-            <div class="header_titulo">
-                <h3>SERVICIO NACIONAL DE APRENDIZAJE SENA</h3>
-                <h3>PROCEDIMIENTO CERTIFICACIÓN ACADÉMICA</h3>
-                <h3>FORMATO PAZ Y SALVO ACADÉMICO ADMINISTRATIVO</h3>
+            <div class="titulo">
+                <div class="containt_titulo">
+                    <h4>SERVICIO NACIONAL DE APRENDIZAJE SENA</h4>
+                    <h4>PROCEDIMIENTO CERTIFICACIÓN ACADÉMICA</h4>
+                    <h4>FORMATO PAZ Y SALVO ACADÉMICO ADMINISTRATIVO</h4>
+                </div>
             </div>
         </div>
-        <div class="paz_datos">
-            <div class="datos_paz">
-               <div>
-                    <div>
-                        <p>LUGAR:</p></div>
-                    <div>
-                        <p>FECHA DILIGENCIAMIENTO:</p>
-                    </div>
-                    <div>
-                        <p>CENTRO DE FORMACION:</p>
-                    </div>
-                    <div>
-                        <p>REGIONAL:</p>
-                    </div>
-               </div>
-                <div class="datos_paz-lineas">
-                    <div>
+        <div class="datos_iniciales">
+            <div class="inicial_1">
+                <div class="inicial_1-p">
+                    <p>LUGAR:</p>
+                    <p>FECHA DILIGENCIAMIENTO:</p>
+                    <p>CENTRO DE FORMACION:</p>
+                    <p>REGIONAL:</p>
+                </div>
+                <div class="inicial_1-linea">
+                    <div class="linea">
                         <p><?php echo $_SESSION['nom_region']?></p>
                     </div>
-                    <div>
+                    <div class="linea">
                         <p><?php echo $_SESSION['fecha_diligenciamiento']?></p>
                     </div>
-                    <div>
+                    <div class="linea">
                         <p><?php echo $_SESSION['nom_cen_forma']?></p>
                     </div>
-                    <div>
+                    <div class="linea">
                         <p><?php echo $_SESSION['nom_region']?></p>
                     </div>
                 </div>
             </div>
+            <div class="inicial_2"></div>
         </div>
-        <div class="paz_datos-usuario">
-            <div class="datos_usuario-header">
-                <h5>DATOS BÁSICOS DEL APRENDIZ</h5>
+        <div class="datos_aprendiz">
+            <div class="datos_aprendiz-header">
+                <p>DATOS BASICOS DEL APRENDIZ</p>
             </div>
-            <div class="contenedor-columnas">
-                <div class="datos_usuario-columna1">
-                    <div>
-                        <p>NOMBRES:</p>
-                        <p><?php echo $_SESSION['nombre_aprend']?></p>
+            <div class="contenedor_columnas">
+                <div class="columna_1">
+                    <div class="linea_aprendiz">
+                        <p>NOMBRES: <?php echo $_SESSION['nombre_aprend']?></p>
                     </div>
-                    <div>
-                        <P>APELLIDOS</P>
-                        <p><p><?php echo $_SESSION['apellido_aprend']?></p></p>
+                    <div class="linea_aprendiz">
+                        <p>APELLIDOS: <?php echo $_SESSION['apellido_aprend']?></p>
                     </div>
-                    <div>
-                        <P>CORREO ELECTRONICO </P>
-                        <p><?php echo $_SESSION['correo_aprend']?></p>
+                    <div class="linea_aprendiz">
+                        <p>CORREO ELECTRONICO: <?php echo $_SESSION['correo_aprend']?></p>
                     </div>
-                    <div>
-                        <P>PROGRAMA DE FORMACION </P>
-                        <p><?php echo $_SESSION['nom_formacion']?></p>
+                    <div class="linea_aprendiz">
+                        <p>PROGRAMA DE FORMACION: <?php echo $_SESSION['nom_formacion']?></p>
                     </div>
-                    <div>
-                        <P>NIVEL DE FORMACIÓN</P>
-                        <p><?php echo $_SESSION['nom_nivel']?></p>
+                    <div class="linea_aprendiz">
+                        <p>NIVEL DE FORMACIÓN: <?php echo $_SESSION['nom_nivel']?></p>
                     </div>
-                    <div>
-                        <P>NÚMERO DE FICHA </P>
-                        <p><?php echo $_SESSION['num_ficha']?></p>
+                    <div class="linea_aprendiz">
+                        <p>NÚMERO DE FICHA: <?php echo $_SESSION['num_ficha']?></p>
                     </div>
                 </div>
-                <div class="datos_usuario-columna2">
-                    <div>
-                        <P>TIPO DOCUMENTO DE IDENTIDAD</P>
-                        <p><?php echo $_SESSION['nom_docu']?></p>
+                <div class="columna_2">
+                    <div class="linea_aprendiz">
+                        <p>TIPO DOCUMENTO DE IDENTIDAD: <?php echo $_SESSION['nom_docu']?></p>
                     </div>
-                    <div>
-                        <P>NUMERO DOCUMENTO DE IDENTIDAD</P>
-                        <p><?php echo $_SESSION['id_aprend']?></p>
+                    <div class="linea_aprendiz">
+                        <p>NUMERO DOCUMENTO DE IDENTIDAD: <?php echo $_SESSION['id_aprend']?></p>
                     </div>
-                    <div>
-                        <P>FECHA Y LUGAR DE EXPEDICIÓN</P>
-                        <p><?php echo $_SESSION['fecha_expedicion_docu']?>, <?php echo $_SESSION['lugar_expedicion']?></p>
+                    <div class="linea_aprendiz">
+                        <p>FECHA Y LUGAR DE EXPEDICIÓN: <?php echo $_SESSION['fecha_expedicion_docu']?>, <?php echo $_SESSION['lugar_expedicion']?></p>
                     </div>
-                    <div>
-                        <P>DIRECCIÓN DE DOMICILIO</P>
-                        <p><?php echo $_SESSION['direccion']?></p>
+                    <div class="linea_aprendiz">
+                        <p>DIRECCIÓN DE DOMICILIO: <?php echo $_SESSION['direccion']?></p>
                     </div>
-                    <div>
-                        <P>TELEFONO FIJO DE CONTACTO</P>
-                        <p><?php echo $_SESSION['telefono_aprend']?></p>
+                    <div class="linea_aprendiz">
+                        <p>TELEFONO FIJO DE CONTACTO: <?php echo $_SESSION['telefono_aprend']?></p>
                     </div>
-                    <div>
-                        <P>NÚMERO CELULAR</P>
-                        <p><?php echo $_SESSION['num_celular']?></p>
+                    <div class="linea_aprendiz">
+                        <p>NÚMERO CELULAR: <?php echo $_SESSION['num_celular']?></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="paz_responables">
-
+        <div class="responsables">
         <table class="tabla_responsables">
             <tr>
                 <th>FUNCIONARIOS QUE INTERVIENEN EN EL DILIGENCIAMIENTO</th>
                 <th>Marcar con X</th>
                 <th>DESCRIPCION DEL TRAMITE</th>
                 <th>NOMBRES Y APELLIDOS COMPLETOS</th>
-                <th>FIRMA</th>
-                <th>ACCCIONES</th>
+                <th id="th_firma_fila">FIRMA</th>
+                <th class="desaparecer">ACCCIONES</th>
             </tr>
     <?php
-        $consulta = "SELECT  detalle_pazysalvo.id_det_pazysalvo, tip_usu.nom_tip_usu, usuario.nombre, usuario.apellido, detalle_pazysalvo.firma
+        $consulta = "SELECT  detalle_pazysalvo.id_det_pazysalvo, tip_usu.nom_tip_usu, usuario.nombre, usuario.apellido, usuario.id_tip_usu ,detalle_pazysalvo.firma
         FROM usuario, detalle_pazysalvo, paz_y_salvo, tip_usu
         WHERE usuario.id_tip_usu = tip_usu.id_tip_usu
         AND detalle_pazysalvo.id_pazysalvo = paz_y_salvo.id_pazysalvo
@@ -195,11 +178,38 @@ if(isset($_POST)){
         <tr>
             <td><?php echo $data['nom_tip_usu']?></td>
             <td>X</td>
-            <td>----------</td>
-            <td><?php echo $data['nombre']?> <?php echo $data['apellido']?></td>
-            <td><img src="<?php echo $data['firma']?>" alt="" width="125">
-            </td>
             <td>
+    <?php
+        switch($data['id_tip_usu']) {
+            case '4':
+            ?>
+                <p>Validar que se encuentra registrada y actualizada la Hoja de Vida del aprendiz.</p>
+            <?php
+                break;
+            case '5':
+            ?>
+                <p>Verificar que se encuentre a paz y salvo con las actividades del programa de bienestar al aprendiz. </p>
+            <?php
+                break;
+            case '6':
+            ?>
+                <p>Verificar que estén registrados la totalidad de los juicios evaluativos en el aplicativo de gestión académico administrativo institucional (etapa lectiva y productiva)
+                Verificar evidencia de presentación de la prueba Saber TyT (Tecnólogos).
+                Recibir el carné de aprendiz SENA para su destrucción.</p>
+            <?php
+                break;
+            case '7':
+            ?>
+                <p>Verificar que esta a paz y salvo con la biblioteca.</p>
+            <?php
+                break;
+        }
+            ?>
+            </td>
+            <td><?php echo $data['nombre']?> <?php echo $data['apellido']?></td>
+            <td><img src="<?php echo $data['firma']?>" alt="" class="img_firma">
+            </td>
+            <td class="desaparecer" id="td_firma_fila">
                 <a href="editar_usuario.php?id=<?php echo $data['id_det_pazysalvo']?>&&usuario=<?php echo $usuario?>&&documento=<?php echo $documento?>" class="btn_firma1" id="<?php echo $idFirma;?>">Firmar</a>
             </td>
         </tr>
@@ -230,6 +240,7 @@ if(isset($_POST)){
             <div class="observacion"></div>
         </div>
     </div>
+
     <div class="boton_regresar">
         <?php
                 if( $_SESSION['id_tip_usu'] == 4) {
@@ -262,6 +273,7 @@ if(isset($_POST)){
         <?php
                 }
         ?>
+         <a class="btn_regresar" href="crearPdf.php" id="btn_imprimir">Imprimir</a>
     </div>
 <script>
     const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>"
@@ -269,13 +281,20 @@ if(isset($_POST)){
     const btn_biblioteca = document.getElementById("Biblioteca");
     const btn_coordinador = document.getElementById("CoordinadorAcademico");
     const btn_bienestar = document.getElementById("Bienestar");
+    const btn_imprimir = document.getElementById("btn_imprimir");
+    const acciones = document.getElementsByClassName("desaparecer");
+
+    btn_imprimir.addEventListener("click", (e) => {
+        e.preventDefault();
+        print();
+    })
     
     switch(id_tip_usu) {
         case "4": 
             btn_biblioteca.style.visibility = "hidden";
             btn_coordinador.style.visibility = "hidden";
-            btn_ape.style.visibility = "visible";
             btn_bienestar.style.visibility = "hidden";
+            btn_ape.style.visibility = "visible";
             break;
         case "5": 
             btn_biblioteca.style.visibility = "hidden";
@@ -285,21 +304,19 @@ if(isset($_POST)){
             break;
         case "6": 
             btn_biblioteca.style.visibility = "hidden";
-            btn_coordinador.style.visibility = "visible";
             btn_ape.style.visibility = "hidden";
             btn_bienestar.style.visibility = "hidden";
+            btn_coordinador.style.visibility = "visible";
             break;
         case "7": 
-            btn_biblioteca.style.visibility = "visible";
-            btn_coordinador.style.visibility = "hidden";
             btn_ape.style.visibility = "hidden";
+            btn_coordinador.style.visibility = "hidden";
             btn_bienestar.style.visibility = "hidden";
+            btn_biblioteca.style.visibility = "visible";
             break;
     }
 </script>
-
 </body>
-
 </html>
 
 <?php
@@ -333,8 +350,5 @@ if(isset($_POST)){
         }
 
     }
-?>
-
-<?php
-    } 
+}
 ?>
