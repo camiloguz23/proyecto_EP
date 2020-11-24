@@ -5,13 +5,13 @@ const btn_aprendices = document.getElementById("btnguardar")
 
 
 const expresionesAprendices = {
-    documento: /^\d{9,13}$/, // 9 a 13 numeros.
+    documento: /^\d{7,12}$/, // 9 a 13 numeros.
     nombre: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
     apellido: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     direccion: /^[a-zA-Z0-9_.+-\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
-    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-}
+    telefono: /^\d{7,10}$/,
+    celular: /^\d{9,11}$/ }
 
 const camposAprendices = {
     docu: false,
@@ -81,7 +81,7 @@ const validarFormulario = (e) => {
             }
             break;
         case "celular":
-            if(expresionesAprendices.telefono.test(e.target.value)){
+            if(expresionesAprendices.celular.test(e.target.value)){
                 document.getElementById("celular").classList.remove("grupo__aprendiz-incorrecto")
                 document.getElementById("parrafoAprendiz_6").classList.remove("parrafoAprendiz-activado")
                 camposAprendices["celular"] = true

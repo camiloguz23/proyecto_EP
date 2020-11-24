@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.imagen{
+    width: 53%;
+    height: 30%;
+    z-index: -15;
+}
+.imagen img{
+    margin: 30px auto;
+    width: 80%;
+    margin-left: 53%;
+    margin-top: 22px;
+    opacity: .4;
+}
+.logito{
+    position: absolute;
+    top: 495px; 
+    left: 630px; 
+}
+header{
+    margin-top: -5%;
+    text-align: center;
+}
+main{
+    width: 700px;
+    height: 560px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 23%;
+    z-index: 10;
+}
+h1{
+    margin: 28px auto;
+}
+main article{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+@media print{
+    main{
+        position: absolute;
+        left: 15px;
+    }
+}

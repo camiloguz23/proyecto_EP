@@ -14,7 +14,6 @@ body {
 /* Header formulario */
 
 .contenedor_header {
-
     display: flex;
     flex-direction: row;
     border: 2px solid black;
@@ -106,14 +105,15 @@ body {
 
 .paz_responables {
     height: auto;
-
+/*
     display: grid;
     grid-template-columns: 1fr 80px 1fr 1fr 1fr;
     grid-template-rows: 50px 50px;
+*/
                          
 }
 
-.paz_responsables-funcionarios {
+/* .paz_responsables-funcionarios {
     grid-area: funcionarios;
 }
 
@@ -128,9 +128,9 @@ body {
 
 .paz_responsables-descripcion {
     grid-area: descripcion;
-}
+} */
 
-.paz_responsables-nombres {
+/* .paz_responsables-nombres {
     grid-area: nombres;
     text-align: center;
     line-height: 25px;
@@ -151,16 +151,16 @@ body {
     text-align: center;
 }
 
-.columnas {
+/* .columnas { 
     width: 100%;
     height: auto;
-}
+} */
 
-.firma_form-desaparecer{
+/* .firma_form-desaparecer{
     display: none;
-}
+} */
 
-.fila {
+/* .fila {
     height: 100px;
 
     display: flex;
@@ -233,7 +233,7 @@ body {
 
     border-right: 1px solid black;
     border-left: 1px solid black;
-}
+} */
 
 .paz_responables p {
     font-size: 12px;
@@ -246,8 +246,6 @@ body {
 }
 
 table {
-    width: 1340px;
-
     font-size: 14px;
 }
 
@@ -306,4 +304,42 @@ table td {
     width: 100%;
     height: 40px;
     border-top: 1px dotted black;
+}
+
+.boton_regresar {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn_regresar {
+    background-color:#fc7323;
+    height: 60px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn_regresar:hover {
+    background-color: #f7813e;
+    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 3);
+    transform: translateY(5px);
+}
+
+.btn_firma1{
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    background-color: #fc7323;
+    color: white;
+    margin: 20px 20px;
+    padding: 5px 20px;
+}
+
+.btn_firma1:hover{
+    background-color: #f7813e;
+    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 3);
+    transform: translateY(5px);
 }

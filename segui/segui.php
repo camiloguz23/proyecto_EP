@@ -50,7 +50,10 @@ if(isset($_POST['btn_actualizar'])){
     $clave = $_POST['claveA'];
 
     if($doc == "" || $correo==""|| $telefono==""|| $clave==""){
-        echo "los campos son obligatorios";
+
+        echo "<script> alert('los campos son obligatorios')</script>";
+           
+        echo '<script> window.location="segui.php" </script>';
     }else{
         $existe =0;
         $resultado = mysqli_query($connection,"SELECT * FROM usuario WHERE documento = '$doc'");
@@ -60,6 +63,8 @@ if(isset($_POST['btn_actualizar'])){
         if($existe ==0){
 
             echo "<script> alert('El documento no existe')</script>";
+           
+                echo '<script> window.location="segui.php" </script>';
         }else{
             $actualizar="UPDATE usuario SET correo = '$correo',telefono = '$telefono',clave = '$clave' WHERE documento = '$doc'";
             mysqli_query($connection,$actualizar);
@@ -89,7 +94,7 @@ if(isset($_POST['btn_actualizar'])){
 <body>
 
     <header class="princi">
-
+        
         <div class="logo">
 
             <img class="imagen" height="90" width="90" src="../imagenes/Imagen1.png" alt="">
@@ -154,13 +159,13 @@ if(isset($_POST['btn_actualizar'])){
             <input class="inputR" type="email" name="correoA" maxlength="30"  style="text-transform:uppercase">
 
             <label class="label" for="">*Telefono</label><br>
-            <input class="inputR" type="number" name="telefonoA" maxlength="10"  style="text-transform:uppercase">
+            <input class="inputR" type="number" name="telefonoA" maxlength="11" minlength="9"  style="text-transform:uppercase">
 
             <label class="label" for="">*Clave</label><br>
-            <input class="inputR" type="text" name="claveA" maxlength="10"  style="text-transform:uppercase">
+            <input class="inputR" type="text" name="claveA" maxlength="10" minlength="4" style="text-transform:uppercase">
 
             <label class="label" for="">*Ingrese su documento</label><br>
-            <input class="inputR" type="number" name="documentoA" maxlength="11"  style="text-transform:uppercase">
+            <input class="inputR" type="number" name="documentoA" maxlength="11" minlength="7"  style="text-transform:uppercase">
             <button class="inputR alv" type="submit" name="btn_actualizar">Actualizar</button>
             <button class="inputR alv" id="botonEditar" >Cancelar</button>
 
@@ -187,20 +192,28 @@ if(isset($_POST['btn_actualizar'])){
 
                     
                 </div>
-
-
+                
                 <div class="botones">
                    
 
                     <input class="botonForm" type="button" value="Registar Empresa" id="btnEmpresa">
                     <input class="botonForm" type="button" value="Legalizar" id="btnLegalizar">
                     <input class="botonForm" type="button" value="Cerrar" id="btnCerraDocu">
+                    <form action="" id="formuPDF">
+                    <input class="botonForm" type="button" value="Documentos" id="DocuPDF">
+                    <div id="hidden"></div>
+                    </form>
                 </div>
             </div>
+            <div id="contePDF">
+                <div id="readPDF"></div>
+                <button id="cerrarPDF">cerrar</button>
+            </div>
+            
         </div>
             <!-------------------------------------DIVISION DE FORMULARIO------------------------------------------->
         <div class="registroEmpre" id="registroEmpreS">
-            <input class="botonDeCerrar" type="button" value="X" id="cerrarEmpresa"style="margin-left: 100%;width: 70px;height: 62px;border-radius: 50%;border: 1px solid navajowhite;background: #238276;cursor: pointer">
+            <input class="botonDeCerrar" type="button" value="X" id="cerrarEmpresa"style="margin-left: 100%;width: 70px;height: 62px;border-radius: 50%;border: 1px solid navajowhite;font-size:25px;color:white;background: #238276;cursor: pointer">
             <form method="POST" id="registroEmpre"  autocomplete="off">
 
                 <h1 class="tituloForm">FORMULARIO DE REGISTRO EMPRESA</h1>
@@ -233,9 +246,11 @@ if(isset($_POST['btn_actualizar'])){
                 <select class="inputR" name="id_ciu" id="id_ciu">
                 <script src="validacionformulario.js"></script>
                 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+                <option value="">Elije una ciudad</option>
                     <?php
+                    
                     foreach ($query_ciudad as $tip_ciudad) : ?>
-                        <option value="">Elije una ciudad</option>
+                        
                         <option value="<?php echo $tip_ciudad['id'] ?> ">
                             <?php echo $tip_ciudad['nombre'] ?>---<?php echo $tip_ciudad['nom_depa'] ?></option>
                     <?php
@@ -262,7 +277,7 @@ if(isset($_POST['btn_actualizar'])){
                     <option value="">Seleccione la alternativa</option>
                     <?php
                     foreach ($query_re as $alternativa) : ?>
-                    <option value="">Seleccione</option>
+                    
                         <option value="<?php echo $alternativa['id_alternativa'] ?>">
                             <?php echo $alternativa['id_alternativa'] ?>
                             <?php echo $alternativa['nom_alternativa'] ?></option>
@@ -276,7 +291,7 @@ if(isset($_POST['btn_actualizar'])){
                     <?php
                     foreach ($query_empresa as $empresa) : ?>
                     
-                        <option value="<?php echo $empresa['nit_empresa'] ?> "><?php echo $empresa['nit_empresa'] ?> --
+                        <option value="<?php echo $empresa['nit_empresa'] ?>" require>
                             <?php echo $empresa['nom_empre'] ?></option>
                     <?php
                     endforeach;
@@ -309,60 +324,8 @@ if(isset($_POST['btn_actualizar'])){
         </form>
     </div>
 
-
-    <!--<div class="formCertificar">
-        <div class="informa2">
-            <div class="buscador2">
-                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
-                <form method="POST" id="buscarDocu" name="buscarDocu" class="buscarDocu" autocomplete="off">
-                    <input class="inputE" type="number">
-                    <div class="boton2">
-                        <a href="" id="boton2"><img class="boton2" src="../imagenes/Imagen3.png" height="50px"
-                                width="50px"></a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="datosMostrar2">
-            <h3 class="subTitulo">*DATOS APRENDIZ</h3>
-            <div class="datosApre2">
-                <div class="dato2">
-                    <label class="label2" for="">NOMBRE: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">TELEFONO: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">E-MAIL: </label>
-                    <label class="inputC" for=""></label>
-                </div>
-                <div class="dato2">
-                    <label class="label2" for="">IDENTIFICACIÓN: </label>
-                    <label class="inputC" for=""></label>
-g                </div>
-
-
-            <div class="dato2">
-                <label class="labelE" for="">ESTADO E.P: </label>
-                <label class="inputC" for=""></label>
-            </div>
-
-        </div><br>
-
-
-        <h3 class="subTitulo">*DATOS LEGALIZACIÓN</h3>
-        <div class="datosForma2">
-            <div class="dato">
-                <label class="label2" for="">TIPO DE ALTERNATIVA: </label>
-                <label for="">$bd</label>
-            </div>
-            <!--CODIGO PARA VER DOCUEMENTOS CARGADOS 
-            <br>
-        </div>
-    </div>-->
-
+        
+  
 
     <div class="cargaArchi" id="formularioCertificacion">
     <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
@@ -422,6 +385,8 @@ g                </div>
             <div class="datosR">
                 <label class="labelR">Tipo Documento:</label>
                 <select name="tipdocu" id="tipdocu">
+                    <option value="">Seleccione el documento</option>
+
                     <?php
                     foreach ($query as $tip) : ?>
                     
@@ -435,18 +400,18 @@ g                </div>
             <div class="datosR">
                 <label class="labelR">Documento</label>
                 <input type="number" name="docu" id="docu" class="grupo__aprendiz">
-                <p class="parrafoAprendiz" id="parrafoAprendiz_1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El documento debe contener de 9 a 13 números</p>
+                <p class="parrafoAprendiz" id="parrafoAprendiz_1"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El documento debe contener de 7 a 12 números</p>
             </div>
             
             <div class="datosR">
                 <label class="labelR">Nombres Completos:</label>
-                <input type="text" name="nom" id="nom" maxlength="40"  style="text-transform:uppercase">
+                <input type="text" name="nom" id="nom" maxlength="35"  style="text-transform:uppercase">
                 <p class="parrafoAprendiz" id="parrafoAprendiz_2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El nombre puede contener espacios, no puede tener simbolos</p>
             </div>
             
             <div class="datosR">
                 <label class="labelR">Apellidos Completos:</label>
-                <input type="text" name="ape" id="ape"  maxlength="40"  style="text-transform:uppercase">
+                <input type="text" name="ape" id="ape"  maxlength="35"  style="text-transform:uppercase">
                 <p class="parrafoAprendiz" id="parrafoAprendiz_3"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El apellido puede contener espacios, no puede tener simbolos</p>
             </div>
             
@@ -459,6 +424,7 @@ g                </div>
             <div class="datosR">
                 <label class="labelR">Ciudad:</label>
                 <select class="select" name="id_apren" id="id_ciu">
+                <option value="">Seleccione la ciudad</option>
                     <?php
                     foreach ($query_ciudad as $tip_ciudad) : ?>
                         <option value="<?php echo $tip_ciudad['id'] ?> ">
@@ -472,13 +438,13 @@ g                </div>
             <div class="datosR">
                 <label class="labelR">Teléfono Aprendiz:</label>
                 <input type="number" name="tel" id="tel">
-                <p class="parrafoAprendiz" id="parrafoAprendiz_5"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El telefono solo puede contener numeros y el máximo son 14 digitos</p>
+                <p class="parrafoAprendiz" id="parrafoAprendiz_5"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El telefono solo puede contener numeros,máximo son 10 digitos</p>
             </div>
             
             <div class="datosR">
                 <label class="labelR" >Teléfono celular:</label>
                 <input type="number" name="celular" id="celular">
-                <p class="parrafoAprendiz" id="parrafoAprendiz_6"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El celular solo puede contener numeros y el máximo son 14 digitos</p>
+                <p class="parrafoAprendiz" id="parrafoAprendiz_6"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> El celular solo puede contener numeros,máximo son 11 digitos</p>
             </div>
           
             <div class="datosR">
@@ -490,6 +456,7 @@ g                </div>
             <div class="datosR">
                 <label class="labelR">Ficha de Formación</label>
                 <select class="select" name="ficha" id="id_ciu">
+                <option value="">Seleccione la ficha</option>
                     <?php
                     foreach ($query_ficha as $ficha) : ?>
                         <option value="<?php echo $ficha['num_ficha'] ?> ">
@@ -502,6 +469,32 @@ g                </div>
             <button id="btnguardar">Guardar</button>
             <button id="btncerrarAprendiz">Cerrar</button>   
         </form>
+        <div class="crearFicha">
+            <form action="" method="POST">
+                <label for="">*Numero de ficha</label>
+                <input type="number">
+
+                <label for="">*Jornada</label>
+                <input type="number">
+
+                <label for="">*Nivel</label>
+                <input type="number">
+
+                <label for="">*Formacion</label>
+                <input type="number">
+
+                <label for="">*centro de formacion</label>
+                <input type="number">
+
+                <label for="">hola</label>
+                <input type="date">
+
+                <label for="">hola</label>
+                <input type="date">
+
+            </form>
+
+        </div>
     </div>
 
 
@@ -514,6 +507,7 @@ g                </div>
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
+    
 
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>
@@ -574,6 +568,7 @@ $(document).ready(function() {
                         setTimeout(() => {
                             document.querySelector("#registroEmpre").reset()
                             $('.agrego').html('<p></p>')
+                            window.location="segui.php"
                         }, 2000);
                     
                     exit()

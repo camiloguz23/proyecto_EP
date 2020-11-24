@@ -4,6 +4,8 @@ require_once("connecion.php");
 if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
     
     echo  "<script>alert('identifique el aprendiz')</script>";
+   
+    echo '<script> window.location="../segui/segui.php" </script>';
   
 }else {
     if ($_POST["seleccionTipo"] == 1) {

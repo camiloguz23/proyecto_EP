@@ -1,12 +1,11 @@
 <?php
-require '../php/connecion.php';
 
+require_once '../php/connecion.php';
+    
 
-$sql_ciudad = "SELECT * FROM tipo_evidencias";
-$query_ciudad = mysqli_query($connection, $sql_ciudad);
-$fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,3 +34,5 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 <script src="archi.js"></script>
 </body>
 </html>
+=======
+>>>>>>> a41e06c1ca6ae7317c19e08280ebda90203518ed

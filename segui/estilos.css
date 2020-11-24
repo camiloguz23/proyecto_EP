@@ -875,7 +875,15 @@ input[type=number] { -moz-appearance:textfield; }
 
 }
 
+#readPDF {
+   
+    overflow: scroll;
+    width: fit-content;
+    height: 400px;
+    
+}
 
+<<<<<<< HEAD
 /****************************VALIDACION FORMULARIO REGISTRO LEGALIZACION**************************************/
 .p-cargo-jefe{
     visibility: hidden;
@@ -892,3 +900,20 @@ input[type=number] { -moz-appearance:textfield; }
 .seleccionTipo_n-incorrecto{
     border: solid red;
 }
+=======
+#cerrarPDF{
+    font-size: 25px;
+    width: 100%;
+    padding: 5px 0px;
+    
+}
+
+#contePDF {
+    display: none;
+    width: fit-content;
+    position: fixed;
+    top: 50px;
+    left: 150px;
+}
+
+>>>>>>> a41e06c1ca6ae7317c19e08280ebda90203518ed
