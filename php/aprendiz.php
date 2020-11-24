@@ -19,7 +19,7 @@ if ($dato) {
                         <div class="dato">
                             <label class ="label" for="">NOMBRE: </label>
                             <!-- NO BORRAR LAS CLASES -->
-                            <label class ="datos" for="">'.$dato["nombre_aprend"].'</label>
+                            <label class ="datos" for="">'.$dato["nombre_aprend"].' '.$dato["apellido_aprend"].'</label>
                         </div>
                         <div class="dato">
                             <label class ="label" for="">IDENTIFICACIÓN: </label>
@@ -37,6 +37,9 @@ if ($dato) {
                             <label class ="label" for="">ESTADO: </label>
                             <label class ="datos" for="" id="estadoAprend">'.$dato["nom_estado"].'</label>
                         </div>
+                        <a href="../certificado_leg/imdex.php?documento='.$dato['id_aprend'].'">
+                        <button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute;">Constancia</button>
+                        </a>
                     </div><br>
 
                     <h3 class="subTitulo">*DATOS FORMACIÓN</h3>
