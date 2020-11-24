@@ -78,7 +78,7 @@ body {
 }
 
 .cuadro {
-    width: 280px;
+    width: 298px;
     height: 200px;
     background-color: #ededed;
 
@@ -210,6 +210,10 @@ body {
     background-color: #ffff;
     border-radius: 20px;
     border: 1px solid  black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .opciones_biblioteca a:hover {
