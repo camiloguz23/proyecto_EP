@@ -42,7 +42,7 @@
                     <div class="cuadro" id="cuadro">
                         <form action="../php/crearPazySalvo.php" method="POST" id="frm_1">
                             <label for="documento">Documento de identidad</label>
-                            <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento">
+                            <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento del aprendiz">
                             <input type="hidden" name="usuario" value="<?php echo $usario?>">
                             <input class="submit" type="submit" value="Buscar">
                         </form>
