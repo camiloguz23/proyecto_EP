@@ -4,6 +4,6 @@ $(document).ready(function () {
     $(cuadro).hide(0);
 
     $(boton_paz).click(function (e) { 
-        $(cuadro).slideToggle(500);
+        $(cuadro).slideToggle(250);
     });
 });

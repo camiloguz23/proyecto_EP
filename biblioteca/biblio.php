@@ -69,11 +69,11 @@
 
         <div class="menu">
             <div class="contenedor_paz">
-                <a id="btn_pazysalvo">PAZ Y SALVO</a>
+                <a id="btn_pazysalvo"><img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
                 <div class="cuadro" id="cuadro">
                     <form action="../php/crearPazySalvo.php" method="POST" id="frm_1">
                         <label for="documento">Documento de identidad</label>
-                        <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento">
+                        <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento del aprendiz">
                         <input type="hidden" name="usuario" value="<?php echo $usario?>">
                         <input class="submit" type="submit" value="Buscar">
                     </form>
@@ -94,10 +94,9 @@
         <div class="datos_biblioteca">
             <div class="caja_datos"> 
                 <h4>Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada dia</h4>
-                <p>NOMBRE:</p>
-                <p>EDAD:</p>
-                <p>TELEFONO:</p>
-                <p>EMAIL:</p>
+                <p>NOMBRE: <?php echo $_SESSION['usuario'];?></p>
+                <p>TELEFONO: <?php echo $_SESSION["telefono"];?></p>
+                <p>EMAIL: <?php echo $_SESSION["correo"];?></p>
             </div>
         </div>
 
@@ -106,8 +105,8 @@
         </div>
 
         <div class="opciones_biblioteca">
-            <a href="#">PAZ Y SALVO</a>
-            <a href="#">APRENDICES</a>
+            <a href="#"><img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
+            <a href="#"><img src="../imagenes/Imagen6.png" alt="" width="39" height="30">APRENDICES</a>
         </div>
     </div>
 
