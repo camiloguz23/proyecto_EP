@@ -83,6 +83,7 @@ if (isset($_POST['btn_actualizar'])) {
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="../imagenes/usuario.jpg" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="../imagenes/favicon.ico">
     <title>Seguimiento</title>
 </head>
 
@@ -219,8 +220,10 @@ if (isset($_POST['btn_actualizar'])) {
                 <p class="inputR_p" id="inputR_p"><i class="fas fa-exclamation"></i> Ingrese solo letras y maximo 30 caracteres</p>
 
                 <label class="label" for="">*Nit: </label><br>
+
                 <input class="inputR" type="number" name="nit" id="nit" max="20" style="text-transform:uppercase">
                 <p class="inputR_p-n" id="inputR_p-n"><i class="fas fa-exclamation"></i> Numeros maximo 12 </p>
+
 
                 <label class="label" for="">*Nombre De La Empresa: </label><br>
                 <input class="inputR" type="text" name="nomEmpre" id="nomEmpre" maxlength="25" style="text-transform:uppercase">
@@ -264,7 +267,9 @@ if (isset($_POST['btn_actualizar'])) {
             </form>
         </div>
 
+
         <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">
+
 
             <div class="registroLegal" id="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
@@ -296,11 +301,15 @@ if (isset($_POST['btn_actualizar'])) {
                 <p class="crear" id="crear">+Crear Empresa</p>
 
                 <label class="label" for="">Nombre del jefe inmediato</label><br>
-                <input class="seleccionTipo" type="text" name="jefe" id="" maxlength="40" style="text-transform:uppercase"><br>
+
+                <input class="seleccionTipo" type="text" name="jefe" id="nombre_jefe" maxlength="40"  style="text-transform:uppercase"><br>
+                <p class="p-nombre-jefe" id="p-nombre-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras</p>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>
-                <input class="seleccionTipo" type="text" name="cargoJefe" id="" maxlength="35" style="text-transform:uppercase"><br>
+                <input class="seleccionTipo" type="text" name="cargoJefe" id="cargoJefe" maxlength="35"  style="text-transform:uppercase"><br>
+                <p class="p-cargo-jefe" id="p-cargo-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras</p>
+
                 <label class="label" for="">Fecha de inicio de la etapa productiva</label><br>
-                <input class="seleccionTipo" type="date" name="fecha" id="">
+                <input class="seleccionTipo" type="date" name="fecha" id=""> 
                 <div id="estudiante">
 
                 </div>
@@ -314,6 +323,7 @@ if (isset($_POST['btn_actualizar'])) {
                     <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
+          
         </form>
     </div>
 
@@ -545,6 +555,7 @@ if (isset($_POST['btn_actualizar'])) {
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>
     <script src="validarAprendices.js"></script>
+    <script src="validar_Rlegalizacion.js"></script>
 
 </body>
 
