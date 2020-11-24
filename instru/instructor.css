@@ -422,6 +422,8 @@
 
     
     /*datos del aprendiz*/
+   
+
     .informa
     {
         background-color: #fff;
@@ -447,7 +449,25 @@
         margin-top: -15px;
         padding: 5px;
     }
+    .calificar{
+        margin-left: 87%;
+        background:white;
+        width: 10%;
+        height: 30px;
+        border-radius: 15px;
+        border:2px solid;
+        border-color: #ff5f02;
+        padding: 2px;
+        font-size: 15px;
+        color:#ff5f02;
+        cursor: pointer;
 
+
+    }
+    .calificar{
+        background: #fc7323;
+        color: #fff;
+    }
     .label{
         display: block;
         font-weight:600;
@@ -479,13 +499,30 @@ input[type=number] { -moz-appearance:textfield; }
     margin-left: 20%;
     grid-column: span 2;
 }
-.evide
+
+.tipoEvidencia
+{
+    display: none;
+}
+.tipoEvidencia
 {
     background-color: #fff;
-    width: 20%;
+    width: 70%;
     padding: 15px 30px;
     border-radius: 15px;
     margin-left: 2%;
     margin-top: 2%;
-    text-align: center;
+    
+}
+
+.fomutievi{
+    width: 100%;
+    font-size: 15px;
+    
+}
+/* Esconder */
+.evidencias1, .evidencias2
+{
+    display: none;
+    
 }
