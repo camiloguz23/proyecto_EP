@@ -881,7 +881,7 @@ input[type=number] { -moz-appearance:textfield; }
     top: 50px;
     left: 150px;
 }
-
+/* ---------------------------------------------------CREAR FICHA------------------------------------------------ */
 .crearFicha{
 
     display:none;
@@ -907,16 +907,40 @@ input[type=number] { -moz-appearance:textfield; }
     color: rgb(0, 0, 0);
     font-size: 15px;
     transition: .3s ease all;
-    margin-top: -30px;
+  
     margin-left: 4%;
     cursor: pointer;
+    border:1px solid black;
    
-
+    
 }
 
 .labelF{
     display: block;
     font-weight:600;
     font-size: 14px;
+    margin-left:4%;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 30px;
+    color: rgb(199, 53, 53);
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.tituloF{
+    text-align:center;
+    border:1px solid red;
+}
+
+.cajitFicha{
+    display: block;
+    font-weight:600;
+    font-size: 14px;
     padding: 7px;
+}
+
+#fomularioF{
+    margin-left:7%;
 }

@@ -466,16 +466,16 @@ if (isset($_POST['btn_actualizar'])) {
     </div>
     
     <div class="crearFicha">
-        <h1>CREAR FICHA DE FORMACION</h1>
-        <form action="" method="POST">
+        <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
+        <form action="../php/crearFicha.php" method="POST" id="fomularioF">
 
-            <div class="labelR">
-                <label for="">*Numero de ficha</label>
-                <input type="number" >
+            <div class="datosf">
+                <label for="" class="labelF">*Numero de ficha</label>
+                <input type="number" class="select1" >
             </div>
 
-            <div class="datosR">
-                <label class="labelR">*Jornada</label>
+            <div class="datosf">
+                <label class="labelF">*Jornada</label>
                 <select class="select1" name="ficha" id="id_jor">
                     <option value="">Seleccione la jornada</option>
                     <?php
@@ -488,8 +488,8 @@ if (isset($_POST['btn_actualizar'])) {
                 </select>
             </div>
 
-            <div class="datosR">
-                <label class="labelR">Nivel de formacion</label>
+            <div class="datosf">
+                <label class="labelF">Nivel de formacion</label>
                 <select class="select1" name="ficha" id="id_niv_form">
                     <option value="">Seleccione nivel de formacion</option>
                     <?php
@@ -502,8 +502,8 @@ if (isset($_POST['btn_actualizar'])) {
                 </select>
             </div>
 
-            <div class="datosR">
-                <label class="labelR">Centro de formacion</label>
+            <div class="datosf">
+                <label class="labelF">Centro de formacion</label>
                 <select class="select1" name="ficha" id="id_ficha">
                     <option value="">Seleccione el centro de formacion</option>
                     <?php
@@ -516,15 +516,15 @@ if (isset($_POST['btn_actualizar'])) {
                 </select>
             </div>
 
-            <div class="cajitFicha">
-                <label for="">Fecha inicio</label>
-                <input type="date" class="labelF">
+            <div class="cajitFicha datosf">
+                <label for="" class="labelF">Fecha inicio</label>
+                <input type="date" class="select1">
             </div>
 
-            <div class="cajitFicha">
+            <div class="cajitFicha datosf">
 
-                <label for="">Fecha fin</label>
-                <input type="date" class="labelF">
+                <label for="" class="labelF">Fecha fin</label>
+                <input type="date" class="select1">
             </div>
 
         </form>
