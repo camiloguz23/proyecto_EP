@@ -4,10 +4,11 @@ require '../php/connecion.php';
 
 $ins = $_POST["docuinst"];
 $apre = $_POST["documenapre"];
-$check1 = $_POST["evi1"];
-$fecha = $_POST ["fechaE"];
+$cheq =$_POST["check"];
 
-$evidencia = "INSERT INTO calificacion (id_calificaciones,id_docu_instru,id_docu_apren,id_evidencias,fecha,estado) VALUES (null,'$ins','$apre','$check1', '$fecha','calificado')";
+echo($ins);
+
+$evidencia = "INSERT INTO calificacion (id_crear_evi,id_aprend,id_evidencias,id_esta_evi,id_doc_instru,fecha_cali) VALUES(null,'$apre','$cheq',1,'$ins', NOW()) ";
 $sql = mysqli_query($connection, $evidencia);
 
 if($sql)
