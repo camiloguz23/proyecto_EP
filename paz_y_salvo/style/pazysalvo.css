@@ -1,277 +1,156 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 body {
-    font-family: Verdana;
+    font-size: 12px;
 }
 
 .contenedor {
-    padding: 5px;
-}
-
-/* Header formulario */
-
-.contenedor_header {
-    display: flex;
-    flex-direction: row;
+    width: 90%;
+    height: 1000px;
     border: 2px solid black;
+    margin: 20px auto;
 }
 
-.header_logo {
-    width: 20%;
-}
-
-
-.header_titulo {
-    width: 80%;
+.header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid black;
 
     display: flex;
-    flex-direction: column;
+}
+
+.logo {
+    width: 20%;
+    height: 100%;
+}
+
+.titulo {
+    width: 80%;
+    height: 100%;
+
+    text-align: center;
+
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Datos formulario */
-
-.paz_datos {
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+.sigasena {
+    width: 160px;
 }
 
-.datos_paz {
+.containt_titulo {
+    height: 100%;
+    width: 60%;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datos_iniciales {
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicial_1, .inicial_2 {
     width: 50%;
-    padding: 20px 10px;
-
-    border-right: 2px dotted black;
+    height: 100%;
 }
 
-.datos_paz p {
-    font-size: 12px;
+.inicial_1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
-.datos_paz-lineas {
+.inicial_2 {
+    border-left: 1px dotted black;
+}
+
+.inicial_1-p {
+    width: 30%;
+    height: 100%;
+
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
 }
 
-.datos_paz-lineas div{
-    width: 400px;
-    height: 1px;
-    border-bottom: 1px dotted black;
-    margin: 8px 0;
-    margin-left: 40px;
-}
+.inicial_1-linea {
+    width: 70%;
+    height: 100%;
 
-/* Datos del aprendiz */
-
-.paz_datos-usuario {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-
-    border: 2px solid black;
-    margin: 10px 0;
-    padding: 10px;
+    justify-content: space-evenly;
 }
 
-.datos_usuario-header {
+.linea {
+    width: 90%;
+    height: 15px;
+    border-bottom: 1px dotted black;
+}
+
+.datos_aprendiz {
     width: 100%;
-    text-align: center;
-
-    margin-bottom: 5px;
+    height: 170px;
+    border-bottom: 2px solid black;
 }
 
-.contenedor-columnas {
+.datos_aprendiz-header {
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_columnas {
+    margin-top: 5px;
+    width: 100%;
+    height: 130px;
+
     display: flex;
 }
 
-.datos_usuario-columna1, .datos_usuario-columna2 {
+.columna_1, .columna_2 {
     width: 50%;
+    height: 100%;
 }
 
-.datos_usuario-columna1 p, .datos_usuario-columna2 p{
-    font-size: 13px;
-    margin: 10px;
+.linea_aprendiz {
+    height: 20px;
+    border-bottom: 1px dotted black;
 }
 
-.datos_usuario-columna1 div, .datos_usuario-columna2 div {
-    border-bottom: 2px dotted black;
-}
-
-.paz_responables {
-    height: auto;
-/*
-    display: grid;
-    grid-template-columns: 1fr 80px 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px;
-*/
-                         
-}
-
-/* .paz_responsables-funcionarios {
-    grid-area: funcionarios;
-}
-
-.paz_responsables-marcar {
-    grid-area: marcar;
-}
-
-.paz_responsables-responsables {
-    grid-area: responsables;
-    text-align: center;
-}
-
-.paz_responsables-descripcion {
-    grid-area: descripcion;
-} */
-
-/* .paz_responsables-nombres {
-    grid-area: nombres;
-    text-align: center;
-    line-height: 25px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-}
-
-.grid-columna {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-}
-
-.centrar {
-    text-align: center;
-}
-
-/* .columnas { 
-    width: 100%;
-    height: auto;
-} */
-
-/* .firma_form-desaparecer{
-    display: none;
-} */
-
-/* .fila {
-    height: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-
-}
-
-.fila-especial {
-    height: 101px;
-    width: 100%;
-}
-
-.fila-especial1 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    width: 100%;
-    height: 50%;
-}
-
-.fila-especial2 {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    width: 100%;
-    height: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fila-especial3 {
-    border-top: 1px solid black;
-    width: 100%;
-    height: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fila-especial4 {
-    width: 100%;
-    height: 50%;
-
-    border-top: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fila-especial5 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-
-    width: 100%;
-    height: 50%;
-}
-
-.fila-especial6 {
-    width: 99.53%;
-    height: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-} */
-
-.paz_responables p {
-    font-size: 12px;
-}
-
-.paz_responables {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-table {
-    font-size: 14px;
-}
-
-table th {
-    text-align: center;
-    padding: 10px;
-    border: 2px solid black;
-    color: black;
-}
-
-table td {
-    padding: 10px;
+table th, table td{
     border: 1px solid black;
 }
 
 .paz_firma-aprendiz {
     display: flex;
     flex-direction: row;
-    font-size: 13px;
-    border: 2px solid black;
     padding: 5px;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .paz_firma-aprendiz .texto_aprendiz {
     width: 70%;
-    height: 100px;
+    height: 70px;
 }
 
 .paz_firma-aprendiz .firma_aprendiz {
@@ -292,17 +171,15 @@ table td {
 .contenedor_footer {
     margin-top: 10px;
     padding: 5px;
-    font-size: 13px;
-    border: 2px solid black;
 }
 
 .espacio_observacion {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .observacion {
     width: 100%;
-    height: 40px;
+    height: 20px;
     border-top: 1px dotted black;
 }
 
@@ -336,10 +213,37 @@ table td {
     color: white;
     margin: 20px 20px;
     padding: 5px 20px;
+
 }
 
 .btn_firma1:hover{
     background-color: #f7813e;
     box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 3);
     transform: translateY(5px);
+}
+
+.img_firma {
+    width: 90px;
+}
+
+@media print{
+    h4 {
+        font-size: 13px;
+    }
+
+    .datos_iniciales {
+        height: 100px;
+    }
+
+    .inicial_1-p {
+        width: 50%;
+    }
+
+    .inicial_1-linea {
+        width: 50%;
+    }
+
+    .btn_regresar {
+        display: none;
+    }
 }

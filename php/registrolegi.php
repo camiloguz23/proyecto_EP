@@ -1,6 +1,7 @@
 <?php
 require_once("connecion.php");
-
+session_start();
+$_SESSION["estudiante"] = $_POST["docuEstudiante"];
 if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
     
     echo  "<script>alert('identifique el aprendiz')</script>";
@@ -13,22 +14,22 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
         $nombre= $_FILES['GFPI'] ['name'];
         $ruta = $_FILES["GFPI"] ["tmp_name"];
         $destino = "../segui/pdfLEgalizacion/".$nombre;
-        echo $nombre;
+        
         $nombreDOs= $_FILES['ContratoAprendizaje'] ['name'];
         $rutaDos = $_FILES["ContratoAprendizaje"] ["tmp_name"];
         $destinoDos = "../segui/pdfLEgalizacion/".$nombreDOs;
-        echo $nombreDOs;
+        
         #dato ingresados por el usuario
         $documento = $_POST["docuEstudiante"];
         echo $documento;
         $Alternativa = $_POST["seleccionTipo"];
-        echo $Alternativa;
+        
         $empresa = $_POST["empresa"];
-        echo $empresa = $empresa;
+        
         $jefe = $_POST["jefe"];
-        echo $empresa = $jefe;
+        
         $cargoJefe = $_POST["cargoJefe"];
-        echo $empresa = $cargoJefe;
+        
         
 
         $fecha = $_POST["fecha"];
@@ -40,7 +41,8 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        
+                        header("location: ../php/constancia.php");
                     }else{
                         echo "30 linea";
                     }
@@ -48,7 +50,8 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     echo "linea 27";
                 }
             }else {
-                echo "linea 24";
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
             }
         }else {
             echo "23 linea";
@@ -84,9 +87,12 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $sqlEstado= mysqli_query($connection,$estado);
                     
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        header("location: ../php/constancia.php");
                     }
                 }
+            }else {
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
             }
         }
     } elseif ($_POST["seleccionTipo"] == 3 || $_POST["seleccionTipo"] == 4 || $_POST["seleccionTipo"] == 5 ){
@@ -127,9 +133,12 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        header("location: ../php/constancia.php");
                     }
                 }
+            }else {
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
             }
         }
     }elseif ($_POST["seleccionTipo"] == 7) {
@@ -166,12 +175,20 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
                     $estado ="UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_aprend = '$documento'";
                     $sqlEstado= mysqli_query($connection,$estado);
                     if ($sqlEstado) {
-                        header("location: ../segui/segui.php");
+                        header("location: ../php/constancia.php");
                     }
+                   }else{
+                       echo "hola";
                    }
-               }
+               }else {
+                echo("<script>alert('No se han cargado los documentos completos')</script>");
+                header("location: ../segui/segui.php");
+                }
            }
     }
     
 }  
 ?>
+
+
+

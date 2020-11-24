@@ -25,7 +25,11 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="instructor.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<<<<<<< HEAD
+    <link rel="icon" href="../imagenes/favicon.ico">
+=======
 
+>>>>>>> a41e06c1ca6ae7317c19e08280ebda90203518ed
     <title>INSTRUCTOR</title>
 </head>
 
