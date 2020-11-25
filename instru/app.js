@@ -19,6 +19,7 @@ const formula = document.getElementById("fore");
 const fragmen = document.createDocumentFragment();
 const contenedor = document.getElementById('contenedor');
 
+
 formu.addEventListener("submit", (e)=>
 {
     e.preventDefault();
@@ -52,7 +53,6 @@ formu.addEventListener("submit", (e)=>
                         contenedor.appendChild(elemento1);
                         contenedor.appendChild(label);
                         formula.appendChild(contenedor);
-                        //elemento1.style.display ="block";
                         fragmen.appendChild(elemento1);
                     })
                     formula.appendChild(fragmen);
@@ -149,7 +149,6 @@ formu.addEventListener("submit", (e)=>
                         contenedorr.appendChild(elemento2);
                         contenedorr.appendChild(labell);
                         formula.appendChild(contenedorr);
-                        //elemento1.style.display ="block";
                         fragmen.appendChild(elemento2);
                     })
                     formula.appendChild(fragmen);
