@@ -34,32 +34,44 @@ $destinocedula = "../segui/pdfCertificacion/".$cedula;
 $cedulaAprendiz = $_POST["docuAprendiz"];
 $cedulaUsuario = $_POST["usuario"];
 
+$validarestu = "SELECT * FROM detalle_formacion where id_aprend = '$cedulaAprendiz'";
+$sqlvalidar = mysqli_query($connection,$validarestu);
+$datovalidar = mysqli_fetch_assoc($sqlvalidar);
 
+if ($datovalidar["id_estado"] == 2) {
 
-if ($cedulaAprendiz != "" || $cedulaAprendiz != null) {
+    if ($cedulaAprendiz != "" || $cedulaAprendiz != null) {
 
-    if (copy($rutaComCERT,$destinoComCERt) && copy($rutaCosntLabo,$destinoConsLabo) && copy($rutaFormaSegui,$destinoFormaSegui) && copy($rutaProsaber,$destinoProsaber) && copy($rutaPazysalvo,$destinoPAzysalvo) && copy($rutaEPA,$destinoEPA) && copy($rutacedula,$destinocedula)) {
-
-        $consulta = "INSERT INTO certificacion(id_certificacion, id_aprend, documento, fecha, evidencias_etapa_productiva, Compromiso_Certificación, Constancia_laboral, Formato_Seguimiento, Formato_Prueba_Saber_Pro, Paz_y_Salvo, Formato_APE, CC_fotocopia) VALUES ('','$cedulaAprendiz','$cedulaUsuario',NOW(),'$chequeo','$compromisoCERT','$constaciaLabo','$formaSegui','$prosaber','$pazysalvo','$EPA','$cedula')";
-        $sql = mysqli_query($connection,$consulta);
-
-        if ($sql) {
-            $estado ="UPDATE detalle_formacion SET id_estado = '3' WHERE detalle_formacion.id_aprend = '$cedulaAprendiz'";
-            $sqlEstado= mysqli_query($connection,$estado);
-
-            if ($sqlEstado) {
-                echo ("existo");
-            }else{
-                echo "fallo en cambio de estado";
+        if (copy($rutaComCERT,$destinoComCERt) && copy($rutaCosntLabo,$destinoConsLabo) && copy($rutaFormaSegui,$destinoFormaSegui) && copy($rutaProsaber,$destinoProsaber) && copy($rutaPazysalvo,$destinoPAzysalvo) && copy($rutaEPA,$destinoEPA) && copy($rutacedula,$destinocedula)) {
+    
+            $consulta = "INSERT INTO certificacion(id_certificacion, id_aprend, documento, fecha, evidencias_etapa_productiva, Compromiso_Certificación, Constancia_laboral, Formato_Seguimiento, Formato_Prueba_Saber_Pro, Paz_y_Salvo, Formato_APE, CC_fotocopia) VALUES ('','$cedulaAprendiz','$cedulaUsuario',NOW(),'$chequeo','$compromisoCERT','$constaciaLabo','$formaSegui','$prosaber','$pazysalvo','$EPA','$cedula')";
+            $sql = mysqli_query($connection,$consulta);
+    
+            if ($sql) {
+                $estado ="UPDATE detalle_formacion SET id_estado = '3' WHERE detalle_formacion.id_aprend = '$cedulaAprendiz'";
+                $sqlEstado= mysqli_query($connection,$estado);
+    
+                if ($sqlEstado) {
+                    echo ("2");
+                }else{
+                    echo "fallo en cambio de estado";
+                }
+            }else {
+                echo "fallo en la cosulta de certificado";
             }
-        }else {
-            echo "fallo en la cosulta de certificado";
+        }else{
+            echo "copia de documentos";
         }
     }else{
-        echo "copia de documentos";
+        echo "4";
     }
+}elseif ($datovalidar["id_Estado"] == 3) {
+    echo "3";
 }else{
-    echo "no ingreso";
+    echo "1";
 }
+
+
+
 
 ?>
