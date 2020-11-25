@@ -19,7 +19,8 @@
         $celular = $_POST["celular"];
         $direccion = $_POST["direccion"];
         $ficha = $_POST["ficha"];
-        
+
+        if($tipdoc !="" && $ficha !="" && $id !=""  ){
         $consultaApre = "SELECT * FROM aprendices where id_aprend = '$docu'";
         $sqlApre = mysqli_query($connection,$consultaApre);
         $datoApre = mysqli_fetch_assoc($sqlApre);
@@ -38,7 +39,9 @@
                 echo mysqli_query($connection,$consulta);
             }
         }
-
+      }else{
+          echo "3";
+      }
     }
 
    
