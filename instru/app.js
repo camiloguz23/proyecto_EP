@@ -43,11 +43,11 @@ formu.addEventListener("submit", (e)=>
                         elemento1.setAttribute("class", "check");
                         elemento1.setAttribute("name","check");
                         elemento1.setAttribute("value",`${el.id_evidencias}`)
-                        if(el.nom_evidencias === "EVIDENCIA 1"){
-                            elemento1.removeAttribute("disabled");
-                        }else{
-                            elemento1.setAttribute("disabled" , "true");
-                        }
+                        // if(el.nom_evidencias === "EVIDENCIA 1"){
+                        //     elemento1.removeAttribute("disabled");
+                        // }else{
+                        //     elemento1.setAttribute("disabled" , "true");
+                        // }
                         label.appendChild(document.createTextNode(texto));
                         contenedor.appendChild(elemento1);
                         contenedor.appendChild(label);
@@ -58,72 +58,72 @@ formu.addEventListener("submit", (e)=>
                     formula.appendChild(fragmen);
                     
                  // funcion habilitar elemento
-                    function habilitar(elemento,habili)
-                    {
-                        const elementohabilitar = document.getElementById(habili);
-                        const habilitardos = document.getElementById(elemento);
+                    // function habilitar(elemento,habili)
+                    // {
+                    //     const elementohabilitar = document.getElementById(habili);
+                    //     const habilitardos = document.getElementById(elemento);
                         
     
-                                if(habilitardos.checked==true){
-                                let conf  = confirm("esta seguro de calificar la actividad");
-                                    if(conf== true){
-                                        elementohabilitar.removeAttribute("disabled");
-                                    }
-                                    else{
-                                        habilitardos.checked=false;
-                                    }
+                    //             if(habilitardos.checked==true){
+                    //             let conf  = confirm("esta seguro de calificar la actividad");
+                    //                 if(conf== true){
+                    //                     elementohabilitar.removeAttribute("disabled");
+                    //                 }
+                    //                 else{
+                    //                     habilitardos.checked=false;
+                    //                 }
                                     
-                                }
-                    }
+                    //             }
+                    // }
 
-                        function ejecutar(e)
-                        {
-                        switch (e.target.id) 
-                            {
-                            case "EVIDENCIA 1":
-                                habilitar("EVIDENCIA 1","EVIDENCIA 2");
-                                break;
-                            case "EVIDENCIA 2":
-                                habilitar("EVIDENCIA 2","EVIDENCIA 3");
-                                break;
-                            case "EVIDENCIA 3":
-                                habilitar("EVIDENCIA 3","EVIDENCIA 4");
-                                break;
-                            case "EVIDENCIA 4":
-                                habilitar("EVIDENCIA 4","EVIDENCIA 5");
-                                break;
-                            case "EVIDENCIA 5":
-                                habilitar("EVIDENCIA 5","EVIDENCIA 6");
-                                break;
-                            case "EVIDENCIA 6":
-                                habilitar("EVIDENCIA 6","EVIDENCIA 7");
-                                break;
-                            case "EVIDENCIA 7":
-                                habilitar("EVIDENCIA 7","EVIDENCIA 8");
-                                break;
-                            case "EVIDENCIA 8":
-                                habilitar("EVIDENCIA 8","EVIDENCIA 9");
-                                break;
-                            case "EVIDENCIA 9":
-                                habilitar("EVIDENCIA 9","EVIDENCIA 10");
-                                break;
-                            case "EVIDENCIA 10":
-                                habilitar("EVIDENCIA 10","EVIDENCIA 11");
-                                break;
-                            case "EVIDENCIA 11":
-                                habilitar("EVIDENCIA 11","EVIDENCIA 12");
-                                break;
+                    //     function ejecutar(e)
+                    //     {
+                    //     switch (e.target.id) 
+                    //         {
+                    //         case "EVIDENCIA 1":
+                    //             habilitar("EVIDENCIA 1","EVIDENCIA 2");
+                    //             break;
+                    //         case "EVIDENCIA 2":
+                    //             habilitar("EVIDENCIA 2","EVIDENCIA 3");
+                    //             break;
+                    //         case "EVIDENCIA 3":
+                    //             habilitar("EVIDENCIA 3","EVIDENCIA 4");
+                    //             break;
+                    //         case "EVIDENCIA 4":
+                    //             habilitar("EVIDENCIA 4","EVIDENCIA 5");
+                    //             break;
+                    //         case "EVIDENCIA 5":
+                    //             habilitar("EVIDENCIA 5","EVIDENCIA 6");
+                    //             break;
+                    //         case "EVIDENCIA 6":
+                    //             habilitar("EVIDENCIA 6","EVIDENCIA 7");
+                    //             break;
+                    //         case "EVIDENCIA 7":
+                    //             habilitar("EVIDENCIA 7","EVIDENCIA 8");
+                    //             break;
+                    //         case "EVIDENCIA 8":
+                    //             habilitar("EVIDENCIA 8","EVIDENCIA 9");
+                    //             break;
+                    //         case "EVIDENCIA 9":
+                    //             habilitar("EVIDENCIA 9","EVIDENCIA 10");
+                    //             break;
+                    //         case "EVIDENCIA 10":
+                    //             habilitar("EVIDENCIA 10","EVIDENCIA 11");
+                    //             break;
+                    //         case "EVIDENCIA 11":
+                    //             habilitar("EVIDENCIA 11","EVIDENCIA 12");
+                    //             break;
 
-                            default:
-                                break;
-                            }
-                        }
+                    //         default:
+                    //             break;
+                    //         }
+                    //     }
  
-                    const opciones =document.querySelectorAll(".check");
-                    opciones.forEach((el)=>{
-                        el.addEventListener("click",ejecutar);
+                    // const opciones =document.querySelectorAll(".check");
+                    // opciones.forEach((el)=>{
+                    //     el.addEventListener("click",ejecutar);
                         
-                    })
+                    // })
     
 
                 }
@@ -140,11 +140,11 @@ formu.addEventListener("submit", (e)=>
                         elemento2.setAttribute("class", "check");
                         elemento2.setAttribute("name","check");
                         elemento2.setAttribute("value",`${el.id_evidencias}`)
-                        if(el.nom_evidencias === "EVIDENCIA PARCIAL"){
-                            elemento2.removeAttribute("disabled");
-                        }else{
-                            elemento2.setAttribute("disabled" , "true");
-                        }
+                        // if(el.nom_evidencias === "EVIDENCIA PARCIAL"){
+                        //     elemento2.removeAttribute("disabled");
+                        // }else{
+                        //     elemento2.setAttribute("disabled" , "true");
+                        // }
                         labell.appendChild(document.createTextNode(textoo));
                         contenedorr.appendChild(elemento2);
                         contenedorr.appendChild(labell);
@@ -155,41 +155,41 @@ formu.addEventListener("submit", (e)=>
                     formula.appendChild(fragmen);
                     
                  // funcion habilitar elemento
-                    function habilitar(elemento,habili)
-                    {
-                        const elementohabilitar = document.getElementById(habili);
-                        const habilitardos = document.getElementById(elemento);
+                    // function habilitar(elemento,habili)
+                    // {
+                    //     const elementohabilitar = document.getElementById(habili);
+                    //     const habilitardos = document.getElementById(elemento);
                         
     
-                                if(habilitardos.checked==true){
-                                let conf  = confirm("esta seguro de calificar la actividad");
-                                    if(conf== true){
-                                        elementohabilitar.removeAttribute("disabled");
-                                    }
-                                    else{
-                                        habilitardos.checked=false;
-                                    }
+                    //             if(habilitardos.checked==true){
+                    //             let conf  = confirm("esta seguro de calificar la actividad");
+                    //                 if(conf== true){
+                    //                     elementohabilitar.removeAttribute("disabled");
+                    //                 }
+                    //                 else{
+                    //                     habilitardos.checked=false;
+                    //                 }
                                     
-                                }
-                    }
+                    //             }
+                    // }
 
-                        function ejecutar(e)
-                        {
-                        switch (e.target.id) 
-                            {
-                            case "EVIDENCIA PARCIAL":
-                                habilitar("EVIDENCIA PARCIAL","EVIDENCIA FINAL");
-                                break;
-                            default:
-                                break;
-                            }
-                        }
+                    //     function ejecutar(e)
+                    //     {
+                    //     switch (e.target.id) 
+                    //         {
+                    //         case "EVIDENCIA PARCIAL":
+                    //             habilitar("EVIDENCIA PARCIAL","EVIDENCIA FINAL");
+                    //             break;
+                    //         default:
+                    //             break;
+                    //         }
+                    //     }
  
-                    const opciones =document.querySelectorAll(".check");
-                    opciones.forEach((el)=>{
-                        el.addEventListener("click",ejecutar);
+                    // const opciones =document.querySelectorAll(".check");
+                    // opciones.forEach((el)=>{
+                    //     el.addEventListener("click",ejecutar);
                         
-                    })
+                    // })
 
                 }
             

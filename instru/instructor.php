@@ -25,11 +25,8 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="instructor.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<<<<<<< HEAD
     <link rel="icon" href="../imagenes/favicon.ico">
-=======
 
->>>>>>> a41e06c1ca6ae7317c19e08280ebda90203518ed
     <title>INSTRUCTOR</title>
 </head>
 
@@ -107,16 +104,21 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
         <!--datos del aprendiz -->
         <div class="informa">
         <button id="calificar" class="calificar" name="calificar">Calificar</button>
+        <form action="evide.php" method="POST" class="regica">
+        <div class="aprendiz" id= "hidden" ></div>
+                <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
+            <input type="submit" value="seguimiento de actividades">
+        </form>
             <div id="informa">
             
                 <!--</div>-->
-                <form action="evide.php" method="POST" class="regica">
-            <input type="submit" value="seguimiento de actividades">
-        </form>
+                
             
             </div>
             <div class="tipoEvidencia" id="tipoEvidencia">
             <form id="fomutievi" class="fomutievi">
+                <div class="aprendiz" id= "hidden" ></div>
+                <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
                 <label for="">*Seleccione el tipo de evidencia que desea calificar:</label><br>
                 <select class="inputR" name="tip_evi" id="tip_evi">
                         <?php
