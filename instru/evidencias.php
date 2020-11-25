@@ -1,4 +1,3 @@
-
 <?php
 require '../php/connecion.php';
 
@@ -8,7 +7,7 @@ $cheq =$_POST["check"];
 
 echo($ins);
 
-$evidencia = "INSERT INTO calificacion (id_crear_evi,id_aprend,id_evidencias,id_esta_evi,id_doc_instru,fecha_cali) VALUES(null,'$apre','$cheq',1,'$ins', NOW()) ";
+$evidencia = "UPDATE calificacion SET id_esta_evi=2,id_doc_instru=$ins,fecha_cali=now() WHERE `id_evidencias`=$cheq ";
 $sql = mysqli_query($connection, $evidencia);
 
 if($sql)
