@@ -356,7 +356,7 @@ if (isset($_POST['btn_actualizar'])) {
                 </div>
 
                 <div class="botones">
-                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523" onclick="validar_selecs()">
+                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523" >
                     <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
