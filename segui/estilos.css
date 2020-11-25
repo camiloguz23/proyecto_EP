@@ -920,7 +920,7 @@ input[type=number] { -moz-appearance:textfield; }
 
 .crearFicha{
 
-    display:none;
+    
     position:absolute;
     border:21px solid #fc7323;
  
@@ -932,7 +932,7 @@ input[type=number] { -moz-appearance:textfield; }
     border-radius:10px;
     margin-left:10%;
     margin-top:-32%;
-   
+    /* display:none; */
 }
 
 .select1{
