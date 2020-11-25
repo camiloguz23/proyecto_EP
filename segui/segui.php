@@ -426,7 +426,7 @@ if (isset($_POST['btn_actualizar'])) {
             <div class="datosR">
                 <label class="labelR">Tipo Documento:</label>
                 <select name="tipdocu" id="tipdocu">
-                    <option value="">Seleccione el documento</option>
+                    <option value="" >Seleccione el documento</option>
 
                     <?php
                     foreach ($query as $tip) : ?>
@@ -522,6 +522,9 @@ if (isset($_POST['btn_actualizar'])) {
         </form>
 
     </div>
+
+
+
     <!------------crear ficha--------------- -->
     <div class="crearFicha" id="fichaOcul">
         <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
@@ -652,8 +655,10 @@ $(document).ready(function() {
 
                 } else if (a == "existe") {
                     alert('Aprendiz ya existe');
+                }else if(a == 3){
+                    alert('llena los campos correctamente')
                 } else {
-                    alert("error")
+                    alert("llena los campos correctamente")
                 }
 
             }
