@@ -323,12 +323,21 @@ function enviaBD(e) {
         .then(res => res.text())
         .then(bd => {
             console.log(bd)
-            if (bd == "existo") {
+            if (bd == "2") {
                 alert("alumno ya esta en inicio de certificacion")
                 setTimeout(() => {
                     resetformuceti.reset();
                     formularioCerti.style.display="none"
                 }, 2000);
+            }else if (bd == "3"){
+                alert("El aprendiz ya esta certificado")
+                resetformuceti.reset();
+            }else if(bd == "4") {
+                alert("ingrese documento del aprendiz")
+                resetformuceti.reset();
+                    formularioCerti.style.display="none"
+            }else {
+                alert("el aprendiz no esta legalizado")
             }
         })
         .catch(error => console.log(error))
