@@ -490,3 +490,4 @@ function validarExt_FotocopiaCC()
 
 const formularioBuscaCer = document.getElementById("forBus")
 const btnmostrar = document.getElementById("btnMostrar")
+
