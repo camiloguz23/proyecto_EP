@@ -2,13 +2,19 @@
 require_once("connecion.php");
 session_start();
 $_SESSION["estudiante"] = $_POST["docuEstudiante"];
-if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
+if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null ){
     
     echo  "<script>alert('identifique el aprendiz')</script>";
    
     echo '<script> window.location="../segui/segui.php" </script>';
   
 }else {
+
+    if($_POST['seleccionTipo'] =="0" || $_POST['empresa'] =="0"){
+        echo  "<script>alert('llene los campos de seleccionar')</script>";
+        echo '<script> window.location="../segui/segui.php" </script>';
+    }else{
+
     if ($_POST["seleccionTipo"] == 1) {
         #archivos pdf
         $nombre= $_FILES['GFPI'] ['name'];
@@ -187,6 +193,7 @@ if ($_POST["docuEstudiante"] == "" || $_POST["docuEstudiante"] == null) {
            }
     }
     
+}
 }  
 ?>
 
