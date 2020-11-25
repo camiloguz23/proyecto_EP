@@ -1026,3 +1026,11 @@ input[type=number] { -moz-appearance:textfield; }
     margin-bottom:20px;
    
 }
+
+#buscadorCer {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    background-color: #fc7323;
+    padding: 6px 15px;
+}

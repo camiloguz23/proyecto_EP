@@ -605,6 +605,7 @@ if (isset($_POST['btn_actualizar'])) {
             <div class="agregoF"></div>
 
             <div class="botonesF">
+                
                 <button class="btnEnviar" id="crearficha">CREAR</button>
                 <button class="btnCerrar" id="cerrarF">CERRAR</button>
             </div>
@@ -623,7 +624,14 @@ if (isset($_POST['btn_actualizar'])) {
         </div>
     </footer>
 
-
+    <div id="buscadorCer">
+        <h2>Ingrese documento del aprendiz</h2>
+        <form action="" id="forBus">
+            <input type="number" name="documento" id=""><br>
+            <button>Consultar</button>
+        </form>
+        <button> certific</button>
+    </div>
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>
     <script src="validarAprendices.js"></script>
