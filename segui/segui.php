@@ -551,7 +551,7 @@ if (isset($_POST['btn_actualizar'])) {
                     <option value="">Seleccione nivel de formacion</option>
                     <?php
                     foreach ($query_formacion as $formacion) : ?>
-                    <option value="<?php echo $ficha['id_nivel'] ?> ">
+                    <option value="<?php echo $formacion['id_nivel'] ?> ">
                         <?php echo $formacion['nom_nivel'] ?></option>
                     <?php
                     endforeach;
@@ -578,7 +578,7 @@ if (isset($_POST['btn_actualizar'])) {
                     <option value="">Seleccione el programa de formacion</option>
                     <?php
                     foreach ($query_pro_formacion as $ficha_pro_formacion) : ?>
-                    <option value="<?php echo $ficha['id_formacion'] ?> ">
+                    <option value="<?php echo $ficha_pro_formacion['id_formacion'] ?> ">
                         <?php echo $ficha_pro_formacion['nom_formacion'] ?></option>
                     <?php
                     endforeach;
@@ -587,13 +587,13 @@ if (isset($_POST['btn_actualizar'])) {
             </div>
 
             <div class="cajitFicha datosf">
-                <label for="" class="labelF">*Fecha inicio</label>
+                <label for="" class="labelF">*Fecha inicio etapa productiva</label>
                 <input type="date" class="select1" name="fechaiF">
             </div>
 
             <div class="cajitFicha datosf">
 
-                <label for="" class="labelF">*Fecha fin</label>
+                <label for="" class="labelF">*Fecha fin etapa productiva</label>
                 <input type="date" class="select1" name="fechaF">
             </div>
 

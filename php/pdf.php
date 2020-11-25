@@ -38,6 +38,8 @@ if ($dato) {
     }else {
         echo "no";
     }
+}else{
+    echo "no";
 }
 
 ?>

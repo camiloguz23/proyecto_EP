@@ -356,8 +356,13 @@ function mostrarPDF() {
             method: "POST",
             body: file
         }).then(res => res.text()).then(valor => {
-            contePDF.style.display = "block"
-            readPDF.innerHTML = `${valor}`
+            if(valor == "no"){
+                alert("aprendiz no esta legalizado")
+            }else{
+                contePDF.style.display = "block"
+                readPDF.innerHTML = `${valor}`
+            }
+            
         })
     }
 }

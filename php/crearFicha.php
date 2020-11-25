@@ -15,7 +15,7 @@
                 $centroFormacion =$_POST['centroFormacion'] ;
                 $fechaiF = $_POST['fechaiF'];
                 $fechaF = $_POST['fechaF'];
-            }
+            
        
             if($numf != "" && $jornadaF != "" && $NivelFormacion != "" && $centroFormacion != "" && $fechaiF != "" && $fechaF != ""){
               
