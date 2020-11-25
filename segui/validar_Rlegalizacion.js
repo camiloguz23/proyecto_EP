@@ -58,14 +58,6 @@ const bloqueo_L = (e) =>{
     }
 } 
 
-function validar_selecs(){
-   if(select_formulario_legalizar_alternativa.value ==0 && select_formulario_legalizar_empresa.value ==0){
-    alert('llene los campos de seleccionar');
-    return false;
-   }else{
-       alert('datos enviados correctamente');
-   }
-}
 
 inputs_formulario_legalizacion.forEach((input)=>{
     input.addEventListener('keyup', validarformulario_L);
