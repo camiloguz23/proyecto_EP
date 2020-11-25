@@ -143,7 +143,7 @@ function consulta(e) {
             const info = document.querySelector("#informa")
             info.innerHTML = xhr.responseText;
             estudiante(docuBase);
-            datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
+            datoAprendizinnerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
             informar.style.display = "block"
             // const estadoAprend = document.getElementById("estadoAprend").value
             // console.log(estadoAprend+"funciona")
@@ -492,13 +492,49 @@ function validarExt_FotocopiaCC()
 const formularioBuscaCer = document.getElementById("forBus")
 const btnmostrar = document.getElementById("btnMostrar")
 const cerrarBusCert = document.getElementById("cerrarBusCert")
-
+const inputdocu = document.getElementById("docuvalicer")
+btnmostrar.disabled = true
 formularioBuscaCer.addEventListener("submit", (e) => {
     e.preventDefault()
     let datos = new FormData(formularioBuscaCer)
     fetch("../php/buscadorCer.php", {
         method:"POST",
         body: datos
-    }).then(dato => dato.text()).then(res => console.log(res))
+    }).then(dato => dato.text()).then(res => {
+
+        
+        if (res == 1) {
+            alert("El aprendiz no esta legalizado ")
+            formularioBuscaCer.reset()
+        }else if (res == 2) {
+            alert("El aprendiz ya esta certificado")
+            formularioBuscaCer.reset()
+        } else if(res == 3) {
+            const docubase = inputdocu.value
+            datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docubase}">`
+            console.log(res)
+            btnmostrar.disabled=false
+        }else {
+            alert(res)
+            formularioBuscaCer.reset()
+        }
+    })
 })
+
+cerrarBusCert.addEventListener("click", (e) =>{
+    e.preventDefault()
+    const buscaCer = document.getElementById("buscadorCer")
+    buscaCer.style.display="none";
+    btnmostrar.disabled = true
+    formularioBuscaCer.reset()
+})
+
+btnmostrar.addEventListener("click", (e) => {
+    e.preventDefault()
+    formularioCerti.style.display = "block"
+    const buscaCer = document.getElementById("buscadorCer")
+    buscaCer.style.display="none";
+    formularioBuscaCer.reset()
+    btnmostrar.disabled = true
+} )
 

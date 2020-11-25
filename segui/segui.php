@@ -637,7 +637,7 @@ if (isset($_POST['btn_actualizar'])) {
     <div id="buscadorCer">
         <h2>Ingrese documento del aprendiz</h2>
         <form action="" id="forBus">
-            <input type="number" name="documento" id=""><br>
+            <input type="number" name="documento" id="docuvalicer"><br>
             <button type="submit">Consultar</button>
         </form>
         <div class="btoncerb">
