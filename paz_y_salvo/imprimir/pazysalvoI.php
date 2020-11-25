@@ -1,6 +1,6 @@
 <?php
 
-require_once("../php/connecion.php");
+require_once("../../php/connecion.php");
 session_start();
 
 if(isset($_POST)){
@@ -42,15 +42,6 @@ if(isset($_POST)){
         $pazysalvo = mysqli_fetch_assoc($queryPazysalvo);
 
         $id_pazysalvo = $pazysalvo['id_pazysalvo']; 
-
-        //Si el usuario aún no tiene el detalle de paz y salvo, se crea automaticamente
-        $consultaDetaPazysalvo = "SELECT * FROM detalle_pazysalvo WHERE id_pazysalvo = '$id_pazysalvo' AND documento = '$usuario'";
-        $queryDetaPazysalvo = mysqli_query($connection, $consultaDetaPazysalvo);
-        $detallePazysalvo = mysqli_fetch_assoc($queryDetaPazysalvo);
-        if(empty($detallePazysalvo)) {
-           $crearDetapazysalvo = "INSERT INTO detalle_pazysalvo (id_det_pazysalvo, documento, firma, id_pazysalvo) VALUES ('', '$usuario', NULL, '$id_pazysalvo')";
-           $querycrearDeta = mysqli_query($connection, $crearDetapazysalvo);
-        }
         
         $_SESSION['fecha_diligenciamiento'] = $pazysalvo['fecha_diligenciamiento']; 
 
@@ -62,14 +53,14 @@ if(isset($_POST)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paz y salvo</title>
-    <link rel="stylesheet" href="style/pazysalvo.css">
+    <link rel="stylesheet" href="../style/pazysalvo.css">
     <link rel="icon" href="../imagenes/favicon.ico">
 </head>
 <body>
     <div class="contenedor">
         <div class="header">
             <div class="logo">
-                <img src="../imagenes/sigasena.jpg" alt="" width="" class="sigasena">
+                <img src="../../imagenes/sigasena.jpg" alt="" width="" class="sigasena">
             </div>
             <div class="titulo">
                 <div class="containt_titulo">
@@ -159,7 +150,6 @@ if(isset($_POST)){
                 <th>DESCRIPCION DEL TRAMITE</th>
                 <th>NOMBRES Y APELLIDOS COMPLETOS</th>
                 <th id="th_firma_fila">FIRMA</th>
-                <th class="desaparecer">ACCCIONES</th>
             </tr>
     <?php
         $consulta = "SELECT  detalle_pazysalvo.id_det_pazysalvo, tip_usu.nom_tip_usu, usuario.nombre, usuario.apellido, usuario.id_tip_usu ,detalle_pazysalvo.firma
@@ -207,10 +197,7 @@ if(isset($_POST)){
             ?>
             </td>
             <td><?php echo $data['nombre']?> <?php echo $data['apellido']?></td>
-            <td><img src="<?php echo $data['firma']?>" alt="" class="img_firma">
-            </td>
-            <td class="desaparecer" id="td_firma_fila">
-                <a href="editar_usuario.php?id=<?php echo $data['id_det_pazysalvo']?>&&usuario=<?php echo $usuario?>&&documento=<?php echo $documento?>" class="btn_firma1" id="<?php echo $idFirma;?>">Firmar</a>
+            <td><img src="../<?php echo $data['firma']?>" alt="" class="img_firma">
             </td>
         </tr>
     <?php
@@ -243,6 +230,13 @@ if(isset($_POST)){
 
     <div class="boton_regresar">
         <?php
+                if( $_SESSION['id_tip_usu'] == 2) {
+        ?>
+                    <a class="btn_regresar" href="../../segui/segui.php">Regresar a Seguimiento</a>
+        <?php
+                }
+        ?>
+        <?php
                 if( $_SESSION['id_tip_usu'] == 4) {
         ?>
                     <a class="btn_regresar" href="../APE/ape.php"><img src="" alt=""> Regresar a APE</a>
@@ -273,12 +267,12 @@ if(isset($_POST)){
         <?php
                 }
         ?>
-         <a class="btn_regresar btn_imprimir" href="crearPdf.php" id="btn_imprimir">Imprimir</a>
+         <a class="btn_regresar" href="" id="btn_imprimir">Imprimir</a>
     </div>
 <script>
     const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>"
 </script>
-<script src="script/pazysalvo.js"></script>
+<script src="../script/pazysalvo.js"></script>
 </body>
 </html>
 
