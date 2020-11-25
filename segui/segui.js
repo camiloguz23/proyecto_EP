@@ -190,83 +190,83 @@ function funAlte() {
         case "1":
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Contrato de aprendizaje</Label>
-            <input class="archivo" type="file" name="ContratoAprendizaje">
+            <input class="archivo" type="file" name="ContratoAprendizaje" onchange="return validarExt_ContratoAprendizaje()" id="ContratoAprendizaje" required>
             `
             break;
         case "2":
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Carta de solicitud</Label>
-            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <input class="archivo" type="file" name="CartaSolicitud" onchange="return validarExt_CartaSolicitud()" id="CartaSolicitud" required><br>
             <Label class="label">Constacia de la empresa</Label>
-            <input class="archivo" type="file" name="Cartaempresa">
+            <input class="archivo" type="file" name="Cartaempresa" onchange="return validarExt_Cartaempresa()" id="Cartaempresa" required>
             `
             break;
         case "3":  // "Pasantía: Apoyo unidad productiva familiar"
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Carta de solicitud</Label>
-            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <input class="archivo" type="file" name="CartaSolicitud" onchange="return validarExt_CartaSolicitud()" id="CartaSolicitud" required><br>
             <Label class="label">Constacia de la empresa</Label>
-            <input class="archivo" type="file" name="Cartaempresa"><br>
+            <input class="archivo" type="file" name="Cartaempresa" onchange="return validarExt_Cartaempresa()" id="Cartaempresa" required><br>
             <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaEPS"><br>
+            <input class="archivo" type="file" name="fotocopiaEPS" onchange="return validarExt_fotocopiaEPS()" id="fotocopiaEPS" required><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
-            <input class="archivo" type="file" name="FotocopiaCC">
+            <input class="archivo" type="file" name="FotocopiaCC" onchange="return validarExt_FotocopiaCC()" id="FotocopiaCC" required>
             `
             break;
         case "4":  // "Pasantia:Apoyo entidad estatal, municipal, verdal u OMG"
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Carta de solicitud</Label>
-            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <input class="archivo" type="file" name="CartaSolicitud" onchange="return validarExt_CartaSolicitud()" id="CartaSolicitud" required><br>
             <Label class="label">Constacia de la empresa</Label>
-            <input class="archivo" type="file" name="Cartaempresa"><br>
+            <input class="archivo" type="file" name="Cartaempresa" onchange="return validarExt_Cartaempresa()" id="Cartaempresa" required><br>
             <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaEPS"><br>
+            <input class="archivo" type="file" name="fotocopiaEPS" onchange="return validarExt_fotocopiaEPS()" id="fotocopiaEPS" required><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
-            <input class="archivo" type="file" name="FotocopiaCC">
+            <input class="archivo" type="file" name="FotocopiaCC" onchange="return validarExt_FotocopiaCC()" id="FotocopiaCC" required>
             `
             break;
         case "5": // Pasantia : Monitoria
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Carta de solicitud</Label>
-            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <input class="archivo" type="file" name="CartaSolicitud" onchange="return validarExt_CartaSolicitud()" id="CartaSolicitud" required><br>
             <Label class="label">Constacia de la empresa</Label>
-            <input class="archivo" type="file" name="Cartaempresa"><br>
+            <input class="archivo" type="file" name="Cartaempresa" onchange="return validarExt_Cartaempresa()" id="Cartaempresa" required><br>
             <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaEPS"><br>
+            <input class="archivo" type="file" name="fotocopiaEPS" onchange="return validarExt_fotocopiaEPS()" id="fotocopiaEPS" required><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
-            <input class="archivo" type="file" name="FotocopiaCC">
+            <input class="archivo" type="file" name="FotocopiaCC" onchange="return validarExt_FotocopiaCC()" id="FotocopiaCC" required>
             `
             break;
         case "6":  // Servicio Militar (social)
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Carta de solicitud</Label>
-            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <input class="archivo" type="file" name="CartaSolicitud" onchange="return validarExt_CartaSolicitud()" id="CartaSolicitud" required><br>
             <Label class="label">Constacia de la empresa</Label>
-            <input class="archivo" type="file" name="Cartaempresa">
+            <input class="archivo" type="file" name="Cartaempresa" onchange="return validarExt_Cartaempresa()" id="Cartaempresa" required>
             `
             break;
         case "7": // Proyecto productivo
             cargaDocu.innerHTML = `
             <Label class="label">Formato GFPI-F-023</Label>
-            <input class="archivo" type="file" name="GFPI"><br>
+            <input class="archivo" type="file" name="GFPI" onchange="return validarExt_GFPI()" id="GFPI" required><br>
             <Label class="label">Carta de solicitud</Label>
-            <input class="archivo" type="file" name="CartaSolicitud"><br>
+            <input class="archivo" type="file" name="CartaSolicitud" onchange="return validarExt_CartaSolicitud()" id="CartaSolicitud" required><br>
             <Label class="label">Fotocopia del carnet de afiliacion a EPS o documento Fosyga</Label>
-            <input class="archivo" type="file" name="fotocopiaEPS"><br>
+            <input class="archivo" type="file" name="fotocopiaEPS" onchange="return validarExt_fotocopiaEPS()" id="fotocopiaEPS" required><br>
             <Label class="label">Fotocopia de la cedula 150%</Label>
-            <input class="archivo" type="file" name="FotocopiaCC">
+            <input class="archivo" type="file" name="FotocopiaCC" onchange="return validarExt_FotocopiaCC()" id="FotocopiaCC" required>
             `
         	break;
         default:
@@ -392,3 +392,97 @@ cerrarFicha.addEventListener("click", (e) => {
     e.preventDefault();
     formFicha.style.display = "none"
 })
+
+
+/************************************************validar extencion de los archivos **********************/
+
+function validarExt_GFPI()
+{
+    var archivoInput = document.getElementById('GFPI');
+    var archivoRuta = archivoInput.value;
+    var extPermitidas = /(.pdf)$/i;
+    if(!extPermitidas.exec(archivoRuta)){
+        alert('Asegurese de haber seleccionado un PDF');
+        archivoInput.value = '';
+        return false;
+    }
+    else
+    {
+       
+    }
+}
+function validarExt_ContratoAprendizaje()
+{
+    var archivoInput = document.getElementById('ContratoAprendizaje');
+    var archivoRuta = archivoInput.value;
+    var extPermitidas = /(.pdf)$/i;
+    if(!extPermitidas.exec(archivoRuta)){
+        alert('Asegurese de haber seleccionado un PDF');
+        archivoInput.value = '';
+        return false;
+    }
+    else
+    {
+       
+    }
+}
+function validarExt_CartaSolicitud()
+{
+    var archivoInput = document.getElementById('CartaSolicitud');
+    var archivoRuta = archivoInput.value;
+    var extPermitidas = /(.pdf)$/i;
+    if(!extPermitidas.exec(archivoRuta)){
+        alert('Asegurese de haber seleccionado un PDF');
+        archivoInput.value = '';
+        return false;
+    }
+    else
+    {
+       
+    }
+}
+function validarExt_Cartaempresa()
+{
+    var archivoInput = document.getElementById('Cartaempresa');
+    var archivoRuta = archivoInput.value;
+    var extPermitidas = /(.pdf)$/i;
+    if(!extPermitidas.exec(archivoRuta)){
+        alert('Asegurese de haber seleccionado un PDF');
+        archivoInput.value = '';
+        return false;
+    }
+    else
+    {
+       
+    }
+}
+function validarExt_fotocopiaEPS()
+{
+    var archivoInput = document.getElementById('fotocopiaEPS');
+    var archivoRuta = archivoInput.value;
+    var extPermitidas = /(.pdf)$/i;
+    if(!extPermitidas.exec(archivoRuta)){
+        alert('Asegurese de haber seleccionado un PDF');
+        archivoInput.value = '';
+        return false;
+    }
+    else
+    {
+       
+    }
+}
+function validarExt_FotocopiaCC()
+{
+    var archivoInput = document.getElementById('FotocopiaCC');
+    var archivoRuta = archivoInput.value;
+    var extPermitidas = /(.pdf)$/i;
+    if(!extPermitidas.exec(archivoRuta)){
+        alert('Asegurese de haber seleccionado un PDF');
+        archivoInput.value = '';
+        return false;
+    }
+    else
+    {
+       
+    }
+}

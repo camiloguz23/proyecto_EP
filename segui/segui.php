@@ -132,6 +132,16 @@ if (isset($_POST['btn_actualizar'])) {
                             alt="">CERTIFICACIÓN</a></li>
                 <li id="tres"><a href="#"><img class="tres" width="37" height="30" src="../imagenes/Imagen6.png"
                             alt="">APRENDIZ</a></li>
+                <li id="btn_pazysalvo"><a href="#"><img class="cuatro" width="37" height="30" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg"
+                            alt="">PAZ Y SALVO</a></li>
+                <div class="cuadro" id="cuadro">
+                    <form action="../php/crearPazySalvo.php" method="POST" id="frm_1">
+                        <label for="documento">Documento de identidad</label>
+                        <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento del aprendiz">
+                        <input type="hidden" name="usuario" value="<?php echo $usario?>">
+                        <input class="submit" type="submit" value="Buscar">
+                    </form>
+                </div>
             </ul>
         </nav>
 
@@ -356,7 +366,7 @@ if (isset($_POST['btn_actualizar'])) {
                 </div>
 
                 <div class="botones">
-                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523" onclick="validar_selecs()">
+                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523" >
                     <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
@@ -628,6 +638,7 @@ if (isset($_POST['btn_actualizar'])) {
     <script src="validacionF.js"></script>
     <script src="validarAprendices.js"></script>
     <script src="validar_Rlegalizacion.js"></script>
+    <script src="subpazysalvo.js"></script>
 
 </body>
 
