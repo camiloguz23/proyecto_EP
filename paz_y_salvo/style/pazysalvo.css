@@ -226,6 +226,10 @@ table th, table td{
     width: 90px;
 }
 
+.btn_imprimir {
+    display: none;
+}
+
 @media print{
     h4 {
         font-size: 13px;
