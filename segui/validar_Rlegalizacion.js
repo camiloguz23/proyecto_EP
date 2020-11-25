@@ -2,7 +2,7 @@ const formulario_legalizacion = document.getElementById('legalForm');
 const inputs_formulario_legalizacion = document.querySelectorAll('#legalForm');
 const select_formulario_legalizar_alternativa = document.getElementById('tipoAlte');
 const select_formulario_legalizar_empresa = document.getElementById('selec_empresa');
-
+const botttton = document.getElementById('boton523');
 const expresiones_legalizacion = {
 	solo_letras: /^[a-zA-ZÀ-ÿ\s]{5,30}$/, // Letras y espacios, pueden llevar acentos maximo 30 caracteres.
 }
@@ -45,7 +45,21 @@ const validarformulario_L = (e) =>{
     }
 }
 
-const bloqueo_L = (e) =>{
+
+
+
+
+botttton.disabled = true;
+const bloquearBottttton = () => {
+    if(campos_Legalizacion.nombre_jefe && campos_Legalizacion.cargoJefe ) {
+        botttton.disabled = false;
+    } else {
+        botttton.disabled = true;
+    }
+} 
+
+
+/* const bloqueo_L = (e) =>{
 
     if (campos_Legalizacion.nombre_jefe==true && campos_Legalizacion.cargoJefe==true) {
 
@@ -56,20 +70,13 @@ const bloqueo_L = (e) =>{
         document.getElementById('boton523').style.display = "none"
     
     }
-} 
-
-function validar_selecs(){
-   if(select_formulario_legalizar_alternativa.value ==0 && select_formulario_legalizar_empresa.value ==0){
-    alert('llene los campos de seleccionar');
-    return false;
-   }else{
-       alert('datos enviados correctamente');
-   }
-}
+}  */
 
 inputs_formulario_legalizacion.forEach((input)=>{
     input.addEventListener('keyup', validarformulario_L);
     input.addEventListener('focusout', validarformulario_L);
-    input.addEventListener('keyup', bloqueo_L);
+    input.addEventListener('keyup', bloquearBottttton);
  
 });
+
+
