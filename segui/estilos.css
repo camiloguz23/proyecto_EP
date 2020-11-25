@@ -1027,6 +1027,42 @@ input[type=number] { -moz-appearance:textfield; }
    
 }
 
+#buscadorCer {
+    position: absolute;
+    top: 150px;
+    left: 440px;
+    background-color: #fc7323;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    display: none;
+}
+
+#buscadorCer button {
+    padding: 8px 0px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btoncerb{
+    display: flex;
+    justify-content: space-between;
+}
+
+#buscadorCer input {
+    font-size: 25px;
+}
+
+#forBus {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .cuadro {
     width: 280px;
     height: 200px;

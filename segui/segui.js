@@ -1,7 +1,7 @@
 // varibles 
 
 const boton = document.getElementById("boton")
-const documento = document.getElementById("documento")
+const documento = document.getElementById("documentole")
 const btnEmpresa = document.getElementById("btnEmpresa")
 const btnLegalizar = document.getElementById("btnLegalizar")
 const formularioEmpresa = document.querySelector(".registroEmpre")
@@ -134,6 +134,7 @@ function ocultarEmpresad(e) {
 
 function consulta(e) {
   e.preventDefault();  
+  console.log(documento.value)
     let xhr = new XMLHttpRequest();
     const docuBase = documento.value 
     xhr.open("get","../php/aprendiz.php?documento=" + docuBase,true)
@@ -144,8 +145,8 @@ function consulta(e) {
             estudiante(docuBase);
             datoAprendiz.innerHTML = ` <input type="hidden" name="docuAprendiz" value="${docuBase}">`
             informar.style.display = "block"
-            const estadoAprend = document.getElementById("estadoAprend").value
-            console.log(estadoAprend+"funciona")
+            // const estadoAprend = document.getElementById("estadoAprend").value
+            // console.log(estadoAprend+"funciona")
         }
     }
     xhr.send()
@@ -284,8 +285,8 @@ function estudiante(datoEstu) {
 
 function buscador(e) {
     e.preventDefault();
-    console.log("funciona 227")
-    formularioCerti.style.display = "block"
+    const buscaCer = document.getElementById("buscadorCer")
+    buscaCer.style.display = "block"
 }
 
 function btncerrarlegal() {
@@ -486,3 +487,18 @@ function validarExt_FotocopiaCC()
        
     }
 }
+// ******************************** CERTIFICACION CONSULTAS Y VALIDACION ***********************
+
+const formularioBuscaCer = document.getElementById("forBus")
+const btnmostrar = document.getElementById("btnMostrar")
+const cerrarBusCert = document.getElementById("cerrarBusCert")
+
+formularioBuscaCer.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let datos = new FormData(formularioBuscaCer)
+    fetch("../php/buscadorCer.php", {
+        method:"POST",
+        body: datos
+    }).then(dato => dato.text()).then(res => console.log(res))
+})
+
