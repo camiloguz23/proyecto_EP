@@ -356,8 +356,13 @@ function mostrarPDF() {
             method: "POST",
             body: file
         }).then(res => res.text()).then(valor => {
-            contePDF.style.display = "block"
-            readPDF.innerHTML = `${valor}`
+            if(valor == "no"){
+                alert("aprendiz no esta legalizado")
+            }else{
+                contePDF.style.display = "block"
+                readPDF.innerHTML = `${valor}`
+            }
+            
         })
     }
 }
@@ -365,4 +370,16 @@ function mostrarPDF() {
 btncerrarPDF.addEventListener("click", (e) => {
     e.preventDefault();
     contePDF.style.display = "none"
+})
+
+// *********************************** BOTON DE CERRAR FORMULARIO DE FICHA DE FORMACION *****************
+
+const btnFicha = document.getElementById("btnficha")
+const formFicha = document.getElementById("fichaOcul")
+const cerrarFicha = document.getElementById("cerrarF")
+
+btnFicha.addEventListener("click", () => formFicha.style.display = "block")
+cerrarFicha.addEventListener("click", (e) => {
+    e.preventDefault();
+    formFicha.style.display = "none"
 })
