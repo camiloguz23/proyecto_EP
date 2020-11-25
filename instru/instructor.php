@@ -106,8 +106,8 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
         <button id="calificar" class="calificar" name="calificar">Calificar</button>
         <form action="evide.php" method="POST" class="regica">
         <div class="aprendiz" id= "hidden" ></div>
-                <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
-            <input type="submit" value="seguimiento de actividades">
+            <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
+            <input id="btnsegui" type="submit" value="seguimiento de actividades">
         </form>
             <div id="informa">
             
