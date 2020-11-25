@@ -212,10 +212,10 @@ if (isset($_POST['btn_actualizar'])) {
                 <form method="POST" id="buscarDocu" class="buscarDocu" autocomplete="off">
                     <h3 class="subTitulo1">BUSCAR DOCUMENTO</h3>
                     <!--todo el formulario-->
-                    <input class="inputB" type="number" id="documento">
+                    <input class="inputB" type="number" id="documentole">
                     <div class="botones12" id="boton" title="consultar">
-                        <a href="#" class="hola"><img class="boton" src="../imagenes/Imagen3.png" height="50px"
-                                width="50px"></a>
+                        <a href="#" class="hola" id=""><img class="boton" src="../imagenes/Imagen3.png" height="50px"
+                        width="50px"></a>
                     </div>
                 </form>
             </div>
@@ -638,9 +638,13 @@ if (isset($_POST['btn_actualizar'])) {
         <h2>Ingrese documento del aprendiz</h2>
         <form action="" id="forBus">
             <input type="number" name="documento" id=""><br>
-            <button>Consultar</button>
+            <button type="submit">Consultar</button>
         </form>
-        <button id="btnMostrar"> certificacion </button>
+        <div class="btoncerb">
+            <button id="btnMostrar"> certificacion </button>
+            <button id="cerrarBusCert"> Cerrar </button>
+        </div>
+        
     </div>
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>

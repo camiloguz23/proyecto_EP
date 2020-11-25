@@ -1045,6 +1045,12 @@ input[type=number] { -moz-appearance:textfield; }
     border-radius: 10px;
     width: 100%;
 }
+
+.btoncerb{
+    display: flex;
+    justify-content: space-between;
+}
+
 #buscadorCer input {
     font-size: 25px;
 }
