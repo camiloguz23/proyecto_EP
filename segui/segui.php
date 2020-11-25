@@ -721,7 +721,7 @@ $(document).ready(function() {
             url: "../php/crearFicha.php",
             data: datosEmpres,
             success: function(h) {
-              
+
                 if (h == 1) {
                     
                     $('.agregoF').html(
@@ -736,6 +736,15 @@ $(document).ready(function() {
                   
 
 
+                }else if(h == 2){
+                    
+                    $('.agregoF').html(
+                        '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">La ficha ya esta creada </p>'
+                    )
+                    setTimeout(() => {
+
+                        $('.agregoF').html('<p></p>')
+                    }, 2000);
                 } else {
 
                     $('.agregoF').html(
