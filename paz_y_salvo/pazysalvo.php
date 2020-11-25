@@ -14,7 +14,7 @@ if(isset($_POST)){
     $fila = mysqli_fetch_assoc($query);
 
     //Si el usuario existe carga el formulario
-    if (!empty($fila) && $fila['id_estado'] >= 3) {
+    if (!empty($fila) && $fila['id_estado'] >= 2) {
         //Se traen los datos del aprendiz
         $consultaAprendiz = "SELECT aprendices.nombre_aprend, aprendices.apellido_aprend, region.nom_region, aprendices.correo_aprend, pro_formacion.nom_formacion, nivel_formacion.nom_nivel, ficha_programa.num_ficha, tip_docu.nom_docu, aprendices.id_aprend, aprendices.lugar_expedicion, aprendices.fecha_expedicion_docu, aprendices.direccion, aprendices.num_celular, aprendices.telefono_aprend, cen_formacion.nom_cen_forma FROM aprendices, detalle_formacion, ficha_programa, tip_docu, estado_aprendiz, pro_formacion, nivel_formacion, cen_formacion, region WHERE detalle_formacion.id_aprend = aprendices.id_aprend AND detalle_formacion.num_ficha = ficha_programa.num_ficha AND aprendices.id_tip_docu = tip_docu.id_tip_docu AND detalle_formacion.num_ficha = ficha_programa.num_ficha AND detalle_formacion.id_aprend = aprendices.id_aprend AND detalle_formacion.id_estado = estado_aprendiz.id_estado AND ficha_programa.id_formacion = pro_formacion.id_formacion AND ficha_programa.id_nivel = nivel_formacion.id_nivel AND ficha_programa.id_cen_forma = cen_formacion.id_cen_forma AND cen_formacion.id_region = region.id_region AND aprendices.id_aprend = '$documento'";
         $queryAprendiz = mysqli_query($connection,$consultaAprendiz);
