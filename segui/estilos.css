@@ -1029,8 +1029,31 @@ input[type=number] { -moz-appearance:textfield; }
 
 #buscadorCer {
     position: absolute;
-    top: 50px;
-    left: 120px;
+    top: 150px;
+    left: 440px;
     background-color: #fc7323;
-    padding: 6px 15px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    display: none;
 }
+
+#buscadorCer button {
+    padding: 8px 0px;
+    border-radius: 10px;
+    width: 100%;
+}
+#buscadorCer input {
+    font-size: 25px;
+}
+
+#forBus {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

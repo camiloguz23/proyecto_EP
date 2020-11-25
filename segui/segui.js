@@ -284,8 +284,8 @@ function estudiante(datoEstu) {
 
 function buscador(e) {
     e.preventDefault();
-    console.log("funciona 227")
-    formularioCerti.style.display = "block"
+    const buscaCer = document.getElementById("buscadorCer")
+    buscaCer.style.display = "block"
 }
 
 function btncerrarlegal() {
@@ -486,3 +486,7 @@ function validarExt_FotocopiaCC()
        
     }
 }
+// ******************************** CERTIFICACION CONSULTAS Y VALIDACION ***********************
+
+const formularioBuscaCer = document.getElementById("forBus")
+const btnmostrar = document.getElementById("btnMostrar")

@@ -132,6 +132,7 @@ if (isset($_POST['btn_actualizar'])) {
                             alt="">CERTIFICACIÓN</a></li>
                 <li id="tres"><a href="#"><img class="tres" width="37" height="30" src="../imagenes/Imagen6.png"
                             alt="">APRENDIZ</a></li>
+               
             </ul>
         </nav>
 
@@ -630,7 +631,7 @@ if (isset($_POST['btn_actualizar'])) {
             <input type="number" name="documento" id=""><br>
             <button>Consultar</button>
         </form>
-        <button> certific</button>
+        <button id="btnMostrar"> certificacion </button>
     </div>
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>
