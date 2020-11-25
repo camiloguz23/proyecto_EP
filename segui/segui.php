@@ -524,7 +524,8 @@ if (isset($_POST['btn_actualizar'])) {
     <!------------crear ficha--------------- -->
     <div class="crearFicha">
         <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
-        <form method="POST" id="fomularioF" autocomplete="off">
+        
+        <form method="POST" id="formularioFw" autocomplete="off"> <!-- action="../php/crearFicha.php" -->
 
             <div class="datosf">
                 <label for="" class="labelF">*Numero de ficha</label>
@@ -600,7 +601,7 @@ if (isset($_POST['btn_actualizar'])) {
             <div class="agregoF"></div>
 
             <div class="botonesF">
-                <button class="btnEnviar" id="crearF">CREAR</button>
+                <button class="btnEnviar" id="crearficha">CREAR</button>
                 <button class="btnCerrar" id="cerrarF">CERRAR</button>
             </div>
 
@@ -708,43 +709,43 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- --------------------------CREARFICHA---------------------------------------->
-
+<!-- --------------------------------- -->
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#crearF').click(function() {
-       
-        var datosformularioF = $('#fomularioF').serialize();
+    $('#crearficha').click(function() {
+        var datosEmpres = $('#formularioFw').serialize();
 
 
         $.ajax({
             type: "POST",
             url: "../php/crearFicha.php",
-            data: datosformularioF,
-            success: function(cy) {
-                if (cy == 1) {
-
+            data: datosEmpres,
+            success: function(h) {
+              
+                if (h == 1) {
+                    
                     $('.agregoF').html(
-                        '<p style="color:white;font-size:15px;text-align: center;margin-right: 60px; background-color:#238276;padding:10px 20px;">SE AGREGO CORRECTAMENTE</p>'
+                        '<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
                         )
                     setTimeout(() => {
-                        document.querySelector("#fomularioF").reset()
+                        document.querySelector("#formularioFw").reset()
                         $('.agregoF').html('<p></p>')
                         window.location = "segui.php"
                     }, 2000);
 
-                    exit()
+                  
+
+
                 } else {
 
                     $('.agregoF').html(
-                        '<p  style="color:white;font-size:20px;text-align: center;margin-right: 60px; background-color:#fc7323;padding:10px 20px;">VERIFICA LOS CAMPOS</p>'
+                        '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>'
                     )
                     setTimeout(() => {
 
                         $('.agregoF').html('<p></p>')
                     }, 2000);
 
-                    exit()
 
                 }
 
@@ -755,3 +756,6 @@ $(document).ready(function() {
 
 });
 </script>
+
+
+
