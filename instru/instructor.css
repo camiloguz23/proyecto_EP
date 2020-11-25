@@ -1,7 +1,7 @@
-    *{
-        padding: 0%;
-        margin: 0%;
-    }
+*{
+    padding: 0%;
+    margin: 0%;
+   }
 
     /*ocultar*/
     
@@ -20,11 +20,9 @@
     }
     body 
     {
-        padding: 0%;
-        margin: 0%;
-        background: rgb(223, 222, 222);
+        background: rgb(222, 223, 222);
         font-family: Verdana;
-        height: auto;
+        width: 100%;
     }
 
     /*encabezado*/
@@ -88,13 +86,13 @@
     {
         list-style: none;
         margin: auto;
-        margin-left: 7%;
+        margin-left: 4%;
     }
 
     .navegacion .menu img
     {
         margin-right: 15px;
-        margin: -7px 5px;
+        margin: -7px 1px;
     }
 
     .menu  li 
@@ -119,49 +117,68 @@
 
     /*contenido imagen de perfil*/
     
-    .contper
-    {
-        height: auto;
-    }
-    
     .fondo
     {
-        margin-top: 40px;
+        width:auto;
+        max-width: 95%;
+        height:300px;
+        margin-top: 5px;
+        margin-left: 30px;
+        background-image: url(../imagenes/INSTRUCTOR.png);
     }
 
     .naranja .perfil
     {
-        position: absolute;
-        margin-top: -120px;
-        margin-left: 545px;
+        margin-top:-67px;
+        margin-left:42%;
+        background-color: #fc7323;
         border-radius: 300px;
         height: 250px;
         width: 20%;
+    }
+    .naranja{
+    
+        width: auto;
+        margin-left: 4.5%;
+        margin-bottom: 2%;
+        max-width: 90%;
+        height: 150px;
+        
     }
 
     /*contenido informativo*/
 
     .contenedor{
-        position: absolute;
-        background-color: #ffffff;
+        position: relative;
+        background-color: rgb(25, 130, 118);
+        border-radius: 10px;
+        border:1px solid black;
         width: 90%;
         height: 150px;
-        margin:5% ;
-        margin-top: 12%;
+        margin-left: 60px;
+        margin-top: 4%;
+        max-width: 97%;
 
     }  
 
     .date{
-        position: relative;
+        position: absolute;
         background-color: #ffffff;
-        border:2px solid;
+        max-width: 97%;
         border-color: #353434;
+        border-radius: 10px;
+        border:1px solid black;
         width:96%;
+        margin-right: 20px;
         height: 100px;
         margin-left: 20px;
         margin-top: 2%;
         text-align: center;
+       
     } 
+    .frase{
+        margin-top:55px;
+    }
 
     .date .datos p
     {
@@ -175,105 +192,72 @@
     .date .datos .text2
     {
         text-align: left;
-        max-width: 100%;
+        width: 250px;
+
     }
 
     /*editar*/
     .button { 
-        position: absolute;
         text-decoration: none;
-        padding: 10px 40px;
-        box-sizing: border-box;
+        padding: 10px 30px;
         font-family: Verdana;
         width: 170px;
         text-align: center;
-        margin-top: -21.5%;
         color: rgb(255, 255, 255);
         font-size: 15px;
-        background: #fc7323;
-        top: 410px;
-        margin-left: 1050px;
+        background: rgb(252, 115, 35);
+        margin-left: 80%;
         border-radius: 20px;
     
     }
 
         .button:hover
         {
-            background-color: rgb(25, 130, 118);
+            background-color: rgb(89, 181, 72) ;
+            border: 1px solid black;
             color: white;
-        
         }
 
     /*opciones*/
 
     .opcion
     {
-        width: 70%;
-        margin-left: 20%;
+        position:relative;
+        margin-top:8%;
+        padding:20px;
+        max-width: 90%;
+        margin-left: 3%;
+        height: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .button3 
     { 
-        position: relative;
+        margin-left: 20%;
         text-decoration: none;
-        padding: 20px;
-        box-sizing: border-box;
-        width: 170px;
-        text-align: center;
-        margin-top: 200px;
+        padding: 10px 30px;
+        font-family: verdana;
+        width: 160px;
         color: rgb(0, 0, 0);
         font-size: 15px;
         background: white;
-        top: 470px;
         border-radius: 20px;
+        border-color: #fc7323;
         border-style: solid;
         border-width: 2px;
+        text-align: center;
     }
 
-        .button3 .butdos
-        {
-            margin: -10px 10px;
-        }
+        
 
         .button3:hover 
         {
             color: white;
-            background-color:  rgb(25, 130, 118); 
+            background-color:#fc7323; 
         }
 
     
-    /*aprendices*/
-
-    .button4 
-    { 
-        position: relative;
-        text-decoration: none;
-        padding: 20px;
-        box-sizing: border-box;
-        width: 170px;
-        text-align: center;
-        margin-top: 200px;
-        color: rgb(0, 0, 0);
-        font-size: 15px;
-        background: white;
-        top: 470px;
-        margin-left: 16%;
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 2px;
-    }
-        .button4 .buttres
-        {
-            margin-right: 15px;
-            margin: -10px 10px;
-        }
-
-        .button4:hover
-        {
-            background-color: rgb(25, 130, 118);
-            color: white;
-        }
-
 
     /*pie de pagina*/
 
@@ -284,12 +268,13 @@
             width: 100%;
             height: 75px;
             background-color: #fc7323;
-            margin-top:550px;
+            margin-top:250px;
             display: flex;
             align-items: flex-end;
             border-top: 2px solid #fff;
             margin-left: 0px;   
         }
+
 
         .pie img
         {
@@ -316,12 +301,12 @@
 
     .seguimiento
     {
-        border-radius: 5%;
+        border-radius: 2%;
         background:rgb(25, 130, 118);
-        margin-top: -427px;
-        width: 94%;
-        margin-left: 3%;
-        height: 760px;
+        margin-top: -840px;
+        width: 85%;
+        margin-left: 7.5%;
+        height: 930px;
         position: absolute; 
     }
     
@@ -332,9 +317,9 @@
     .seguimiento .salir
     {
         width: 3%;
-        height: 5%;
+        height: 4%;
         position: absolute;
-        margin-left: 90%;
+        margin-left: 93%;
         margin-top: 2%;
         z-index: 11;
     }
@@ -343,10 +328,11 @@
         background: white;
         border-radius: 20px;
         width: 40%;
-        height: 14%;
+        height: 11%;
         margin-top:5% ;
-        margin-left: 5%;
+        margin-left: 30%;
         text-align: center;
+        padding: 15px;
     }
 
     .buscarDocu
