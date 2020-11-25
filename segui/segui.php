@@ -310,7 +310,7 @@ if (isset($_POST['btn_actualizar'])) {
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
                 <label class="label" for="">*Seleccione el tipo de alternativa:</label><br>
                 <select class="seleccionTipo" id="tipoAlte" name="seleccionTipo">
-                    <option value="">Seleccione la alternativa</option>
+                    <option value="0">Seleccione la alternativa</option>
                     <?php
                     foreach ($query_re as $alternativa) : ?>
 
@@ -322,8 +322,8 @@ if (isset($_POST['btn_actualizar'])) {
                     ?>
                 </select><br>
                 <label class="label" for="">Empresa</label><br>
-                <select class="seleccionTipo" name="empresa" id="">
-                    <option value="">Seleccione la empresa</option>
+                <select class="seleccionTipo" name="empresa" id="selec_empresa">
+                    <option value="0">Seleccione la empresa</option>
                     <?php
                     foreach ($query_empresa as $empresa) : ?>
 
@@ -339,11 +339,11 @@ if (isset($_POST['btn_actualizar'])) {
 
                 <input class="seleccionTipo" type="text" name="jefe" id="nombre_jefe" maxlength="40"
                     style="text-transform:uppercase"><br>
-                <p class="p-nombre-jefe" id="p-nombre-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras</p>
+                <p class="p-nombre-jefe" id="p-nombre-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y max 30 </p>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="cargoJefe" id="cargoJefe" maxlength="35"
                     style="text-transform:uppercase"><br>
-                <p class="p-cargo-jefe" id="p-cargo-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras</p>
+                <p class="p-cargo-jefe" id="p-cargo-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y max 30</p>
 
                 <label class="label" for="">Fecha de inicio de la etapa productiva</label><br>
                 <input class="seleccionTipo" type="date" name="fecha" id="">
@@ -356,7 +356,7 @@ if (isset($_POST['btn_actualizar'])) {
                 </div>
 
                 <div class="botones">
-                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523">
+                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523" onclick="validar_selecs()">
                     <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
