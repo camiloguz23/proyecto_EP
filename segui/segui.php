@@ -515,6 +515,7 @@ if (isset($_POST['btn_actualizar'])) {
                     endforeach;
                     ?>
                 </select>
+                <p id="btnficha">+crear ficha de formacion</p>
             </div>
             <button id="btnguardar">Guardar</button>
             <button id="btncerrarAprendiz">Cerrar</button>
@@ -522,7 +523,7 @@ if (isset($_POST['btn_actualizar'])) {
 
     </div>
     <!------------crear ficha--------------- -->
-    <div class="crearFicha">
+    <div class="crearFicha" id="fichaOcul">
         <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
         
         <form method="POST" id="formularioFw" autocomplete="off"> <!-- action="../php/crearFicha.php" -->

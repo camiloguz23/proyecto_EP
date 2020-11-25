@@ -371,3 +371,15 @@ btncerrarPDF.addEventListener("click", (e) => {
     e.preventDefault();
     contePDF.style.display = "none"
 })
+
+// *********************************** BOTON DE CERRAR FORMULARIO DE FICHA DE FORMACION *****************
+
+const btnFicha = document.getElementById("btnficha")
+const formFicha = document.getElementById("fichaOcul")
+const cerrarFicha = document.getElementById("cerrarF")
+
+btnFicha.addEventListener("click", () => formFicha.style.display = "block")
+cerrarFicha.addEventListener("click", (e) => {
+    e.preventDefault();
+    formFicha.style.display = "none"
+})

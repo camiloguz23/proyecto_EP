@@ -883,6 +883,12 @@ input[type=number] { -moz-appearance:textfield; }
     
 }
 
+#btnficha {
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
 
 /****************************VALIDACION FORMULARIO REGISTRO LEGALIZACION**************************************/
 .p-cargo-jefe{
@@ -931,8 +937,8 @@ input[type=number] { -moz-appearance:textfield; }
     background: white;
     border-radius:10px;
     margin-left:10%;
-    margin-top:-32%;
-    /* display:none; */
+    margin-top:-52%;
+    display:none; 
 }
 
 .select1{
