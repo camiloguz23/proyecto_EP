@@ -126,7 +126,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
             <div class="tipoEvidencia" id="tipoEvidencia">
                 <form id="fomutievi" class="fomutievi">
                     <div class="aprendiz" id="hidden"></div>
-                    <label  for="">Seleccione el tipo de evidencia que desea calificar:</label><br>
+                    <label  for="">SELECCIONE EL TIPO DE EVIDENCIA QUE DESEA CALIFICAR:</label><br>
                     <select class="inputR" name="tip_evi" id="tip_evi">
                         <?php
                         foreach ($query_ciudad as $tipo_evidencia) : ?>
@@ -140,15 +140,15 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                     <button id="salir2" class="salir2">Cancelar</button>
                 </form>
 
-                <div>
+               
                     <form action="evidencias.php" method="POST" id="fore">
 
                         <div class="aprendiz" id="hidden"></div>
                         <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
 
-                        <input type="submit" value="calificar">
+                        <input type="submit" class="botorara" value="calificar">
                     </form>
-                </div>
+                
             </div>
         </div>
     </div>

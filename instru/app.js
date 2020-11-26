@@ -50,10 +50,12 @@ formu.addEventListener("submit", (e)=>
                         elemento1.setAttribute("class", "check");
                         elemento1.setAttribute("name","check");
                         elemento1.setAttribute("value",`${el.id_evidencias}`)
-                        elemento1.style.display="flex";
+                        contenedor.style.display="grid";
+                        contenedor.style.columns="1fr 1fr";
+                        // elemento1.style.display="flex";
                         // label.style.bottom="-100px"
-                        label.style.margin="-51px";
-                        elemento1.style.margin="-61";
+                        // label.style.margin="-51px";
+                        // elemento1.style.margin="-61";
                         // if(el.nom_evidencias === "EVIDENCIA 1"){
                         //     elemento1.removeAttribute("disabled");
                         // }else{
