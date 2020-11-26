@@ -73,7 +73,7 @@
     {
         background: white;
         display: table;
-        width: 86%;
+        width: 85%;
         padding: 0 5.5em;
         position: absolute;
         margin-top: 12px;
@@ -86,12 +86,12 @@
     {
         list-style: none;
         margin: auto;
-        margin-left: 4%;
+        margin-left: 1%;
     }
 
     .navegacion .menu img
     {
-        margin-right: 15px;
+        margin-right: 15%;
         margin: -7px 1px;
     }
 
@@ -323,6 +323,31 @@
         margin-top: 2%;
         z-index: 11;
     }
+    .cali
+    {
+        border-radius: 2%;
+        background:rgb(25, 130, 118);
+        margin-top: -840px;
+        width: 85%;
+        margin-left: 7.5%;
+        height: 930px;
+        position: absolute; 
+        visibility: hidden;
+    }
+    
+    .cali.sali a 
+    {
+        cursor: pointer;
+    }
+    .cali .salir
+    {
+        width: 3%;
+        height: 4%;
+        position: absolute;
+        margin-left: 93%;
+        margin-top: 2%;
+        z-index: 11;
+    }
     .informa2
     {
         background: white;
@@ -419,6 +444,16 @@
         margin-left: 20%;
         margin-top: 1%;
     }
+    .informaa
+    {
+        background-color: #fff;
+        width: 60%;
+        padding: 15px 30px;
+        border-radius: 15px;
+        margin-left: 20%;
+        margin-top: 1%;
+    }
+    
     .subTitulo{
         padding: 20px;
         font-size: 17px;
@@ -435,25 +470,7 @@
         margin-top: -15px;
         padding: 5px;
     }
-    .calificar{
-        margin-left: 87%;
-        background:white;
-        width: 10%;
-        height: 30px;
-        border-radius: 15px;
-        border:2px solid;
-        border-color: #ff5f02;
-        padding: 2px;
-        font-size: 15px;
-        color:#ff5f02;
-        cursor: pointer;
-
-
-    }
-    .calificar{
-        background: #fc7323;
-        color: #fff;
-    }
+    
     .label{
         display: block;
         font-weight:600;
@@ -466,12 +483,12 @@
         margin-top: -55px;
     }
     input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+    input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
     }
-input[type=number] { -moz-appearance:textfield; }
-.inputB{
+    input[type=number] { -moz-appearance:textfield; }
+    .inputB{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -484,29 +501,74 @@ input[type=number] { -moz-appearance:textfield; }
     margin-top: 5%;
     margin-left: 20%;
     grid-column: span 2;
-}
+    }
 
-.tipoEvidencia
-{
+    .tipoEvidencia
+    {
     display: none;
-}
-.tipoEvidencia
-{
+    }
+    .tipoEvidencia
+    {
     background-color: #fff;
     width: 70%;
     padding: 15px 30px;
     border-radius: 15px;
     margin-left: 2%;
     margin-top: 2%;
-    
-}
+ 
 
-.fomutievi{
+    }
+
+    .fomutievi{
     width: 100%;
     font-size: 15px;
+    background-color:wheat;
+    padding: 10px;
+    text-align: center;
+    }
+    .fomutievi label{
+        font-size: 15px;
+        padding: 10px;
+    }
     
-}
-.check{
-    padding: 30px;
-    background-color: chartreuse;
-}
+    .inisegui{
+        margin-left: 10%;
+        background:#ff5f02;
+        width: 30%;
+        margin-top: 1px;
+        height: 30px;
+        border-radius: 15px;
+        border:2px solid;
+        border-color: #ff5f02;
+        padding: 2px;
+        font-size: 15px;
+        color:#fff;
+        cursor: pointer;
+    }
+    .regica
+    {
+        display: flex;
+    }
+    .calificar{
+        margin-left: 10%;
+        background:#ff5f02;
+        width: 30%;
+        margin-top: 1px;
+        height: 30px;
+        border-radius: 15px;
+        border:2px solid;
+        border-color: #ff5f02;
+        padding: 2px;
+        font-size: 15px;
+        color:#fff;
+        cursor: pointer;
+    }
+
+    .inisegui:hover{
+        background:white ;
+        color:#ff5f02;
+        border:2px solid;
+        border-color: #ff5f02;
+    }
+
+    

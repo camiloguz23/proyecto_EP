@@ -50,52 +50,47 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#" id="seguimi"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">SEGUIMIENTO DE EVIDENCIAS</a></li>
-                <li id="aprediz"><a href="#"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
-                <li><a href="#"><img class="cuatro" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a></li>
+                <li><a href="#" id="seguimi"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">CALIFICACION DE ACTIVIDADES</a></li>
+                <li ><a href="#" id="calificaa"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">SEGUIMIENTO DE EVIDENCIAS</a></li>
             </ul>
         </nav>
 
     </header>
 
-    
+
     <div id="fondo" class="fondo">
-       
+
     </div>
 
     <div class="naranja">
         <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
     </div>
 
-    <div class="contenedor">
+    <div id="date" class="contenedor">
         <div class="date">
 
 
             <ul class="datos">
-            <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
+                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
                     dia</p>
-                    <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> <br>TELEFONO:
+                <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> <br>TELEFONO:
                     <?= $_SESSION["telefono"] ?><br>E-Mail:
                     <?= $_SESSION["correo"] ?></p>
             </ul>
 
             <a href="#" class="button">EDITAR</a>
 
-        </div>  
+        </div>
     </div>
-
-
 
     <div class="opcion">
 
         <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset=""> EVIDENCIAS</a>
         <a href="#" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
-        <a href="#" class="button3"> <img  height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
+        <a href="#" class="button3"> <img height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
 
-        
+
     </div>
-    
-
 
     <div id="infor" class="seguimiento">
         <div class="sali">
@@ -115,59 +110,75 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                 </div>
             </div>
         </div>
-        
+
         <!--datos del aprendiz -->
         <div class="informa">
-        <button id="calificar" class="calificar" name="calificar">Calificar</button>
-        <form action="evide.php" method="POST" class="regica">
-        <div class="aprendiz" id= "hidden" ></div>
-            <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
-            <input id="btnsegui" type="submit" value="seguimiento de actividades">
-        </form>
+            <form action="evide.php" method="POST" class="regica">
+                <div class="aprendiz" id="hidden"></div>
+                <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
+                <input class="inisegui" id="btnsegui" type="submit" value="INICIAR SEGUIMIENTO">
+                <input class="calificar" id="calificar" type="submit" value="CALIFICACION">
+            </form>
+
             <div id="informa">
-            
                 <!--</div>-->
-                
-            
             </div>
             <div class="tipoEvidencia" id="tipoEvidencia">
-            <form id="fomutievi" class="fomutievi">
-                <div class="aprendiz" id= "hidden" ></div>
-                <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
-                <label for="">*Seleccione el tipo de evidencia que desea calificar:</label><br>
-                <select class="inputR" name="tip_evi" id="tip_evi">
+                <form id="fomutievi" class="fomutievi">
+                    <div class="aprendiz" id="hidden"></div>
+                    <label  for="">Seleccione el tipo de evidencia que desea calificar:</label><br>
+                    <select class="inputR" name="tip_evi" id="tip_evi">
                         <?php
-                            foreach($query_ciudad as $tipo_evidencia):?>
-                        <option value="<?php echo $tipo_evidencia['id_tip_eviden'] ?> ">
-                            <?php echo $tipo_evidencia['nom_tip_eviden'] ?></option>
+                        foreach ($query_ciudad as $tipo_evidencia) : ?>
+                            <option value="<?php echo $tipo_evidencia['id_tip_eviden'] ?> ">
+                                <?php echo $tipo_evidencia['nom_tip_eviden'] ?></option>
                         <?php
-                            endforeach; 
-                            ?>
-                </select>
-                <button id="inicio">Seleccionar</button><br><br>
-                <button id="salir2" class="salir2">Cancelar</button>
-            </form>
-            
-        
-        <div>
-                <form action="evidencias.php" method="POST" id="fore">
-
-                <div class="aprendiz" id= "hidden" ></div>
-                <input type="hidden" name ="docuinst" value="<?php echo ($_SESSION['documento']) ?>"> 
-
-                <input type="submit" value="calificar">
+                        endforeach;
+                        ?>
+                    </select>
+                    <button id="inicio">Seleccionar</button><br><br>
+                    <button id="salir2" class="salir2">Cancelar</button>
                 </form>
+
+                <div>
+                    <form action="evidencias.php" method="POST" id="fore">
+
+                        <div class="aprendiz" id="hidden"></div>
+                        <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
+
+                        <input type="submit" value="calificar">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-        
 
-    
-        
-           
+    <div id="cali" class="cali">
+        <div class="sali">
+            <a href="#" id="salirrr"><img class="salir" src="../imagenes/cancelar.png" alt=""></a>
+        </div>
+        <div class="informa2">
+            <div class="buscador2">
+                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
+                <div class="buscarDocu">
+                    <form method="POST" id="buscarDocu" autocomplete="off">
+                        <input type="number" name="aprendiza" placeholder="Numero De Documento" id="documento">
+                        <div class="boton">
+                            <a href="#" id="boton"><img class="boton" src="../imagenes/Imagen3.png" height="50px" width="50px"></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="informa">
+            <div id="informa">
+
+            </div>
+        </div>
+       
     </div>
 
-    
     <footer class="pie">
         <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
 

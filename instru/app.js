@@ -3,7 +3,12 @@ const mostrartd = document.getElementById("seguimi");//boton para seguimiento de
 const informacion = document.getElementById("infor");//div de seguimiento de evidencias
 const salii = document.getElementById("salirr");//boton de salir
 
+const mostrarcali = document.getElementById("calificaa");
+const vercali = document.getElementById("cali");
+const saliii = document.getElementById("salirrr");//boton de salir
+
 const fond = document.getElementById("fondo")//imagen de fondo del perfil del usuario
+const inf = document.getElementById("date")
 const datosapre = document.getElementById("informa")//informacion del aprendiz
 const boton = document.getElementById("boton");//boton para ejecutar la busqueda del aprendiz
 const documento = document.getElementById("documento");//input que contiene el documento del aprendiz
@@ -13,6 +18,7 @@ const salir2 = document.getElementById("salir2");//boton de salir de calidicar
 const evidencia1 = document.getElementById("evidencias1");//Formulario evidencia Quincenales
 const evidencia2 = document.getElementById("evidencias2");//Formulario evidencia Trimestrales
 
+const calificar = document.querySelector("#calificar");//Boton para calificar
 const formu = document.getElementById("fomutievi");
 const usuario = document.getElementById("tip_evi");
 const formula = document.getElementById("fore");
@@ -44,6 +50,10 @@ formu.addEventListener("submit", (e)=>
                         elemento1.setAttribute("class", "check");
                         elemento1.setAttribute("name","check");
                         elemento1.setAttribute("value",`${el.id_evidencias}`)
+                        elemento1.style.display="flex";
+                        // label.style.bottom="-100px"
+                        label.style.margin="-51px";
+                        elemento1.style.margin="-61";
                         // if(el.nom_evidencias === "EVIDENCIA 1"){
                         //     elemento1.removeAttribute("disabled");
                         // }else{
@@ -201,7 +211,6 @@ formu.addEventListener("submit", (e)=>
 
 
 
-const calificar = document.getElementById("calificar");//Boton para calificar
 
 
  //funcion para consultar
@@ -225,9 +234,25 @@ function consulta(e) {
 mostrartd.addEventListener('click', (e)=>{
     e.preventDefault();
     fond.style.opacity="0";
+    inf.style.opacity="0";
     mostrartd.style.background="#238276";
     informacion.style.opacity="1";
     informacion.style.visibility="visible";
+    vercali.style.opacity="0";
+    vercali.style.visibility="hidden";
+    mostrarcali.style.background="#fff";
+})
+
+mostrarcali.addEventListener('click', (e)=>{
+    e.preventDefault();
+    fond.style.opacity="0";
+    inf.style.opacity="0";
+    mostrarcali.style.background="#238276";
+    vercali.style.opacity="1";
+    vercali.style.visibility="visible";
+    informacion.style.opacity="0";
+    informacion.style.visibility="hidden";
+    mostrartd.style.background="#fff";
 })
 
 // salir de evidencias
@@ -237,6 +262,16 @@ salii.addEventListener('click', (e)=>{
     informacion.style.opacity="0";
     informacion.style.visibility="hidden";
     fond.style.opacity="1";
+    inf.style.opacity="1";
+})
+
+saliii.addEventListener('click', (e)=>{
+    e.preventDefault();
+    mostrarcali.style.background="#fff";
+    vercali.style.opacity="0";
+    vercali.style.visibility="hidden";
+    fond.style.opacity="1";
+    inf.style.opacity="1";
 })
 
 //Abir calificador
@@ -261,6 +296,7 @@ function relacion (apren)
 {
     const hidden = document.getElementById("hidden");
     hidden.innerHTML = `<input type="hidden" name="documenapre" value="${apren}" > `
+    console.log(apren)
 }
 
 
