@@ -276,7 +276,8 @@ if(isset($_POST)){
          <a class="btn_regresar btn_imprimir" href="crearPdf.php" id="btn_imprimir">Imprimir</a>
     </div>
 <script>
-    const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>"
+    const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>";
+    
 </script>
 <script src="pazysalvo.js"></script>
 </body>

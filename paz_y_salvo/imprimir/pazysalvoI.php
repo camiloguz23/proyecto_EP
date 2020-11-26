@@ -278,6 +278,11 @@ if(isset($_POST)){
 
 <?php
     } else {
+          echo'<script type="text/javascript">
+                        alert("El aprendiz digitado no existe, o no se encuentra en estado Iniciado Por Certificar");
+                        window.location.href="../../segui/segui.php";
+                    </script>';
+                
 
         switch($_SESSION['id_tip_usu']) {
             case 4: 
