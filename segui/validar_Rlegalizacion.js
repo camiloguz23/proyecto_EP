@@ -70,7 +70,12 @@ const bloquearBottttton = () => {
         document.getElementById('boton523').style.display = "none"
     
     }
+
+ 
+
+
 }  */
+
 
 inputs_formulario_legalizacion.forEach((input)=>{
     input.addEventListener('keyup', validarformulario_L);
