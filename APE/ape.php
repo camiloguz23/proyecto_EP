@@ -39,6 +39,9 @@
                 <li id="paz">
                     <a href="#" id="btn_pazysalvo"><img class="dos" width="36" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a>
                     <div class="cuadro" id="cuadro">
+                    <div class="b_salir">
+                            <a href="#" id="salir"><img class="salir" src="../imagenes/cancelar.png" alt=""></a>
+                        </div>
                         <form action="../php/crearPazySalvo.php" method="POST" id="frm_1">
                             <label for="documento">Documento de identidad</label>
                             <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento del aprendiz">
@@ -53,36 +56,42 @@
 
     </header>
 
-    <div class="contper">
-            <div id="fondo" class="fondo">
-                <img width="1349" height="400" src="../imagenes/ape.jpg" alt="">
-            </div>
-        <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
+    
+    <div id="fondo" class="fondo">
 
-        <div class="contenedor">
-            <div class="date">
-                <ul class="datos">
-                    <p>Soy  una persona empendedora que siempre mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                    <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> </p>
-                    <p class="text2"> TELEFONO: <?=$_SESSION["telefono"]?></p>
-                    <p class="text2">EMAIL:  <?=$_SESSION["correo"]?></p>
-                </ul>
-            </div>
-            <div class="edicion">
-                <a href="#" class="button">EDITAR</a>
-            </div> 
-        </div>
+    </div>
+
+    <div class="naranja" >
+        <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
+    </div>
+
+    <div class="contenedor">
+        <div class="date">
+
+            
+            <ul class="datos">
+                <p class="frase">Soy  una persona empendedora que siempre mira hacia adelante y simepre intenta ser mejor cada  dia</p>
+                <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> </p>
+                <p class="text2"> TELEFONO: <?=$_SESSION["telefono"]?></p>
+                <p class="text2">EMAIL:  <?=$_SESSION["correo"]?></p>
+            </ul>
+
+            <a href="#" class="button">EDITAR</a>
+
+        </div>  
+    </div>
         
-            <div class="opcion">
-                <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
-                <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
-            </div>
-    </div>
+    <div class="opcion">
 
+        <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
+        <a href="#" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
+        
     </div>
+   
+
     <div id="pazsal" class="pazsal">
 
-        <div id="cerrarpaz" class="cerrarpaz">
+         <div id="cerrarpaz" class="cerrarpaz">
             <img src="../imagenes/cancelar.png" alt="">
         </div>
     </div>
@@ -92,12 +101,12 @@
         <div class="info">
             <p>&copy; Servicio Nacional de Aprendizaje SENA </p>
             <p>Centro de Industria y Construccion- Ibague-Tolima </p>
-            
+                
             <p> Direccion: 141- Sector, Cra. 45 Sur #1255</p>
         </div>
     </footer>
-   
+    
 
-<script src="script/ape.js"></script>
+    <script src="script/ape.js"></script>
 </body>
 </html>

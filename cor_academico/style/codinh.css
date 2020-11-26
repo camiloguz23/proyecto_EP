@@ -1,3 +1,4 @@
+
 *{
     padding: 0%;
     margin: 0%;
@@ -51,7 +52,7 @@ body
     position: absolute;
     margin-left: 82.6%;
     z-index: 1;
-    margin-top: -6.2%;
+    margin-top: -6.4%;
 
 }
 
@@ -91,7 +92,7 @@ body
 .menu  li a 
 {
     display: block;
-    padding: 15px 5px;
+    padding: 15px 10px;
     color: black;
     font-family: Verdana;
     text-decoration: none;
@@ -101,56 +102,77 @@ body
     {
         background-color:rgb(252, 115, 25);
         color: rgb(255, 255, 255);
-        width: 105%;
+        width: 114%;
         border-radius: 8px;
     }
 
 /*contenido imagen de perfil*/
 
-.contper
-{
-    
-    height: auto;
-}
 
 .fondo
 {
-    margin-top: 40px;
+    width:auto;
+    max-width: 95%;
+    height:300px;
+    margin-top: 5px;
+        margin-left: 30px;
+        background-image: url(../../imagenes/academico.jpg);
 }
 
 .naranja .perfil
 {
-    position: absolute;
-    margin-top: -120px;
-    margin-left: 545px;
+    margin-top:-67px;
+    margin-left:42%;
+    background-color: #fc7323;
     border-radius: 300px;
     height: 250px;
     width: 20%;
 }
 
+.naranja{
+    
+    width: auto;
+    margin-left: 4.5%;
+    margin-bottom: 2%;
+    max-width: 90%;
+    height: 150px;
+    
+}
+
+
 /*contenido informativo*/
 
 .contenedor{
-    position: absolute;
-    background-color: #ffffff;
+    position: relative;
+    background-color: rgb(252, 115, 35);
+    border-radius: 10px;
+    border:1px solid black;
     width: 90%;
     height: 150px;
-    margin:5% ;
-    margin-top: 12%;
+    margin-left: 60px;
+    margin-top: 4%;
+    max-width: 97%;
 
 }  
 
 .date{
-    position: relative;
+    position: absolute;
     background-color: #ffffff;
-    border:2px solid;
+    max-width: 97%;
     border-color: #353434;
+    border-radius: 10px;
+    border:1px solid black;
     width:96%;
+    margin-right: 20px;
     height: 100px;
     margin-left: 20px;
     margin-top: 2%;
     text-align: center;
 } 
+
+.frase{
+    margin-top:13px;
+}
 
 .date .datos p
 {
@@ -164,24 +186,20 @@ body
 .date .datos .text2
 {
     text-align: left;
-    max-width: 100%;
+    width:250px;
 }
 
 /*editar*/
 .button { 
-    position: absolute;
     text-decoration: none;
-    padding: 10px 40px;
-    box-sizing: border-box;
+    padding: 10px 30px;
     font-family: Verdana;
     width: 170px;
     text-align: center;
-    margin-top: -22%;
     color: rgb(255, 255, 255);
     font-size: 15px;
-    background: rgb(89, 181, 72);
-    top: 410px;
-    margin-left: 1050px;
+    background:rgb(89, 181, 72);
+    margin-left: 80%;
     border-radius: 20px;
 
 }
@@ -189,6 +207,7 @@ body
     .button:hover
     {
         background-color: rgb(25, 130, 118);
+        border: 1px solid black;
         color: white;
     
     }
@@ -197,72 +216,39 @@ body
 
 .opcion
 {
-    width: 70%;
-    margin-left: 30%;
+    position:relative;
+    margin-top:8%;
+    padding:20px;
+    max-width: 90%;
+    margin-left: 7%;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .button3 
 { 
-    position: relative;
+    margin-left: 20%;
     text-decoration: none;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 170px;
-    text-align: center;
-    margin-top: 200px;
+    padding: 10px 30px;
+    font-family: verdana;
+    width: 160px;
     color: rgb(0, 0, 0);
     font-size: 15px;
     background: white;
-    top: 470px;
     border-radius: 20px;
+    border-color: rgb(89, 181, 72);
     border-style: solid;
     border-width: 2px;
-}
-
-    .button3 .butdos
-    {
-        margin: -10px 10px;
-    }
-
-    .button3:hover 
-    {
-        color: white;
-        background-color:  rgb(25, 130, 118); 
-    }
-
-
-/*aprendices*/
-
-.button4 
-{ 
-    position: relative;
-    text-decoration: none;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 170px;
     text-align: center;
-    margin-top: 200px;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    background: white;
-    top: 470px;
-    margin-left: 16%;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 2px;
 }
-    .button4 .buttres
-    {
-        margin-right: 15px;
-        margin: -10px 10px;
-    }
 
-    .button4:hover
-    {
-        background-color: rgb(25, 130, 118);
-        color: white;
-    }
-
+  
+.button3:hover 
+{
+    color: white;
+    background-color: rgb(89, 181, 72); 
+}
 
 /*pie de pagina*/
 
@@ -273,7 +259,7 @@ body
         width: 100%;
         height: 75px;
         background-color: rgb(89, 181, 72);
-        margin-top:550px;
+        margin-top:259px;
         display: flex;
         align-items: flex-end;
         border-top: 2px solid #fff;
@@ -299,6 +285,22 @@ body
         margin: 4px;
         margin-left: 5px;
         font-family: Verdana;
+    }
+
+    .b_salir a 
+    {
+        cursor: pointer;
+
+    }
+   
+    .b_salir img
+    {
+        width: 7%;
+        height: 9%;
+        position: absolute;
+        left: 370px;
+        margin-top: 2px;
+        z-index: 11;
     }
 
     .pazysall
@@ -329,51 +331,67 @@ body
     }
 
     .cuadro {
-        width: 280px;
-        height: 200px;
-        background-color: #ededed;
-    
+        display: none;
+        width: 390px;
+        height: 330px;
+        background:rgb(252, 115, 35);
+        border-radius:9px;
         position: absolute;
         top: 48px;
         left: 300px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-    
+        padding: 1.5%;
+        
+        
     }
     
     
     .cuadro form {
-        width: 90%;
-        height: 100%;
+        width: 80%;
+        height:86%;
         margin: auto;
-        
+        background: #fff;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        border-radius:9px;
         align-items: center;
     }
     
     .cuadro form label {
         font-weight: bold;
     }
-    
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    input[type=number] { -moz-appearance:textfield; }
     .cuadro form .input {
-        width: 100%;
-        height: 40px;
+        width: 80%;
+        height: 35px;
         padding: 0 3px;
         border-radius: 20px;
-        border: none;
-        box-shadow: 3px 3px 4px black;
+        border-color: rgb(25, 130, 118);
+        border-style: solid;
+        border-width: 2px;
+        box-shadow: 3px 3px 4px rgb(25, 130, 118);
     }
     
     .cuadro form .input:focus {
         outline: none;
     }
     
+
     .cuadro form .submit {
-        width: 200px;
+        width: 100px;
         height: 30px;
         border: none;
+        color: #fff;
+        font-size: 15px;
         background-color: rgb(89, 181, 72);
         border-radius: 20px;
     }
