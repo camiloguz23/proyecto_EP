@@ -1,9 +1,19 @@
-$(document).ready(function () {
-    boton_paz = $('#btn_pazysalvo');
-    cuadro = $('#cuadro');
-    $(cuadro).hide(0);
+const boto = document.getElementById("btn_pazysalvo");
+const cuadropa = document.getElementById("cuadro");
+const salid = document.getElementById("salir");
 
-    $(boton_paz).click(function (e) { 
-        $(cuadro).slideToggle(250);
-    });
+boto.addEventListener('click', (e)=>{
+    e.preventDefault();
+    cuadropa.style.display= "block";
+    boto.style.background ="#fc7323";
+    boto.style.color = "#ffffff";
+    boto.style.width ="214px";
+});
+
+salid.addEventListener('click', (e)=>{
+    e.preventDefault();
+    cuadropa.style.display= "none";
+    boto.style.background ="#ffffff";
+    boto.style.color ="black";
+
 });
