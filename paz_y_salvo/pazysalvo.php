@@ -278,7 +278,7 @@ if(isset($_POST)){
 <script>
     const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>"
 </script>
-<script src="script/pazysalvo.js"></script>
+<script src="pazysalvo.js"></script>
 </body>
 </html>
 

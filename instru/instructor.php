@@ -27,6 +27,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="../imagenes/favicon.ico">
 
+
     <title>INSTRUCTOR</title>
 </head>
 
@@ -51,36 +52,50 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
             <ul class="menu">
                 <li><a href="#" id="seguimi"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">SEGUIMIENTO DE EVIDENCIAS</a></li>
                 <li id="aprediz"><a href="#"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
+                <li><a href="#"><img class="cuatro" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a></li>
             </ul>
         </nav>
 
     </header>
 
-    <div class="contper">
-        <div id="fondo" class="fondo">
-            <img width="1349" height="400" src="../imagenes/INSTRUCTOR.png" alt="">
-        </div>
-        <div class="naranja"><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
-
-        <div class="contenedor">
-            <div class="date">
-                <ul class="datos">
-                    <p>Soy una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada dia</p>
-                    <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> </p>
-                    <p class="text2"> TELEFONO: <?= $_SESSION["telefono"] ?></p>
-                    <p class="text2">EMAIL: <?= $_SESSION["correo"] ?></p>
-                </ul>
-            </div>
-            <div class="edicion">
-                <a href="#" class="button">EDITAR</a>
-            </div>
-        </div>
-
-        <div class="opcion">
-            <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset="">SEGUIMIENTO DE EVIDENCIAS</a>
-            <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
-        </div>
+    
+    <div id="fondo" class="fondo">
+       
     </div>
+
+    <div class="naranja">
+        <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
+    </div>
+
+    <div class="contenedor">
+        <div class="date">
+
+
+            <ul class="datos">
+            <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
+                    dia</p>
+                    <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> <br>TELEFONO:
+                    <?= $_SESSION["telefono"] ?><br>E-Mail:
+                    <?= $_SESSION["correo"] ?></p>
+            </ul>
+
+            <a href="#" class="button">EDITAR</a>
+
+        </div>  
+    </div>
+
+
+
+    <div class="opcion">
+
+        <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset=""> EVIDENCIAS</a>
+        <a href="#" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
+        <a href="#" class="button3"> <img  height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
+
+        
+    </div>
+    
+
 
     <div id="infor" class="seguimiento">
         <div class="sali">

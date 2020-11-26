@@ -30,9 +30,9 @@ btn_imprimir.addEventListener("click", (e) => {
             btn_coordinador.style.visibility = "visible";
             break;
         case "7":
-            btn_coordinador.style.visibility = "hidden";
-            btn_biblioteca.style.visibility = "visible"; 
+            btn_biblioteca.style.visibility = "visible";
             btn_ape.style.visibility = "hidden";
             btn_bienestar.style.visibility = "hidden";
+            btn_coordinador.style.visibility = "hidden";
             break;
     }
