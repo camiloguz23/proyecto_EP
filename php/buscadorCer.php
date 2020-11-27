@@ -25,7 +25,7 @@ if($documento == "" || $documento == null){
             $datoCer = mysqli_fetch_array($sqlCer);
             $contador = count($datoCer);
             $contadorAray = count($datoCer);
-            if ($contadorAray == 2) {
+            if ($contadorAray == 14) {
                 echo 3;
             
             }else{
