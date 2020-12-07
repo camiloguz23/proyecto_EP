@@ -50,22 +50,16 @@ formu.addEventListener("submit", (e)=>
                         elemento1.setAttribute("class", "check");
                         elemento1.setAttribute("name","check");
                         elemento1.setAttribute("value",`${el.id_evidencias}`)
-                        contenedor.style.display="grid";
-                        contenedor.style.columns="1fr 1fr";
-                        // elemento1.style.display="flex";
-                        // label.style.bottom="-100px"
-                        // label.style.margin="-51px";
-                        // elemento1.style.margin="-61";
+                    
                         // if(el.nom_evidencias === "EVIDENCIA 1"){
                         //     elemento1.removeAttribute("disabled");
                         // }else{
                         //     elemento1.setAttribute("disabled" , "true");
                         // }
                         label.appendChild(document.createTextNode(texto));
-                        contenedor.appendChild(elemento1);
+                        label.appendChild(elemento1);
                         contenedor.appendChild(label);
                         formula.appendChild(contenedor);
-                        fragmen.appendChild(elemento1);
                     })
                     formula.appendChild(fragmen);
                     
@@ -151,17 +145,19 @@ formu.addEventListener("submit", (e)=>
                         labell.setAttribute("for" , `${el.nom_evidencias}`);
                         elemento2.setAttribute("class", "check");
                         elemento2.setAttribute("name","check");
-                        elemento2.setAttribute("value",`${el.id_evidencias}`)
+                        elemento2.setAttribute("value",`${el.id_evidencias}`);
+                        
                         // if(el.nom_evidencias === "EVIDENCIA PARCIAL"){
                         //     elemento2.removeAttribute("disabled");
-                        // }else{
+                        // }
+                        // else{
                         //     elemento2.setAttribute("disabled" , "true");
                         // }
                         labell.appendChild(document.createTextNode(textoo));
-                        contenedorr.appendChild(elemento2);
+                        
+                        labell.appendChild(elemento2);
                         contenedorr.appendChild(labell);
                         formula.appendChild(contenedorr);
-                        fragmen.appendChild(elemento2);
                     })
                     formula.appendChild(fragmen);
                     
