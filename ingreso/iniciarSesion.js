@@ -11,7 +11,7 @@ const btn_subdirector = document.getElementById("btn_subdirector");
 //Imagen de la mascota 
 const Img_macota = document.getElementById('imagenMascota');
 
-//Formularios
+// id Formularios
 
 const login_box1 = document.getElementById("login-box1");
 const login_box2 = document.getElementById("login-box2");
@@ -21,6 +21,17 @@ const login_box5 = document.getElementById("login-box5");
 const login_box6 = document.getElementById("login-box6");
 const login_box7 = document.getElementById("login-box7");
 const login_box8 = document.getElementById("login-box8");
+
+
+//formularios como tal
+const form1 = document.getElementById("form1");
+const form2 = document.getElementById("form2");
+const form3 = document.getElementById("form3");
+const form4 = document.getElementById("form4");
+const form5 = document.getElementById("form5");
+const form6 = document.getElementById("form6");
+const form7 = document.getElementById("form7");
+const form8 = document.getElementById("form8");
 
 btn_administrador.addEventListener('click',(e)=>{
     e.preventDefault();
@@ -33,6 +44,13 @@ btn_administrador.addEventListener('click',(e)=>{
     login_box7.style.display = "none";
     login_box8.style.display = "none";
     Img_macota.style.display = "none";
+    form2.reset();
+    form3.reset();
+    form4.reset();
+    form5.reset();
+    form6.reset();
+    form7.reset();
+    form8.reset();
     
 })
 
@@ -47,6 +65,14 @@ btn_seguimiento.addEventListener('click',(e)=>{
     login_box7.style.display = "none";
     login_box8.style.display = "none";
     Img_macota.style.display = "none";
+    form1.reset();
+    form3.reset();
+    form4.reset();
+    form5.reset();
+    form6.reset();
+    form7.reset();
+    form8.reset();
+
 })
 
 btn_instructor.addEventListener('click',(e)=>{
@@ -60,6 +86,13 @@ btn_instructor.addEventListener('click',(e)=>{
     login_box7.style.display = "none";
     login_box8.style.display = "none";
     Img_macota.style.display = "none";
+    form1.reset();
+    form2.reset();
+    form4.reset();
+    form5.reset();
+    form6.reset();
+    form7.reset();
+    form8.reset();
 })
 
 btn_agenciaPublica.addEventListener('click',(e)=>{
@@ -72,7 +105,14 @@ btn_agenciaPublica.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
-     Img_macota.style.display = "none";
+    Img_macota.style.display = "none";
+    form1.reset();
+    form2.reset();
+    form3.reset();
+    form5.reset();
+    form6.reset();
+    form7.reset();
+    form8.reset();
 })
 
 btn_bienestar.addEventListener('click',(e)=>{
@@ -86,6 +126,13 @@ btn_bienestar.addEventListener('click',(e)=>{
     login_box7.style.display = "none";
     login_box8.style.display = "none";
     Img_macota.style.display = "none";
+    form1.reset();
+    form2.reset();
+    form3.reset();
+    form4.reset();
+    form6.reset();
+    form7.reset();
+    form8.reset();
    
 })
 
@@ -100,6 +147,13 @@ btn_coordinador.addEventListener('click',(e)=>{
     login_box7.style.display = "none";
     login_box8.style.display = "none";
     Img_macota.style.display = "none";
+    form1.reset();
+    form2.reset();
+    form3.reset();
+    form4.reset();
+    form5.reset();
+    form7.reset();
+    form8.reset();
    
 })
 
@@ -114,6 +168,13 @@ btn_biblioteca.addEventListener('click',(e)=>{
     login_box7.style.display = "block";
     login_box8.style.display = "none";
     Img_macota.style.display = "none";
+    form1.reset();
+    form2.reset();
+    form3.reset();
+    form4.reset();
+    form5.reset();
+    form6.reset();
+    form8.reset();
    
 })
 
@@ -128,5 +189,12 @@ btn_subdirector.addEventListener('click',(e)=>{
     login_box7.style.display = "none";
     login_box8.style.display = "block";
     Img_macota.style.display = "none";
+    form1.reset();
+    form2.reset();
+    form3.reset();
+    form4.reset();
+    form5.reset();
+    form6.reset();
+    form7.reset();
    
 })

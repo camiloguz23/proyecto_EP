@@ -23,7 +23,7 @@ body
 
 .titu h1
 {
-    margin-left:35%;
+    margin-left:25%;
     font-size: 50px;
 }
 
@@ -161,14 +161,14 @@ body
 }
 
 
-.login-box input[type="text"],
-.login-box2 input[type="text"],
-.login-box3 input[type="text"],
-.login-box4 input[type="text"],
-.login-box5 input[type="text"],
-.login-box6 input[type="text"],
-.login-box7 input[type="text"],
-.login-box8 input[type="text"]
+.login-box input[type="number"],
+.login-box2 input[type="number"],
+.login-box3 input[type="number"],
+.login-box4 input[type="number"],
+.login-box5 input[type="number"],
+.login-box6 input[type="number"],
+.login-box7 input[type="number"],
+.login-box8 input[type="number"]
 {
     border: none;
     border-radius: 60px;
@@ -251,6 +251,13 @@ body
     border-radius: 30px;
     
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
 /* FORMULARIO NUMERO DOS SEGUIMIENTO*/
 
 .login-box2{
@@ -269,7 +276,16 @@ body
     margin-left: 400px;
     border-radius: 30px;
 }
+/* quitar punto de la house */
+li{
+    list-style-type: none;
+    margin-top:2.5%;
+    margin-left:1.2%;
+}
 
+li a{
+    color:rgb(0, 0, 0);
+}
 /* FORMULARIO NUMERO TRES INSTRUCTOR */
 
 .login-box3{
