@@ -9,12 +9,22 @@ body
 
 .titu
 {
-    margin-left: 600px;
+    
+    text-align: center;
+    display:flex;
+    height:15%;
+    margin-bottom:8px;
+    
+}
+
+.chiquito{
+    padding:45px 0 0 0;
 }
 
 .titu h1
 {
-    font-size: 60px;
+    margin-left:35%;
+    font-size: 50px;
 }
 
 .total
@@ -25,6 +35,59 @@ body
     border:1px solid transparent;
 }
 
+/* imagen del logo de la mascota */
+.imagenlogo{
+    width:75%;
+   
+}
+
+.imgMÑ{
+    width:100%;
+   
+}
+    /* --------------------------BOTONES DE APARECER FORMULARIOS------------------- */
+
+.botones-form{
+    margin-top:3%;
+    width:60%;
+    height: 100%;
+    padding:10px;
+    display:grid;   
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap:5px;
+    background: rgba(46, 163, 42, 0.473);
+    margin-left:5%;
+    border-radius:5px;
+    
+}
+
+.botones-form button{
+    border-radius:2px;
+    outline:none;
+
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.botones-form button:focus{
+    background:rgb(236, 163, 54);
+    border:rgb(236, 163, 54);
+    outline:none;
+    
+}
+
+.btn-cursor{
+    padding:10px;
+    cursor:pointer;
+}
+
 /* CAJA DE BOTONES Y FORMULARIO */
 .total2{
     
@@ -33,18 +96,6 @@ body
     grid-template-columns: 1fr 1fr;
     width:99.4%;
 }
-
-.botones-form{
-    border:3px solid red;
-    width:40%;
-    
-    display:grid;   
-    grid-template-columns: 1fr;
-    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    gap:5px;
-    background: rgb(131, 121, 121);
-}
-
 
 
 .login-box .avatar,
@@ -309,7 +360,7 @@ body
 
 .login-box8{
     display:none;
-    
+
     width: 350px;
     height: 445px;
     background: rgb(255, 255, 255); 
@@ -323,12 +374,7 @@ body
     margin-left: 400px;
     border-radius: 30px;
 }
-    /* --------------------------BOTONES DE APARECER FORMULARIOS------------------- */
 
-
-.btn-cursor{
-    cursor:pointer;
-}
 
 
 
