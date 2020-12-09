@@ -3,6 +3,7 @@
     session_start();
             $usuario = $_POST["usuario"];
             $clave = $_POST["clave"];
+            $loginTipUsu = $_POST['loginTipUsu'];
            
             
                 $consul = "SELECT * FROM usuario WHERE documento = '$usuario'  and clave = '$clave'";
@@ -19,32 +20,35 @@
                             $_SESSION["documento"] = $fila["documento"];
                             $_SESSION["foto"] = $fila["foto"];
                            
-                            
-
-                                if($_SESSION["id_tip_usu"] == 1 ){
+                                if($loginTipUsu == $_SESSION['id_tip_usu']) {
+                                    if($_SESSION["id_tip_usu"] == 1 ){
                                     
-                                    header("location: ../administrador/admin.php");
-                                    exit();
+                                        header("location: ../administrador/admin.php");
+                                        exit();
+                                    }
+                                    elseif($_SESSION["id_tip_usu"] == 2 ){
+                                        header("location: ../segui/segui.php");
+                                        exit();
+                                    }elseif($_SESSION["id_tip_usu"] == 3){
+                                        header("location: ../instru/instructor.php");
+                                    }elseif ($_SESSION["id_tip_usu"] == 4){
+                                        header("location: ../APE/ape.php");
+                                    }elseif ($_SESSION["id_tip_usu"] == 5){
+                                        header("location: ../bienestar/biene.php");
+                                    }elseif ($_SESSION["id_tip_usu"] == 6){
+                                        header("location: ../cor_academico/cordinh.php");
+                                    }elseif ($_SESSION["id_tip_usu"] == 7){
+                                        header("location: ../biblioteca/biblio.php");
+                                    } else if ($_SESSION["id_tip_usu"] == 8){
+                                        header("location: ../subdirector/index.php");
+                                    } else{
+                                        header("location: ../index.html");
+                                    }
+                                } else {
+                                    header("location: ../ingreso/ingreso.html");
                                 }
-                                elseif($_SESSION["id_tip_usu"] == 2 ){
-                                    header("location: ../segui/segui.php");
-                                    exit();
-                                }elseif($_SESSION["id_tip_usu"] == 3){
-                                    header("location: ../instru/instructor.php");
-                                }elseif ($_SESSION["id_tip_usu"] == 4){
-                                    header("location: ../APE/ape.php");
-                                }elseif ($_SESSION["id_tip_usu"] == 5){
-                                    header("location: ../bienestar/biene.php");
-                                }elseif ($_SESSION["id_tip_usu"] == 6){
-                                    header("location: ../cor_academico/cordinh.php");
-                                }elseif ($_SESSION["id_tip_usu"] == 7){
-                                    header("location: ../biblioteca/biblio.php");
-                                }elseif ($_SESSION["id_tip_usu"] == 8){
-                                    header("location: ../subdirector/index.php");
-                                }
-                                 else{
-                                    header("location: ../index.html");
-                                }  
+
+                                  
                                 
                         } else{
                             
