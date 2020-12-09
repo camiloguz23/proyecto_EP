@@ -1,9 +1,9 @@
 <?php
 session_start();
 $usario = $_SESSION["documento"];
-// if ($usario == "" || $usario == null) {
-//     header("location: ../index.html");
-// }
+if ($usario == "" || $usario == null) {
+    header("location: ../index.html");
+}
 require_once('../php/connecion.php');
 
 ?>
