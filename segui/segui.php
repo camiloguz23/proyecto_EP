@@ -132,12 +132,14 @@ if (isset($_POST['btn_actualizar'])) {
                             alt="">CERTIFICACIÓN</a></li>
                 <li id="tres"><a href="#"><img class="tres" width="37" height="30" src="../imagenes/Imagen6.png"
                             alt="">APRENDIZ</a></li>
-                <li id="btn_pazysalvo"><a href="#"><img class="cuatro" width="37" height="30" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg"
-                            alt="">PAZ Y SALVO</a></li>
+                <li id="btn_pazysalvo"><a href="#"><img class="cuatro" width="37" height="30"
+                            src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a>
+                </li>
                 <div class="cuadro" id="cuadro">
                     <form action="../php/crearPazySalvo.php" method="POST" id="frm_1">
                         <label for="documento">Documento de identidad</label>
-                        <input class="input" type="number" name="documento" id="documento" placeholder="Ingrese el documento del aprendiz">
+                        <input class="input" type="number" name="documento" id="documento"
+                            placeholder="Ingrese el documento del aprendiz">
                         <input type="hidden" name="usuario" value="<?php echo $usario?>">
                         <input class="submit" type="submit" value="Buscar">
                     </form>
@@ -215,7 +217,7 @@ if (isset($_POST['btn_actualizar'])) {
                     <input class="inputB" type="number" id="documentole">
                     <div class="botones12" id="boton" title="consultar">
                         <a href="#" class="hola" id=""><img class="boton" src="../imagenes/Imagen3.png" height="50px"
-                        width="50px"></a>
+                                width="50px"></a>
                     </div>
                 </form>
             </div>
@@ -311,7 +313,6 @@ if (isset($_POST['btn_actualizar'])) {
             </form>
         </div>
 
-
         <form action="../php/registrolegi.php" method="POST" autocomplete="off" enctype="multipart/form-data"
             id="legalForm">
 
@@ -349,11 +350,13 @@ if (isset($_POST['btn_actualizar'])) {
 
                 <input class="seleccionTipo" type="text" name="jefe" id="nombre_jefe" maxlength="40"
                     style="text-transform:uppercase"><br>
-                <p class="p-nombre-jefe" id="p-nombre-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y max 30 </p>
+                <p class="p-nombre-jefe" id="p-nombre-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5
+                    y max 30 </p>
                 <label class="label" for="">Cargo del jefe inmediato</label><br>
                 <input class="seleccionTipo" type="text" name="cargoJefe" id="cargoJefe" maxlength="35"
                     style="text-transform:uppercase"><br>
-                <p class="p-cargo-jefe" id="p-cargo-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y max 30</p>
+                <p class="p-cargo-jefe" id="p-cargo-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y
+                    max 30</p>
 
                 <label class="label" for="">Fecha de inicio de la etapa productiva</label><br>
                 <input class="seleccionTipo" type="date" name="fecha" id="">
@@ -366,7 +369,7 @@ if (isset($_POST['btn_actualizar'])) {
                 </div>
 
                 <div class="botones">
-                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523" >
+                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523">
                     <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
                 </div>
             </div>
@@ -374,16 +377,12 @@ if (isset($_POST['btn_actualizar'])) {
         </form>
     </div>
 
-
-
-
     <div class="cargaArchi" id="formularioCertificacion">
         <h1 class="tituloForm">REGISTRO DE CERTIFICACIÓN</h1>
         <form id="cargaArchi" name="cargaArchi" autocomplete="off" enctype="multipart/form-data">
 
             <Label class="label"><input type="checkbox" name="chequeo" id="" value="valido">|COMPETANCIAS ETAPA LECTIVA
                 Y PRODUCTIVA AL DIA</Label>
-
 
             <h3 class="subTitulo">*CARGA DE DOCUMENTOS</h3>
 
@@ -411,16 +410,11 @@ if (isset($_POST['btn_actualizar'])) {
             <div id="datoAprendiz">
             </div>
 
-
             <div class="botones2">
-
-
                 <input class="botonForm2" type="button" value="GUARDAR" id="btnEnviar">
-
                 <input class="botonForm2" type="button" value="CERRAR" id="cerrarCerti">
 
             </div>
-
 
         </form>
     </div>
@@ -436,7 +430,7 @@ if (isset($_POST['btn_actualizar'])) {
             <div class="datosR">
                 <label class="labelR">Tipo Documento:</label>
                 <select name="tipdocu" id="tipdocu">
-                    <option value="" >Seleccione el documento</option>
+                    <option value="">Seleccione el documento</option>
 
                     <?php
                     foreach ($query as $tip) : ?>
@@ -538,8 +532,9 @@ if (isset($_POST['btn_actualizar'])) {
     <!------------crear ficha--------------- -->
     <div class="crearFicha" id="fichaOcul">
         <h1 class="tituloF">CREAR FICHA DE FORMACION</h1>
-        
-        <form method="POST" id="formularioFw" autocomplete="off"> <!-- action="../php/crearFicha.php" -->
+
+        <form method="POST" id="formularioFw" autocomplete="off">
+            <!-- action="../php/crearFicha.php" -->
 
             <div class="datosf">
                 <label for="" class="labelF">*Numero de ficha</label>
@@ -615,7 +610,7 @@ if (isset($_POST['btn_actualizar'])) {
             <div class="agregoF"></div>
 
             <div class="botonesF">
-                
+
                 <button class="btnEnviar" id="crearficha">CREAR</button>
                 <button class="btnCerrar" id="cerrarF">CERRAR</button>
             </div>
@@ -644,7 +639,7 @@ if (isset($_POST['btn_actualizar'])) {
             <button id="btnMostrar"> certificacion </button>
             <button id="cerrarBusCert"> Cerrar </button>
         </div>
-        
+
     </div>
     <script src="segui.js"></script>
     <script src="validacionF.js"></script>
@@ -678,7 +673,7 @@ $(document).ready(function() {
 
                 } else if (a == "existe") {
                     alert('Aprendiz ya existe');
-                }else if(a == 3){
+                } else if (a == 3) {
                     alert('llena los campos correctamente')
                 } else {
                     alert("llena los campos correctamente")
@@ -706,7 +701,7 @@ $(document).ready(function() {
                     console.log(b);
                     $('.agrego').html(
                         '<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
-                        )
+                    )
                     setTimeout(() => {
                         document.querySelector("#registroEmpre").reset()
                         $('.agrego').html('<p></p>')
@@ -752,21 +747,21 @@ $(document).ready(function() {
             success: function(h) {
 
                 if (h == 1) {
-                    
+
                     $('.agregoF').html(
                         '<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
-                        )
+                    )
                     setTimeout(() => {
                         document.querySelector("#formularioFw").reset()
                         $('.agregoF').html('<p></p>')
                         window.location = "segui.php"
                     }, 2000);
 
-                  
 
 
-                }else if(h == 2){
-                    
+
+                } else if (h == 2) {
+
                     $('.agregoF').html(
                         '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">La ficha ya esta creada </p>'
                     )
@@ -794,6 +789,3 @@ $(document).ready(function() {
 
 });
 </script>
-
-
-
