@@ -19,18 +19,108 @@
             <button class="btn-2 btn-cursor">SEGUIMIENTO</button>
             <button class="btn-3 btn-cursor">INSTRUCTOR</button>
             <button class="btn-4 btn-cursor">AGENCIA PUBLICA DE EMPLEO</button>
-            <button class="btn-5 btn-cursor">BIENESTAR</button>
-            <button class="btn-6 btn-cursor">COORDINADOR ACADEMICO</button>
-            <button class="btn-7 btn-cursor">BIBLIOTECA</button>
-            <button class="btn-8 btn-cursor">SUBDIRECTOR</button>
+            <button class="btn-5 btn-cursor" id="btn_bienestar">BIENESTAR</button>
+            <button class="btn-6 btn-cursor" id="btn_coordinador">COORDINADOR ACADEMICO</button>
+            <button class="btn-7 btn-cursor" id="btn_biblioteca">BIBLIOTECA</button>
+            <button class="btn-8 btn-cursor" id="btn_subdirector">SUBDIRECTOR</button>
         
         </div>
-        <div class="login-box">
+
+        <div class="login-box" id="login_box">
+            <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
+            <form method="post" id="form1" action="../php/ingreso.php" autocomplete="off">
+
+                <!-- Inicio sesión Bienestar -->
+                <div id="login_box-bienestar">
+                    <h1>BIENESTAR</h1>
+                    <!-- USERNAME INPU -->
+                    <div class="grupo">
+                        <label for="username">Documento</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario" maxlength="12"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <div class="grupo">
+                        <label for="password">Clave</label>
+                        <input type="password" name="clave" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <!-- PASSWORD INPUT -->
+                    
+                    
+                    <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+                    
+                </div>
+
+                <!-- Inicio sesión Coordinador -->
+                <div id="login_box-coordinador">
+                    <h1>COORDINADOR ACADEMICO</h1>
+                    <!-- USERNAME INPU -->
+                    <div class="grupo">
+                        <label for="username">Documento</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario" maxlength="12"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <div class="grupo">
+                        <label for="password">Clave</label>
+                        <input type="password" name="clave" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <!-- PASSWORD INPUT -->
+                    
+                    
+                    <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+                    
+                </div>
+
+                <!-- Inicio sesión Biblioteca -->
+                <div id="login_box-biblioteca">
+                    <h1>BIBLIOTECA</h1>
+                    <!-- USERNAME INPU -->
+                    <div class="grupo">
+                        <label for="username">Documento</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario" maxlength="12"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <div class="grupo">
+                        <label for="password">Clave</label>
+                        <input type="password" name="clave" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <!-- PASSWORD INPUT -->
+                    
+                    
+                    <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+                    
+                </div>
+
+                <!-- Inicio sesión Biblioteca -->
+                <div id="login_box-subdirector">
+                    <h1>SUBDIRECTOR</h1>
+                    <!-- USERNAME INPU -->
+                    <div class="grupo">
+                        <label for="username">Documento</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario" maxlength="12"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <div class="grupo">
+                        <label for="password">Clave</label>
+                        <input type="password" name="clave" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <!-- PASSWORD INPUT -->
+                    
+                    
+                    <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+                    
+                </div>
+            </form>
+        </div>
+        <!-- <div class="login-box">
 
             <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
             <h1>INICIO SESION</h1>
             <form method="post" id="form1" action="../php/ingreso.php" autocomplete="off">
-                <!--USERNAME INPUT-->
+                USERNAME INPU
                 <div class="grupo">
                     <label for="username">Documento</label>
                     <input type="text" name="usuario" id="usuario" placeholder="Ingrese Usuario" maxlength="12"  style="text-transform:uppercase">
@@ -41,17 +131,18 @@
                     <input type="password" name="clave" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
                     <p id="aviso"></p>
                 </div>
-                <!--PASSWORD INPUT-->
+                PASSWORD INPUT
               
 
                 <input type="submit" name="inicio" id="inicio" value="INGRESAR">
              
             </form>
 
-        </div>
+        </div> -->
     </div>
    
     <script src="validacion.js"></script>
+    <script src="iniciarSesion.js"></script>
 </body>
 
 </html>
