@@ -66,6 +66,40 @@ if(isset($_POST)){
     <link rel="icon" href="../imagenes/favicon.ico">
 </head>
 <body>
+<div class="boton_regresar">
+        <?php
+                if( $_SESSION['id_tip_usu'] == 4) {
+        ?>
+                    <a class="btn_regresar" href="../APE/ape.php"><img src="" alt=""> Regresar a APE</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 5) {
+        ?>
+                    <a class="btn_regresar" href="../bienestar/biene.php">Regresar a Bienestar</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 6) {
+        ?>
+                    <a class="btn_regresar" href="../cor_academico/cordinh.php">Regresar a Coordinador Academico</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 7) {
+        ?>
+                    <a class="btn_regresar" href="../biblioteca/biblio.php">Regresar a Biblioteca</a>
+        <?php
+                }
+        ?>
+         <a class="btn_regresar btn_imprimir" href="crearPdf.php" id="btn_imprimir">Imprimir</a>
+    </div>
     <div class="contenedor">
         <div class="header">
             <div class="logo">
@@ -210,7 +244,7 @@ if(isset($_POST)){
             <td><img src="<?php echo $data['firma']?>" alt="" class="img_firma">
             </td>
             <td class="desaparecer" id="td_firma_fila">
-                <a href="editar_usuario.php?id=<?php echo $data['id_det_pazysalvo']?>&&usuario=<?php echo $usuario?>&&documento=<?php echo $documento?>" class="btn_firma1" id="<?php echo $idFirma;?>">Firmar</a>
+                <a href="editar_usuario.php?id=<?php echo $data['id_det_pazysalvo']?>&&usuario=<?php echo $usuario?>&&documento=<?php echo $documento?>" class="btn_firma1 <?php echo $idFirma;?>" id="<?php echo $idFirma;?>">Firmar</a>
             </td>
         </tr>
     <?php
@@ -239,41 +273,6 @@ if(isset($_POST)){
             <div class="observacion"></div>
             <div class="observacion"></div>
         </div>
-    </div>
-
-    <div class="boton_regresar">
-        <?php
-                if( $_SESSION['id_tip_usu'] == 4) {
-        ?>
-                    <a class="btn_regresar" href="../APE/ape.php"><img src="" alt=""> Regresar a APE</a>
-        <?php
-                }
-        ?>
-
-        <?php
-                if( $_SESSION['id_tip_usu'] == 5) {
-        ?>
-                    <a class="btn_regresar" href="../bienestar/biene.php">Regresar a Bienestar</a>
-        <?php
-                }
-        ?>
-
-        <?php
-                if( $_SESSION['id_tip_usu'] == 6) {
-        ?>
-                    <a class="btn_regresar" href="../cor_academico/cordinh.php">Regresar a Coordinador Academico</a>
-        <?php
-                }
-        ?>
-
-        <?php
-                if( $_SESSION['id_tip_usu'] == 7) {
-        ?>
-                    <a class="btn_regresar" href="../biblioteca/biblio.php">Regresar a Biblioteca</a>
-        <?php
-                }
-        ?>
-         <a class="btn_regresar btn_imprimir" href="crearPdf.php" id="btn_imprimir">Imprimir</a>
     </div>
 <script>
     const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>";
