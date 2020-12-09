@@ -29,8 +29,8 @@
         <nav class="navegacion">
             <ul class="menu">
                 <li id="pazsalvo">
-                    <a href="#" id="btn_pazysalvo"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a></li>
-                <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
+                    <a href="#" id="btn_pazysalvo"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">REPORTE</a></li>
+                <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">######</a></li>
             </ul>  
         </nav>
 
@@ -48,7 +48,7 @@
 
             <ul class="datos">
                 <p class="frase">Soy  una persona empendedora que mira hacia adelante y simepre intenta ser mejor cada  dia</p>
-                <p class="text2">NOMBRE: <?=$_SESSION["usuario"]?> <br>TELEFONO: <?=$_SESSION["telefono"]?><br>E-Mail: <?=$_SESSION["correo"]?></p>
+                <p class="text2">NOMBRE:<!-- <?=$_SESSION["usuario"]?>--> <br>TELEFONO:<!-- <?=$_SESSION["telefono"]?>--><br>E-Mail:<!-- <?=$_SESSION["correo"]?>--></p>
 
             </ul>
 
@@ -56,11 +56,11 @@
 
         </div>        
     </div>
-    
+
     <div class="opcion">
 
-        <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">PAZ Y SALVO</a>
-        <a href="#" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">APRENDICES</a>
+        <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">REPORTE</a>
+        <a href="#" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">######</a>
     
     </div> 
     <footer class="pie">
