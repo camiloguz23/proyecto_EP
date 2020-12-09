@@ -116,3 +116,25 @@
         background: rgb(89, 181, 72);
         color: rgb(255, 255, 255);
     }
+
+
+
+    /* --------------------------BOTONES DE APARECER FORMULARIOS------------------- */
+.botones-form{
+    border:3px solid red;
+    width:20%;
+    
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap:5px;
+    background: rgb(131, 121, 121);
+    
+}
+
+.btn-cursor{
+    cursor:pointer;
+}
+
+
+
