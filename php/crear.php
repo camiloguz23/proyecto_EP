@@ -26,9 +26,9 @@
         $foto= $_FILES['foto'] ['name'];
         $rutafoto = $_FILES["foto"] ["tmp_name"];
         $destinofoto = "../fotoPerfil/aprendices/".$foto;
-        copy($rutafoto,$destinofoto);
+        
 
-        if($tipdoc !="" && $ficha !=""  ){
+        if($tipdoc !="" && $ficha !="" && copy($rutafoto,$destinofoto) ){
         $consultaApre = "SELECT * FROM aprendices where id_aprend = '$docu'";
         $sqlApre = mysqli_query($connection,$consultaApre);
         $datoApre = mysqli_fetch_assoc($sqlApre);
@@ -44,12 +44,19 @@
             if ($inserta) {
                 $consulta = "INSERT INTO detalle_formacion(num_ficha, id_aprend, id_estado) VALUES ('$ficha',$docu,'1')";
                 
-                echo mysqli_query($connection,$consulta);
+                $SQLdeta = mysqli_query($connection,$consulta);
+
+                if ($SQLdeta) {
+                    echo 1;
+                }
+               
             }
         }
       }else{
-          echo "3";
+          echo 3;
       }
+    }else{
+        echo 3;
     }
 
    

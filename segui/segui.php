@@ -424,7 +424,7 @@ if (isset($_POST['btn_actualizar'])) {
 
     <div id="registroAprendiz" class="registroAprendiz">
 
-        <form id="frmajax" method="POST" autocomplete="off" enctype="multipart/form-data" >
+        <form id="frmajax" autocomplete="off" enctype="multipart/form-data" >
             <h1 class="tituloFormR">REGISTRO DE APRENDIZ</h1>
 
             <div class="datosR">
@@ -523,7 +523,7 @@ if (isset($_POST['btn_actualizar'])) {
             </div>
             <div class="datosR">
                 <label class="labelR">Subir foto</label>
-                <input type="file" name="foto" id="" accept="image/*">
+                <input type="file" name="foto" id="" >
                 
             </div>
             <div class="datosR">
@@ -662,40 +662,7 @@ if (isset($_POST['btn_actualizar'])) {
 
 </html>
 
-<!-------------------------------Jquery--------------------------->
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#btnguardar').click(function() {
-        var datos = $('#frmajax').serialize();
 
-
-        $.ajax({
-            type: "POST",
-            url: "../php/crear.php",
-            data: datos,
-            success: function(a) {
-                console.log(`revison de este dato ${a}`)
-                if (a == 1) {
-                    alert('Se agrego correctamente');
-                    setTimeout(() => {
-                        document.querySelector("#frmajax").reset()
-
-                    }, 2000);
-
-                } else if (a == "existe") {
-                    alert('Aprendiz ya existe');
-                } else if (a == 3) {
-                    alert('llena los campos correctamente')
-                } else {
-                    alert("llena los campos correctamente")
-                }
-
-            }
-        });
-        return false;
-    });
-});
-</script>
 <!-- --------------------------REGISTRO EMPRESA---------------------------------------->
 <script type="text/javascript">
 $(document).ready(function() {
