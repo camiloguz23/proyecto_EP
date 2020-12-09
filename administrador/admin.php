@@ -77,6 +77,42 @@
         <div id="cerrar" class="cerrar">
             <img src="../imagenes/cancelar.png" alt="">
         </div>
+
+        <div class="container">
+        
+        <div class="formu"> 
+            <form class="formm" action="../php/registro.php" method="POST" id="form">
+                <h1>REGISTRO DE USUARIOS</h1>
+                <div class="conten">
+                <div class="fila">
+                <label for="user">Documento</label>
+                <input type="text" id="usu" name="doc" placeholder="Ingrese su usuario o Documento" required autocomplete="off">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nom" name="nom" placeholder="Ingrese su nombre completo" required autocomplete="off">
+                <label for="apellido">Apellido completo</label>
+                <input type="text" id="ape" name="ape" placeholder="Ingrese su apellido completo" required autocomplete="off">
+                <label for="direccion">Correo</label>
+                <input type="email" id="corr" name="correo" placeholder="Ingrese su Correo" required autocomplete="off">
+                </div>
+                <div class="fila">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="tel" name="telefono" placeholder="Ingrese su Teléfono" required autocomplete="off">
+                <label for="clave">Clave</label> 
+                <input type="password" id="contra" name="clave" placeholder="Ingrese su Contraseña" required autocomplete="off">
+                <label for="clave">foto</label> 
+                <input type="file" name="imagen1" class="btnsubir" />
+                </div>
+                </div>
+                <div class="btnregistrar">
+                <input type="submit" name="enviar" id="env" value="Registrar">
+                </div>
+                <div class="btnregresar">
+                    <a href="../index.php" class="regreso">Regresar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
     </div>
 
         <!--pie de pagina-->
