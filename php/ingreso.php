@@ -17,6 +17,7 @@
                             $_SESSION["telefono"] = $fila["telefono"];
                             $_SESSION["correo"] = $fila["correo"];
                             $_SESSION["documento"] = $fila["documento"];
+                            $_SESSION["foto"] = $fila["foto"];
                            
                             
 
