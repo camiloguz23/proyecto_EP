@@ -538,3 +538,36 @@ btnmostrar.addEventListener("click", (e) => {
     btnmostrar.disabled = true
 } )
 
+// ****** FORMULARIO DE REGISTRO DE APRENDIZ *******************  /////
+
+// const form = document.getElementById("frmajax")
+const btnenviarapren = document.getElementById("btnguardar")
+
+btnenviarapren.addEventListener("click", (e) => {
+    e.preventDefault()
+    console.log("entre nontlf")
+    const formA = document.getElementById("frmajax")
+    const dataP = new FormData(formA)
+
+    fetch("../php/crear.php", {
+        method:"POST",
+        body: dataP
+    }).then(res => res.text()).then(apren => {
+        console.log(apren)
+        if (apren == 1) {
+            alert('Se agrego correctamente');
+            setTimeout(() => {
+                document.querySelector("#frmajax").reset()
+                // window.location = "segui.php"
+
+            }, 2000);
+
+        } else if (apren == "existe") {
+            alert('Aprendiz ya existe');
+        } else if (apren == 3 ) {
+            alert('llena los campos correctamente' )
+        } else {
+            alert("llena todos campos correctamente")
+        }
+    })
+})
