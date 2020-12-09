@@ -57,6 +57,47 @@ if(isset($_POST)){
     <link rel="icon" href="../imagenes/favicon.ico">
 </head>
 <body>
+<div class="boton_regresar">
+        <?php
+                if( $_SESSION['id_tip_usu'] == 2) {
+        ?>
+                    <a class="btn_regresar" href="../../segui/segui.php">Regresar a Seguimiento</a>
+        <?php
+                }
+        ?>
+        <?php
+                if( $_SESSION['id_tip_usu'] == 4) {
+        ?>
+                    <a class="btn_regresar" href="../APE/ape.php"><img src="" alt=""> Regresar a APE</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 5) {
+        ?>
+                    <a class="btn_regresar" href="../bienestar/biene.php">Regresar a Bienestar</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 6) {
+        ?>
+                    <a class="btn_regresar" href="../cor_academico/cordinh.php">Regresar a Coordinador Academico</a>
+        <?php
+                }
+        ?>
+
+        <?php
+                if( $_SESSION['id_tip_usu'] == 7) {
+        ?>
+                    <a class="btn_regresar" href="../biblioteca/biblio.php">Regresar a Biblioteca</a>
+        <?php
+                }
+        ?>
+         <a class="btn_regresar" href="" id="btn_imprimir">Imprimir</a>
+    </div>
     <div class="contenedor">
         <div class="header">
             <div class="logo">
@@ -226,48 +267,6 @@ if(isset($_POST)){
             <div class="observacion"></div>
             <div class="observacion"></div>
         </div>
-    </div>
-
-    <div class="boton_regresar">
-        <?php
-                if( $_SESSION['id_tip_usu'] == 2) {
-        ?>
-                    <a class="btn_regresar" href="../../segui/segui.php">Regresar a Seguimiento</a>
-        <?php
-                }
-        ?>
-        <?php
-                if( $_SESSION['id_tip_usu'] == 4) {
-        ?>
-                    <a class="btn_regresar" href="../APE/ape.php"><img src="" alt=""> Regresar a APE</a>
-        <?php
-                }
-        ?>
-
-        <?php
-                if( $_SESSION['id_tip_usu'] == 5) {
-        ?>
-                    <a class="btn_regresar" href="../bienestar/biene.php">Regresar a Bienestar</a>
-        <?php
-                }
-        ?>
-
-        <?php
-                if( $_SESSION['id_tip_usu'] == 6) {
-        ?>
-                    <a class="btn_regresar" href="../cor_academico/cordinh.php">Regresar a Coordinador Academico</a>
-        <?php
-                }
-        ?>
-
-        <?php
-                if( $_SESSION['id_tip_usu'] == 7) {
-        ?>
-                    <a class="btn_regresar" href="../biblioteca/biblio.php">Regresar a Biblioteca</a>
-        <?php
-                }
-        ?>
-         <a class="btn_regresar" href="" id="btn_imprimir">Imprimir</a>
     </div>
 <script>
     const id_tip_usu = "<?php echo $_SESSION['id_tip_usu'];?>"

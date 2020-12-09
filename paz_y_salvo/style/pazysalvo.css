@@ -136,7 +136,13 @@ body {
     border-bottom: 1px dotted black;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
 table th, table td{
+    padding: 10px;
     border: 1px solid black;
 }
 
@@ -206,6 +212,7 @@ table th, table td{
 }
 
 .btn_firma1{
+    display: none;
     text-decoration: none;
     width: 100px;
     height: 100px;
@@ -215,6 +222,10 @@ table th, table td{
     margin: 20px 20px;
     padding: 5px 20px;
 
+}
+
+.btn_firma1_activado {
+    display: inline;
 }
 
 .btn_firma1:hover{
