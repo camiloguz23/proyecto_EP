@@ -63,7 +63,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     </div>
 
     <div class="naranja">
-        <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
+        <img class="perfil" src="../fotoPerfil/instructor/<?=$_SESSION["foto"]?>" alt="">
     </div>
 
     <div id="date" class="contenedor">

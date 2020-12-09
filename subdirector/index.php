@@ -40,7 +40,7 @@
     </div>
 
     <div class="naranja" >
-        <img class="perfil" src="../imagenes/PERFIL.jpg" alt="">
+        <img class="perfil" src="../fotoPerfil/subdirector/<?=$_SESSION["foto"]?>" alt="">
     </div>
 
     <div class="contenedor">

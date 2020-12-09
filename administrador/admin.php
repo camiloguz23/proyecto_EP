@@ -48,7 +48,7 @@
         <div id="fondo" class="fondo">
             <img width="1349" height="400" src="../imagenes/adminitrador.jpg" alt="">
         </div>
-        <div class="naranja" ><img class="perfil" src="../imagenes/PERFIL.jpg" alt=""></div>
+        <div class="naranja" ><img class="perfil" src="../fotoPerfil/administrador/<?=$_SESSION["foto"]?>" alt=""></div>
         <div class="contenedor">
             <div class="date">
                 <ul class="datos">
