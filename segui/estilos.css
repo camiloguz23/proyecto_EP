@@ -698,7 +698,7 @@ input[type=number] { -moz-appearance:textfield; }
     background-color: #fff;
     padding: 10px 6px;
     border-radius: 15px;
-    height: 120%;
+    height: 160%;
     width: 60%;
     margin-top: -2.5%;
     position: absolute;
