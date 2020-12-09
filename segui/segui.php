@@ -154,7 +154,7 @@ if (isset($_POST['btn_actualizar'])) {
     </div>
 
     <div class="naranja">
-        <img class="perfil" src="../fotoPerfil/seguimiento/'<?=$_SESSION["foto"]?>''" alt="">
+        <img class="perfil" src="../fotoPerfil/seguimiento/<?=$_SESSION["foto"]?>" alt="">
     </div>
     <div class="contenedor">
         <div class="date">
