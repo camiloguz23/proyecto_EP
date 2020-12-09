@@ -56,3 +56,17 @@ main article{
         left: 15px;
     }
 }
+
+#pdf1{
+    margin-left: 1060px;
+    position: absolute;
+    top: 290px;
+    font-size: 30px;
+    background-color: rgb(89, 181, 72);
+    padding: 20px;
+    border-radius: 10px;
+}
+#pdf1:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 3px 5px rgb(0,0,0,0.5);
+}
