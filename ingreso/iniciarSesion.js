@@ -8,6 +8,9 @@ const btn_coordinador = document.getElementById("btn_coordinador");
 const btn_biblioteca = document.getElementById("btn_biblioteca");
 const btn_subdirector = document.getElementById("btn_subdirector");
 
+//Imagen de la mascota 
+const Img_macota = document.getElementById('imagenMascota');
+
 //Formularios
 
 const login_box1 = document.getElementById("login-box1");
@@ -29,6 +32,7 @@ btn_administrador.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
+    Img_macota.style.display = "none";
     
 })
 
@@ -42,6 +46,7 @@ btn_seguimiento.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
+    Img_macota.style.display = "none";
 })
 
 btn_instructor.addEventListener('click',(e)=>{
@@ -54,6 +59,7 @@ btn_instructor.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
+    Img_macota.style.display = "none";
 })
 
 btn_agenciaPublica.addEventListener('click',(e)=>{
@@ -66,6 +72,7 @@ btn_agenciaPublica.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
+     Img_macota.style.display = "none";
 })
 
 btn_bienestar.addEventListener('click',(e)=>{
@@ -78,6 +85,7 @@ btn_bienestar.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
+    Img_macota.style.display = "none";
    
 })
 
@@ -91,6 +99,7 @@ btn_coordinador.addEventListener('click',(e)=>{
     login_box6.style.display = "block";
     login_box7.style.display = "none";
     login_box8.style.display = "none";
+    Img_macota.style.display = "none";
    
 })
 
@@ -104,6 +113,7 @@ btn_biblioteca.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "block";
     login_box8.style.display = "none";
+    Img_macota.style.display = "none";
    
 })
 
@@ -117,5 +127,6 @@ btn_subdirector.addEventListener('click',(e)=>{
     login_box6.style.display = "none";
     login_box7.style.display = "none";
     login_box8.style.display = "block";
+    Img_macota.style.display = "none";
    
 })
