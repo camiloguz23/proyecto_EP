@@ -424,7 +424,7 @@ if (isset($_POST['btn_actualizar'])) {
 
     <div id="registroAprendiz" class="registroAprendiz">
 
-        <form id="frmajax" method="POST" autocomplete="off">
+        <form id="frmajax" method="POST" autocomplete="off" enctype="multipart/form-data" >
             <h1 class="tituloFormR">REGISTRO DE APRENDIZ</h1>
 
             <div class="datosR">
@@ -520,6 +520,17 @@ if (isset($_POST['btn_actualizar'])) {
                     ?>
                 </select>
                 <p id="btnficha">+crear ficha de formacion</p>
+            </div>
+            <div class="datosR">
+                <label class="labelR">Subir foto</label>
+                <input type="file" name="foto" id="" accept="image/*">
+                
+            </div>
+            <div class="datosR">
+                <label class="labelR">Lugar de Expedicion</label>
+                <input type="text" name="lugarexp" id="" accept="image/*">
+                <label class="labelR">Fecha de expedicion</label>
+                <input type="date" name="fechaexp" id="" >
             </div>
             <button id="btnguardar">Guardar</button>
             <button id="btncerrarAprendiz">Cerrar</button>

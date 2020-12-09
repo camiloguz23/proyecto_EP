@@ -40,7 +40,7 @@
                                     }elseif ($_SESSION["id_tip_usu"] == 7){
                                         header("location: ../biblioteca/biblio.php");
                                     } else if ($_SESSION["id_tip_usu"] == 8){
-                                        header("location: ../biblioteca/biblio.php");
+                                        header("location: ../subdirector/index.php");
                                     } else{
                                         header("location: ../index.html");
                                     }

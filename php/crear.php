@@ -19,8 +19,16 @@
         $celular = $_POST["celular"];
         $direccion = $_POST["direccion"];
         $ficha = $_POST["ficha"];
+        $lugarexp = $_POST["lugarexp"];
+        $fechaexp = $_POST["fechaexp"];
+        
 
-        if($tipdoc !="" && $ficha !="" && $id !=""  ){
+        $foto= $_FILES['foto'] ['name'];
+        $rutafoto = $_FILES["foto"] ["tmp_name"];
+        $destinofoto = "../fotoPerfil/aprendices/".$foto;
+        copy($rutafoto,$destinofoto);
+
+        if($tipdoc !="" && $ficha !=""  ){
         $consultaApre = "SELECT * FROM aprendices where id_aprend = '$docu'";
         $sqlApre = mysqli_query($connection,$consultaApre);
         $datoApre = mysqli_fetch_assoc($sqlApre);
@@ -29,8 +37,8 @@
         }else {
 
         
-            $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend, id_tip_docu,direccion,num_celular)
-            VALUES ('$docu', '$name', '$ape', '$email', '$tel', '$tipdoc','$direccion','$celular')";
+            $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend, id_tip_docu,direccion,num_celular,fecha_expedicion_docu,lugar_expedicion,foto)
+            VALUES ('$docu', '$name', '$ape', '$email', '$tel', '$tipdoc','$direccion','$celular','$fechaexp','$lugarexp','$foto')";
             $inserta = mysqli_query($connection, $insert);
 
             if ($inserta) {
