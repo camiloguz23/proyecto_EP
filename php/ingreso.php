@@ -45,15 +45,21 @@
                                         header("location: ../index.html");
                                     }
                                 } else {
-                                    header("location: ../ingreso/ingreso.html");
+                                    echo'<script type="text/javascript">
+                                            alert("El usuario no corresponde a este cargo");
+                                            window.location.href="../ingreso/ingreso.html";
+                                        </script>';
+                                    header("location: ");
                                 }
 
                                   
                                 
                         } else{
                             
-                            
-                             header("location: ../ingreso/ingreso.html");
+                            echo'<script type="text/javascript">
+                                            alert("Documento y/o contraseña incorrecta, por favor revise los datos ingresados");
+                                            window.location.href="../ingreso/ingreso.html";
+                                </script>';
                          
                              
                         }  
