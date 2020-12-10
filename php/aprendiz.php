@@ -41,7 +41,7 @@ if ($dato) {
                             <label class ="datos" for="" id="estadoAprend">'.$dato["nom_estado"].'</label>
                         </div>
                         <a href="../certificado_leg/imdex.php?documento='.$dato['id_aprend'].'" target="_blank">
-                        <button class="botonForm constancia" style="margin-top:-20px; margin-left:160px; position:absolute;">Constancia</button>
+                        <button class="botonForm constancia" style="margin-top:-40px; margin-left:460px; position:absolute;">Constancia</button>
                         </a>
                     </div><br>
 
