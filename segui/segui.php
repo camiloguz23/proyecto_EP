@@ -523,7 +523,7 @@ if (isset($_POST['btn_actualizar'])) {
             </div>
             <div class="datosR">
                 <label class="labelR">Subir foto</label>
-                <input type="file" name="foto" id="" >
+                <input type="file" name="foto" id="" accept="image/jpeg">
                 
             </div>
             <div class="datosR">
