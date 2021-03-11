@@ -389,6 +389,7 @@
         border: 1px solid black;
         border-radius: 20px;
         background-color: white;
+
     }
     
     h1{
@@ -484,5 +485,15 @@
     
     .regreso{
         background-color: rgb(15, 248, 73);
+    }
+
+    .fila2{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .fila2 select{
+        width: 270px;
     }
     /*_______________________________________*/

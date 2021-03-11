@@ -4,7 +4,21 @@
     if ($usario == "" || $usario == null) {
         header("location: ../index.html");
     }
-        require_once('../php/connecion.php');
+
+
+
+?>
+
+<?php
+require_once ("../php/connecion.php");
+$connection = new mysqli("localhost","root","","ep_proyecto");
+$sql = "SELECT * from tip_usu";
+$info = mysqli_query($connection,$sql);
+$fila = mysqli_fetch_assoc($info)
+?>
+<?php
+$sql_docu = "SELECT * from tip_docu";
+$consulta = mysqli_query($connection,$sql_docu);
 
 ?>
 <!DOCTYPE html>
@@ -80,35 +94,54 @@
 
         <div class="container">
         
-        <div class="formu"> 
-            <form class="formm" action="../php/registro.php" method="POST" id="form">
+        <div class="formu">
+            <form class="formm" action="../php/registro.php" method="POST" id="form" enctype="multipart/form-data">
                 <h1>REGISTRO DE USUARIOS</h1>
                 <div class="conten">
-                <div class="fila">
-                <label for="user">Documento</label>
-                <input type="text" id="usu" name="doc" placeholder="Ingrese su usuario o Documento" required autocomplete="off">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nom" name="nom" placeholder="Ingrese su nombre completo" required autocomplete="off">
-                <label for="apellido">Apellido completo</label>
-                <input type="text" id="ape" name="ape" placeholder="Ingrese su apellido completo" required autocomplete="off">
-                <label for="direccion">Correo</label>
-                <input type="email" id="corr" name="correo" placeholder="Ingrese su Correo" required autocomplete="off">
+                    <div class="fila">
+                        <label for="user">Documento</label>
+                        <input type="text" id="usu" name="doc" placeholder="Ingrese su usuario o Documento" required autocomplete="off">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ingrese su nombre completo" required autocomplete="off">
+                        <label for="apellido">Apellido completo</label>
+                        <input type="text" id="ape" name="ape" placeholder="Ingrese su apellido completo" required autocomplete="off">
+                        <label for="direccion">Correo</label>
+                        <input type="email" id="corr" name="correo" placeholder="Ingrese su Correo" required autocomplete="off">
+                        <label for="tipo_docu">Tipo de Documento</label>
+                        <select name="tipDocu">
+                            <option>Elege una opcion</option>
+                            <?php
+                            foreach ($consulta as $docu){
+                                ?><option value="<?=$docu['id_tip_docu']?>"><?=$docu['nom_docu']?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+                        <div class="fila2">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="tel" name="telefono" placeholder="Ingrese su Teléfono" required autocomplete="off">
+                            <label for="clave">Clave</label>
+                            <input type="password" id="contra" name="clave" placeholder="Ingrese su Contraseña" required autocomplete="off">
+                            <label for="imagen1">foto</label>
+                            <input type="file" name="imagen1" class="btnsubir" accept="image/*" />
+                            <label>Tipo de Usuario</label>
+                            <select name="tipousu">
+                                <option>......</option>
+                                <?php
+                                foreach ($info as $dato){
+                                   ?><option value="<?php echo $dato['id_tip_usu']?>"><?php echo $dato['nom_tip_usu']?></option>
+                                <?php
+                                }
+                                ?>
+
+                            </select>
+                        </div>
                 </div>
-                <div class="fila">
-                <label for="telefono">Teléfono</label>
-                <input type="text" id="tel" name="telefono" placeholder="Ingrese su Teléfono" required autocomplete="off">
-                <label for="clave">Clave</label> 
-                <input type="password" id="contra" name="clave" placeholder="Ingrese su Contraseña" required autocomplete="off">
-                <label for="clave">foto</label> 
-                <input type="file" name="imagen1" class="btnsubir" />
-                </div>
-                </div>
-                <div class="btnregistrar">
                 <input type="submit" name="enviar" id="env" value="Registrar">
-                </div>
-                <div class="btnregresar">
-                    <a href="../index.php" class="regreso">Regresar</a>
-                </div>
+
+                <a href="../index.php" class="regreso">Regresar</a>
+
             </form>
         </div>
     </div>

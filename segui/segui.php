@@ -10,6 +10,7 @@ require_once('../php/connecion.php');
 
 <?php
     $sql = "SELECT * FROM tip_docu";
+    $connection = new mysqli("localhost","root","","ep_proyecto");
     $query = mysqli_query($connection, $sql);
     $fila = mysqli_fetch_assoc($query);
 ?>
