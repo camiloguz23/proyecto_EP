@@ -21,6 +21,18 @@ $sql_docu = "SELECT * from tip_docu";
 $consulta = mysqli_query($connection,$sql_docu);
 
 ?>
+<?php
+$sql_tip_docu = "SELECT * from tip_docu";
+$consulta_tip_docu = mysqli_query($connection,$sql_tip_docu)
+?>
+<?php
+$sql_ciudad = "SELECT nombre from municipios";
+$consulta_ciudad = mysqli_query($connection,$sql_ciudad)
+?>
+<?php
+$sql_ficha = "SELECT num_ficha, pro_formacion.nom_formacion FROM ficha_programa, pro_formacion WHERE ficha_programa.id_formacion = pro_formacion.id_formacion";
+$consulta_ficha = mysqli_query($connection,$sql_ficha)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +61,7 @@ $consulta = mysqli_query($connection,$sql_docu);
             <nav class="navegacion">
                 <ul class="menu">
                     <li id="uno"><a href="#"><img class="uno" width="30" height="30"  src="../imagenes/usuarioadmi.png" alt="">CREAR USUARIOS </a></li>
-                    <li><a href="#"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png" alt="">-----------</a></li>
+                    <li><a href="#" id="create"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png" alt="">CREAR APRENDIZ</a></li>
                     <li><a href="#"><img class="tres"  width="37" height="30" src="../imagenes/Imagen6.png" alt="">-----------</a></li>
                 </ul>  
             </nav>
@@ -79,7 +91,7 @@ $consulta = mysqli_query($connection,$sql_docu);
         </div>
         <div class="botmen">
             <a href="#" class="button2"> <img class="butuno" height="30" width="30" src="../imagenes/usuarioadmi.png" alt="" srcset=""> CREAR USUARIOS</a>
-            <a href="#" class="button3"> <img class="butdos" height="30" width="30" src="../imagenes/Imagen5.png" alt="" srcset="">-----</a>
+            <a href="#" class="button3" id="create"> <img class="butdos" height="30" width="30" src="../imagenes/Imagen5.png" alt="" srcset="">CREAR APRENDIZ</a>
             <a href="#" class="button4"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">-------</a>
         </div>
 
@@ -93,7 +105,7 @@ $consulta = mysqli_query($connection,$sql_docu);
         </div>
 
         <div class="container">
-        
+<!--    *******************************   FORMULARIO DE CREAR USUARIOS  *******************************************    -->
         <div class="formu">
             <form class="formm" action="../php/registro.php" method="POST" id="form" enctype="multipart/form-data">
                 <h1>REGISTRO DE USUARIOS</h1>
@@ -147,7 +159,70 @@ $consulta = mysqli_query($connection,$sql_docu);
     </div>
 
     </div>
+<!-- ***************************************  FORMUALRIO DE CREAR APRENDIZ ************************************ -->
+        <div id="conteaprendiz">
+            <form method="POST" action="" enctype="multipart/form-data" id="aprendizform">
+                <fieldset>
+                    <legend>datos del aprendiz</legend>
+                    <label>Documento</label><br>
+                    <input type="number" name="docu" pattern="[0-9] {7-12}" title="minimo 7 digitos"><br>
+                    <label>Tipo de documento</label><br>
+                    <select name="tipdocu" required>
+                        <option>Elige una opcion</option>
+                        <?php
+                        foreach ($consulta_tip_docu as $tip_docu){
+                            ?><option value="<?=$tip_docu['id_tip_docu']?>"><?=$tip_docu['nom_docu']?></option>
+                        <?php
+                        }
+                        ?>
 
+                    </select><br>
+                    <label>Nombre del aprendiz</label><br>
+                    <input type="text" name="nom" required pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
+                    <label>Apellido del aprendiz</label><br>
+                    <input type="text" required name="ape" pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
+                    <label>Correo del aprendiz</label><br>
+                    <input type="email" name="email" required><br>
+                    <label>Telefono del aprendiz</label><br>
+                    <input type="tel" pattern="[0-9]{7}" title="•maximo 11 numeros\n •Solo numeros" name="tel" required><br>
+                    <button type="reset">Restaurar formulario</button>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del Aprendiz</legend>
+                    <label>Direccion del aprendiz</label><br>
+                    <input type="text" name="direccion"><br>
+                    <labe>Numero de celular del aprendiz</labe><br>
+                    <input type="tel" pattern="[0-9] {10}" title="•Debe tener 11 digitos, • solo numeros" name="celular" ><br>
+                    <label>Fecha de expedicion</label><br>
+                    <input type="date" name="fechaexp"><br>
+                    <label>Lugar de expedicion</label><br>
+                    <select name="lugarexp">
+                        <option>Sleccione la ciudad</option>
+                        <?php
+                        foreach ($consulta_ciudad as $ciudad){
+                            ?><option value="<?=$ciudad['nombre']?>"><?=$ciudad['nombre']?></option>
+                        <?php
+                        }
+                        ?>
+                    </select><br>
+                    <label>Ingresar una foto</label><br>
+                    <input type="file" name="foto" accept="multipart/form-data"><br>
+                    <label>Ficha de formacion</label><br>
+                    <select name="ficha">
+                        <option>Elegir ficha de formacion</option>
+                        <?php
+                        foreach ($consulta_ficha as $ficha){
+                            ?><option value="<?=$ficha['num_ficha']?>"><?=$ficha['num_ficha'] ?> <?=$ficha['nom_formacion']?></option>
+                        <?php
+                        }
+                        ?>
+                    </select><br>
+                    <button type="submit" id="btn_enviar">Enviar</button>
+                    <button type="button" id="btn_cerrra">Cerrar</button>
+                </fieldset>
+            </form>
+        </div>
         <!--pie de pagina-->
     <footer class="pie">
         <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">

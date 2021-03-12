@@ -496,4 +496,48 @@
     .fila2 select{
         width: 270px;
     }
-    /*_______________________________________*/
+    /*_______________________________________ FORMUALARIO DEL APRENDIZ ______________________________________________*/
+    #conteaprendiz{
+        position: absolute;
+        top: 80px;
+        left: 250px;
+        z-index: 2;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        border: solid 2px rgb(255, 123, 0);
+        visibility: hidden;
+    }
+
+    #conteaprendiz form{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #conteaprendiz form label{
+        margin-top: 30px;
+    }
+
+
+
+    #conteaprendiz form select {
+        width: 270px;
+        margin-bottom: 20px;
+        padding: 5px;
+        border: solid 2px #59b548;
+        border-radius: 10px;
+    }
+
+    #conteaprendiz form fieldset{
+        padding: 20px;
+        margin-right: 30px;
+        border-radius: 10px;
+    }
+
+    #conteaprendiz form button {
+        background-color:  rgb(255, 123, 0);
+        padding: 5px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
