@@ -15,7 +15,6 @@
         $email=$_POST['email'];
         $tel=$_POST['tel'];
         $docu= $_POST['docu'];
-        $id= $_POST['id_apren'];
         $celular = $_POST["celular"];
         $direccion = $_POST["direccion"];
         $ficha = $_POST["ficha"];
@@ -53,7 +52,7 @@
             }
         }
       }else{
-          echo 3;
+          echo 2;
       }
     }else{
         echo 3;
