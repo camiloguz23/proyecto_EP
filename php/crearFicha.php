@@ -18,17 +18,17 @@
                 $resultadoF = mysqli_query($connection,$consultaF);
                
                 if($resultadoF ){
-                    echo "1";
+                    echo 1;
             
     
                 }else{
                     
-               echo "2";
+               echo 2;
                 
                 }
             }else{
        
-                echo "3";
+                echo 3;
             }
                 
            

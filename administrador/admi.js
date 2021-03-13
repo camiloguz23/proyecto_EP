@@ -7,6 +7,18 @@ const boton_enviar = document.getElementById("btn_enviar")
 const btn_crear_apre = document.getElementById("create")
 const conte_formu_apren = document.getElementById("conteaprendiz")
 const cerrar_formu_apren = document.getElementById("btn_cerrra")
+const menu_formu = document.getElementById("menu_form")
+const link_menu = document.getElementById("link_menu")
+const formu_formacion = document.getElementById("formulario_formacion")
+const btn_uno = document.getElementById("btn_uno")
+const conte_fomu_formulario = document.getElementById("formu_formacion")
+const btn_cerrar_formulario = document.getElementById("btn_dos")
+const link_formacion = document.getElementById("link_formacion")
+const conte_ficha = document.getElementById("conte_ficha")
+const formulario_ficha = document.getElementById("formulario_ficha")
+const enviar_ficha = document.getElementById("enviar_ficha")
+const cerrar_ficha = document.getElementById("cerrar_ficha")
+const link_ficha = document.getElementById("link_ficha")
 
 creausu.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -59,4 +71,75 @@ boton_enviar.addEventListener("click", (e) => {
             alert("no envio de datos a la base de datos")
         }
     })
+})
+
+// *************************** MENU DE FORMULARIOS *****************************
+
+link_menu.addEventListener("click", () => {
+    menu_formu.classList.toggle("ocultar")
+})
+
+// ****************** FORMULARIO DE FORMACION **********************
+
+link_formacion.addEventListener("click", () => {
+    conte_fomu_formulario.style.visibility = "visible"
+    menu_formu.classList.toggle("ocultar")
+})
+
+btn_cerrar_formulario.addEventListener("click", () => {
+    conte_fomu_formulario.style.visibility = "hidden"
+    formu_formacion.reset()
+})
+
+btn_uno.addEventListener("click", (e) => {
+    e.preventDefault()
+    const dato = new FormData(formu_formacion)
+    fetch("../php/createFormacion.php", {
+        method:"POST",
+        body: dato
+    }).then(res => res.text()).then(info => {
+        if (info == 1){
+            alert("Formulario incompleto")
+        }else if (info == 2){
+            formu_formacion.reset()
+            alert("Formacion creada")
+        }
+    })
+})
+
+// ***************** FORMULARIO DE CREACION DE FICHA **********************
+
+enviar_ficha.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    const dato_ficha = new FormData(formulario_ficha)
+    fetch("../php/crearFicha.php", {
+        method:"POST",
+        body:dato_ficha
+    }).then(res => res.text()).then(info_ficha => {
+        console.log(info_ficha)
+        if (info_ficha == 1){
+            alert("Ficha de formacion creada")
+            formulario_ficha.reset()
+            window.location= "admin.php"
+        } else if (info_ficha == 2){
+            alert("No se guardo el aprendiz")
+
+        } else if (info_ficha == 3){
+            alert("Formulario ficha tiene datos vacios")
+        }
+    })
+})
+
+cerrar_ficha.addEventListener("click", (e) => {
+    e.preventDefault()
+    conte_ficha.style.visibility = "hidden"
+    formulario_ficha.reset()
+})
+
+link_ficha.addEventListener("click", (e) => {
+    conte_ficha.style.visibility = "visible"
+    menu_formu.classList.toggle("ocultar")
+
+
 })
