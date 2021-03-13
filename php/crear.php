@@ -35,6 +35,8 @@
             echo "existe";
         }else {
 
+
+
         
             $insert="INSERT INTO aprendices (id_aprend, nombre_aprend, apellido_aprend, correo_aprend, telefono_aprend, id_tip_docu,direccion,num_celular,fecha_expedicion_docu,lugar_expedicion,foto)
             VALUES ('$docu', '$name', '$ape', '$email', '$tel', '$tipdoc','$direccion','$celular','$fechaexp','$lugarexp','$foto')";

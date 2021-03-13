@@ -3,6 +3,12 @@
         margin: 0%;
     }
 
+    :root{
+        --naranja:rgb(255, 60, 0);
+        --verde :  rgb(89, 181, 72);
+        --naranjaClaro : rgb(255, 123, 0)
+    }
+
     body 
     {
         background-color: rgb(223, 223, 223) ;
@@ -539,5 +545,85 @@
         background-color:  rgb(255, 123, 0);
         padding: 5px;
         font-size: 13px;
+        border-radius: 10px;
+    }
+
+    /***************   MENU DE CREACION ***************************/
+
+    .menu_create{
+        position: absolute;
+        background-color: var(--naranjaClaro);
+        top: 125px;
+        left: 900px;
+        z-index: 2;
+        padding: 15px;
+        visibility: hidden;
+    }
+     .menu_create p {
+         margin-bottom: 10px;
+         cursor: pointer;
+     }
+
+     .menu_create p:hover{
+         color: white;
+     }
+
+     .ocultar {
+         visibility: visible;
+     }
+
+     .ocultarM {
+         visibility: hidden;
+     }
+
+/*     ************************************* FORMULARIO DE FORMACION ***************************************   */
+
+    .formu-formacion{
+
+        padding: 15px;
+        position: absolute;
+        top: 250px;
+        left: 450px;
+        z-index: 2;
+        background-color: var(--naranjaClaro);
+        border: solid 2px var(--naranja);
+        border-radius: 10px;
+        text-align: center;
+        visibility: hidden;
+    }
+
+    .formu-formacion form button{
+        padding: 5px;
+        background-color: var(--verde);
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+/*  *******************  FORMULARIO DE CREAR FICHA DE FORMACION *****************************     */
+
+    .conte_ficha{
+        position: absolute;
+        background-color: white;
+        padding: 15px;
+        top: 20px;
+        left: 450px;
+        text-align: center;
+        border: solid 2px var(--naranja);
+        border-radius: 10px;
+        visibility: hidden;
+    }
+
+    .conte_ficha form select {
+        width: 270px;
+        margin-bottom: 20px;
+        padding: 5px;
+        border: solid 2px #59b548;
+        border-radius: 10px;
+    }
+
+    .conte_ficha form button {
+        background-color: var(--naranjaClaro);
+        font-size: 13px;
+        padding: 5px;
         border-radius: 10px;
     }

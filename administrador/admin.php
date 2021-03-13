@@ -16,6 +16,7 @@ $sql = "SELECT * from tip_usu";
 $info = mysqli_query($connection,$sql);
 $fila = mysqli_fetch_assoc($info)
 ?>
+<!--****** TABLA DE TIPO DE DOCUMENTO  ***********-->
 <?php
 $sql_docu = "SELECT * from tip_docu";
 $consulta = mysqli_query($connection,$sql_docu);
@@ -25,13 +26,35 @@ $consulta = mysqli_query($connection,$sql_docu);
 $sql_tip_docu = "SELECT * from tip_docu";
 $consulta_tip_docu = mysqli_query($connection,$sql_tip_docu)
 ?>
+<!-- ************** TABLA DE LAS CIUDADES ***************-->
 <?php
 $sql_ciudad = "SELECT nombre from municipios";
 $consulta_ciudad = mysqli_query($connection,$sql_ciudad)
 ?>
+<!-- ************** TABLA DE FICHA DE FORMACION ****************** -->
 <?php
 $sql_ficha = "SELECT num_ficha, pro_formacion.nom_formacion FROM ficha_programa, pro_formacion WHERE ficha_programa.id_formacion = pro_formacion.id_formacion";
 $consulta_ficha = mysqli_query($connection,$sql_ficha)
+?>
+<!-- ******************* TABLA DE CENTRO DE FORMACION ***************-->
+<?php
+$sql_centro_formacion = "SELECT * from cen_formacion";
+$consulta_centro_formacion = mysqli_query($connection,$sql_centro_formacion)
+?>
+<!-- ************ NIVEL DE FORMACION *************************-->
+<?php
+$sql_nivel_formacion = "SELECT * from nivel_formacion";
+$consulta_nivel_formacion = mysqli_query($connection,$sql_nivel_formacion)
+?>
+<!-- ****************** TABLA DE JORNADA  **************************** -->
+<?php
+$sql_jornada = "SELECT * from jornada";
+$consulta_jornada = mysqli_query($connection,$sql_jornada)
+?>
+<!-- ******************** TABLA DE FORMACION ********************************** -->
+<?php
+$sql_formacion = "SELECT * from pro_formacion";
+$consulta_formacion = mysqli_query($connection,$sql_formacion)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +85,7 @@ $consulta_ficha = mysqli_query($connection,$sql_ficha)
                 <ul class="menu">
                     <li id="uno"><a href="#"><img class="uno" width="30" height="30"  src="../imagenes/usuarioadmi.png" alt="">CREAR USUARIOS </a></li>
                     <li><a href="#" id="create"><img class="dos" width="26" height="30" src="../imagenes/Imagen5.png" alt="">CREAR APRENDIZ</a></li>
-                    <li><a href="#"><img class="tres"  width="37" height="30" src="../imagenes/Imagen6.png" alt="">-----------</a></li>
+                    <li><a href="#" id="link_menu"><img class="tres"  width="37" height="30" src="../imagenes/Imagen6.png" alt="">FORMULARIO</a></li>
                 </ul>  
             </nav>
 
@@ -158,70 +181,141 @@ $consulta_ficha = mysqli_query($connection,$sql_ficha)
         </div>
     </div>
 
-    </div>
-<!-- ***************************************  FORMUALRIO DE CREAR APRENDIZ ************************************ -->
-        <div id="conteaprendiz">
-            <form method="POST" action="" enctype="multipart/form-data" id="aprendizform">
-                <fieldset>
-                    <legend>datos del aprendiz</legend>
-                    <label>Documento</label><br>
-                    <input type="number" name="docu" pattern="[0-9] {7-12}" title="minimo 7 digitos"><br>
-                    <label>Tipo de documento</label><br>
-                    <select name="tipdocu" required>
-                        <option>Elige una opcion</option>
-                        <?php
-                        foreach ($consulta_tip_docu as $tip_docu){
-                            ?><option value="<?=$tip_docu['id_tip_docu']?>"><?=$tip_docu['nom_docu']?></option>
-                        <?php
-                        }
-                        ?>
+        </div>
+    <!-- ***************************************  FORMUALRIO DE CREAR APRENDIZ ************************************ -->
+            <div id="conteaprendiz">
+                <form method="POST" action="" enctype="multipart/form-data" id="aprendizform">
+                    <fieldset>
+                        <legend>datos del aprendiz</legend>
+                        <label>Documento</label><br>
+                        <input type="number" name="docu" pattern="[0-9] {7-12}" title="minimo 7 digitos"><br>
+                        <label>Tipo de documento</label><br>
+                        <select name="tipdocu" required>
+                            <option>Elige una opcion</option>
+                            <?php
+                            foreach ($consulta_tip_docu as $tip_docu){
+                                ?><option value="<?=$tip_docu['id_tip_docu']?>"><?=$tip_docu['nom_docu']?></option>
+                            <?php
+                            }
+                            ?>
 
-                    </select><br>
-                    <label>Nombre del aprendiz</label><br>
-                    <input type="text" name="nom" required pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
-                    <label>Apellido del aprendiz</label><br>
-                    <input type="text" required name="ape" pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
-                    <label>Correo del aprendiz</label><br>
-                    <input type="email" name="email" required><br>
-                    <label>Telefono del aprendiz</label><br>
-                    <input type="tel" pattern="[0-9]{7}" title="•maximo 11 numeros\n •Solo numeros" name="tel" required><br>
-                    <button type="reset">Restaurar formulario</button>
+                        </select><br>
+                        <label>Nombre del aprendiz</label><br>
+                        <input type="text" name="nom" required pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
+                        <label>Apellido del aprendiz</label><br>
+                        <input type="text" required name="ape" pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
+                        <label>Correo del aprendiz</label><br>
+                        <input type="email" name="email" required><br>
+                        <label>Telefono del aprendiz</label><br>
+                        <input type="tel" pattern="[0-9]{7}" title="•maximo 11 numeros\n •Solo numeros" name="tel" required><br>
+                        <button type="reset">Restaurar formulario</button>
 
-                </fieldset>
-                <fieldset>
-                    <legend>Datos del Aprendiz</legend>
-                    <label>Direccion del aprendiz</label><br>
-                    <input type="text" name="direccion"><br>
-                    <labe>Numero de celular del aprendiz</labe><br>
-                    <input type="tel" pattern="[0-9] {10}" title="•Debe tener 11 digitos, • solo numeros" name="celular" ><br>
-                    <label>Fecha de expedicion</label><br>
-                    <input type="date" name="fechaexp"><br>
-                    <label>Lugar de expedicion</label><br>
-                    <select name="lugarexp">
-                        <option>Sleccione la ciudad</option>
-                        <?php
-                        foreach ($consulta_ciudad as $ciudad){
-                            ?><option value="<?=$ciudad['nombre']?>"><?=$ciudad['nombre']?></option>
-                        <?php
-                        }
-                        ?>
-                    </select><br>
-                    <label>Ingresar una foto</label><br>
-                    <input type="file" name="foto" accept="multipart/form-data"><br>
-                    <label>Ficha de formacion</label><br>
-                    <select name="ficha">
-                        <option>Elegir ficha de formacion</option>
-                        <?php
-                        foreach ($consulta_ficha as $ficha){
-                            ?><option value="<?=$ficha['num_ficha']?>"><?=$ficha['num_ficha'] ?> <?=$ficha['nom_formacion']?></option>
-                        <?php
-                        }
-                        ?>
-                    </select><br>
-                    <button type="submit" id="btn_enviar">Enviar</button>
-                    <button type="button" id="btn_cerrra">Cerrar</button>
-                </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos del Aprendiz</legend>
+                        <label>Direccion del aprendiz</label><br>
+                        <input type="text" name="direccion"><br>
+                        <labe>Numero de celular del aprendiz</labe><br>
+                        <input type="tel" pattern="[0-9] {10}" title="•Debe tener 11 digitos, • solo numeros" name="celular" ><br>
+                        <label>Fecha de expedicion</label><br>
+                        <input type="date" name="fechaexp"><br>
+                        <label>Lugar de expedicion</label><br>
+                        <select name="lugarexp">
+                            <option>Sleccione la ciudad</option>
+                            <?php
+                            foreach ($consulta_ciudad as $ciudad){
+                                ?><option value="<?=$ciudad['nombre']?>"><?=$ciudad['nombre']?></option>
+                            <?php
+                            }
+                            ?>
+                        </select><br>
+                        <label>Ingresar una foto</label><br>
+                        <input type="file" name="foto" accept="multipart/form-data"><br>
+                        <label>Ficha de formacion</label><br>
+                        <select name="ficha">
+                            <option>Elegir ficha de formacion</option>
+                            <?php
+                            foreach ($consulta_ficha as $ficha){
+                                ?><option value="<?=$ficha['num_ficha']?>"><?=$ficha['num_ficha'] ?> <?=$ficha['nom_formacion']?></option>
+                            <?php
+                            }
+                            ?>
+                        </select><br>
+                        <button type="submit" id="btn_enviar">Enviar</button>
+                        <button type="button" id="btn_cerrra">Cerrar</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="menu_create" id="menu_form">
+                <p id="link_formacion">Crear formacion</p>
+                <p id="link_ficha">Crear ficha</p>
+                <p id="link_empresa">crear empresa</p>
+            </div>
+<!--        *****************************      FORMULARIO DE FORMACION  ******************************       -->
+
+            <div class="formu-formacion" id="formu_formacion">
+                <form method="POST" id="formulario_formacion">
+                    <label>Nombre de la formacion</label><br>
+                    <input name="nom_formacion" type="text" required><br>
+                    <button type="button" id="btn_uno">Enviar</button>
+                    <button type="button" id="btn_dos">Cerrar</button>
+                </form>
+            </div>
+<!--        ******************** FORMULARIO DE FICHA DE FORMACION ****************************     -->
+        <div class="conte_ficha" id="conte_ficha">
+            <h4>Formulario de crear ficha de formacion</h4>
+            <form id="formulario_ficha" method="POST" autocomplete="off">
+                <label>Numero de ficha</label><br>
+                <input type="number" name="numf"><br>
+                <label>Jornada</label><br>
+                <select name="jornadaF">
+                    <option>Eligue una opcion</option>
+                    <?php
+                    foreach ($consulta_jornada as $jornada){
+                        ?><option value="<?=$jornada['id_jornada']?>"><?=$jornada['nom_jornada']?></option>
+                    <?php
+                    }
+                    ?>
+                </select><br>
+                <label>Nivel de formacion</label><br>
+                <select name="NivelFormacion">
+                    <option>Eligue una opcion</option>
+                    <?php
+                    foreach ($consulta_nivel_formacion as $nivel){
+                        ?><option value="<?=$nivel['id_nivel']?>"><?=$nivel['nom_nivel']?></option>
+                    <?php
+                    }
+                    ?>
+                </select><br>
+                <label>Nombre de formacion</label><br>
+                <select name="programaformacion">
+                    <option>Eligue una opcion</option>
+                    <?php
+                    foreach ($consulta_formacion as $formacion){
+                        ?><option value="<?=$formacion['id_formacion']?>"><?=$formacion['nom_formacion']?></option>
+                    <?php
+                    }
+                    ?>
+                </select><br>
+                <label>Centro de formacion</label><br>
+                <select name="centroFormacion" >
+                    <option>Eliegue una opcion</option>
+                    <?php
+                    foreach ($consulta_centro_formacion as $centro){
+                        ?><option value="<?=$centro['id_cen_forma']?>"><?=$centro['nom_cen_forma']?></option>
+                    <?php
+                    }
+                    ?>
+                </select><br>
+                <label>Fecha de inicio de Etapa Productiva</label><br>
+                <input type="date" name="fechaiF"><br>
+                <label>Fecha terminacion de la Etapa Productiva</label><br>
+                <input type="date" name="fechaF"><br>
+                <button type="button" id="enviar_ficha">Enviar</button>
+                <button type="button" id="cerrar_ficha">Cerrar</button>
             </form>
+
         </div>
         <!--pie de pagina-->
     <footer class="pie">
