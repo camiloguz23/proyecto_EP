@@ -28,7 +28,7 @@ $consulta_tip_docu = mysqli_query($connection,$sql_tip_docu)
 ?>
 <!-- ************** TABLA DE LAS CIUDADES ***************-->
 <?php
-$sql_ciudad = "SELECT nombre from municipios";
+$sql_ciudad = "SELECT id,nombre from municipios";
 $consulta_ciudad = mysqli_query($connection,$sql_ciudad)
 ?>
 <!-- ************** TABLA DE FICHA DE FORMACION ****************** -->
@@ -316,6 +316,37 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                 <button type="button" id="cerrar_ficha">Cerrar</button>
             </form>
 
+        </div>
+<!--      *********************** TABLA DE EMPRESA **********************************      -->
+        <div class="conte_empresa" id="conte_empresa">
+            <h4>Formulario crear empresa</h4>
+            <form method="POST" id="formualario_empresa" autocomplete="off" action="../php/empresa.php">
+                <label>Nit de la empresa</label><br>
+                <input type="number" required pattern="[0-9] {10-12}" title="·Solo numero, · minimo 10digitos" name="nit" maxlength="12"  minlength="10"><br>
+                <label>Razon social de la empresa</label><br>
+                <input type="text" required name="razon_social"><br>
+                <label>Nombre de la empresa</label><br>-
+                <input type="text" name="nom_empresa" required><br>
+                <label>Direccion de la empresa</label><br>
+                <input type="text" required name="dire_empresa"><br>
+                <label>Telefono de la empresa</label><br>
+                <input type="number" name="tel_empresa" pattern="[0-9] {7-10}" title="·No corresponde a un numero telefono ni celular" required maxlength="10" minlength="6"><br>
+                <label>Correo de la empresa</label><br>
+                <input type="email" required name="correo"><br>
+                <select name="ciu_empresa">
+                    <?php
+                    foreach ($consulta_ciudad as $ciu_empre){
+                        ?><option value="<?=$ciu_empre['id']?>"><?=$ciu_empre['nombre']?></option>
+                    <?php
+                    }
+                    ?>
+                </select><br>
+                <button type="submit">Enviar</button>
+                <button type="button" id="btn_cerrar_empresa">Cerrar</button>
+
+
+
+            </form>
         </div>
         <!--pie de pagina-->
     <footer class="pie">

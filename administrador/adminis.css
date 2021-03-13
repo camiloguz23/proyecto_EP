@@ -627,3 +627,30 @@
         padding: 5px;
         border-radius: 10px;
     }
+/* *******************  FORMULARIO DE LA EMPRESA ****************/
+    .conte_empresa{
+        position: absolute;
+        z-index: 2;
+        background-color: white;
+        text-align: center;
+        border: solid 2px var(--naranja);
+        top: 115px;
+        left: 350px;
+        padding: 10px;
+        visibility: hidden;
+    }
+
+    .conte_empresa form select{
+        width: 270px;
+        margin-bottom: 20px;
+        padding: 5px;
+        border: solid 2px #59b548;
+        border-radius: 10px;
+    }
+
+    .conte_empresa form button{
+        background-color: var(--naranjaClaro);
+        font-size: 13px;
+        padding: 5px;
+        border-radius: 10px;
+    }
