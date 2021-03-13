@@ -19,6 +19,10 @@ const formulario_ficha = document.getElementById("formulario_ficha")
 const enviar_ficha = document.getElementById("enviar_ficha")
 const cerrar_ficha = document.getElementById("cerrar_ficha")
 const link_ficha = document.getElementById("link_ficha")
+const conte_empresa = document.getElementById("conte_empresa")
+const btn_cerrar_empresa = document.getElementById("btn_cerrar_empresa")
+const link_empresa = document.getElementById("link_empresa")
+const formulario_empresa = document.getElementById("formualario_empresa")
 
 creausu.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -141,5 +145,18 @@ link_ficha.addEventListener("click", (e) => {
     conte_ficha.style.visibility = "visible"
     menu_formu.classList.toggle("ocultar")
 
+
+})
+
+// ******************************************* FORMULARIO DE EMPRESA ********************
+
+link_empresa.addEventListener("click", (e) => {
+    conte_empresa.style.visibility = "visible"
+    menu_formu.classList.toggle("ocultar")
+})
+
+btn_cerrar_empresa.addEventListener("click", (e) => {
+    conte_empresa.style.visibility = "hidden"
+    formulario_empresa.reset()
 
 })
