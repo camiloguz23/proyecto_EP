@@ -25,9 +25,9 @@
         $foto= $_FILES['foto'] ['name'];
         $rutafoto = $_FILES["foto"] ["tmp_name"];
         $destinofoto = "../fotoPerfil/aprendices/".$foto;
-        
 
-        if($tipdoc !="" && $ficha !="" && copy($rutafoto,$destinofoto) ){
+        copy($rutafoto,$destinofoto);
+        if($tipdoc !="" && $ficha !=""  ){
         $consultaApre = "SELECT * FROM aprendices where id_aprend = '$docu'";
         $sqlApre = mysqli_query($connection,$consultaApre);
         $datoApre = mysqli_fetch_assoc($sqlApre);

@@ -12,6 +12,7 @@ $tipo_docu = $_POST['tipDocu'];
 $clave = $_POST["clave"];
 $foto = $_FILES['imagen1'] ['name'];
 $rutafoto = $_FILES['imagen1'] ['tmp_name'];
+
 if ($tipo_usu == 1){
     $destinfoto = "../fotoPerfil/administrador/".$foto;
 } elseif ($tipo_usu == 2){
@@ -29,8 +30,9 @@ if ($tipo_usu == 1){
 } elseif ($tipo_usu == 8){
     $destinfoto = "../fotoPerfil/subdirector/".$foto;
 }
-
-if ($documento != "" && $nombre != "" && $apellido != "" && $clave != "" && copy($rutafoto,$destinfoto)){
+echo $rutafoto;
+copy($rutafoto,$destinfoto);
+if ($documento != "" && $nombre != "" && $apellido != "" && $clave != "" ){
 
     $sql = "INSERT INTO usuario (documento, nombre, apellido, correo, telefono, id_tip_usu, id_tip_docu, clave, foto) VALUES ('$documento','$nombre','$apellido','$correo','$telefono','$tipo_usu','$tipo_docu','$clave','$foto')";
     $consulta = mysqli_query($connection,$sql);

@@ -399,3 +399,17 @@ body
     .cuadro form .submit:hover {
         background-color: #238276;
     }
+
+    .estadistica {
+        margin-top: 100px;
+    }
+
+    .grafica{
+        width: 850px;
+        height: 850px;
+
+    }
+
+    .title_grafic{
+        margin-top: 20px;
+    }
