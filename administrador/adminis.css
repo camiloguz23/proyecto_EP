@@ -426,6 +426,14 @@
         color: rgb(255, 60, 0); 
         font-family: 'Saira Condensed', sans-serif;
     }
+
+    .formm button{
+        margin-top: 40px;
+        background-color: var(--naranjaClaro);
+        font-size: 13px;
+        padding: 5px;
+        border-radius: 10px;
+    }
     
     input{
         margin: 15px 15px;

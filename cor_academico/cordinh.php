@@ -7,6 +7,9 @@
         require_once('../php/connecion.php');
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +54,7 @@
                         </form>
                     </div>
                 </li>
-                <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
+                <li><a href="esta.php"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">ESTADISTICA</a></li>
             </ul>  
         </nav>
 
@@ -96,6 +99,8 @@
             <img src="../imagenes/cancelar.png" alt="">
         </div>
     </div>
+
+
     <footer class="pie">
         <img  height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
 

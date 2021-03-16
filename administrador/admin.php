@@ -135,7 +135,7 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                 <div class="conten">
                     <div class="fila">
                         <label for="user">Documento</label>
-                        <input type="text" id="usu" name="doc" placeholder="Ingrese su usuario o Documento" required autocomplete="off">
+                        <input type="text" id="usu" name="doc" placeholder="Ingrese su usuario o Documento" required pattern="[0-9] {6-12}" autocomplete="off">
                         <label for="nombre">Nombre completo</label>
                         <input type="text" id="nom" name="nom" placeholder="Ingrese su nombre completo" required autocomplete="off">
                         <label for="apellido">Apellido completo</label>
@@ -143,7 +143,7 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                         <label for="direccion">Correo</label>
                         <input type="email" id="corr" name="correo" placeholder="Ingrese su Correo" required autocomplete="off">
                         <label for="tipo_docu">Tipo de Documento</label>
-                        <select name="tipDocu">
+                        <select name="tipDocu" required>
                             <option>Elege una opcion</option>
                             <?php
                             foreach ($consulta as $docu){
@@ -173,9 +173,9 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                             </select>
                         </div>
                 </div>
-                <input type="submit" name="enviar" id="env" value="Registrar">
+                <button type="submit">Registrar</button>
 
-                <a href="../index.php" class="regreso">Regresar</a>
+                <button type="reset">Borrar datos</button>
 
             </form>
         </div>
