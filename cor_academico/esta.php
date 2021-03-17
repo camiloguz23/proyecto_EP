@@ -37,6 +37,17 @@ $sql_centro = "SELECT COUNT(id_deta_forma) FROM detalle_formacion,ficha_programa
 $consulta_centro = mysqli_query($connection,$sql_centro);
 $dato_centro = mysqli_fetch_array($consulta_centro)
 ?>
+<?php
+$fecha= "SELECT fecha_inicio, fecha_final from ficha_programa where num_ficha = 2060060";
+$fecha_consulta = mysqli_query($connection,$fecha);
+$dato_fecha = mysqli_fetch_assoc($fecha_consulta);
+
+$fechaUno = date_create($dato_fecha["fecha_inicio"]);
+date_default_timezone_set("America/Bogota");
+$fecha_actual = date_create(date("y-m-d"));
+$resta = $fecha_actual -> diff($fechaUno)
+?>
+
 
 
 <!DOCTYPE html>
@@ -92,6 +103,7 @@ $dato_centro = mysqli_fetch_array($consulta_centro)
     <p>Aprendices en etapa de certificacion: </> <?=$dato_cer[0]?></p>
     <p>Aprendices en etapa pendiente por el certificado:  <?=$dato_pend[0]?></p>
     <p>Aprendices en etapa certificado entregado:  <?=$dato_fin[0]?></p>
+    <p><?=$resta->d?> dias <?=$resta->m?> meses <?=$resta->y?> años <?=$resta->s?> segudos</p> 
 
 </div>
 <div class="grafica">
