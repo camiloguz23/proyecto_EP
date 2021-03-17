@@ -6,12 +6,9 @@ if ($usario == "" || $usario == null) {
 }
 require_once('../php/connecion.php');
 
-
 ?>
 <?php
 require '../php/connecion.php';
-
-
 $sql_ciudad = "SELECT * FROM tipo_evidencias";
 $query_ciudad = mysqli_query($connection, $sql_ciudad);
 $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
@@ -71,11 +68,10 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 
 
             <ul class="datos">
-                <p class="frase">Soy una persona empendedora que mira hacia adelante y siempre intenta ser mejor cada
-                    dia</p>
-                <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> <br>TELEFONO:
-                    <?= $_SESSION["telefono"] ?><br>E-Mail:
-                    <?= $_SESSION["correo"] ?></p>
+                <p class="frase"></p>
+                <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> <br><br>
+                TELEFONO:<?= $_SESSION["telefono"] ?><br><br>
+                E-Mail:<?= $_SESSION["correo"] ?></p>
             </ul>
 
             <a href="#" class="button">EDITAR</a>
@@ -113,8 +109,10 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 
         <!--datos del aprendiz -->
         <div class="informa">
-            <form action="evide.php" method="POST" class="regica">
-                <div class="aprendiz" id="hidden"></div>
+            <form action="evide.php" method="POST" class="regica" id="intento">
+                <div class="aprendiz" id="hidden">
+                </div>
+                
                 <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
                 <input class="inisegui" id="btnsegui" type="submit" value="INICIAR SEGUIMIENTO">
                 <input class="calificar" id="calificar" type="submit" value="CALIFICACION">
@@ -124,8 +122,10 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                 <!--</div>-->
             </div>
             <div class="tipoEvidencia" id="tipoEvidencia">
-                <form id="fomutievi" class="fomutievi">
-                    <div class="aprendiz" id="hidden"></div>
+                <form id="fomutievi" class="fomutievi" name="fomutievi">
+                    <div class="aprendiz" id="hidden" >
+                    
+                    </div>
                     <label  for="">SELECCIONE EL TIPO DE EVIDENCIA QUE DESEA CALIFICAR:</label><br>
                     <select class="inputR" name="tip_evi" id="tip_evi">
                         <?php
@@ -141,12 +141,15 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                 </form>
 
                
-                    <form action="evidencias.php" method="POST" id="fore">
+                    <form method="POST" id="fore">
 
-                        <div class="aprendiz" id="hidden"></div>
+                        <div class="aprendiz" id="hidden">
+                            
+                        </div>
+                        <div class="che" id="che">
+                        </div>
                         <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
 
-                        <input type="submit" class="botorara" value="calificar">
                     </form>
                 
             </div>
@@ -157,27 +160,29 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
         <div class="sali">
             <a href="#" id="salirrr"><img class="salir" src="../imagenes/cancelar.png" alt=""></a>
         </div>
-        <div class="informa2">
-            <div class="buscador2">
-                <h3 class="subTitulo2">BUSCAR DOCUMENTO</h3>
-                <div class="buscarDocu">
-                    <form method="POST" id="buscarDocu" autocomplete="off">
-                        <input type="number" name="aprendiza" placeholder="Numero De Documento" id="documento">
-                        <div class="boton">
-                            <a href="#" id="boton"><img class="boton" src="../imagenes/Imagen3.png" height="50px" width="50px"></a>
+        <div class="informa3">
+            <div class="buscador3">
+                <h3 class="subTitulo3">BUSCAR DOCUMENTO</h3>
+                <div class="buscarDocu3">
+                    <form method="POST" id="buscarDocu3" autocomplete="off">
+                        <input type="number" name="aprendiza" placeholder="Numero De Documento" id="documento3">
+                        <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
+                        <div class="boton3">
+                            <a href="#" id="boton3"><img class="boton3" src="../imagenes/Imagen3.png" height="50px" width="50px"></a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <div class="informa">
-            <div id="informa">
-
+        
+            <div id="informa3" class="repre">
+                    <h6>Seguimiento de entrega de evidencias de los aprendices</h6>
             </div>
-        </div>
+       
        
     </div>
+    
 
     <footer class="pie">
         <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
@@ -191,7 +196,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
     </footer>
 
     <script src="app.js"></script>
-
+    <script src="archi.js"></script>
 </body>
 
 </html>

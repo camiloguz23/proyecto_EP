@@ -22,8 +22,11 @@ const calificar = document.querySelector("#calificar");//Boton para calificar
 const formu = document.getElementById("fomutievi");
 const usuario = document.getElementById("tip_evi");
 const formula = document.getElementById("fore");
-const fragmen = document.createDocumentFragment();
+const che = document.getElementById("che");
 const contenedor = document.getElementById('contenedor');
+
+const intento = document.getElementById('intento');
+const fragmen = document.createDocumentFragment();
 
 
 formu.addEventListener("submit", (e)=>
@@ -36,7 +39,7 @@ formu.addEventListener("submit", (e)=>
             {
                 let json = JSON.parse(xhr.responseText);
                 console.log(json)
-                if(json[0].id_tip_eviden==2)
+                if(json[0].id_tip_evi==2)
                 {
                    
                     json.forEach((el)=>{
@@ -51,86 +54,14 @@ formu.addEventListener("submit", (e)=>
                         elemento1.setAttribute("name","check");
                         elemento1.setAttribute("value",`${el.id_evidencias}`)
                     
-                        // if(el.nom_evidencias === "EVIDENCIA 1"){
-                        //     elemento1.removeAttribute("disabled");
-                        // }else{
-                        //     elemento1.setAttribute("disabled" , "true");
-                        // }
                         label.appendChild(document.createTextNode(texto));
                         label.appendChild(elemento1);
+
                         contenedor.appendChild(label);
-                        formula.appendChild(contenedor);
+                        fragmen.appendChild(contenedor);
+                
                     })
-                    formula.appendChild(fragmen);
                     
-                 // funcion habilitar elemento
-                    // function habilitar(elemento,habili)
-                    // {
-                    //     const elementohabilitar = document.getElementById(habili);
-                    //     const habilitardos = document.getElementById(elemento);
-                        
-    
-                    //             if(habilitardos.checked==true){
-                    //             let conf  = confirm("esta seguro de calificar la actividad");
-                    //                 if(conf== true){
-                    //                     elementohabilitar.removeAttribute("disabled");
-                    //                 }
-                    //                 else{
-                    //                     habilitardos.checked=false;
-                    //                 }
-                                    
-                    //             }
-                    // }
-
-                    //     function ejecutar(e)
-                    //     {
-                    //     switch (e.target.id) 
-                    //         {
-                    //         case "EVIDENCIA 1":
-                    //             habilitar("EVIDENCIA 1","EVIDENCIA 2");
-                    //             break;
-                    //         case "EVIDENCIA 2":
-                    //             habilitar("EVIDENCIA 2","EVIDENCIA 3");
-                    //             break;
-                    //         case "EVIDENCIA 3":
-                    //             habilitar("EVIDENCIA 3","EVIDENCIA 4");
-                    //             break;
-                    //         case "EVIDENCIA 4":
-                    //             habilitar("EVIDENCIA 4","EVIDENCIA 5");
-                    //             break;
-                    //         case "EVIDENCIA 5":
-                    //             habilitar("EVIDENCIA 5","EVIDENCIA 6");
-                    //             break;
-                    //         case "EVIDENCIA 6":
-                    //             habilitar("EVIDENCIA 6","EVIDENCIA 7");
-                    //             break;
-                    //         case "EVIDENCIA 7":
-                    //             habilitar("EVIDENCIA 7","EVIDENCIA 8");
-                    //             break;
-                    //         case "EVIDENCIA 8":
-                    //             habilitar("EVIDENCIA 8","EVIDENCIA 9");
-                    //             break;
-                    //         case "EVIDENCIA 9":
-                    //             habilitar("EVIDENCIA 9","EVIDENCIA 10");
-                    //             break;
-                    //         case "EVIDENCIA 10":
-                    //             habilitar("EVIDENCIA 10","EVIDENCIA 11");
-                    //             break;
-                    //         case "EVIDENCIA 11":
-                    //             habilitar("EVIDENCIA 11","EVIDENCIA 12");
-                    //             break;
-
-                    //         default:
-                    //             break;
-                    //         }
-                    //     }
- 
-                    // const opciones =document.querySelectorAll(".check");
-                    // opciones.forEach((el)=>{
-                    //     el.addEventListener("click",ejecutar);
-                        
-                    // })
-    
 
                 }
                 else 
@@ -147,59 +78,24 @@ formu.addEventListener("submit", (e)=>
                         elemento2.setAttribute("name","check");
                         elemento2.setAttribute("value",`${el.id_evidencias}`);
                         
-                        // if(el.nom_evidencias === "EVIDENCIA PARCIAL"){
-                        //     elemento2.removeAttribute("disabled");
-                        // }
-                        // else{
-                        //     elemento2.setAttribute("disabled" , "true");
-                        // }
                         labell.appendChild(document.createTextNode(textoo));
                         
                         labell.appendChild(elemento2);
                         contenedorr.appendChild(labell);
-                        formula.appendChild(contenedorr);
+                        che.appendChild(contenedorr);
                     })
-                    formula.appendChild(fragmen);
                     
-                 // funcion habilitar elemento
-                    // function habilitar(elemento,habili)
-                    // {
-                    //     const elementohabilitar = document.getElementById(habili);
-                    //     const habilitardos = document.getElementById(elemento);
-                        
-    
-                    //             if(habilitardos.checked==true){
-                    //             let conf  = confirm("esta seguro de calificar la actividad");
-                    //                 if(conf== true){
-                    //                     elementohabilitar.removeAttribute("disabled");
-                    //                 }
-                    //                 else{
-                    //                     habilitardos.checked=false;
-                    //                 }
-                                    
-                    //             }
-                    // }
-
-                    //     function ejecutar(e)
-                    //     {
-                    //     switch (e.target.id) 
-                    //         {
-                    //         case "EVIDENCIA PARCIAL":
-                    //             habilitar("EVIDENCIA PARCIAL","EVIDENCIA FINAL");
-                    //             break;
-                    //         default:
-                    //             break;
-                    //         }
-                    //     }
- 
-                    // const opciones =document.querySelectorAll(".check");
-                    // opciones.forEach((el)=>{
-                    //     el.addEventListener("click",ejecutar);
-                        
-                    // })
+                    
 
                 }
-            
+                const boton=document.createElement('button')
+                boton.setAttribute("class","botorara")
+                boton.setAttribute("type","submit")
+                boton.setAttribute("value","calificar")
+                boton.setAttribute("placeholder","calificar")
+                che.appendChild(boton)
+                che.appendChild(fragmen);
+                
             }
         })
         xhr.open("POST","evi.php");
@@ -207,7 +103,33 @@ formu.addEventListener("submit", (e)=>
         
 });
 
+formula.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let datos = new FormData(formula),
+        // documenapre= datos.get('documenapre'),
+        check= datos.get('check'),
+        data = new URLSearchParams();
 
+    data.append("check",check);
+    // data.append("apre",documenapre)
+
+    fetch("evidencias.php",{
+        method:'POST',
+        body:data
+    })
+        .then( res => res.ok ? res.json():Promise.reject(res))
+        .then(data => {
+            console.log(data)
+
+        if (data== 'ok'){
+            alert("evidencia calificada")
+            location.reload()
+        }
+
+        })
+        .catch(error => console.log(error))
+
+})
 
 
 
@@ -222,6 +144,7 @@ function consulta(e) {
           if(xhr.readyState == 4 && xhr.status == 200){
               const info = document.querySelector("#informa")
               info.innerHTML = xhr.responseText;
+            //   info.innerHTML = 
              relacion(docuBase);
           }
       }
@@ -288,13 +211,11 @@ salir2.addEventListener('click', (e)=>{
     
 })
 
-
+boton.addEventListener('submit',relacion)
 
 function relacion (apren)
 {
     const hidden = document.getElementById("hidden");
     hidden.innerHTML = `<input type="hidden" name="documenapre" value="${apren}" > `
-    console.log(apren)
+    console.log(hidden)
 }
-
-
