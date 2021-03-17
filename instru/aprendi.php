@@ -3,13 +3,14 @@ require_once("../php/connecion.php");
 
 $documento = $_GET["documento"];
 
-$consulta = "SELECT aprendices.nombre_aprend,aprendices.apellido_aprend,cen_formacion.nom_cen_forma,aprendices.telefono_aprend,aprendices.num_celular, aprendices.correo_aprend,region.nom_region,pro_formacion.nom_formacion,ficha_programa.num_ficha,aprendices.id_aprend,estado_aprendiz.nom_estado, jornada.nom_jornada, nivel_formacion.nom_nivel,aprendices.foto FROM aprendices,cen_formacion,region,ficha_programa,pro_formacion,estado_aprendiz,jornada,nivel_formacion, detalle_formacion WHERE detalle_formacion.id_aprend = '$documento' and aprendices.id_aprend=detalle_formacion.id_aprend and ficha_programa.id_cen_forma=cen_formacion.id_cen_forma and cen_formacion.id_region=region.id_region AND ficha_programa.id_formacion=pro_formacion.id_formacion AND detalle_formacion.id_estado=estado_aprendiz.id_estado AND ficha_programa.id_jornada=jornada.id_jornada and ficha_programa.id_nivel=nivel_formacion.id_nivel";
+$consulta = "SELECT aprendices.nombre_aprend, aprendices.num_celular,aprendices.apellido_aprend,cen_formacion.nom_cen_forma,aprendices.telefono_aprend, aprendices.correo_aprend,region.nom_region,pro_formacion.nom_formacion,ficha_programa.num_ficha,aprendices.id_aprend,estado_aprendiz.nom_estado, jornada.nom_jornada, nivel_formacion.nom_nivel,aprendices.foto FROM aprendices,cen_formacion,region,ficha_programa,pro_formacion,estado_aprendiz,jornada,nivel_formacion, detalle_formacion WHERE detalle_formacion.id_aprend = '$documento' and aprendices.id_aprend=detalle_formacion.id_aprend and ficha_programa.id_cen_forma=cen_formacion.id_cen_forma and cen_formacion.id_region=region.id_region AND ficha_programa.id_formacion=pro_formacion.id_formacion AND detalle_formacion.id_estado=estado_aprendiz.id_estado AND ficha_programa.id_jornada=jornada.id_jornada and ficha_programa.id_nivel=nivel_formacion.id_nivel and ficha_programa.num_ficha=detalle_formacion.num_ficha";
 
 $sql = mysqli_query($connection,$consulta);
 $dato = mysqli_fetch_assoc($sql);
 
 
 if ($dato) {
+    $_SESSION['documentoapr'] = $dato['id_aprend'];
     // $datos = implode(",", $dato);
     // echo ($datos);
         
@@ -87,7 +88,22 @@ if ($dato) {
                
         '
     );
-        
+    // $buscar= "SELECT id_aprend FROM calificacion WHERE id_aprend=$documento";
+    // $query_evi = mysqli_query($connection, $buscar);
+    // $dato_evi =mysqli_fetch_all($query_evi);
+    // $evide = (count($dato_evi));
+    
+    //     if($evide ==14){
+    //         echo('<form action="evide.php" method="POST" class="regica">
+            
+    //         <input class="calificar" id="calificar" type="submit" value="CALIFICACION">
+    //     </form>');
+    //     }
+    //     else{
+    //         echo('<input class="inisegui" id="btnsegui" type="submit" value="INICIAR SEGUIMIENTO">');
+    //         echo('<input class="calificar" id="calificar" type="submit" value="CALIFICACION">');
+    //     };
+    
     
 }else if($documento == ""){
    
