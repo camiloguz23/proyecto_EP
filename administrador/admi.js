@@ -23,6 +23,7 @@ const conte_empresa = document.getElementById("conte_empresa")
 const btn_cerrar_empresa = document.getElementById("btn_cerrar_empresa")
 const link_empresa = document.getElementById("link_empresa")
 const formulario_empresa = document.getElementById("formualario_empresa")
+const linkFicha = document.getElementById("linkFicha")
 
 creausu.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -107,6 +108,7 @@ btn_uno.addEventListener("click", (e) => {
         }else if (info == 2){
             formu_formacion.reset()
             alert("Formacion creada")
+            window.location = "admin.php"
         }
     })
 })
@@ -142,10 +144,17 @@ cerrar_ficha.addEventListener("click", (e) => {
 })
 
 link_ficha.addEventListener("click", (e) => {
+    e.preventDefault()
     conte_ficha.style.visibility = "visible"
     menu_formu.classList.toggle("ocultar")
 
 
+})
+
+linkFicha.addEventListener("click", (e) => {
+    e.preventDefault()
+    conte_ficha.style.visibility = "visible"
+    menu_formu.classList.toggle("ocultar")
 })
 
 // ******************************************* FORMULARIO DE EMPRESA ********************

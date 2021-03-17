@@ -38,14 +38,9 @@ $consulta_centro = mysqli_query($connection,$sql_centro);
 $dato_centro = mysqli_fetch_array($consulta_centro)
 ?>
 <?php
-$fecha= "SELECT fecha_inicio, fecha_final from ficha_programa where num_ficha = 2060060";
-$fecha_consulta = mysqli_query($connection,$fecha);
-$dato_fecha = mysqli_fetch_assoc($fecha_consulta);
+$nom_ficha = "SELECT num_ficha,nom_formacion from ficha_programa, pro_formacion where ficha_programa.id_formacion = pro_formacion.id_formacion";
+$consulta_ficha = mysqli_query($connection,$nom_ficha);
 
-$fechaUno = date_create($dato_fecha["fecha_inicio"]);
-date_default_timezone_set("America/Bogota");
-$fecha_actual = date_create(date("y-m-d"));
-$resta = $fecha_actual -> diff($fechaUno)
 ?>
 
 
@@ -81,7 +76,7 @@ $resta = $fecha_actual -> diff($fechaUno)
     <nav class="navegacion">
         <ul class="menu">
             <li id="pazsalvo">
-                <a href="#" id="btn_pazysalvo"><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAZ Y SALVO</a>
+                <a href="cordinh.php" ><img class="dos" width="33" height="26" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="">PAGINA DE PERFIL</a>
                 <div class="cuadro" id="cuadro">
                     <div class="b_salir">
                         <a href="#" id="salir"><img class="salir" src="../imagenes/cancelar.png" alt=""></a>
@@ -96,25 +91,59 @@ $resta = $fecha_actual -> diff($fechaUno)
 </header>
 <h1 class="estadistica">Estadistica</h1>
 
-<div class="title_grafic">
-    <h3>Estadisticas de los aprendices </h3>
-    <p>Aprendices en etapa lectiva:  <?=$dato_lec[0]?></p>
-    <p>Aprendices en etapa de legalizacion:  <?=$dato_leg[0]?></p>
-    <p>Aprendices en etapa de certificacion: </> <?=$dato_cer[0]?></p>
-    <p>Aprendices en etapa pendiente por el certificado:  <?=$dato_pend[0]?></p>
-    <p>Aprendices en etapa certificado entregado:  <?=$dato_fin[0]?></p>
-    <p><?=$resta->d?> dias <?=$resta->m?> meses <?=$resta->y?> años <?=$resta->s?> segudos</p> 
+<div class="title_grafic centrar">
+    <h3>Tiempo restante para inicio de la etapa productiva </h3>
+    <form method="POST" id="fecha">
+        <select name="ficha">
+            <option>Eligue el numero de la ficha</option>
+            <?php
+            foreach ($consulta_ficha as $ficha){
+                ?><option value="<?=$ficha['num_ficha']?>"><?=$ficha['num_ficha']?> <?=$ficha['nom_formacion']?></option>
+                <?php
+            }
+            ?>
+        </select>
+        <button type="button" id="btn_fecha">Consultar</button>
+    </form>
+
+    <p id="texto_fecha"></p>
 
 </div>
-<div class="grafica">
+
+<div class="title_grafic centrar">
+    <h3>Estadisticas de los aprendices </h3>
+    <table>
+        <title>Aprendices</title>
+        <thead>
+        <tr>
+            <th>Etapa lectiva</th>
+            <th>Etapa de legalizacion</th>
+            <th>Etapa de certificacion</th>
+            <th>Pendiente por certificado</th>
+            <th>Certifiado entregados</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><?=$dato_lec[0]?></td>
+            <td><?=$dato_leg[0]?></td>
+            <td><?=$dato_cer[0]?></td>
+            <td><?=$dato_pend[0]?></td>
+            <td><?=$dato_fin[0]?></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+</div>
+<div class="grafica centrar">
     <canvas id="myChart" width="50px" height="20px"></canvas>
 </div>
-<div class="title_grafic">
-    <h3>Centro de formacion </h3>
-
-</div>
 
 
+<script src="script/fecha.js"></script>
 <script>
     console.log(<?=$dato_lec[0]?>)
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -127,8 +156,8 @@ $resta = $fecha_actual -> diff($fechaUno)
             labels: ['lectiva', 'legalizacion', 'certificacio', 'proceso de entraga', 'entregado'],
             datasets: [{
                 label: 'ESTADOS DE LOS APRENDICES',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgb(89, 181, 72)',
+                borderColor: 'rgb(252, 115, 35)',
                 data: [<?=$dato_lec[0]?>,<?=$dato_leg[0]?> ,<?=$dato_cer[0]?>,<?=$dato_pend[0]?>,<?=$dato_fin[0]?>]
             }]
         },

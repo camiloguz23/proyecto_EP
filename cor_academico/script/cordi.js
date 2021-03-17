@@ -2,6 +2,7 @@ const boton = document.getElementById("btn_pazysalvo");
 const cuadro = document.getElementById("cuadro");
 const salida = document.getElementById("salir");
 
+
 boton.addEventListener('click', (e)=>{
     e.preventDefault();
     cuadro.style.display= "block";
@@ -17,3 +18,6 @@ salida.addEventListener('click', (e)=>{
     boton.style.color ="black";
 
 })
+
+// ****************  FORMULARIO DE FECHA **********************
+

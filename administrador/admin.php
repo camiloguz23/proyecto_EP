@@ -137,9 +137,9 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                         <label for="user">Documento</label>
                         <input type="text" id="usu" name="doc" placeholder="Ingrese su usuario o Documento" required pattern="[0-9] {6-12}" autocomplete="off">
                         <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nom" name="nom" placeholder="Ingrese su nombre completo" required autocomplete="off">
+                        <input type="text" id="nom" class="uper" name="nom" placeholder="Ingrese su nombre completo" required autocomplete="off">
                         <label for="apellido">Apellido completo</label>
-                        <input type="text" id="ape" name="ape" placeholder="Ingrese su apellido completo" required autocomplete="off">
+                        <input type="text" id="ape" class="uper" name="ape" placeholder="Ingrese su apellido completo" required autocomplete="off">
                         <label for="direccion">Correo</label>
                         <input type="email" id="corr" name="correo" placeholder="Ingrese su Correo" required autocomplete="off">
                         <label for="tipo_docu">Tipo de Documento</label>
@@ -201,9 +201,9 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
 
                         </select><br>
                         <label>Nombre del aprendiz</label><br>
-                        <input type="text" name="nom" required pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
+                        <input type="text" class="uper" name="nom" required pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
                         <label>Apellido del aprendiz</label><br>
-                        <input type="text" required name="ape" pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
+                        <input type="text" class="uper" class="uper" required name="ape" pattern="[a-z] {4-30}" title="•Solo letras de la A - Z, • minimo 4 caracteres y maximo 30"><br>
                         <label>Correo del aprendiz</label><br>
                         <input type="email" name="email" required><br>
                         <label>Telefono del aprendiz</label><br>
@@ -241,6 +241,7 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                             }
                             ?>
                         </select><br>
+                        <a href="#" id="linkFicha">•Crear ficha</a><br>
                         <button type="submit" id="btn_enviar">Enviar</button>
                         <button type="button" id="btn_cerrra">Cerrar</button>
                     </fieldset>
@@ -257,7 +258,7 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
             <div class="formu-formacion" id="formu_formacion">
                 <form method="POST" id="formulario_formacion">
                     <label>Nombre de la formacion</label><br>
-                    <input name="nom_formacion" type="text" required><br>
+                    <input name="nom_formacion" class="uper" type="text" required class="uper"><br>
                     <button type="button" id="btn_uno">Enviar</button>
                     <button type="button" id="btn_dos">Cerrar</button>
                 </form>
@@ -267,7 +268,7 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
             <h4>Formulario de crear ficha de formacion</h4>
             <form id="formulario_ficha" method="POST" autocomplete="off">
                 <label>Numero de ficha</label><br>
-                <input type="number" name="numf"><br>
+                <input type="number" name="numf" minlength="4"><br>
                 <label>Jornada</label><br>
                 <select name="jornadaF">
                     <option>Eligue una opcion</option>
@@ -324,9 +325,9 @@ $consulta_formacion = mysqli_query($connection,$sql_formacion)
                 <label>Nit de la empresa</label><br>
                 <input type="number" required pattern="[0-9] {10-12}" title="·Solo numero, · minimo 10digitos" name="nit" maxlength="12"  minlength="10"><br>
                 <label>Razon social de la empresa</label><br>
-                <input type="text" required name="razon_social"><br>
+                <input type="text" class="uper" required name="razon_social"><br>
                 <label>Nombre de la empresa</label><br>-
-                <input type="text" name="nom_empresa" required><br>
+                <input type="text" class="uper" name="nom_empresa" required><br>
                 <label>Direccion de la empresa</label><br>
                 <input type="text" required name="dire_empresa"><br>
                 <label>Telefono de la empresa</label><br>
