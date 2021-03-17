@@ -1,7 +1,7 @@
 <?php
 require '../php/connecion.php';
 
-$ins = $_POST["docuinst"];
+// $ins = $_POST["docuinst"];
 $cheq =$_POST["check"];
 
 
@@ -11,15 +11,15 @@ $sqli = mysqli_query($connection, $consul);
 
 if($sqli)
 {
-    $evidencia = "UPDATE calificacion SET id_esta_evi=2,id_doc_instru=$ins,fecha_cali=now() WHERE `id_evidencias`=$cheq ";
+    $evidencia = "UPDATE calificacion SET id_esta_evi=2,fecha_cali=now() WHERE `id_evidencias`=$cheq ";
     $sql = mysqli_query($connection, $evidencia);
     
-    echo("<script>alert(' calificacion de correcta')</script>");
-    // header("location: instructor.php");
-                            
+    // echo("<script>alert(' calificacion de correcta')</script>");
+    // // header("location: instructor.php");
+       echo json_encode("ok")  ;                   
 }else
 {
-    echo ("morimosss");
+    echo json_encode("f") ; 
                             
 }
 ?>
