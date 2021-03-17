@@ -662,3 +662,14 @@
         padding: 5px;
         border-radius: 10px;
     }
+
+    .uper{
+        text-transform: uppercase;
+    }
+
+    #linkFicha{
+        font-size: 10px;
+        margin-top: -20px;
+        position: absolute;
+        margin-left: -90px;
+    }

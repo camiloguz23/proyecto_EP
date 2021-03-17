@@ -198,6 +198,14 @@ h4{
     transition: all 1s ease-out;
     border-radius: 10px;
 }
+
+.dato_mensaje{
+    position: absolute;
+    z-index: 3;
+    margin-left: 150px;
+
+}
+
 .contenido1 h2{
     
     margin-top: 8%;
