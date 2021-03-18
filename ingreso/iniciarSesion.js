@@ -8,6 +8,7 @@ const btn_coordinador = document.getElementById("btn_coordinador");
 const btn_coordinador2 = document.getElementById("btn_coordinador2");
 const btn_biblioteca = document.getElementById("btn_biblioteca");
 const btn_subdirector = document.getElementById("btn_subdirector");
+const btn_aprendiz = document.getElementById("btn_aprendiz")
 
 //Imagen de la mascota 
 const Img_macota = document.getElementById('imagenMascota');
@@ -55,6 +56,8 @@ btn_administrador.addEventListener('click',(e)=>{
     form6.reset();
     form7.reset();
     form8.reset();
+    form9.reset()
+
     
 })
 
@@ -78,6 +81,7 @@ btn_seguimiento.addEventListener('click',(e)=>{
     form6.reset();
     form7.reset();
     form8.reset();
+    form9.reset()
 
 })
 
@@ -101,6 +105,7 @@ btn_instructor.addEventListener('click',(e)=>{
     form6.reset();
     form7.reset();
     form8.reset();
+    form9.reset()
 })
 
 btn_agenciaPublica.addEventListener('click',(e)=>{
@@ -123,6 +128,7 @@ btn_agenciaPublica.addEventListener('click',(e)=>{
     form6.reset();
     form7.reset();
     form8.reset();
+    form9.reset()
 })
 
 btn_bienestar.addEventListener('click',(e)=>{
@@ -145,6 +151,7 @@ btn_bienestar.addEventListener('click',(e)=>{
     form6.reset();
     form7.reset();
     form8.reset();
+    form9.reset()
    
 })
 
@@ -168,6 +175,7 @@ btn_coordinador.addEventListener('click',(e)=>{
     form5.reset();
     form7.reset();
     form8.reset();
+    form9.reset()
    
 })
 btn_coordinador2.addEventListener('click',(e)=>{
@@ -213,6 +221,7 @@ btn_biblioteca.addEventListener('click',(e)=>{
     form5.reset();
     form6.reset();
     form8.reset();
+    form9.reset()
    
 })
 
@@ -236,5 +245,30 @@ btn_subdirector.addEventListener('click',(e)=>{
     form5.reset();
     form6.reset();
     form7.reset();
+    form9.reset()
    
+})
+
+btn_aprendiz.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    login_box1.style.display = "none";
+    login_box2.style.display = "none";
+    login_box3.style.display = "none";
+    login_box4.style.display = "none";
+    login_box5.style.display = "none";
+    login_box6.style.display = "none";
+    login_box7.style.display = "none";
+    login_box8.style.display = "none";
+    Img_macota.style.display = "none";
+    login_box9.style.display = "block"
+    form1.reset();
+    form2.reset();
+    form3.reset();
+    form4.reset();
+    form5.reset();
+    form6.reset();
+    form7.reset();
+
+
 })
