@@ -41,7 +41,10 @@
                                         header("location: ../biblioteca/biblio.php");
                                     } else if ($_SESSION["id_tip_usu"] == 8){
                                         header("location: ../subdirector/index.php");
-                                    } else{
+                                    } else if ($_SESSION["id_tip_usu"] == 9){
+                                        header("location: ../cor_formacion/c_formacion.php");
+                                    }
+                                     else{
                                         header("location: ../index.html");
                                     }
                                 } else {
