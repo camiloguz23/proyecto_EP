@@ -15,7 +15,7 @@ if ($dato) {
     // echo ($datos);
         
         echo('
-        <div class="datosMostrar" id="datosgen">
+        <div class="datosMostrar" id="datosgen" data-documento='.$dato["id_aprend"].'>
         
                     <h3 class="subTitulo">DATOS APRENDIZ</h3>
                     <div class="datosApre">
