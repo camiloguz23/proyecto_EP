@@ -1,3 +1,40 @@
+<?php
+require_once ("php/connecion.php");
+$sql_lec = "SELECT COUNT(id_estado) from detalle_formacion where id_estado = 1";
+$consulta_lec = mysqli_query($connection,$sql_lec);
+$dato_lec = mysqli_fetch_array($consulta_lec)
+?>
+<?php
+$sql_leg = "SELECT COUNT(id_estado) from detalle_formacion where id_estado = 2";
+$consulta_leg = mysqli_query($connection,$sql_leg);
+$dato_leg = mysqli_fetch_array($consulta_leg)
+?>
+<?php
+$sql_pend = "SELECT COUNT(id_estado) from detalle_formacion where id_estado = 4";
+$consulta_pend = mysqli_query($connection,$sql_pend);
+$dato_pend = mysqli_fetch_array($consulta_pend)
+?>
+<?php
+$sql_fin = "SELECT COUNT(id_estado) from detalle_formacion where id_estado = 5";
+$consulta_fin = mysqli_query($connection,$sql_fin);
+$dato_fin = mysqli_fetch_array($consulta_fin)
+?>
+<?php
+$sql_cer = "SELECT COUNT(id_estado) from detalle_formacion where id_estado = 3";
+$consulta_cer = mysqli_query($connection,$sql_cer);
+$dato_cer = mysqli_fetch_array($consulta_cer)
+?>
+<?php
+$sql_centro = "SELECT COUNT(id_deta_forma) FROM detalle_formacion,ficha_programa WHERE detalle_formacion.num_ficha= ficha_programa.num_ficha and ficha_programa.id_cen_forma = 1";
+$consulta_centro = mysqli_query($connection,$sql_centro);
+$dato_centro = mysqli_fetch_array($consulta_centro)
+?>
+<?php
+$nom_ficha = "SELECT num_ficha,nom_formacion from ficha_programa, pro_formacion where ficha_programa.id_formacion = pro_formacion.id_formacion";
+$consulta_ficha = mysqli_query($connection,$nom_ficha);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +52,7 @@
         <div class="logo">
             <img class="imagen"  height="67" width="90" src="imagenes/iconoinicio.jpg.png"  alt="">
             <h3 class="segui">SEA| <h4>SEGUIMIENTO A EL ESTADO DEL APRENDIZ<img class="seguiimg" width="20" height="20" src="imagenes/iconoii.jpg" alt=""></h4></h3>
-
+            <p class="parrafo">Procesos y seguimiento de la estapa productiva del aprendiz</p>
             <div class="segun">
                 <img height="220" src="imagenes/verdemoco.png" alt="">
             </div>
@@ -72,11 +109,10 @@
 
             </div>
             <div class="dato_mensaje">
-                <p>mensaje</p>
-                <p>mensaje</p>
-                <p>mensaje</p>
-                <p>mensaje</p>
-                <p>mensaje</p>
+                <p>Aprendices en etapa lectiva <span><?=$dato_lec[0]?></span></p>
+                <p>Aprencices legalizados <span><?=$dato_leg[0]?></span></p>
+                <p>Aprendices inicio de certificacion <span><?=$dato_cer[0]?> </span> </p>
+                <p>Aprendices con certificado <span><?=$dato_fin[0]?> </span></p>
             </div>
         </div>
 

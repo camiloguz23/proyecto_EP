@@ -157,7 +157,7 @@ h4{
 }
 .info 
 {
-   border-left: solid var(--white);
+   border-left: solid white;
    margin: 4px;
    
 }
@@ -198,13 +198,29 @@ h4{
 .dato_mensaje{
     position: absolute;
     z-index: 3;
-    margin-top: 3%;
-    margin-left: 150px;
+    margin-left: 200px;
+    margin-top: 50px;
+
 
 }
 
 .dato_mensaje p{
-    padding-bottom: 3px;
+
+    margin-bottom: 20px;
+    color: #238276;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dato_mensaje p span {
+    color: black;
+}
+
+.parrafo{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 190px;
 }
 
 
@@ -232,7 +248,7 @@ h4{
 }
 .cerr{
     padding: 20px;
-    width: -2%;
+    /*width: -2%;*/
     
     height: 23px;
     border-radius: 50%;
