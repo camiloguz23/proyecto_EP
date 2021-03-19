@@ -27,11 +27,12 @@ const contenedor = document.getElementById('contenedor');
 
 const intento = document.getElementById('intento');
 const fragmen = document.createDocumentFragment();
-
-
+console.log(intento)
+console.log(formu)
 formu.addEventListener("submit", (e)=>
 {
     e.preventDefault();
+    console.log(formu)
         const xhr = new XMLHttpRequest();
         xhr.addEventListener("readystatechange",(e)=>{
             if(xhr.readyState !== 4) return;
@@ -146,6 +147,7 @@ function consulta(e) {
               info.innerHTML = xhr.responseText;
             //   info.innerHTML = 
              relacion(docuBase);
+             relacionar(docuBase);
           }
       }
       xhr.send()
@@ -217,5 +219,14 @@ function relacion (apren)
 {
     const hidden = document.getElementById("hidden");
     hidden.innerHTML = `<input type="hidden" name="documenapre" value="${apren}" > `
+    console.log(hidden)
+}
+
+
+calificar.addEventListener('submit',relacionar)
+function relacionar (aprendiz)
+{
+    const hidden = document.getElementById("apren");
+    hidden.innerHTML = `<input type="hidden" name="documenapre" value="${aprendiz}" > `
     console.log(hidden)
 }

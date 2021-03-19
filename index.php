@@ -103,8 +103,8 @@ $consulta_ficha = mysqli_query($connection,$nom_ficha);
             <h2>SEA|SEGUIMIENTO A EL ESTADO DEL APRENDIZ </h2>
             </div>
 
-            <div class="cerr">
-            <p class="cerrar" id="cerrar">X</p>
+            <div class="cerr" id="cerrar">
+                <p class="cerrar" >X</p>
             </div>
 
             </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,7 +24,7 @@
                 <button class="btn-2 btn-cursor" id="btn_seguimiento">SEGUIMIENTO</button>
                 <button class="btn-3 btn-cursor" id="btn_instructor">INSTRUCTOR</button>
                 <button class="btn-6 btn-cursor" id="btn_coordinador">COORDINADOR ACADEMICO</button>
-                <button class="btn-6 btn-cursor" id="btn_coordinador">COORDINADOR DE FORMACION</button>
+                <button class="btn-6 btn-cursor" id="btn_coordinador2">COORDINADOR DE FORMACION</button>
                 <button class="btn-5 btn-cursor" id="btn_bienestar">BIENESTAR</button>
                 <button class="btn-7 btn-cursor" id="btn_biblioteca">BIBLIOTECA</button>
                 <button class="btn-8 btn-cursor" id="btn_subdirector">SUBDIRECTOR</button>
@@ -32,12 +32,12 @@
                 <button class="btn-1 btn-cursor" id="btn_administrador">ADMINISTRADOR</button>
             
             </div>
-            <div class="login-box"  id="login-box9">
+            <div class="login-box10"  id="login-box10">
 
                 <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
 
                 <h1>INICIO SESION</h1>
-                <form method="post" id="form9" action="../php/ingreso.php" autocomplete="off">
+                <form method="post" id="form10" action="../php/ingreso.php" autocomplete="off">
                     <!--USERNAME INPUT-->
                     <div class="grupo">
                         <label for="username">Documento</label>
@@ -50,12 +50,12 @@
                         <p id="aviso"></p>
                     </div>
                     <!--PASSWORD INPUT-->
-                    <input type="hidden" name="loginTipUsu" value="1">
+                    <input type="hidden" name="loginTipUsu" value="10">
                     <input type="submit" name="inicio" id="inicio" value="INGRESAR">
                 </form>
             </div>
             <div class="login-box"  id="login-box1">
-    
+
                 <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
                 
                 <h1>INICIO SESION</h1>
@@ -234,6 +234,29 @@
                     </div>
                     <!--PASSWORD INPUT-->
                     <input type="hidden" name="loginTipUsu" value="8">
+                    <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+                </form>
+            </div>
+
+            <div class="login-box9" id="login-box9">
+    
+                <img src="../imagenes/icono1.jpg.png" class="avatar" alt="avatar img">
+                
+                <h1>INICIO SESION</h1>
+                <form method="post" id="form9" action="../php/ingreso.php" autocomplete="off">
+                    <!--USERNAME INPUT-->
+                    <div class="grupo">
+                        <label for="username">Documento</label>
+                        <input type="number" name="usuario" id="usuario" placeholder="Ingrese Usuario" maxlength="12"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <div class="grupo">
+                        <label for="password">Clave</label>
+                        <input type="password" name="clave" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
+                        <p id="aviso"></p>
+                    </div>
+                    <!--PASSWORD INPUT-->
+                    <input type="hidden" name="loginTipUsu" value="9">
                     <input type="submit" name="inicio" id="inicio" value="INGRESAR">
                 </form>
             </div>

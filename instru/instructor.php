@@ -109,23 +109,23 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
 
         <!--datos del aprendiz -->
         <div class="informa">
-            <form action="evide.php" method="POST" class="regica" id="intento">
-                <div class="aprendiz" id="hidden">
-                </div>
-                
-                <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
-                <input class="inisegui" id="btnsegui" type="submit" value="INICIAR SEGUIMIENTO">
-                <input class="calificar" id="calificar" type="submit" value="CALIFICACION">
-            </form>
-
+            <div>
+                <form action="evide.php" method="POST" class="regica" id="intento">
+                    <div class="apren" id="apren">
+                    </div>
+                    
+                    <input type="hidden" name="docuinst" value="<?php echo ($_SESSION['documento']) ?>">
+                    <input class="inisegui" id="btnsegui" type="submit" value="INICIAR SEGUIMIENTO">
+                    <input class="calificar" id="calificar" type="submit" value="CALIFICACION">
+                </form>
+            </div>
             <div id="informa">
                 <!--</div>-->
             </div>
             <div class="tipoEvidencia" id="tipoEvidencia">
                 <form id="fomutievi" class="fomutievi" name="fomutievi">
-                    <div class="aprendiz" id="hidden" >
-                    
-                    </div>
+                <div class="aprendiz" id="hidden">
+                </div>
                     <label  for="">SELECCIONE EL TIPO DE EVIDENCIA QUE DESEA CALIFICAR:</label><br>
                     <select class="inputR" name="tip_evi" id="tip_evi">
                         <?php
@@ -136,7 +136,7 @@ $fila_ciudad = mysqli_fetch_assoc($query_ciudad);
                         endforeach;
                         ?>
                     </select>
-                    <button id="inicio">Seleccionar</button><br><br>
+                    <button  id="inicio" >Seleccionar</button><br><br>
                     <button id="salir2" class="salir2">Cancelar</button>
                 </form>
 
