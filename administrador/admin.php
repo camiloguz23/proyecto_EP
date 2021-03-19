@@ -2,7 +2,7 @@
     session_start();
     $usario = $_SESSION["documento"];
     if ($usario == "" || $usario == null) {
-        header("location: ../index.html");
+        header("location: ../index.php");
     }
 
 

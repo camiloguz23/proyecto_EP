@@ -42,7 +42,7 @@
                                     } else if ($_SESSION["id_tip_usu"] == 8){
                                         header("location: ../subdirector/index.php");
                                     } else{
-                                        header("location: ../index.html");
+                                        header("location: ../index.php");
                                     }
                                 } else {
                                     echo'<script type="text/javascript">

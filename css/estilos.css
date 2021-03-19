@@ -202,8 +202,27 @@ h4{
 .dato_mensaje{
     position: absolute;
     z-index: 3;
-    margin-left: 150px;
+    margin-left: 500px;
+    margin-top: 50px;
 
+}
+
+.dato_mensaje p{
+    margin-bottom: 20px;
+    color: #238276;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dato_mensaje p span {
+    color: black;
+}
+
+.parrafo{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 190px;
 }
 
 .contenido1 h2{
