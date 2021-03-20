@@ -1,3 +1,14 @@
+<?php
+session_start();
+$usuario = $_SESSION['documento-aprend'];
+
+if ($usuario == "" || $usuario == null ){
+    header("location: ../index.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,18 +55,18 @@
     </div>
 
     <div class="naranja">
-        <img class="perfil" src="#" alt="">
+        <img class="perfil" src="../fotoPerfil/aprendices/<?=$_SESSION['foto']?>" alt="foto de perfil">
     </div>
 
     <div id="date" class="contenedor">
         <div class="date">
 
 
-            <!-- <ul class="datos">
-                <p class="text2">NOMBRE: <?= $_SESSION["usuario"] ?> <br><br>
-                TELEFONO:<?= $_SESSION["telefono"] ?><br><br>
-                E-Mail:<?= $_SESSION["correo"] ?></p>
-            </ul> -->
+             <ul class="datos">
+                <p class="text2">NOMBRE: <?= $_SESSION['nombre-aprendiz'] ?> <br>
+                TELEFONO:<?= $_SESSION['telefono-aprend'] ?><br>
+                E-Mail:<?= $_SESSION['correo-aprendiz'] ?></p>
+            </ul>
 
             <a href="#" class="button">EDITAR</a>
 
