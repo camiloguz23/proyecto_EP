@@ -43,7 +43,7 @@ if ($usuario == "" || $usuario == null ){
         <nav class="navegacion">
             <ul class="menu">
                 <li><a href="#" id="seguimi"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">#</a></li>
-                <li ><a href="#" id="calificaa"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">#</a></li>
+                <li ><a href="documentos.php" id="calificaa"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">Documentos</a></li>
             </ul>
         </nav>
 
