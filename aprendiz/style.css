@@ -5,10 +5,6 @@
 
     /*ocultar*/
     
-    .seguimiento
-    {
-        visibility: hidden;
-    }
     .conteiner
     {
         visibility: hidden;
@@ -47,11 +43,11 @@
         color: #238276;
     }
 
-    .logo .segui
+    .segui
     {
         font-family: Verdana;
         font-size: 20px;
-        margin-left: 9%;
+        margin-right: 70%;
         margin-top: -5%;
         color: rgb(89, 181, 72);
     }
@@ -193,7 +189,7 @@
     .date .datos .text2
     {
         text-align: left;
-        width: 250px;
+        width: 450px;
 
     }
 
