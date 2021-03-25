@@ -217,8 +217,7 @@ if (isset($_POST['btn_actualizar'])) {
                     <!--todo el formulario-->
                     <input class="inputB" type="number" id="documentole">
                     <div class="botones12" id="boton" title="consultar">
-                        <a href="#" class="hola" id=""><img class="boton" src="../imagenes/Imagen3.png" height="50px"
-                                width="50px"></a>
+                        <a href="#" class="hola" id=""><img class="boton" src="../imagenes/Imagen3.png" height="50px" width="50px"></a>
                     </div>
                 </form>
             </div>

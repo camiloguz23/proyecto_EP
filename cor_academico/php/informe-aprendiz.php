@@ -1,7 +1,7 @@
 <?php
-require_once("connecion.php");
+require_once("../../php/connecion.php");
 
-$documento = $_GET["documento"];
+$documento = $_POST["documento"];
 
 $consulta = "SELECT aprendices.nombre_aprend,aprendices.apellido_aprend,cen_formacion.nom_cen_forma,aprendices.telefono_aprend, aprendices.correo_aprend,region.nom_region,pro_formacion.nom_formacion,ficha_programa.num_ficha,aprendices.id_aprend,estado_aprendiz.nom_estado, jornada.nom_jornada, nivel_formacion.nom_nivel,aprendices.foto FROM aprendices,cen_formacion,region,ficha_programa,pro_formacion,estado_aprendiz,jornada,nivel_formacion, detalle_formacion WHERE detalle_formacion.id_aprend = '$documento' and aprendices.id_aprend=detalle_formacion.id_aprend and ficha_programa.id_cen_forma=cen_formacion.id_cen_forma and cen_formacion.id_region=region.id_region AND ficha_programa.id_formacion=pro_formacion.id_formacion AND detalle_formacion.id_estado=estado_aprendiz.id_estado AND ficha_programa.id_jornada=jornada.id_jornada and ficha_programa.id_nivel=nivel_formacion.id_nivel and ficha_programa.num_ficha=detalle_formacion.num_ficha";
 
@@ -9,10 +9,10 @@ $sql = mysqli_query($connection,$consulta);
 $dato = mysqli_fetch_assoc($sql);
 
 if ($dato) {
-     
-    
-        
-        echo('
+
+
+
+    echo('
                 <div class="datosMostrar">
                     <h3 class="subTitulo">*DATOS APRENDIZ</h3>
                     <div class="datosApre">
@@ -40,8 +40,8 @@ if ($dato) {
                             <label class ="label" for="">ESTADO: </label>
                             <label class ="datos" for="" id="estadoAprend">'.$dato["nom_estado"].'</label>
                         </div>
-                        <a href="../certificado_leg/imdex.php?documento='.$dato['id_aprend'].'" target="_blank">
-                        <button class="botonForm constancia" style="margin-top:-40px; margin-left:460px; position:absolute;">Constancia</button>
+                        <a href="../certificado_leg/imdex.php?documento='.$dato['id_aprend'].'" target="_blank"><br>
+                        <button class="" style="margin-top:-40px; ">Constancia</button>
                         </a>
                     </div><br>
 
@@ -83,10 +83,10 @@ if ($dato) {
                
         '
     );
-        
-    
+
+
 }else if($documento == ""){
-   
+
 }else{
     echo("<h2>Aprendiz no existe</h2>");
 };
