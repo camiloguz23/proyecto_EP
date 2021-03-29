@@ -18,8 +18,14 @@ btn_enviar.addEventListener("click", (e) => {
         method:"POST",
         body: documento
     }).then(res => res.text()).then(info => {
-        dato_aprendiz.innerHTML = info
-        botonApre.style.visibility = "visible"
+        if (info == "documento no ingresado" || info == "Aprendiz no existe"){
+            dato_aprendiz.innerHTML = `<h2>${info}</h2>`
+            botonApre.style.visibility = "hidden"
+        }else {
+            dato_aprendiz.innerHTML = info
+            botonApre.style.visibility = "visible"
+        }
+
     })
 })
 
