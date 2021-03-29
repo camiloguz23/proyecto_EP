@@ -5,7 +5,17 @@ $usuario = $_SESSION['documento-aprend'];
 if ($usuario == "" || $usuario == null ){
     header("location: ../index.php");
 }
-
+require_once('../php/connecion.php');
+?>
+<?php
+    $sql_empresa = "SELECT * FROM empresa";
+    $query_empresa = mysqli_query($connection, $sql_empresa);
+    $fila_empresa = mysqli_fetch_assoc($query_empresa);
+?>
+<?php
+    $sql_re = "SELECT * FROM alternativa";
+    $query_re = mysqli_query($connection, $sql_re);
+    $fila_re = mysqli_fetch_assoc($query_re);
 ?>
 
 
@@ -15,8 +25,9 @@ if ($usuario == "" || $usuario == null ){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_info.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_info.css">
+    <link rel="stylesheet" href="css/style_legal.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="../imagenes/favicon.ico">
 
@@ -44,7 +55,8 @@ if ($usuario == "" || $usuario == null ){
         <nav class="navegacion">
             <ul class="menu">
                 <li><a href="#" id="datos"><img class="dos" width="33" height="26" src="../imagenes/Imagen8.png" alt="">Información Adicional</a></li>
-                <li ><a href="documentos.php" id="calificaa"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">Documentos</a></li>
+                <li ><a href="#" id="calificaa"><img class="tres" width="39" height="30" src="../imagenes/Imagen6.png" alt="">Descarga de Documentos</a></li>
+                <li><a href="#" id="datos2"><img class="cuatro" width="33" height="26" src="../imagenes/Imagen8.png" alt="">Carga de Documentos</a></li>
             </ul>
         </nav>
 
@@ -71,7 +83,7 @@ if ($usuario == "" || $usuario == null ){
                 E-Mail:<?= $_SESSION['correo-aprendiz'] ?></p>
             </ul>
 
-            <a href="#" class="button">EDITAR</a>
+            <a href="#"  id="aparecerE" class="button">EDITAR</a>
 
         </div>
     </div>
@@ -84,6 +96,7 @@ if ($usuario == "" || $usuario == null ){
 
 
     </div>
+    <!-- informacion Adicional del aprendiz -->
     <div id="infor" class="seguimiento">
         <div class="sali">
             <a href="#" id="salirr"><img class="salir" src="../imagenes/cancelar.png" alt=""></a>
@@ -216,8 +229,89 @@ if ($usuario == "" || $usuario == null ){
 
             ?>
     </div>
-    
+    <!-- descarga de documentos -->
+    <div class="documentos1" id="documentos1">
+    <div class="sali">
+            <a href="#" id="salirrr"><img class="salir" src="../imagenes/cancelar.png" alt=""></a>
+        </div>
+        <h1>DOCUMENTOS PARA DESCARGAR</h1>
+        <div class="fomutievi2">
+         <label  for="">SELECCIONE EL TIPO DE EVIDENCIA QUE DESEA CALIFICAR:</label><br>
+            <form id="fomutievi" class="fomutievi" name="fomutievi">
+                <select class="seleccionTipo" id="tipoAlternativa" name="tipoAlte">
+                    <option value="0">Seleccione la alternativa</option>
+                    <?php
+                    foreach ($query_re as $alternativa) : ?>
 
+                    <option value="<?php echo $alternativa['id_alternativa'] ?>">
+                        <?php echo $alternativa['id_alternativa'] ?>
+                        <?php echo $alternativa['nom_alternativa'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select><br>    
+            </form>    
+            <div class="documentos" id="documentos">   
+            </div> 
+            <br> 
+        </div>
+    </div>
+
+    <div class="documentos2" id="documentos2">
+    <form action="legalizacion.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">
+            <div class="registroLegal" id="registroLegal">
+                <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>
+                <label class="label1" for="">*Seleccione el tipo de alternativa:</label><br>
+                <select class="seleccionTipo" id="tipoAl" name="seleccionTipo">
+                    <option value="0">Seleccione la alternativa</option>
+                    <?php
+                    foreach ($query_re as $alternativa) : ?>
+
+                    <option value="<?php echo $alternativa['id_alternativa'] ?>">
+                        <?php echo $alternativa['id_alternativa'] ?>
+                        <?php echo $alternativa['nom_alternativa'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select><br>
+                <label class="label1" for="">Empresa</label><br>
+                <select class="seleccionTipo" name="empresa" id="selec_empresa">
+                    <option value="0">Seleccione la empresa</option>
+                    <?php
+                    foreach ($query_empresa as $empresa) : ?>
+
+                    <option value="<?php echo $empresa['nit_empresa'] ?>" require>
+                        <?php echo $empresa['nom_empre'] ?></option>
+                    <?php
+                    endforeach;
+                    ?>
+                </select>
+                
+
+                <label class="label1" for="">Nombre del jefe inmediato</label><br>
+                <input class="seleccionTipo" type="text" name="jefe" id="nombre_jefe" maxlength="40" style="text-transform:uppercase"><br>
+
+                <p class="p-nombre-jefe" id="p-nombre-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y max 30 </p>
+
+                <label class="label1" for="">Cargo del jefe inmediato</label><br>
+                <input class="seleccionTipo" type="text" name="cargoJefe" id="cargoJefe" maxlength="35" style="text-transform:uppercase"><br>
+                <p class="p-cargo-jefe" id="p-cargo-jefe"><i class="fas fa-exclamation"></i> Ingrese solo Letras min 5 y max 30</p>
+
+                <label class="label1" for="">Fecha de inicio de la etapa productiva</label><br>
+                <input class="seleccionTipo" type="date" name="fecha" id="">
+                
+                <div class="cargaDocu" id="cargaDocu">
+                    <label class="label1" for="">*Recuerde cargar todos los archivos en formato PDF</label><br>
+                </div>
+
+                <div class="botones">
+                    <input class="botonForm" type="submit" value="GUARDAR" id="boton523">
+                    <button class="botonForm" id="btn_cerrarLegal">CERRAR</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
     <footer class="pie">
         <img height="70px" width="70px" src="../imagenes/logo blanco.jpg" alt="">
 
@@ -229,7 +323,10 @@ if ($usuario == "" || $usuario == null ){
         </div>
     </footer>
 
-    <script src="archivo.js"></script>
+    <script src="js/archivo.js"></script>
+    <script src="js/legalizar.js"></script>
+    <script src="js/formu.js"></script>
+    <script src="js/cargar.js"></script>
 </body>
 
 </html>

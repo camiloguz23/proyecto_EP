@@ -29,6 +29,19 @@
         margin-top: 2%;
         z-index: 11;
     }
+.documentos1.sali a 
+{
+    cursor: pointer;
+}
+.documentos1 .salir
+{
+    width: 3%;
+    height: 4%;
+    position: absolute;
+    margin-left: 93%;
+    margin-top: 2%;
+    z-index: 11;
+} 
 .td{
     margin-top: 40px;
     background-color: white;
@@ -90,4 +103,59 @@ h3{
 }
 .tabla table{
     margin: auto;
+}
+.documentos1{
+    background-color:rgb(25, 130, 118);
+    width: 90%;
+    margin-left:5% ;
+    height: 900px;
+    z-index: 2;
+    margin-top: -837px;
+    visibility: hidden;
+    position: absolute; 
+    opacity: 0;
+}
+.documentos2{
+    background-color:rgb(25, 130, 118);
+    width: 90%;
+    margin-left:5% ;
+    height: 900px;
+    z-index: 2;
+    margin-top: -837px;
+    visibility: hidden;
+    position: absolute; 
+    opacity: 0;
+}
+.documentos1 h1{
+    text-align: center;
+    margin-top: 5%;
+    color: #fff;
+}
+.fomutievi2{
+    margin-top: 3%;
+    background-color: #fff;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    border-radius: 15px;
+}
+.fomutievi {
+    display: flex;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+.fomutievi select{
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 4%;
+    height: 30px;
+}
+.fomutievi button{
+    width: 10%;
+    height: 30px;
+    margin-top: 4%;
+    margin-left: 2%;
+    background-color: black;
+    color: #fff;
 }
