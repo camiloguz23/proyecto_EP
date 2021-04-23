@@ -56,6 +56,8 @@
                 </li>
                 <li><a href="esta.php"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">ESTADISTICA</a></li>
                 <li><a href="aprendiz.php"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">APRENDIZ</a></li>
+                <li><a href="carta.php"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">CARTAS</a></li>
+
             </ul>  
         </nav>
 

@@ -1,5 +1,8 @@
 <?php
 require_once ("../php/connecion.php");
+
+$sql = "SELECT aprendices.id_aprend,nombre_aprend,apellido_aprend,carta FROM aprendices, detalle_formacion WHERE id_estado = 1 and aprendices.id_aprend = detalle_formacion.id_aprend";
+$consulta = mysqli_query($connection,$sql)
 ?>
 
 <!DOCTYPE html>
@@ -46,31 +49,39 @@ require_once ("../php/connecion.php");
     </nav>
 
 </header>
-<h1 class="estadistica">Informacion de el aprendiz</h1>
+<h1 class="estadistica">Cartas enviadas</h1>
 
-<div class="conte-aprendiz">
-
-    <div class="buscador-aprendiz">
-        <form method="POST" autocomplete="off" id="formulario_dato">
-            <label>Ingrese el documento del aprendiz</label><br>
-            <input type="number" name="documento" maxlength="12" id="docupdf">
-            <button id="btn_enviar" type="button">Buscar</button>
-        </form>
-    </div>
-
-    <div class="dato-aprendiz" id="dato-aprendiz"></div>
-
-    <div class="botones-aprendiz">
-        <form method="POST" id="formudos-aprendiz" autocomplete="off">
-            <div id="agregar"></div>
-
-            <button type="button" id="cartasoli">Carta de solicitud</button>
-            <button type="button" id="pdf">Documentos</button>
-
-        </form>
-    </div>
-    <div class="pdf" id="conte-pdf"></div>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Documento</th>
+            <th>Nombre y apellido</th>
+            <th>Carta</th>
+            <th>Aprobacion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach ($consulta as $datoapre){
+            ?> <tr>
+                <td><?=$datoapre["id_aprend"]?></td>
+                <td><?=$datoapre["nombre_aprend"]?> <?=$datoapre["apellido_aprend"]?></td>
+                <td><a href="../aprendiz/carta/<?=$datoapre['id_aprend']?>/<?=$datoapre['carta']?>"><?=$datoapre['carta']?></a></td>
+                <td>
+                    <form method="post" action="php/aprobacion.php" autocomplete="off">
+                        <input type="hidden" value="<?=$datoapre['id_aprend']?>" name="documento">
+                        <button type="submit">Aprobar</button>
+                    </form>
+                </td>
+            </tr>
+        <?php
+        }
+        ?>
+        </tbody>
+    </table>
 </div>
+
 
 
 
