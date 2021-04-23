@@ -51,7 +51,7 @@ $consulta = mysqli_query($connection,$sql)
 </header>
 <h1 class="estadistica">Cartas enviadas</h1>
 
-<div>
+<div class="divtable">
     <table>
         <thead>
         <tr>
@@ -75,7 +75,7 @@ $consulta = mysqli_query($connection,$sql)
                     </form>
                 </td>
             </tr>
-        <?php
+            <?php
         }
         ?>
         </tbody>
@@ -89,6 +89,3 @@ $consulta = mysqli_query($connection,$sql)
 
 
 
-<script src="script/aprendiz.js"></script>
-</body>
-</html>
