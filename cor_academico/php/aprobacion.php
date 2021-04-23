@@ -7,6 +7,6 @@ $sql = "UPDATE detalle_formacion SET id_estado = '2' WHERE detalle_formacion.id_
 $consulta = mysqli_query($connection,$sql);
 
 if ($consulta){
-    header("location : ../carta.php");
+    header("location: ../solicitud.php");
 }
 ?>

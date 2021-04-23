@@ -505,4 +505,21 @@ body
 
     .divtable{
         text-align: center;
+        margin-left: 450px;
+    }
+
+    .divtable th {
+        background-color: var(--naranjaClaro);
+        padding: 10px;
+        border: solid 2px black;
+    }
+
+    .divtable td {
+        background-color: white;
+        padding: 10px;
+        border: solid 2px black;
+    }
+
+    .divtable table{
+        border-collapse: collapse;
     }
