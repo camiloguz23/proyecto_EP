@@ -20,6 +20,7 @@ if ($documento != "" and $clave != ""){
         $_SESSION['direccion'] = $dato_SQL['direccion'];
         $_SESSION['telefono-aprend'] = $dato_SQL['num_celular'];
         $_SESSION['correo-aprendiz'] = $dato_SQL['correo_aprend'];
+        $_SESSION['carta'] = $dato_SQL['carta'];
 
         header("location: ../aprendiz/index.php");
 

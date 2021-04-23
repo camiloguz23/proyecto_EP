@@ -116,7 +116,7 @@ alternativa.addEventListener("blur", (e)=> {
 
 // EVENTOS 
 
-alternativa.addEventListener("blur", funAlte)
+
 
 /************************************************validar extencion de los archivos **********************/
 
