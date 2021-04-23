@@ -1,0 +1,76 @@
+<?php
+require_once('../php/connecion.php');
+session_start();
+$usuario = $_SESSION['documento-aprend'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php 
+        $sql_carta = "SELECT * FROM aprendices WHERE $usuario";
+        $query_carta = mysqli_query($connection, $sql_carta);
+        $fila_carta = mysqli_fetch_assoc($query_carta);
+
+        if($fila_carta){
+            $_SESSION['carta'] = $fila_carta['carta'];
+            // $documento = $_SESSION['documento'];
+            if( $_SESSION['carta'] == null ){
+                echo '<form method="post" enctype="multipart/form-data" class="form_2" id="form_2">
+                <h3 class="titulo">Seleccionar carta</h3>
+                <input type="file" name="file" class="boton_personalizado">
+                <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo" class="boton_personalizado"></p>
+                </form>';
+                if(isset($_FILES['file'])) {
+                    $directorio = "carta/" . $usuario;
+                    
+                    if (!file_exists($directorio)) {
+                        mkdir($directorio, 0777, true);
+                    }
+                
+                    $directorio = $directorio . "/";
+                
+                    $archivo = $directorio . basename($_FILES["file"]["name"]); // uploads/carta.pdf
+                    $nombreArchivo = $_FILES["file"]["name"];
+                    $tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+                    $tamañoArchivo = $_FILES["file"]["size"];
+                
+                    if($tipoArchivo == "pdf") {
+                        if ($tamañoArchivo <= 209715200) {
+                
+                            if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
+                                
+                                $sql = "UPDATE aprendices SET carta = '$archivo' WHERE id_aprend = '$usuario'";
+                                $consultarSql = mysqli_query($connection,$sql);
+                
+                                if( $consultarSql ){
+                                    echo'<script type="text/javascript">
+                                        alert("Se ha agregado correctamente la carta de autorizacion");
+                                        
+                                    </script>';
+                                }
+                            } else {
+                                echo "<script>alert('Ha ocurrido un error al subir el archivo')</script>";
+                            }
+                
+                        } else {
+                            echo "<script>alert('El peso del archivo es superior a 200MB')</script>";
+                        }   
+                    } else {
+                        echo "<script>alert('El tipo de archivo subido no es admitido, solo se admite PDF ')</script>";
+                    }
+                }
+            }else{
+                
+                echo "<img class='perfil' src='./$fila_carta[carta]' alt='carta de autorizacion'>";
+            }  
+        } 
+        ?>
+    </div>
+</body>
+</html>

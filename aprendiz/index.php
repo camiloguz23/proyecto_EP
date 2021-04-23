@@ -1,6 +1,8 @@
 <?php
 session_start();
 $usuario = $_SESSION['documento-aprend'];
+$foto =$_SESSION['foto'];
+
 
 if ($usuario == "" || $usuario == null ){
     header("location: ../index.php");
@@ -70,7 +72,65 @@ require_once('../php/connecion.php');
     </div>
 
     <div class="naranja">
-        <img class="perfil" src="../fotoPerfil/aprendices/<?=$_SESSION['foto']?>" alt="foto de perfil">
+        <?php 
+        $sql_foto = "SELECT * FROM aprendices WHERE $usuario";
+        $query_foto = mysqli_query($connection, $sql_foto);
+        $fila_foto = mysqli_fetch_assoc($query_foto);
+
+        if($fila_foto){
+            $_SESSION['foto'] = $fila_foto['foto'];
+            // $documento = $_SESSION['documento'];
+
+            if( $_SESSION['foto'] == null ){
+                echo '<form method="post" enctype="multipart/form-data" class="form_2" id="form_2">
+                <h3 class="titulo">Seleccionar foto</h3>
+                <input type="file" name="file" class="boton_personalizado">
+                <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo" class="boton_personalizado"></p>
+                </form>';
+                if(isset($_FILES['file'])) {
+                    $directorio = "fotos/" . $usuario;
+                    
+                    if (!file_exists($directorio)) {
+                        mkdir($directorio, 0777, true);
+                    }
+                
+                    $directorio = $directorio . "/";
+                
+                    $archivo = $directorio . basename($_FILES["file"]["name"]); // uploads/carta.pdf
+                    $nombreArchivo = $_FILES["file"]["name"];
+                    $tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+                    $tamañoArchivo = $_FILES["file"]["size"];
+                
+                    if($tipoArchivo == "png" || $tipoArchivo == "jpg" || $tipoArchivo == "jpeg") {
+                        if ($tamañoArchivo <= 209715200) {
+                
+                            if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
+                                
+                                $sql = "UPDATE aprendices SET foto = '$archivo' WHERE id_aprend = '$usuario'";
+                                $consultarSql = mysqli_query($connection,$sql);
+                
+                                if( $consultarSql ){
+                                    echo'<script type="text/javascript">
+                                        alert("Se ha agregado correctamente la foto");
+                                        
+                                    </script>';
+                                }
+                            } else {
+                                echo "<script>alert('Ha ocurrido un error al subir el archivo')</script>";
+                            }
+                
+                        } else {
+                            echo "<script>alert('El peso del archivo es superior a 200MB')</script>";
+                        }   
+                    } else {
+                        echo "<script>alert('El tipo de archivo subido no es admitido, solo se admite imágenes (jpg, png, jpeg)')</script>";
+                    }
+                }
+            }else{
+                echo "<img class='perfil' src='./$fila_foto[foto]' alt='foto de perfil'>";
+            }  
+        } 
+        ?>
     </div>
 
     <div id="date" class="contenedor">
@@ -90,8 +150,8 @@ require_once('../php/connecion.php');
 
     <div class="opcion">
 
-        <a href="#" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset=""> #</a>
-        <a href="#" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">#</a>
+        <a href="carta.php" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset=""> Imprimir carta de Autorizacion</a>
+        <a href="cargar_carta.php" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">Cargar carta de Autorizacion</a>
         <a href="#" class="button3"> <img height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">#</a>
 
 
@@ -120,7 +180,7 @@ require_once('../php/connecion.php');
                                 <h3 class="subTitulo">DATOS APRENDIZ</h3>
                                 
                             <div class="dato1">
-                                <img class="perfil" src="../fotoPerfil/aprendices/'.$dato["foto"].'" alt="" width="100px">
+                                <img class="perfil" src="'.$dato["foto"].'" alt="" width="100px">
                             </div>
                             <div class="dato">
                                 <label class ="label" for="">NOMBRE: </label>

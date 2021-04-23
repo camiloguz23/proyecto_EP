@@ -6,7 +6,6 @@ if ( $_SESSION['documento-aprend'] == "" ||  $_SESSION['documento-aprend'] == nu
     
     echo  "<script>alert('identifique el aprendiz')</script>";
     echo '<script> window.location="index.php" </script>';
-  
 }else {
 
     if($_POST['seleccionTipo'] =="0" || $_POST['empresa'] =="0"){
@@ -54,8 +53,9 @@ if ( $_SESSION['documento-aprend'] == "" ||  $_SESSION['documento-aprend'] == nu
                     echo "linea 27";
                 }
             }else {
-                echo("<script>alert('No se han cargado los documentos completos')</script>");
-                header("location: segui.php");
+                // echo("<script>alert('No se han cargado los documentos completos')</script>");
+                // header("location: segui.php");
+                var_dump($nombre);
             }
         }else {
             echo "23 linea";
