@@ -318,6 +318,7 @@ require_once('../php/connecion.php');
     </div>
 
     <div class="documentos2" id="documentos2">
+   
     <form action="legalizacion.php" method="POST" autocomplete="off" enctype="multipart/form-data" id="legalForm">
             <div class="registroLegal" id="registroLegal">
                 <h1 class="tituloForm">REGISTRO LEGALIZACIÓN</h1>

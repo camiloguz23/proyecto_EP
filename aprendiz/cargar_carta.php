@@ -9,6 +9,7 @@ $usuario = $_SESSION['documento-aprend'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carta.css">
     <title>Document</title>
 </head>
 <body>
@@ -22,9 +23,10 @@ $usuario = $_SESSION['documento-aprend'];
             // $documento = $_SESSION['documento'];
             if( $_SESSION['carta'] == null ){
                 echo '<form method="post" enctype="multipart/form-data" class="form_2" id="form_2">
-                <h3 class="titulo">Seleccionar carta</h3>
+                <h3 class="titulo">SELECCIONAR CARTA DE AUTORIZACIÓN</h3>
                 <input type="file" name="file" class="boton_personalizado">
-                <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo" class="boton_personalizado"></p>
+                <p class="center"><input class="boton" id="btn_subirfirma" type="submit" value="Subir Archivo" class="boton_personalizado"></p>
+                <a class="regre" href="index.php" id="regre">⬅</a>
                 </form>';
                 if(isset($_FILES['file'])) {
                     $directorio = "carta/" . $usuario;
@@ -66,8 +68,12 @@ $usuario = $_SESSION['documento-aprend'];
                     }
                 }
             }else{
-                
-                echo "<img class='perfil' src='./$fila_carta[carta]' alt='carta de autorizacion'>";
+                echo '
+                <div class="info">
+                <h3 class="resp">USTED YA CARGO SU CARTA DE AUTORIZACIÓN </h3>
+                </div>
+                <a class="regrr" href="index.php" id="regre">⬅</a>
+                ';
             }  
         } 
         ?>

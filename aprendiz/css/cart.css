@@ -1,0 +1,33 @@
+.principal{
+    margin-top: 50px;
+}
+.info_one{
+    width: 60%;
+    margin-left: 20%;
+    height: 60%;
+    
+}
+.pri{
+    margin-top: 100px;
+}
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: -10px;
+}
+.che{
+    display: flex;
+}
+.lol{
+    display: flex;
+}
+.asunto{
+    margin-top: -28px;
+}
+.text{
+    margin-top: -18px;
+}
+.rari{
+    margin-top: -18px;
+}
