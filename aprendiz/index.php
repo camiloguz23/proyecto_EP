@@ -88,7 +88,7 @@ require_once('../php/connecion.php');
                 <p class="center"><input id="btn_subirfirma" type="submit" value="Subir Archivo" class="boton_personalizado"></p>
                 </form>';
                 if(isset($_FILES['file'])) {
-                    $directorio = "fotos/" . $usuario;
+                    $directorio = "../fotoPerfil/aprendices";
                     
                     if (!file_exists($directorio)) {
                         mkdir($directorio, 0777, true);
@@ -106,7 +106,7 @@ require_once('../php/connecion.php');
                 
                             if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
                                 
-                                $sql = "UPDATE aprendices SET foto = '$archivo' WHERE id_aprend = '$usuario'";
+                                $sql = "UPDATE aprendices SET foto = '$nombreArchivo' WHERE id_aprend = '$usuario'";
                                 $consultarSql = mysqli_query($connection,$sql);
                 
                                 if( $consultarSql ){
@@ -127,7 +127,7 @@ require_once('../php/connecion.php');
                     }
                 }
             }else{
-                echo "<img class='perfil' src='./$fila_foto[foto]' alt='foto de perfil'>";
+                echo "<img class='perfil' src='../fotoPerfil/aprendices/./$fila_foto[foto]' alt='foto de perfil'>";
             }  
         } 
         ?>
