@@ -29,7 +29,7 @@ $usuario = $_SESSION['documento-aprend'];
                 <a class="regre" href="index.php" id="regre">⬅</a>
                 </form>';
                 if(isset($_FILES['file'])) {
-                    $directorio = "carta/" . $usuario;
+                    $directorio = "carta/" ;
                     
                     if (!file_exists($directorio)) {
                         mkdir($directorio, 0777, true);
@@ -47,7 +47,7 @@ $usuario = $_SESSION['documento-aprend'];
                 
                             if(move_uploaded_file($_FILES["file"]["tmp_name"], $archivo)){
                                 
-                                $sql = "UPDATE aprendices SET carta = '$archivo' WHERE id_aprend = '$usuario'";
+                                $sql = "UPDATE aprendices SET carta = '$nombreArchivo' WHERE id_aprend = '$usuario'";
                                 $consultarSql = mysqli_query($connection,$sql);
                 
                                 if( $consultarSql ){
