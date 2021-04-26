@@ -12,7 +12,6 @@ const btn_cerrarForm = document.getElementById("btn_cerrarLegal")
 /* ---------------------------hola------------------------------- */
 btn_cerrarForm.addEventListener("click", (e) => {
     e.preventDefault()
-    registroLegal.style.display = "none"
     informacionnnn.style.opacity="0";
     informacionnnn.style.visibility="hidden";
     fondd.style.opacity="1";

@@ -7,6 +7,7 @@ const descargardoc = document.getElementById("datos2");
 const mostrardoc = document.getElementById("calificaa");//boton para información
 const informacionn = document.getElementById("documentos1");//div de información
 const informacionnn = document.getElementById("documentos2");//
+const formul_legalizacion = document.getElementById('legalForm');
 
 mostrar.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -30,6 +31,9 @@ descargardoc.addEventListener('click', (e)=>{
     descargardoc.style.background="#238276";
     informacionnn.style.opacity="1";
     informacionnn.style.visibility="visible";  
+    formul_legalizacion.style.opacity="1";
+    formul_legalizacion.style.visibility="visible";
+    formul_legalizacion.style.display=""
 })
 
 salii.addEventListener('click', (e)=>{
