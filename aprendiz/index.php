@@ -150,7 +150,7 @@ require_once('../php/connecion.php');
 
     <div class="opcion">
 
-        <a href="carta.php" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset=""> Imprimir carta de Autorizacion</a>
+        <a href="documentos/Formato%20carta%20de%20autorizacion%20Coordinacion%20Academica.doc" download="Carta-Autorizacion-Academica" class="button3"> <img class="butdos" height="26" width="33" src="../imagenes/Imagen8.png" alt="" srcset=""> Imprimir carta de Autorizacion</a>
         <a href="cargar_carta.php" class="button3"> <img class="buttres" height="30" width="55" src="../imagenes/Imagen6.png" alt="" srcset="">Cargar carta de Autorizacion</a>
         <a href="#" class="button3"> <img height="26" width="33" src="https://www.flaticon.es/svg/static/icons/svg/2091/2091584.svg" alt="" srcset="">#</a>
 
