@@ -71,9 +71,13 @@ boton_enviar.addEventListener("click", (e) => {
             formulario_apren.reset()
             alert("aprendiz registrado")
         } else if (bd == 2){
-            alert("datos no ingresados completos")
-        }else {
+            alert("datos ingresados no completos")
+        }else if (bd == 3) {
             alert("no envio de datos a la base de datos")
+            formulario_apren.reset()
+        }else {
+            alert(`el aprendiz ya ${bd}`)
+            formulario_apren.reset()
         }
     })
 })

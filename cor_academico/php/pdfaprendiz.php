@@ -16,7 +16,7 @@ if ($dato) {
         ");
 
     }elseif ($dato["id_alternativa"] == 2 || $dato["id_alternativa"] == 6) {
-        echo ("<iframe src='../aprendiz/pdfLEgalizacion/".$dato["form_023"]."' width='650' height='500'></iframe><br>
+        echo ("<iframe src='../../aprendiz/pdfLEgalizacion/".$dato["form_023"]."' width='650' height='500'></iframe><br>
         <iframe src='../aprendiz/pdfLEgalizacion/".$dato["cart_solicitud"]."' width='650' height='500'></iframe><br>
         <iframe src='../aprendiz/pdfLEgalizacion/".$dato["const_empre"]."' width='650' height='500'></iframe>
         ");
@@ -32,7 +32,7 @@ if ($dato) {
     }elseif ($dato["id_alternativa"] == 7) {
         echo("<iframe src='../aprendiz/pdfLEgalizacion/".$dato["form_023"]."' width='650' height='500'></iframe><br>
         <iframe src='../aprendiz/pdfLEgalizacion/".$dato["cart_solicitud"]."' width='650' height='500'></iframe><br>
-        <iframe src=../aprendiz/pdfLEgalizacion/".$dato["eps_copia"]."' width='650' height='500'></iframe><br>
+        <iframe src='../aprendiz/pdfLEgalizacion/".$dato["eps_copia"]."' width='650' height='500'></iframe><br>
         ");
 
     }else {
@@ -42,4 +42,4 @@ if ($dato) {
     echo "Aprendiz no registrado";
 }
 
-?>
+?>../

@@ -44,7 +44,7 @@ $consulta = mysqli_query($connection,$sql)
 
                 </div>
             </li>
-            <li><a href="#"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">ESTADISTICA</a></li>
+            <li><a href="buscador.php"><img class="tres"  width="39" height="30" src="../imagenes/Imagen6.png" alt="">BUSCAR</a></li>
         </ul>
     </nav>
 

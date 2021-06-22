@@ -13,7 +13,7 @@ require_once('../php/connecion.php');
     // var_dump($db);
     if($db['id_estado'] == 1 || $db['id_estado'] == null){
         echo '<script> alert("El aprendiz no esta legalizado"); </script>';
-        echo '<script> window.location = "../segui/segui.php"; </script>';  
+        echo '<script> window.location = "../cor_academico/aprendiz.php"; </script>';  
     }
 ?>        
         <!DOCTYPE html>
