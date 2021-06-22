@@ -24,7 +24,10 @@ $usuario = $_SESSION['documento-aprend'];
 
     $sql = mysqli_query($connection,$consulta);
     $dato = mysqli_fetch_assoc($sql);
+
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
