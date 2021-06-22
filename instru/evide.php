@@ -5,7 +5,7 @@ require_once '../php/connecion.php';
 if(isset($_POST)){
     
 $ins = $_POST["docuinst"];
-$apre = $_POST["documenaprendiz"];
+$apre = $_POST["documenapre"];
 $buscar= "SELECT id_aprend FROM calificacion WHERE id_aprend=$apre";
 $query_evi = mysqli_query($connection, $buscar);
 $dato_evi =mysqli_fetch_all($query_evi);
